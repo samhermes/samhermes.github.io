@@ -1,0 +1,249 @@
+body {
+	font-family: 'Quattrocento Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.5;
+	color: #191919;
+	font-weight: 300;
+	background: #FFF;
+	margin: 0;
+	padding: 0;
+}
+img, video, object {
+	max-width: 100%;
+	outline: 0;
+	border: 0;
+}
+article, header, nav, section {
+    display: block;
+}
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+h1, h2 {
+	font-size: 1.6em;
+	font-weight: 400;
+}
+h2 {
+	margin-top: 0;
+}
+.wrap {
+	margin: 0 auto 25px;
+	max-width: 1100px;
+	width: 90%;
+	padding: 0 0 20px;
+}
+.content {
+	max-width: 800px;
+	width: 75%;
+	margin: 0 0 20px;
+	padding: 0;
+	float: left;
+}
+article {
+	width: 100%;
+	margin: 0 auto 100px;
+	font-size: 1.2em;
+}
+article a {
+	text-decoration: underline;
+}
+article h2 a {
+	text-decoration: none;
+}
+article footer {
+	font-size: 1em;
+	font-style: italic;
+}
+.sidebar {
+	float: right;
+	width: 20%;
+}
+.sidebar h3 {
+	text-transform: uppercase;
+	font-style: italic;
+	font-size: 16px;
+	margin: 0 0 10px;
+	padding: 0;
+	font-weight: normal;
+}
+.sidebar p {
+	font-size: 0.9em;
+}
+.sidebar div {
+	margin-bottom: 30px;
+}
+.sidebar .me p {
+	margin-top: 15px;
+}
+.sidebar .instagram img {
+	margin-bottom: 10px;
+}
+a {
+	color: #191919;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+li a {
+	text-decoration: underline;
+}
+h1 {
+	border-bottom: 1px solid black;
+}
+.primary-header {
+	font-size: 1.3em;
+	margin: 30px 0 50px;
+	width: 95%;
+	float: right;
+	border-bottom: 3px solid black;
+}
+.site-title {
+	font-family: 'Playfair Display SC', serif;
+	font-size: 3.5em;
+	font-weight: 400;
+	margin: 0 0 5px;
+	padding: 0;
+	color: #1D1D1D;
+	text-transform: uppercase;
+	font-weight: 400;
+	font-style: italic;
+}
+.site-title a {
+	color: #000;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+}
+.site-title a:hover {
+	text-decoration: none;
+}
+.page-menu {
+	margin: 0;
+	padding: 0;
+	display: none;
+}
+.page-menu li {
+	margin: 0 12px 0 0;
+	padding: 0;
+	list-style: none;
+	display: inline-block;
+}
+.is-current-page {
+	text-decoration: underline;
+	pointer-events: none;
+}
+.content-title {
+	margin: 0 0 0.5em;
+}
+.post-preview {
+	margin: 0 0 1em;
+	padding: 0 0 1em;
+}
+.post-preview h2 {
+	margin: 0 0 0.5em;
+}
+.subpage-menu a {
+	display: inline-block;
+	margin-right: 15px;
+}
+.date {
+	margin: 0 0 1em;
+	font-size: 0.8em;
+}
+.mainfooter {
+	margin: 0 0 35px;
+	width: 95%;
+	border-top: 1px solid grey;
+	padding-top: 20px;
+	float: right;
+}
+.mainfooter a {
+	color: #666;
+	text-decoration: underline;
+}
+.mainfooter ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.mainfooter ul li {
+	display: inline-block;
+	margin: 10px 10px 10px 0;
+}
+.tw {
+	background: #00ACED;
+}
+.ig {
+	background: #3F729B;
+}
+.mainfooter h3 {
+	color: #000;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin: 0 0 8px;
+	padding: 0;
+	font-weight: 400;
+}
+.mainfooter p {
+	color: #000;
+	font-size: 0.8em;
+	margin: 0;
+	padding: 0;
+	font-weight: 300;
+}
+@media only screen and (max-width: 1085px){
+	.wrap {
+		margin: 0 auto 25px;
+	}
+}
+@media only screen and (max-width: 775px){
+	.content {
+		float: none;
+		width: 100%;
+	}
+	.sidebar {
+		float: none;
+		width: 100%;
+	}
+	.sidebar > div {
+		float: left;
+		width: 50%;
+		max-width: 250px;
+	}
+	.sidebar .instagram {
+		float: right;
+	}
+}
+@media only screen and (max-width: 600px){
+	.site-title {
+		font-size: 2.3em;
+	}
+	body {
+		font-size: 14px;
+	}
+	.primary-header {
+		margin: 10px 0 25px;
+	}
+	h2 {
+		margin-top: 0.5em;
+	}
+	article {
+		margin-bottom: 50px;
+	}
+	.sidebar > div {
+		float: none;
+		width: 100%;
+	}
+	.sidebar .instagram {
+		float: none;
+	}
+	.sidebar h3 {
+		font-size: 16px;
+	}
+	.sidebar p {
+		font-size: 1em;
+	}
+}

@@ -1,0 +1,8 @@
+# Site settings
+title: Sam Hermes
+url: "http://samhermes.com"
+twitter_username: samhermes
+github_username:  samhermes
+
+# Build settings
+markdown: kramdown
