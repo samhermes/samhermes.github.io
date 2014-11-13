@@ -1,11 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="utf-8">
-	<title>Sam Hermes</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-	<h1>We all start somewhere.</h1>
-</body>
-</html>
+---
+layout: default
+---
+
+<div class="home">
+
+<section class="content">
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <article class="post-content">
+          {{ post.content }}
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+
+  </section>
+
+  <section class="sidebar">
+      <div class="me">
+          <h3>About Me</h3>
+            <img src="img/sam.jpg">
+            <p>I'm a web developer in St. Louis, obsessed with everything including and limited to coffee, Apple, and the internet.</p>
+        </div>
+      <div class="instagram">
+          <h3>Instagram Photos</h3>
+          <div id="instafeed"></div>
+        </div>
+    </section>
+
+</div>
