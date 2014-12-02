@@ -95,7 +95,7 @@ a:hover {
 li a {
 	text-decoration: underline;
 }
-article a {
+article a:link, article a:visited, article a:focus, article a:active {
 	text-decoration: underline;
 }
 h1 {
