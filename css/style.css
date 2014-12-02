@@ -87,12 +87,13 @@ article footer {
 .sidebar .instagram img {
 	margin-bottom: 10px;
 }
-a {
+a:link, a:visited, a:focus, a:active {
 	color: #191919;
 	text-decoration: none;
 }
 a:hover {
 	text-decoration: underline;
+	color: #191919;
 }
 li a {
 	text-decoration: underline;
