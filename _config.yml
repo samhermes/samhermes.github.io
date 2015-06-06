@@ -6,3 +6,6 @@ github_username:  samhermes
 
 # Build settings
 markdown: kramdown
+
+# Outputting
+permalink:     /:categories/:title/
