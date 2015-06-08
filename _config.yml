@@ -8,4 +8,6 @@ github_username:  samhermes
 markdown: kramdown
 
 # Outputting
-permalink:     /:categories/:title/
+permalink: /:categories/:title/
+
+exclude: ["node_modules", "aws.json", "gulpfile.js"]

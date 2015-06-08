@@ -1,0 +1,671 @@
+@import url(http://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400italic,700,700italic|Muli:400,400italic);
+@font-face {
+    font-family: 'novecento_sans_wide_bookbold';
+    src: url('fonts/Novecentosanswide-Bold-webfont.eot');
+    src: url('fonts/Novecentosanswide-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Novecentosanswide-Bold-webfont.woff2') format('woff2'),
+         url('fonts/Novecentosanswide-Bold-webfont.woff') format('woff'),
+         url('fonts/Novecentosanswide-Bold-webfont.ttf') format('truetype'),
+         url('fonts/Novecentosanswide-Bold-webfont.svg#novecento_sans_widedemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'novecento_sans_widenormal';
+    src: url('fonts/Novecentosanswide-Normal-webfont.eot');
+    src: url('fonts/Novecentosanswide-Normal-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/Novecentosanswide-Normal-webfont.woff2') format('woff2'),
+         url('fonts/Novecentosanswide-Normal-webfont.woff') format('woff'),
+         url('fonts/Novecentosanswide-Normal-webfont.ttf') format('truetype'),
+         url('fonts/Novecentosanswide-Normal-webfont.svg#novecento_sans_widenormal') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+html {
+	background: #fff;
+}
+html, body {
+	border:0;
+	margin: 0;
+	padding: 0;
+	min-height: 100%;
+}
+body {
+	color: #333;
+	font-family: 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+	background: rgb(245,236,217);
+	background: -moz-linear-gradient(45deg,  rgba(245,236,217,1) 0%, rgba(43,172,181,0.53) 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(245,236,217,1)), color-stop(100%,rgba(43,172,181,0.53)));
+	background: -webkit-linear-gradient(45deg,  rgba(245,236,217,1) 0%,rgba(43,172,181,0.53) 100%);
+	background: -o-linear-gradient(45deg,  rgba(245,236,217,1) 0%,rgba(43,172,181,0.53) 100%);
+	background: -ms-linear-gradient(45deg,  rgba(245,236,217,1) 0%,rgba(43,172,181,0.53) 100%);
+	background: linear-gradient(45deg,  rgba(245,236,217,1) 0%,rgba(43,172,181,0.53) 100%);
+}
+footer, header {
+	display: block;
+}
+.group:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+a:link {
+	text-decoration: none;
+	color: #1D1D1D;
+}
+a:visited {
+	color: #1D1D1D;
+}
+a:hover {
+	color: #1D1D1D;
+}
+a:active {
+	color: #1D1D1D;
+}
+img, object {
+	border: 0;
+	max-width: 100%;
+}
+header[role="banner"] {
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+	width: 100%;
+	overflow: hidden;
+	background: #FFF;
+}
+.header-wrapper {
+	width: 95%;
+	max-width: 1075px;
+	margin: 0 auto;
+}
+.logo {
+	margin: 16px 0;
+	padding: 0;
+	float: left;
+}
+.name {
+	margin: 0;
+	padding: 0;
+	display: block;
+	color: #1D1D1D;
+	border: none;
+	line-height: 1;
+	font-family: 'novecento_sans_widenormal', Helvetica, sans-serif;
+	font-size: 2.2em;
+	letter-spacing: -0.04em;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+.name a:link, .name a:visited {
+	color: #1D1D1D;
+}
+.name a:hover {
+	color: #1D1D1D;
+}
+.bold {
+	font-family: 'novecento_sans_wide_bookbold', Helvetica, sans-serif;
+	margin-left: 2px;
+	letter-spacing: normal;
+	font-weight: normal;
+	font-style: normal;
+	text-transform: uppercase;
+}
+
+/* ---------------------------------------- NAV */
+
+nav.main {
+	float: right;
+	display: block;
+}
+nav.main ul {
+	text-align: right;
+	margin: 26px 0 0 0;
+	padding: 0;
+	float: right;
+}
+nav.main ul li {
+	list-style-type: none;
+	display: inline;
+	margin: 0 0 0 20px;
+	padding: 0;
+	vertical-align: middle;
+	float: left;
+}
+nav.main ul li a:link, nav.main ul li a:visited {
+    color: #6B6B6B;
+	font-size: 1em;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: color .1s linear;
+}
+nav.main ul li a:hover {
+	color: #1D1D1D;
+}
+.page {
+	width: 100%;
+	margin: 0 auto;
+	padding: 0;
+}
+h1 {
+	padding: 0;
+	margin: 0;
+}
+.content {
+	width: 100%;
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0;
+	clear: both;
+}
+.content img {
+	display: block;
+}
+
+/* ---------------------------------------- HOME */
+
+.introduction {
+	padding: 75px 20px;
+	text-align: center;
+}
+.introduction img {
+	width: 50px;
+	display: block;
+	vertical-align: bottom;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+.introduction h2 {
+	margin: 0;
+	font-size: 2em;
+	text-transform: uppercase;
+	color: #1D1D1D;
+	font-weight: inherit;
+}
+.portfolio-sample {
+	background: #FFF;
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+}
+.portfolio-sample h2 {
+	color: #1D1D1D;
+	margin: 0 auto;
+	padding: 28px 0 30px;
+	font-size: 1.3em;
+	font-weight: normal;
+	text-transform: uppercase;
+	max-width: 1050px;
+	width: 95%;
+}
+.portfolio-sample h3 {
+	font-weight: normal;
+}
+.portfolio-sample ul {
+	margin: 0 auto;
+	padding: 0;
+	max-width: 1075px;
+	width: 97.7%;
+	list-style: none;
+}
+.portfolio-sample ul li {
+	width: 33.333333%;
+	display: inline-block;
+	margin: 0;
+	padding: 0 15px 0;
+	vertical-align: top;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.portfolio-sample p {
+	width: 95%;
+	max-width: 1000px;
+	margin: 0 auto;
+	color: #FFF;
+	padding: 35px 0 40px;
+	text-align: right;
+}
+.what-i-do {
+	background: #FFF;
+	max-width: 1100px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 0 40px;
+}
+.what-i-do h2 {
+	color: #1D1D1D;
+	margin: 0 auto;
+	padding: 40px 0 35px;
+	font-size: 1.3em;
+	font-weight: normal;
+	text-transform: uppercase;
+	max-width: 1050px;
+	width: 95%;
+}
+.about-container {
+	margin: 0 auto;
+	width: 95%;
+	max-width: 1050px;
+}
+.about-left {
+	float: left;
+	width: 64%;
+}
+.about-left p {
+	margin: 0 0 15px;
+}
+.about-right {
+	float: right;
+	width: 27%;
+}
+.about-right h3 {
+	margin: 0;
+	text-transform: uppercase;
+	font-size: 1em;
+}
+.about-right ul {
+	list-style: none;
+	padding: 0;
+}
+p.bottom {
+	text-align: right;
+	width: 95%;
+	max-width: 1000px;
+	margin: 35px auto 0;
+}
+
+/* ---------------------------------------- PORTFOLIO */
+
+.portfolio {
+	max-width: 1116px;
+	width: 96.5%;
+	margin: 40px auto 0;
+	padding: 0;
+	clear: both;
+	list-style: none;
+	margin-bottom: 50px;
+}
+.portfolio li {
+	width: 33.333333%;
+	display: inline-block;
+	margin: 0;
+	padding: 0 8px 25px;
+	vertical-align: top;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.work {
+	margin: 0;
+	background: #FFF;
+	display: block;
+}
+.portfolio li img {
+	margin: 0;
+	vertical-align: top;
+}
+.portfolio li h3 {
+	font-size: 1.2em;
+	font-weight: normal;
+	color: #505050;
+	padding: 15px 10px 8px;
+	margin:0;
+}
+.portfolio li p {
+	margin: 0;
+	font-size: 0.8em;
+	color: #999;
+	padding: 0px 10px 15px;
+}
+
+/* ---------------------------------------- PORTFOLIO PAGES */
+
+.portfoliopg {
+	text-align: center;
+	margin: 40px auto 60px;
+	background: #FFF;
+	max-width: 1100px;
+	padding-bottom: 20px;
+	width: 95%;
+}
+.portfoliopg img {
+	display: block;
+	margin: 0 auto;
+	padding: 15px 0;
+	width: 93%;
+}
+.title {
+	width: 100%;
+	max-width: 1100px;
+	text-align: center;
+	padding: 30px 0;
+	margin: 0 auto;
+}
+.title h2 {
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+}
+.title p {
+	margin: 0;
+	padding: 0;
+}
+.title p a {
+	color: #FFF;
+}
+.desc {
+	margin: 50px 0;
+}
+.desc p {
+	max-width: 900px;
+	width: 95%;
+	color: #000;
+	margin: 0 auto;
+	font-size: 1.2em;
+}
+
+/* ---------------------------------------- ABOUT */
+
+.about {
+  width: 95%;
+  max-width: 1100px;
+  background: #FFF;
+  margin: 40px auto 0;
+  font-size: 1.1em;
+}
+.about a {
+	text-decoration: underline;
+}
+.inner-about {
+	width: 90%;
+	margin: 0 auto;
+	padding: 5% 0;
+}
+.about-intro {
+	margin-bottom: 50px;
+	border-bottom: 1px solid rgba(43,172,181,0.4);
+	padding-bottom: 60px;
+}
+.about-intro img {
+	float: left; 
+	padding-right: 50px;
+	max-width: 200px;
+}
+.heading {
+  	width: 100%;
+  	background: #E65848;
+}
+.heading h2 {
+  font-size: 2em;
+  text-transform: uppercase;
+  margin: 0 auto;
+  color: #FFF;
+  font-weight: normal;
+  padding: 25px 0;
+  text-align: center;
+  max-width: 1000px;
+  width: 95%;
+}
+.edu {
+  padding: 0 0 80px;
+}
+.edu img {
+	padding: 10px 0 15px;
+}
+.left {
+  float: left;
+  width: 42%;
+}
+.left img {
+	width: 100px;
+}
+.right img {
+	height: 100px;
+}
+.right {
+	float: right;
+	width: 47%;
+}
+.right p {
+	padding-right: 5%;
+}
+.about h2 {
+	text-align: left;
+	margin: 0 0 25px;
+	font-size: 1.7em;
+	font-weight: 400;
+	color: #1D1D1D;
+}
+.about h3 {
+  margin: 15px 0 15px;
+  font-weight: 400;
+  font-size: 1.3em;
+  color: #1D1D1D;
+}
+.about p {
+	margin: 0 0 5px;
+	font-size: 1em;
+	text-align: left;
+	line-height: 1.5;
+}
+.resume {
+	padding: 30px 0;
+	margin: 0 auto;
+}
+.sh-about {
+	margin: -45px auto 0;
+	width: 60px;
+}
+.skills ul {
+  list-style: none;
+  margin: 0 0 5px;
+  padding: 0 0 10px;
+}
+.skills li {
+  margin: 0;
+  padding: 0;
+}
+.about-intro p {
+	font-size: 1.3em;
+	font-weight: 400;
+	padding-top: 70px;
+}
+
+/* ---------------------------------------- FOOTER */
+
+footer {
+	margin: 30px auto 0;
+	padding: 15px 0 40px 0;
+	clear: both;
+	max-width: 1000px;
+	width: 100%;
+	color: #999;
+	font-weight: 300;
+	text-align: center;
+}
+.footerlogo {
+	padding: 10px 0;
+	margin: 0 auto;
+	width: 30px;
+	font-family: 'novecento_sans_widenormal', Helvetica, sans-serif;
+	color: #1D1D1D;
+	font-size: 1.3em;
+	display: inline-block;
+}
+.footerlogobold {
+	font-family: 'novecento_sans_wide_bookbold', Helvetica, sans-serif;
+}
+.copyright {
+	margin: 0 0 15px;
+	padding: 0;
+	font-size: 0.8em;
+}
+.contact {
+	list-style: none;
+	margin: 0 auto 10px;
+	padding: 0;
+	font-size: 0.9em;
+	text-align: center;
+}
+.contact li {
+	padding: 0;
+	margin: 13px 0 0;
+	text-transform: uppercase;
+	font-weight: 300;
+	font-size: 0.8em;
+	display: inline-block;
+}
+.contact li:last-child {
+	margin-left: 20px;
+}
+.contact li a {
+	color: #999;
+	-webkit-transition: color .1s linear;
+	transition: color .1s linear;
+}
+.contact li a:hover {
+	color: #666;
+}
+.border {
+	border-bottom: 1px solid #CCC;
+}
+.fourohfour {
+	padding-bottom: 60px;
+	max-width: 800px;
+	width: 90%;
+}
+.fourohfour h2 {
+	text-align: center;
+	font-size: 6em;
+	font-weight: 400;
+}
+.fourohfour p {
+	font-size: 1.4em;
+	text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+
+	.text h2 {
+		font-size: 3em;
+	}
+}
+
+@media screen and (max-width: 1000px) {
+	.text h2 {
+		font-size: 2.8em;
+	}
+	.page {
+		max-width: 100%;
+		margin: auto;
+		padding: auto;
+	}
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	.about {
+		border: none;
+		border-bottom: 1px solid #DBDBDB;
+	}
+	.about-intro img {
+		float: none;
+		padding-right: 0;
+	}
+	.about-intro p {
+		padding-top: 25px;
+	}
+}
+@media screen and (max-width: 800px) {
+	.portfolio li {
+		width: 50%;
+	}
+	.latestposts {
+		width: 60%;
+	}
+	.sideabout {
+		width: 30%;
+	}
+}
+@media screen and (max-width: 700px) {
+	nav.main {
+		width: 100%;
+		padding: 0;
+	}
+	nav.main ul {
+		float: none;
+		text-align: center;
+		display: block;
+		width: 100%;
+		margin: 0 auto;
+		padding: 0 0 19px 0;
+	}
+	nav.main ul li {
+		margin: 0 8px;
+		float: none;
+		display: inline;
+	}
+	.logo {
+		max-width: 100%;
+		margin: 15px 0 8px 0;
+		text-align: center;
+		float: none;
+		padding: 0;
+	}
+	.name {
+		width: 100%;
+		height: auto;
+		font-size: 2.2em;
+	}
+	ul.websites li {
+		padding: 0 4px 4px 4px;
+	}
+	.text h2 {
+		font-size: 2.2em;
+	}
+	.portfolio-sample ul li {
+		width: 50%;
+	}
+	.inner-about {
+		width: 90%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.portfolio {
+		margin: 20px auto 0;
+	}
+	.about {
+		margin: 20px auto 0;
+	}
+	.introduction h2 {
+		font-size: 2em;
+	}
+	.about-left, .about-right {
+		float: none;
+		width: auto;
+	}
+	.right, .left {
+		float: none;
+		width: auto;
+	}
+	.about-intro img {
+		width: 150px;
+		display: block;
+		margin: 0 auto;
+	}
+
+}
+@media screen and (max-width: 400px) {
+	.portfolio-sample ul li {
+		width: 100%;
+	}
+	.portfolio li {
+		width: 100%;
+	}
+	.about-intro p {
+		font-size: 1em;
+	}
+}
