@@ -38,24 +38,33 @@ header[role="banner"] {
 	width: 100%;
 }
 header.home {
-	background: url(/img/ny.jpg) no-repeat center center;
+	background: url(/img/chi.jpg) no-repeat center center;
 	background-size: cover;
-	padding: 85px 0 75px;
+	background-position: center center;
+	padding: 120px 0 80px;
 }
 @media screen and (max-width: 1200px) {
 	header.home {
-		padding: 75px 0 55px;
+		padding: 75px 0 65px;
 	}
 }
 @media screen and (max-width: 700px) {
 	header.home {
-		padding: 45px 0 45px;
+		padding: 45px 0 55px;
 	}
 }
+.header-cont {
+	max-width: 290px;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0px 2px 6px -3px #656565;
+	margin: 0 auto;
+	padding: 0 0 18px;
+	text-align: center;
+}
 .sam {
-	width: 100px;
-	margin: 0 auto 25px;
-	display: block;
+	width: 110px;
+	margin: -45px 0 3px;
 }
 .logo {
 	max-width: 1200px;
@@ -69,11 +78,12 @@ header.home {
 	display: block;
 	border: none;
 	line-height: 1;
-	font-family: 'Oswald', sans-serif;
-	font-weight: 300;
+	font-family: 'Playfair Display SC', sans-serif;
+	font-weight: 400;
 	text-transform: uppercase;
 	text-align: left;
 	font-size: 2.3em;
+	font-style: italic;
 }
 .home .name {
 	text-align: center;
