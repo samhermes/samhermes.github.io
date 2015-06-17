@@ -38,28 +38,36 @@ header {
 	width: 100%;
 }
 header.home {
-	background: url(/img/chi.jpg) no-repeat center center;
+	background: url(/img/chi-lg.jpg) no-repeat center center;
 	background-size: cover;
 	background-position: center center;
 	padding: 130px 0 90px;
 }
 @media screen and (max-width: 1200px) {
 	header.home {
+		
 		padding: 75px 0 65px;
+	}
+}
+@media screen and (max-width: 900px) {
+	header.home {
+		background: url(/img/chi-md.jpg) no-repeat center center;
 	}
 }
 @media screen and (max-width: 700px) {
 	header.home {
-		padding: 45px 0 55px;
+		background: url(/img/chi-sm.jpg) no-repeat center center;
+		padding: 55px 0 45px;
 	}
 }
 .name-group {
-	max-width: 310px;
+	max-width: 280px;
+	width: 90%;
 	background: #fff;
 	border-radius: 5px;
 	box-shadow: 0px 2px 6px -3px #656565;
 	margin: 0 auto;
-	padding: 0 0 16px;
+	padding: 0 15px 16px;
 	text-align: center;
 }
 .sam {
@@ -89,7 +97,7 @@ header.home {
 	text-align: center;
 	margin: 0;
 	text-transform: uppercase;
-	letter-spacing: 1.5px;
+	letter-spacing: 1px;
 	font-size: 0.7em;
 	font-style: italic;
 }
