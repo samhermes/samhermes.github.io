@@ -38,41 +38,17 @@ header {
 	width: 100%;
 }
 header.home {
-	background: url(/img/chi-lg.jpg) no-repeat center center;
-	background-size: cover;
-	background-position: center center;
 	padding: 130px 0 90px;
 }
 @media screen and (max-width: 1200px) {
 	header.home {
-		
 		padding: 75px 0 65px;
-	}
-}
-@media screen and (max-width: 900px) {
-	header.home {
-		background: url(/img/chi-md.jpg) no-repeat center center;
 	}
 }
 @media screen and (max-width: 700px) {
 	header.home {
-		background: url(/img/chi-sm.jpg) no-repeat center center;
 		padding: 55px 0 45px;
 	}
-}
-.name-group {
-	max-width: 280px;
-	width: 90%;
-	background: #fff;
-	border-radius: 5px;
-	box-shadow: 0px 2px 6px -3px #656565;
-	margin: 0 auto;
-	padding: 0 15px 16px;
-	text-align: center;
-}
-.sam {
-	width: 110px;
-	margin: -10px 0 3px;
 }
 .name {
 	margin: 0;
@@ -84,7 +60,7 @@ header.home {
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: left;
-	font-size: 2.3em;
+	font-size: 2.7em;
 	font-style: italic;
 }
 .home .name {
@@ -97,18 +73,11 @@ header.home {
 	text-align: center;
 	margin: 0;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
 	font-size: 0.7em;
-	font-style: italic;
 }
 .name a {
 	color: #333;
-}
-.logo {
-	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
-	padding: 35px 0 30px;
 }
 
 /* ---------------------------------------- HOME */
@@ -117,16 +86,6 @@ header.home {
 	width: 92%;
 	max-width: 1225px;
 	margin: 0 auto 50px;
-}
-.recent-work h2,
-.side-projects h2 {
-	color: rgb(80,80,80);
-	margin: 0 auto;
-	padding: 55px 1% 20px;
-	font-weight: 400;
-	font-size: 14px;
-	text-transform: uppercase;
-	max-width: 1200px;
 }
 .recent-work ul {
 	margin: 0 auto;
@@ -142,9 +101,6 @@ header.home {
 	vertical-align: top;
 	box-sizing: border-box;
 }
-.recent-work ul li p {
-	margin: 0 0 10px;
-}
 .recent-work ul li img {
 	display: block;
 }
@@ -154,40 +110,13 @@ header.home {
 	}
 }
 @media screen and (max-width: 600px) {
-	.recent-work ul li {
+	.recent-work {
 		width: 100%;
 	}
-}
-.site-image {
-	border: 1px solid #eee;
-	border-top: none;
-	border-radius: 0 0 3px 3px;
-	margin-bottom: 15px;
-	overflow: hidden;
-	position: relative;
-}
-.browser-bar {
-	height: 10px;
-	background: #eee;
-	width: 100%;
-	position: relative;
-	border-radius: 3px 3px 0 0;
-}
-.browser-bar::before {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: #fff;
-	z-index: 1;
-}
-.side-projects {
-	width: 92%;
-	max-width: 1225px;
-	margin: 0 auto 50px;
+	.recent-work ul li {
+		width: 100%;
+		padding: 0;
+	}
 }
 
 /* ---------------------------------------- PORTFOLIO PAGES */
