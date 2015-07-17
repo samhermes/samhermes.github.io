@@ -38,17 +38,17 @@ header {
 	border-bottom: 1px solid #efefef;
 }
 header.home {
-	padding: 110px 0;
+	padding: 110px 0 120px;
 	border-bottom: none;
 }
 @media screen and (max-width: 1200px) {
 	header.home {
-		padding: 75px 0 65px;
+		padding: 75px 0;
 	}
 }
 @media screen and (max-width: 700px) {
 	header.home {
-		padding: 55px 0 45px;
+		padding: 55px 0;
 	}
 }
 .name {
