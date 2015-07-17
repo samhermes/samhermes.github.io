@@ -35,7 +35,9 @@ img {
 }
 header {
 	margin: 0 auto;
-	width: 100%;
+	padding: 30px 0;
+	max-width: 1177px;
+	width: 92%;
 }
 header.home {
 	padding: 130px 0 90px;
@@ -122,8 +124,8 @@ header.home {
 /* ---------------------------------------- PORTFOLIO PAGES */
 
 .project {
-	margin: 40px auto;
-	max-width: 1200px;
+	margin: 0 auto 40px;
+	max-width: 1177px;
 	padding-bottom: 20px;
 	width: 90%;
 }
@@ -131,20 +133,15 @@ header.home {
 	display: block;
 	margin: 0 auto;
 	padding: 15px 0;
-	width: 1200px;
+	width: 1177px;
 }
 .project-info {
-	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
-	padding: 22px 0;
-	color: #fff;
+	padding: 20px 0;
 	position: relative;
 }
 .title {
 	float: left;
 	width: auto;
-	margin-right: 150px;
 }
 .title h2 {
 	font-size: 1.5em;
@@ -156,23 +153,17 @@ header.home {
 	margin: 0;
 	padding: 0;
 }
-.title p a {
-	color: #fff;
-}
 .details {
 	float: right;
 	width: auto;
 	text-align: right;
 }
 .details .when {
-	background: rgba(255,255,255,0.2);
-	border-radius: 3px;
-	padding: 6px 13px 5px;
-	margin: -14px;
+	margin: 0 0 20px;
 	font-size: 0.9em;
 	position: absolute;
-	top: 50%;
-	right: 14px;
+	bottom: 0;
+	right: 0;
 	display: inline-block;
 	text-transform: uppercase;
 }
