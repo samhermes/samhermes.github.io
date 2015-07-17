@@ -89,7 +89,8 @@ header.home p {
 	color: #515151;
 }
 
-/* ---------------------------------------- HOME */
+
+/* HOME */
 
 .recent-work {
 	width: 92%;
@@ -128,7 +129,8 @@ header.home p {
 	}
 }
 
-/* ---------------------------------------- PORTFOLIO PAGES */
+
+/* PROJECTS */
 
 .project {
 	margin: 0 auto 40px;
@@ -185,7 +187,8 @@ header.home p {
 	font-size: 1.2em;
 }
 
-/* ---------------------------------------- FOOTER */
+
+/* FOOTER */
 
 footer {
 	margin: 0 auto;
@@ -228,16 +231,19 @@ footer {
 .border {
 	border-bottom: 1px solid #CCC;
 }
-.fourohfour {
-	padding-bottom: 60px;
-	max-width: 800px;
-	width: 90%;
-}
-.fourohfour h2 {
+.fourohfour .main {
+	max-width: 1200px;
+	width: 92%;
+	margin: 50px auto 0;
 	text-align: center;
-	font-size: 6em;
+	line-height: 1.5;
+	font-size: 0.9em;
 }
-.fourohfour p {
-	font-size: 1.4em;
-	text-align: center;
+.fourohfour .main h2 {
+	font-size: 4.04em;
+	font-weight: normal;
+	margin: 0;
+}
+.fourohfour .main a {
+	text-decoration: underline;
 }
