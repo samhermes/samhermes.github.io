@@ -8,10 +8,10 @@ html, body {
 	padding: 0;
 }
 body {
-	color: #333;
-	font-family: 'Quattrocento Sans', sans-serif;
-	font-weight: normal;
+	font-family: 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+	font-weight: 300;
 	min-height: 100%;
+	background: #f9f9f9;
 }
 footer, header {
 	display: block;
@@ -34,12 +34,23 @@ img {
 	height: auto;
 }
 header {
-	padding: 20px 0 23px;
-	border-bottom: 1px solid #efefef;
+	padding: 20px 0 16px;
+	background: #fff;
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	width: 100%;
+}
+.header-wrap {
+	max-width: 1200px;
+	width: 92%;
+	margin: 0 auto;
 }
 header.home {
 	padding: 110px 0 120px;
 	border-bottom: none;
+	position: static;
+	background: none;
 }
 @media screen and (max-width: 1200px) {
 	header.home {
@@ -52,34 +63,48 @@ header.home {
 	}
 }
 .name {
-	display: block;
+	display: inline-block;
 	border: none;
 	line-height: 1;
-	font-family: 'Playfair Display SC', sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: left;
 	font-size: 2.6em;
 	font-style: italic;
 	color: #515151;
-	margin: 0 auto;
-	width: 92%;
-	text-align: center;
-	margin: 0 0 9px;
-	padding: 0;
+	margin: 0;
+}
+.home .name {
+	width: 100%;
+	display: block;
+}
+.name img {
+	display: block;
+	margin: 0;
+	width: 180px;
+}
+.home .name img {
+	margin: 0 auto 15px;
 	width: auto;
 	max-width: 100%;
 }
-.home .name {
-	font-size: 3em;
-	margin: 0 0 10px;
-}
 header p {
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.5em;
+	margin: 7px 0 0 18px;
+}
+header.home p {
 	color: #515151;
 	text-align: center;
+	display: block;
 	margin: 0;
 	text-transform: uppercase;
 	letter-spacing: 2px;
+	text-align: center;
 	font-size: 0.6em;
 }
 header.home p {
@@ -135,7 +160,7 @@ header.home p {
 .project {
 	margin: 0 auto 40px;
 	max-width: 1200px;
-	padding-bottom: 20px;
+	padding: 62px 0 20px;
 	width: 92%;
 }
 .project img {
@@ -154,7 +179,7 @@ header.home p {
 }
 .title h2 {
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: 300;
 	margin: 0 0 5px;
 	padding: 0;
 }
@@ -169,7 +194,8 @@ header.home p {
 }
 .details .when {
 	margin: 0 0 10px;
-	font-size: 0.9em;
+	font-size: 0.7em;
+	letter-spacing: 1px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -177,11 +203,12 @@ header.home p {
 	text-transform: uppercase;
 }
 .desc {
-	margin: 50px 0;
+	margin: 100px 0;
 }
 .desc p {
 	max-width: 700px;
 	width: 90%;
+	line-height: 1.4;
 	color: #000;
 	margin: 0 auto 1.4em;
 	font-size: 1.2em;
