@@ -8,10 +8,10 @@ html, body {
 	padding: 0;
 }
 body {
-	color: #333;
-	font-family: 'Quattrocento Sans', sans-serif;
-	font-weight: normal;
+	font-family: 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+	font-weight: 300;
 	min-height: 100%;
+	background: #f9f9f9;
 }
 footer, header {
 	display: block;
@@ -34,99 +34,110 @@ img {
 	height: auto;
 }
 header {
-	margin: 0 auto;
+	padding: 20px 0 16px;
+	background: #fff;
+	position: fixed;
+	z-index: 1;
+	top: 0;
 	width: 100%;
 }
+.header-wrap {
+	max-width: 1200px;
+	width: 92%;
+	margin: 0 auto;
+}
 header.home {
-	background: url(/img/chi-lg.jpg) no-repeat center center;
-	background-size: cover;
-	background-position: center center;
-	padding: 130px 0 90px;
+	padding: 110px 0 120px;
+	border-bottom: none;
+	position: static;
+	background: none;
 }
 @media screen and (max-width: 1200px) {
 	header.home {
-		
-		padding: 75px 0 65px;
-	}
-}
-@media screen and (max-width: 900px) {
-	header.home {
-		background: url(/img/chi-md.jpg) no-repeat center center;
+		padding: 75px 0;
 	}
 }
 @media screen and (max-width: 700px) {
 	header.home {
-		background: url(/img/chi-sm.jpg) no-repeat center center;
-		padding: 55px 0 45px;
+		padding: 55px 0;
 	}
 }
-.name-group {
-	max-width: 280px;
-	width: 90%;
-	background: #fff;
-	border-radius: 5px;
-	box-shadow: 0px 2px 6px -3px #656565;
-	margin: 0 auto;
-	padding: 0 15px 16px;
-	text-align: center;
-}
-.sam {
-	width: 110px;
-	margin: -10px 0 3px;
-}
 .name {
-	margin: 0;
-	padding: 0;
-	display: block;
+	display: inline-block;
 	border: none;
 	line-height: 1;
-	font-family: 'Playfair Display SC', sans-serif;
 	font-weight: 400;
 	text-transform: uppercase;
 	text-align: left;
-	font-size: 2.3em;
+	font-size: 2.6em;
 	font-style: italic;
+	color: #515151;
+	margin: 0;
 }
 .home .name {
-	text-align: center;
-	margin: 0 0 10px;
-	padding: 0;
+	width: 100%;
+	display: block;
 }
-.home p {
-	color: rgba(0,0,0,0.7);
+.name img {
+	display: block;
+	margin: 0;
+	width: 180px;
+}
+.home .name img {
+	margin: 0 auto 20px;
+	width: auto;
+	max-width: 100%;
+}
+header p {
+	text-align: left;
+	display: inline-block;
+	vertical-align: top;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 0.5em;
+	margin: 7px 0 0 18px;
+}
+@media screen and (max-width: 530px) {
+	header p {
+		display: none;
+	}
+}
+header.home p {
+	color: #515151;
 	text-align: center;
+	display: block;
 	margin: 0;
 	text-transform: uppercase;
-	letter-spacing: 1px;
+	letter-spacing: 2px;
+	text-align: center;
 	font-size: 0.7em;
-	font-style: italic;
 }
 .name a {
-	color: #333;
+	color: #515151;
 }
-.logo {
-	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
-	padding: 35px 0 30px;
+@media screen and (max-width: 450px) {
+	.home .name img {
+		width: 240px;
+		margin: 0 0 10px;
+	}
+	header.home {
+		width: 90%;
+		margin: 0 auto;
+		padding: 30px 0 50px;
+	}
+	header.home p {
+		text-align: left;
+		margin-left: ;
+	}
 }
 
-/* ---------------------------------------- HOME */
+
+/* HOME */
 
 .recent-work {
 	width: 92%;
 	max-width: 1225px;
 	margin: 0 auto 50px;
-}
-.recent-work h2,
-.side-projects h2 {
-	color: rgb(80,80,80);
-	margin: 0 auto;
-	padding: 55px 1% 20px;
-	font-weight: 400;
-	font-size: 14px;
-	text-transform: uppercase;
-	max-width: 1200px;
 }
 .recent-work ul {
 	margin: 0 auto;
@@ -137,13 +148,10 @@ header.home {
 .recent-work ul li {
 	width: 33.333333%;
 	display: inline-block;
-	margin: 0 0 5px;
+	margin: 0 0 25px;
 	padding: 0 1%;
 	vertical-align: top;
 	box-sizing: border-box;
-}
-.recent-work ul li p {
-	margin: 0 0 10px;
 }
 .recent-work ul li img {
 	display: block;
@@ -154,49 +162,23 @@ header.home {
 	}
 }
 @media screen and (max-width: 600px) {
-	.recent-work ul li {
+	.recent-work {
 		width: 100%;
 	}
-}
-.site-image {
-	border: 1px solid #eee;
-	border-top: none;
-	border-radius: 0 0 3px 3px;
-	margin-bottom: 15px;
-	overflow: hidden;
-	position: relative;
-}
-.browser-bar {
-	height: 10px;
-	background: #eee;
-	width: 100%;
-	position: relative;
-	border-radius: 3px 3px 0 0;
-}
-.browser-bar::before {
-	content: '';
-	position: absolute;
-	top: 3px;
-	left: 3px;
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: #fff;
-	z-index: 1;
-}
-.side-projects {
-	width: 92%;
-	max-width: 1225px;
-	margin: 0 auto 50px;
+	.recent-work ul li {
+		width: 100%;
+		padding: 0;
+	}
 }
 
-/* ---------------------------------------- PORTFOLIO PAGES */
+
+/* PROJECTS */
 
 .project {
-	margin: 40px auto;
+	margin: 0 auto 40px;
 	max-width: 1200px;
-	padding-bottom: 20px;
-	width: 90%;
+	padding: 62px 0 20px;
+	width: 92%;
 }
 .project img {
 	display: block;
@@ -205,21 +187,16 @@ header.home {
 	width: 1200px;
 }
 .project-info {
-	max-width: 1200px;
-	width: 90%;
-	margin: 0 auto;
-	padding: 22px 0;
-	color: #fff;
+	padding: 30px 0 10px;
 	position: relative;
 }
 .title {
 	float: left;
 	width: auto;
-	margin-right: 150px;
 }
 .title h2 {
 	font-size: 1.5em;
-	font-weight: normal;
+	font-weight: 300;
 	margin: 0 0 5px;
 	padding: 0;
 }
@@ -227,38 +204,35 @@ header.home {
 	margin: 0;
 	padding: 0;
 }
-.title p a {
-	color: #fff;
-}
 .details {
 	float: right;
 	width: auto;
 	text-align: right;
 }
 .details .when {
-	background: rgba(255,255,255,0.2);
-	border-radius: 3px;
-	padding: 6px 13px 5px;
-	margin: -14px;
-	font-size: 0.9em;
+	margin: 0 0 10px;
+	font-size: 0.7em;
+	letter-spacing: 1px;
 	position: absolute;
-	top: 50%;
-	right: 14px;
+	bottom: 0;
+	right: 0;
 	display: inline-block;
 	text-transform: uppercase;
 }
 .desc {
-	margin: 50px 0;
+	margin: 100px 0;
 }
 .desc p {
 	max-width: 700px;
 	width: 90%;
+	line-height: 1.4;
 	color: #000;
 	margin: 0 auto 1.4em;
 	font-size: 1.2em;
 }
 
-/* ---------------------------------------- FOOTER */
+
+/* FOOTER */
 
 footer {
 	margin: 0 auto;
@@ -301,16 +275,20 @@ footer {
 .border {
 	border-bottom: 1px solid #CCC;
 }
-.fourohfour {
-	padding-bottom: 60px;
-	max-width: 800px;
-	width: 90%;
-}
-.fourohfour h2 {
+.fourohfour .main {
+	max-width: 1200px;
+	width: 92%;
+	margin: 50px auto 0;
 	text-align: center;
-	font-size: 6em;
+	line-height: 1.5;
+	font-size: 0.9em;
 }
-.fourohfour p {
-	font-size: 1.4em;
-	text-align: center;
+.fourohfour .main h2 {
+	font-size: 4.04em;
+	color: #515151;
+	font-weight: normal;
+	margin: 0;
+}
+.fourohfour .main a {
+	text-decoration: underline;
 }
