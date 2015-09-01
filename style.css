@@ -148,13 +148,21 @@ header.home p {
 .recent-work ul li {
 	width: 33.333333%;
 	display: inline-block;
-	margin: 0 0 25px;
+	margin: 0 0 30px;
 	padding: 0 1%;
 	vertical-align: top;
 	box-sizing: border-box;
 }
 .recent-work ul li img {
 	display: block;
+}
+.recent-work h2 {
+	font-size: 0.9em;
+    text-transform: uppercase;
+    font-weight: normal;
+    text-align: center;
+    max-width: 230px;
+    margin: 15px auto 0;
 }
 @media screen and (max-width: 1000px) {
 	.recent-work ul li {
