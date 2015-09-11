@@ -158,7 +158,6 @@ header.home p {
 }
 .recent-work h2 {
 	font-size: 0.9em;
-    text-transform: uppercase;
     font-weight: normal;
     text-align: center;
     max-width: 230px;
@@ -177,6 +176,42 @@ header.home p {
 		width: 100%;
 		padding: 0;
 	}
+}
+
+
+/* SIDE PROJECTS & POSTS */
+
+.projects-posts {
+	width: 92%;
+	max-width: 1225px;
+	margin: 0 auto 50px;
+}
+.projects-posts h3 {
+	text-transform: uppercase;
+	font-size: 0.9em;
+	letter-spacing: 1px;
+}
+.projects {
+	float: left;
+	width: 31.3333%;
+	margin: 0 0 0 1%;
+}
+.projects ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.projects h4 {
+	font-size: 0.9em;
+    font-weight: normal;
+    text-align: center;
+    max-width: 230px;
+    margin: 15px auto 0;
+}
+.posts {
+	float: right;
+	width: 50%;
+	margin: 0 1% 0 0;
 }
 
 
