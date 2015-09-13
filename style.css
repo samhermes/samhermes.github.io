@@ -47,7 +47,7 @@ header {
 	margin: 0 auto;
 }
 header.home {
-	padding: 110px 0 120px;
+	padding: 110px 0;
 	border-bottom: none;
 	position: static;
 	background: none;
