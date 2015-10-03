@@ -335,3 +335,59 @@ footer {
 .fourohfour .main a {
 	text-decoration: underline;
 }
+
+
+/* PROJECT SPECIFIC */
+
+.stlmetrolink {
+	background: rgb(51,198,244);
+	background: -moz-linear-gradient(-45deg,  rgb(51,198,244) 0%, rgb(45,69,152) 100%);
+	background: -webkit-gradient(linear, left top, right bottom, color-stop(0%,rgb(51,198,244)), color-stop(100%,rgb(45,69,152)));
+	background: -webkit-linear-gradient(-45deg,  rgb(51,198,244) 0%,rgb(45,69,152) 100%);
+	background: -o-linear-gradient(-45deg,  rgb(51,198,244) 0%,rgb(45,69,152) 100%);
+	background: -ms-linear-gradient(-45deg,  rgb(51,198,244) 0%,rgb(45,69,152) 100%);
+	background: linear-gradient(135deg,  rgb(51,198,244) 0%,rgb(45,69,152) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33c6f4', endColorstr='#2d4598',GradientType=1 );
+}
+.stlmetrolink .project {
+	color: #fff;
+}
+.stlmetrolink .project img {
+	width: 200px;
+	padding: 70px 0 30px;
+}
+.stlmetrolink .project h2 {
+	text-align: center;
+	font-weight: normal;
+	margin: 0 0 10px;
+	font-family: "Helvetica Neue", sans-serif;
+}
+.stlmetrolink .project .type {
+	text-transform: uppercase;
+	font-size: 0.75em;
+	text-align: center;
+	margin: 0 0 50px;
+}
+.stlmetrolink .desc {
+	background: #fff;
+	max-width: 740px;
+	margin: 0 auto;
+	padding: 30px 10px;
+}
+.stlmetrolink .desc a {
+	display: block;
+	padding: 10px 15px;
+	background: #329BD5;
+	text-transform: uppercase;
+	color: #fff;
+	max-width: 200px;
+	margin: 40px auto 5px;
+	text-align: center;
+}
+.stlmetrolink footer,
+.stlmetrolink .contact li a {
+	color: rgba(255,255,255,0.85);
+}
+.stlmetrolink .contact li a:hover {
+	color: rgba(255,255,255,0.5);
+}
