@@ -95,7 +95,7 @@ header p {
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 0.5em;
-	margin: 7px 0 0 18px;
+	margin: 5px 0 0 18px;
 }
 @media screen and (max-width: 530px) {
 	header p {
