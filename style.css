@@ -169,9 +169,6 @@ header.home p {
 	}
 }
 @media screen and (max-width: 600px) {
-	.recent-work {
-		width: 100%;
-	}
 	.recent-work ul li {
 		width: 100%;
 		padding: 0;
@@ -235,6 +232,23 @@ header.home p {
 }
 .posts a:hover {
 	text-decoration: underline;
+}
+@media screen and (max-width: 1000px) {
+	.projects,
+	.posts {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 600px) {
+	.projects,
+	.posts {
+		width: 100%;
+		float: none;
+		margin: 0;
+	}
+	.projects {
+		margin-bottom: 50px;
+	}
 }
 
 
