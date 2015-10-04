@@ -23,15 +23,10 @@
     <div class="project">
         <img src="../img/metrolink.svg">
         <h2>St. Louis MetroLink Schedule</h2>
-        <p class="type">Web App</p>
         <div class="desc">
-            <p>I ride the MetroLink to and from work everyday. I began using the Transit app to look up when the next train would be arriving, but I typically get on in an underground station without any service. So, I wondered if I could make something that would work offline. I make websites, so that's where I began.</p>
-            <p>I had never used JSON on a project before, and wondered if I would be able to make use of the format for storing all of the train times. I started loading train times into a JSON file, a bit haphazardly. I couldn't find a good example of what I was trying to do, so I just tried out what I thought might work. Things I learned from that include the fact that JSON is rather picky. It just flat out didn't work the first few times I tried. It is looking for a particular format, and if it doens't find it, nothing happens. I finally determined the proper format and moved forward.</p>
-            <p>The train times are AJAX'ed into the app, so fetching the correct file isn't too hard to do. When the app opens, it asks for the station, and then the direction you are heading. It stores both of those choices in variables, and then also determines if it is a weekday or a weekend. Using those three variables, it looks for the correct JSON file and grabs the correct block of times.</p>
-            <p>Despite my time spent figuring out JSON, it actually wasn't the most time consuming part of the project. Simply loading the train times into JSON took a great deal of time, but it was something that needed to be done. It was a relatively manual process in which I copied the times from PDFs into the proper file and then formatted accordingly.</p>
-            <a href="http://stlmetro.link">Use the app</a>
+            <p>A web app that provides an easy and quick way to reference the train schedule, and works completely offline. To use, visit <a href="http://stlmetro.link">stlmetro.link</a>, add it to your homescreen, and you're ready to catch the train!</p>
+            <a class="launch-stlmetrolink" href="http://stlmetro.link">Launch stlmetro.link</a>
         </div>
-        <img src="">
 	</div>
 
 	<footer role="contentinfo" class="group">

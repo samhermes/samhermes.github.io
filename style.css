@@ -356,11 +356,15 @@ footer {
 	width: 200px;
 	padding: 70px 0 30px;
 }
+@media screen and (max-width: 500px) {
+	.stlmetrolink .project img {
+		width: 150px;
+	}
+}
 .stlmetrolink .project h2 {
 	text-align: center;
 	font-weight: normal;
 	margin: 0 0 10px;
-	font-family: "Helvetica Neue", sans-serif;
 }
 .stlmetrolink .project .type {
 	text-transform: uppercase;
@@ -369,20 +373,39 @@ footer {
 	margin: 0 0 50px;
 }
 .stlmetrolink .desc {
-	background: #fff;
-	max-width: 740px;
+	max-width: 640px;
 	margin: 0 auto;
-	padding: 30px 10px;
-}
-.stlmetrolink .desc a {
-	display: block;
-	padding: 10px 15px;
-	background: #329BD5;
-	text-transform: uppercase;
-	color: #fff;
-	max-width: 200px;
-	margin: 40px auto 5px;
 	text-align: center;
+	padding: 30px 0;
+}
+.stlmetrolink .desc p {
+	color: rgba(255,255,255,0.9);
+	margin: 0 0 1.4em;
+	width: 100%;
+}
+.stlmetrolink .desc p a {
+	color: rgba(255,255,255,0.7);
+	transition: color 0.1s;
+}
+.stlmetrolink .desc p a:hover {
+	color: rgba(255,255,255,0.9);
+}
+a.launch-stlmetrolink {
+	display: inline-block;
+	padding: 10px 25px;
+	background: rgba(49, 141, 203, 0.78);
+	text-transform: uppercase;
+	color: rgba(255,255,255,0.9);
+	margin: 10px 0 30px;
+	border: 1px solid rgba(255,255,255,0.3);
+	transition: border 0.1s;
+	border-radius: 3px;
+}
+a.launch-stlmetrolink:hover {
+	border-color: rgba(255,255,255,0.5);
+}
+.stlmetrolink .article-link {
+	font-size: 1em;
 }
 .stlmetrolink footer,
 .stlmetrolink .contact li a {
