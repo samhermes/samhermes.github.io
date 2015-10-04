@@ -189,6 +189,7 @@ header.home p {
 .projects-posts h3 {
 	text-transform: uppercase;
 	font-size: 0.9em;
+	font-weight: normal;
 	letter-spacing: 1px;
 }
 .projects {
