@@ -104,7 +104,6 @@ header p {
 }
 header.home p {
 	color: #515151;
-	text-align: center;
 	display: block;
 	margin: 0;
 	text-transform: uppercase;
@@ -117,7 +116,7 @@ header.home p {
 }
 @media screen and (max-width: 450px) {
 	.home .name img {
-		width: 240px;
+		width: 180px;
 		margin: 0 0 10px;
 	}
 	header.home {
@@ -127,7 +126,7 @@ header.home p {
 	}
 	header.home p {
 		text-align: left;
-		margin-left: ;
+		font-size: 0.5em;
 	}
 }
 
