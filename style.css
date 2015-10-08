@@ -8,7 +8,7 @@ html, body {
 	padding: 0;
 }
 body {
-	font-family: 'Quattrocento Sans', Helvetica, Arial, sans-serif;
+	font-family: 'Muli', Helvetica, Arial, sans-serif;
 	font-weight: 300;
 	min-height: 100%;
 	background: #f9f9f9;
@@ -158,10 +158,11 @@ header.home p {
 	display: block;
 }
 .recent-work h2 {
-	font-size: 0.8em;
-    font-weight: normal;
-    text-transform: uppercase;
-    margin: 10px 0 0;
+    font-size: 0.9em;
+    font-weight: 300;
+    text-align: center;
+    max-width: 230px;
+    margin: 15px auto 0;
 }
 @media screen and (max-width: 1000px) {
 	.recent-work ul li {
@@ -185,9 +186,8 @@ header.home p {
 }
 .projects-posts h3 {
 	text-transform: uppercase;
-	font-size: 0.9em;
-	font-weight: normal;
-	letter-spacing: 1px;
+	font-size: 0.8em;
+	font-weight: 300;
 	margin: 0 0 25px;
 }
 .projects {
@@ -202,7 +202,7 @@ header.home p {
 }
 .projects h4 {
 	font-size: 0.9em;
-    font-weight: normal;
+    font-weight: 300;
     text-align: center;
     max-width: 230px;
     margin: 15px auto 0;
@@ -227,7 +227,7 @@ header.home p {
 }
 .posts h4 {
 	font-size: 1.2em;
-	font-weight: normal;
+	font-weight: 300;
 	margin: 0;
 }
 .posts a:hover {
@@ -292,7 +292,6 @@ header.home p {
 .details .when {
 	margin: 0 0 10px;
 	font-size: 0.7em;
-	letter-spacing: 1px;
 	position: absolute;
 	bottom: 0;
 	right: 0;
@@ -315,8 +314,8 @@ header.home p {
 
 .post {
 	margin: 0 auto 40px;
-	max-width: 800px;
-	padding: 40px 0 20px;
+	max-width: 750px;
+	padding: 45px 0;
 	width: 92%;
 }
 .post .post-date {
@@ -328,11 +327,13 @@ header.home p {
 	font-size: 2em;
 	margin: 0 0 1em;
 	font-weight: 300;
+	letter-spacing: -0.3px;
 }
 .post p {
 	font-size: 1.3em;
-	line-height: 1.4;
+	line-height: 1.5;
 	margin: 1.2em 0;
+	letter-spacing: -0.3px;
 }
 
 
@@ -390,7 +391,7 @@ footer {
 .fourohfour .main h2 {
 	font-size: 4.04em;
 	color: #515151;
-	font-weight: normal;
+	font-weight: 300;
 	margin: 0;
 }
 .fourohfour .main a {
@@ -424,7 +425,7 @@ footer {
 }
 .stlmetrolink .project h2 {
 	text-align: center;
-	font-weight: normal;
+	font-weight: 300;
 	margin: 0 0 10px;
 }
 .stlmetrolink .project .type {
