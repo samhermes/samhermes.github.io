@@ -2,15 +2,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>St. Louis MetroLink Web App &mdash; Sam Hermes</title>
+    <title>Sam Hermes</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Sam Hermes">
     <meta name="description" content="Web developer in St. Louis, MO">
     <link href='https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,300' rel='stylesheet' type='text/css'>
+    <script src="../../js/prism.js"></script>
     <link rel="stylesheet" href="/style.css" type="text/css">
 </head>
 
-<body class="stlmetrolink">
+<body>
     <header role="banner" class="group">
         <div class="name">
             <a href="/">Sam Hermes</a>
@@ -21,15 +22,15 @@
             <li><a href="/about">About</a></li>
         </ul>
     </header>
-        
-    <div class="project">
-        <img src="../img/metrolink.svg">
-        <h2>St. Louis MetroLink Schedule</h2>
-        <div class="desc">
-            <p>A web app that provides an easy and quick way to reference the train schedule, and works completely offline. To use, visit <a href="http://stlmetro.link">stlmetro.link</a>, add it to your homescreen, and you're ready to catch the train!</p>
-            <a class="launch-stlmetrolink" href="http://stlmetro.link">Launch stlmetro.link</a>
-        </div>
-	</div>
+
+    <div class="post">
+        <time class="post-date">1/1/2016</time>
+        <h1>Add 1 hour to date &amp; time in PHP</h1>
+
+        <pre><code class="language-php">strtotime($time . '+ 1 hour');</code></pre>
+
+        <p>This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.</p>
+    </div>
 
 	<footer role="contentinfo" class="group">
         <ul class="contact">

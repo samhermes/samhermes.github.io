@@ -1,6 +1,6 @@
 html {
 	height: 100%;
-	background: #fff;
+	background: #f8f8f8;
 }
 html, body {
 	border:0;
@@ -11,8 +11,9 @@ body {
 	font-family: 'Rubik', sans-serif;
 	font-weight: 300;
 	font-size: 16px;
+	color: #1D1D1D;
 	min-height: 100%;
-	background: #fff;
+	background: #f8f8f8;
 }
 footer, header {
 	display: block;
@@ -38,7 +39,7 @@ header {
 	margin: 0 auto;
 	padding: 30px 0;
 	width: 100%;
-	width: 92%;
+	background: #fff;
 }
 .name {
 	float: left;
@@ -48,11 +49,12 @@ header {
 	font-size: 1.6em;
 	text-transform: uppercase;
 	letter-spacing: 2.2px;
+	margin-left: 4%;
 }
 header ul {
 	float: right;
 	list-style: none;
-	margin: 6px 0 0;
+	margin: 6px 4% 0 0;
 	padding: 0;
 }
 header li {
@@ -79,15 +81,11 @@ header li:first-child {
 		margin-left: 25px;
 	}
 }
-.main {
-	background: #f8f8f8;
-	width: 100%;
-}
 .latest-posts,
 .posts {
 	max-width: 800px;
 	width: 92%;
-	padding: 5% 0 6%;
+	padding: 5% 0 1%;
 	margin: 0 auto;
 	list-style: none;
 }
@@ -120,6 +118,22 @@ header li:first-child {
 	line-height: 1.5;
 	margin: 1em 0;
 }
+.view-all-posts {
+	text-align: center;
+}
+.view-all-posts a {
+	border: 1px solid #c1c1c1;
+	border-radius: 5px;
+	padding: 10px 20px;
+	font-size: 12px;
+	color: #707070;
+	text-transform: uppercase;
+	transition: 0.1s;
+}
+.view-all-posts a:hover {
+	border-color: #9a9a9a;
+	color: #585858;
+}
 
 
 /* POSTS */
@@ -127,7 +141,7 @@ header li:first-child {
 .post {
 	margin: 0 auto;
 	max-width: 800px;
-	padding: 5% 0 6%;
+	padding: 5% 0 3%;
 	width: 92%;
 }
 .post .post-date {
@@ -152,9 +166,9 @@ header li:first-child {
 /* WORK */
 
 .work {
-	width: 97.6%;
+	width: 97.2%;
 	max-width: 1556px;
-	padding: 4% 0 6%;
+	padding: 4% 0 0;
 	margin: 0 auto;
 }
 .work ul {
@@ -167,7 +181,7 @@ header li:first-child {
 	width: 33.333333%;
 	display: inline-block;
 	margin: 0 0 75px;
-	padding: 0 2.8%;
+	padding: 0 2.6%;
 	vertical-align: top;
 	box-sizing: border-box;
 }
@@ -206,7 +220,7 @@ header li:first-child {
 .about {
 	margin: 0 auto;
 	max-width: 800px;
-	padding: 5% 0 6%;
+	padding: 5% 0 0;
 	width: 92%;
 }
 .about h1 {
@@ -219,8 +233,16 @@ header li:first-child {
 	line-height: 1.6;
 	margin: 1.2em 0;
 }
+.about img {
+	max-width: 200px;
+	margin: 0 auto 25px;
+	display: block;
+}
 .about .intro {
 	font-size: 1.5em;
+	max-width: 450px;
+	margin: 0 auto 50px;
+	text-align: center;
 }
 
 
@@ -228,7 +250,7 @@ header li:first-child {
 
 footer {
 	margin: 0 auto;
-	padding: 25px 0 30px;
+	padding: 9% 0 30px;
 	clear: both;
 	color: #999;
 	text-align: left;
@@ -257,14 +279,11 @@ footer {
 }
 .contact li a {
 	color: #999;
-	-webkit-transition: color .1s linear;
-	transition: color .1s linear;
+	-webkit-transition: .1s linear;
+	transition: .1s linear;
 }
 .contact li a:hover {
 	color: #666;
-}
-.border {
-	border-bottom: 1px solid #CCC;
 }
 .fourohfour .main {
 	max-width: 1200px;
@@ -302,7 +321,7 @@ footer {
 	background: none;
 }
 .stlmetrolink .name a,
-.stlmetrolink header p {
+.stlmetrolink header a {
 	color: #fff;
 }
 .stlmetrolink .project {
@@ -372,4 +391,100 @@ a.launch-stlmetrolink:hover {
 }
 .stlmetrolink .contact li a:hover {
 	color: rgba(255,255,255,0.5);
+}
+code[class*="language-"],
+pre[class*="language-"] {
+	color: #f8f8f2;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	direction: ltr;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+pre[class*="language-"] {
+	padding: 1em;
+	overflow: auto;
+	border-radius: 5px;
+}
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #1f2223;
+}
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+.token.punctuation {
+	color: #f8f8f2;
+}
+.namespace {
+	opacity: .7;
+}
+.token.property,
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #f92672;
+}
+.token.boolean,
+.token.number {
+	color: #ae81ff;
+}
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #a6e22e;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+	color: #f8f8f2;
+}
+.token.atrule,
+.token.attr-value,
+.token.function {
+	color: #e6db74;
+}
+.token.keyword {
+	color: #66d9ef;
+}
+.token.regex,
+.token.important {
+	color: #fd971f;
+}
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+.token.entity {
+	cursor: help;
 }

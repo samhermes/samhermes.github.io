@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sam Hermes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Sam Hermes">
+    <meta name="description" content="Web developer in St. Louis, MO">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,300' rel='stylesheet' type='text/css'>
+    <script src="../../js/prism.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+
+<body>
+    <header role="banner" class="group">
+        <div class="name">
+            <a href="/">Sam Hermes</a>
+        </div>
+        <ul>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="/work">Work</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </header>
+
+    <div class="post">
+        <time class="post-date">1/1/2016</time>
+        <h1>Using vertical height media queries with fixed headers</h1>
+
+        <p>We all know lots of people who have been #blessed with large screens to work on, and so setting up a fixed header can make a lot of sense. Why not use that extra screen real estate? The philosophies of responsive design can and should apply to this as well. Screen height should be taken into account, and fixed headers should be disabled if there is not enough height for them to be useful (although, I would argue that they are never useful).</p>
+
+        <p>Let's say that the fixed header on a site is 80px tall. Nothing too unruly, but it might get in the way of someone on a smaller laptop as they are browsing your site. In this example, you could set the header to fixed if the viewport is at least 800px tall. Any shorter and let that header scroll away out of sight.</p>
+
+
+<pre><code class="language-css">@media screen and (min-height: 800px) { 
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    body {
+        margin-top: 80px;
+    }
+}</code></pre>
+
+        <p>You’ll want to replace the space you’re creating when the header is fixed by applying the height of the header as margin-top of the body element.</p>
+
+        <p>To take this a bit further, you could combine this with a max-width media query so that the header would not be fixed below a specified width, something like 600px. In that way, you are only applying a fixed header when there is plenty of room.</p>
+    </div>
+
+	<footer role="contentinfo" class="group">
+        <ul class="contact">
+            <li><a href="https://github.com/samhermes">GitHub</a></li>
+            <li><a href="https://twitter.com/samhermes">Twitter</a></li>
+        </ul>
+        <p class="copyright">&copy; 2016 Sam Hermes</p>
+    </footer>
+</body>
+</html>
