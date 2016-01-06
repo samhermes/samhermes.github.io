@@ -73,19 +73,47 @@ header li:first-child {
 header li:last-child {
 	margin-right: -5px;
 }
+.toggle {
+	display: none;
+}
 @media screen and (max-width: 500px) {
 	header {
 		padding: 20px 0;
 	}
 	.name {
-		float: none;
 	}
 	header ul {
 		float: none;
-		margin: 12px 0 0 4%;
+		display: none;
+		margin: 0 0 -20px;
+		padding-top: 10px;
+		clear: both;
 	}
-	header li:first-child {
-		margin-left: -5px;
+	header li {
+		float: none;
+		margin: 0;
+		font-size: 14px;
+		text-align: center;
+	}
+	header li:last-child {
+		margin: 0;
+		border-bottom: 1px solid rgb(240, 240, 240);
+	}
+	header li a {
+		padding: 10px 0;
+		border-top: 1px solid rgb(240, 240, 240);
+	}
+	.toggle {
+		display: block;
+		float: right;
+		margin-right: 4%;
+		padding: 3px 0 0;
+	}
+	.toggle.open img {
+		transform: rotate(180deg);
+	}
+	.open + ul {
+		display: block;
 	}
 }
 .latest-posts,
@@ -95,6 +123,12 @@ header li:last-child {
 	padding: 5% 0 1%;
 	margin: 0 auto;
 	list-style: none;
+}
+@media screen and (max-width: 500px) {
+	.latest-posts,
+	.posts {
+		padding-top: 8%;
+	}
 }
 .latest-posts li {
 	margin-bottom: 10%;
@@ -273,11 +307,16 @@ header li:last-child {
 
 footer {
 	margin: 0 auto;
-	padding: 9% 0 35px;
+	padding: 150px 0 35px;
 	clear: both;
 	color: #999;
 	text-align: left;
 	background: #f8f8f8;
+}
+@media screen and (max-width: 700px) {
+	footer {
+		padding: 80px 0 3.5%;
+	}
 }
 .copyright {
 	margin: 0 0 0 4%;
@@ -342,6 +381,10 @@ footer {
 .stlmetrolink header,
 .stlmetrolink footer {
 	background: none;
+}
+.stlmetrolink .toggle img {
+	-webkit-filter: contrast(200%);
+	filter: contrast(200%);
 }
 .stlmetrolink .name a,
 .stlmetrolink header a {

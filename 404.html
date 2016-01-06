@@ -15,6 +15,7 @@
         <div class="name">
             <a href="/">Sam Hermes</a>
         </div>
+        <div class="toggle"><img src="/img/toggle.svg"></div>
         <ul>
             <li><a href="/posts">Posts</a></li>
             <li><a href="/work">Work</a></li>
@@ -26,5 +27,11 @@
         <h2>404</h2>
         <p>This page cannot be found.<br><a href="/">Return to the homepage</a></p>
 	</div>
+    <script>
+        var menu = document.querySelector('.toggle');
+        menu.onclick = function(e){
+            menu.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>

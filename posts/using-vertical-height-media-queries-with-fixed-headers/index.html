@@ -16,6 +16,7 @@
         <div class="name">
             <a href="/">Sam Hermes</a>
         </div>
+        <div class="toggle"><img src="/img/toggle.svg"></div>
         <ul>
             <li><a href="/posts">Posts</a></li>
             <li><a href="/work">Work</a></li>
@@ -55,5 +56,12 @@
         </ul>
         <p class="copyright">&copy; 2016 Sam Hermes</p>
     </footer>
+    
+    <script>
+        var menu = document.querySelector('.toggle');
+        menu.onclick = function(e){
+            menu.classList.toggle('open');
+        }
+    </script>
 </body>
 </html>
