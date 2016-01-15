@@ -231,8 +231,27 @@ header li:last-child {
 .work {
 	width: 97.2%;
 	max-width: 1556px;
-	padding: 4% 0 0;
+	padding: 0;
 	margin: 0 auto;
+}
+.work header {
+	max-width: 1476px;
+	padding: 0;
+	margin: 50px auto 60px;
+	background: none;
+}
+.work h1 {
+	font-size: 1.4em;
+	font-weight: normal;
+	text-transform: uppercase;
+	margin: 0 0 10px;
+	padding: 0 2.6%;
+}
+.work header p {
+	font-size: 1em;
+	margin: 0;
+	max-width: 550px;
+	padding: 0 2.6%;
 }
 .work ul {
 	margin: 0 auto;
@@ -250,6 +269,7 @@ header li:last-child {
 }
 .work ul li img {
 	display: block;
+	border: 1px solid rgb(240, 240, 240);
 }
 .work h2 {
     font-size: 1.1em;
