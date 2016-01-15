@@ -202,6 +202,11 @@ header li:last-child {
 	padding: 5% 0 3%;
 	width: 92%;
 }
+@media screen and (max-width: 500px) {
+	.post {
+		padding-top: 8%;
+	}
+}
 .post .post-date {
 	font-size: 1em;
 	margin: 0 0 10px;
