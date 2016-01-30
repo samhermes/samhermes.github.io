@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Sam Hermes</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="author" content="Sam Hermes">
+    <meta name="description" content="Web developer in St. Louis, MO">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,300' rel='stylesheet' type='text/css'>
+    <script src="../../js/prism.js"></script>
+    <link rel="stylesheet" href="/style.css" type="text/css">
+</head>
+
+<body>
+    <header role="banner" class="group">
+        <div class="name">
+            <a href="/">Sam Hermes</a>
+        </div>
+        <div class="toggle"><img src="/img/toggle.svg"></div>
+        <ul>
+            <li><a href="/posts">Posts</a></li>
+            <li><a href="/work">Work</a></li>
+            
+        </ul>
+    </header>
+
+    <div class="post">
+        <time class="post-date">1/30/2016</time>
+        <h1>Output featured image caption in WordPress</h1>
+
+        <p>It's relatively easy and well documented to output a featured image, but getting the caption is a little trickier. Here's the code I use:</p>
+
+<pre><code class="language-php">$post_thumbnail_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
+
+if(!empty($post_thumbnail_caption)) {
+    echo '&lt;p class="featured-image-caption"&gt;' . $post_thumbnail_caption . '&lt;/p&gt;';
+}</code></pre>
+
+    </div>
+
+	<footer role="contentinfo" class="group">
+        <ul class="contact">
+            <li><a href="https://github.com/samhermes">GitHub</a></li>
+            <li><a href="https://twitter.com/samhermes">Twitter</a></li>
+        </ul>
+        <p class="copyright">&copy; 2016 Sam Hermes</p>
+    </footer>
+    
+    <script>
+        var menu = document.querySelector('.toggle');
+        menu.onclick = function(e){
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
