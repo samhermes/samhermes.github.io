@@ -224,6 +224,11 @@ header li:last-child {
 	line-height: 1.6;
 	margin: 1.2em 0;
 }
+.post .last-updated {
+	text-transform: uppercase;
+	font-size: 0.8em;
+	margin: 3em 0 0
+}
 
 
 /* WORK */
