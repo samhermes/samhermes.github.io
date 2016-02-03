@@ -20,7 +20,7 @@
         <ul>
             <li><a href="/posts">Posts</a></li>
             <li><a href="/work">Work</a></li>
-            
+
         </ul>
     </header>
 
@@ -33,7 +33,6 @@
 <pre><code class="language-php">$post_thumbnail_caption = get_post( get_post_thumbnail_id() )->post_excerpt;
 
 if(!empty($post_thumbnail_caption)) {
-    echo '&lt;p class="featured-image-caption"&gt;' . $post_thumbnail_caption . '&lt;/p&gt;';
 }</code></pre>
 
     </div>
@@ -45,7 +44,6 @@ if(!empty($post_thumbnail_caption)) {
         </ul>
         <p class="copyright">&copy; 2016 Sam Hermes</p>
     </footer>
-    
     <script>
         var menu = document.querySelector('.toggle');
         menu.onclick = function(e){
