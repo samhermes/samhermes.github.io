@@ -2,12 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sam Hermes</title>
-    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
-</description>
+    <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 09 Feb 2016 22:23:16 -0600</pubDate>
-    <lastBuildDate>Tue, 09 Feb 2016 22:23:16 -0600</lastBuildDate>
+    <pubDate>Wed, 10 Feb 2016 13:09:51 -0600</pubDate>
+    <lastBuildDate>Wed, 10 Feb 2016 13:09:51 -0600</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
     
       <item>
