@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sam Hermes</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>http://samhermes.com/</link>
+    <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Tue, 09 Feb 2016 22:15:04 -0600</pubDate>
+    <lastBuildDate>Tue, 09 Feb 2016 22:15:04 -0600</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Output featured image caption in WordPress</title>
+        <description>&lt;p&gt;It’s relatively easy and well documented to output a featured image, but getting the caption is a little trickier. Here’s the code I use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;$post_thumbnail_caption = get_post( get_post_thumbnail_id() )-&amp;gt;post_excerpt;
+
+if ( ! empty( $post_thumbnail_caption ) ) {
+    echo &#39;&amp;lt;p class=&quot;featured-image-caption&quot;&amp;gt;&#39; . esc_html( $post_thumbnail_caption ) . &#39;&amp;lt;/p&amp;gt;&#39;;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Note: If you are expecting to output HTML inside captions, use &lt;code&gt;wp_kses_post()&lt;/code&gt; in place of &lt;code&gt;esc_html()&lt;/code&gt;. While not as performant, it allows the same tags that are allowed inside post content, such as links, italics, bolding, etc.&lt;/p&gt;
+
+&lt;p class=&quot;last-updated&quot;&gt;Last Updated: 2/3/2016&lt;/p&gt;
+</description>
+        <pubDate>Sat, 30 Jan 2016 12:00:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/output-featured-image-caption-wordpress/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/output-featured-image-caption-wordpress/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Add 1 hour to date &amp; time in PHP</title>
+        <description>&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;strtotime($time . &#39;+ 1 hour&#39;);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Jan 2016 12:00:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Using vertical height media queries with fixed headers</title>
+        <description>&lt;p&gt;On a site with tall pages, setting up a fixed header can make a lot of sense. Why not use that extra screen real estate? The philosophies of responsive design can and should apply to this as well. Screen height should be taken into account, and fixed headers should be disabled if there is not enough height for them to be useful (although, I would argue that they are never useful).&lt;/p&gt;
+
+&lt;p&gt;Let’s say that the fixed header on a site is 80px tall. Nothing too unruly, but it might get in the way of someone on a smaller laptop as they are browsing your site. In this example, you could set the header to fixed if the viewport is at least 800px tall. Any shorter and let that header scroll away out of sight.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;@media screen and (min-height: 800px) {
+    header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    body {
+        margin-top: 80px;
+    }
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You’ll want to replace the space you’re creating when the header is fixed by applying the height of the header as margin-top of the body element.&lt;/p&gt;
+
+&lt;p&gt;To take this a bit further, you could combine this with a max-width media query so that the header would not be fixed below a specified width, something like 600px. In that way, you are only applying a fixed header when there is plenty of room.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 03 Jan 2016 12:00:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/using-vertical-height-media-queries-with-fixed-headers/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/using-vertical-height-media-queries-with-fixed-headers/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Designing for every moment</title>
+        <description>&lt;p&gt;Responsive design is truly about each and every point in between the smallest supported viewport and the largest, which leaves a lot of possibilities. If truly designing for a fully responsive experience, you should give attention to the awkward moments of change. One of those moments is when an element comes into contact with the edge of the screen.&lt;/p&gt;
+
+&lt;p&gt;If there is a centered image on the page with no border or additional styles around it, what happens when the width of the browser window is about 10px wider than the image? It leaves a small gutter along each side. Is this an issue? Maybe not. I still think it deserves consideration.&lt;/p&gt;
+
+&lt;p&gt;It depends on the case, but on a few occasions I have adjusted the behavior of those images so that there are no awkward in-between moments. When the image got to have less than 10px on each side, I stretched the image to fill the entire width of the screen. This is usually okay, as long as the image has a little extra resolution to give. Of course, we wouldn’t want to stretch an image beyond it’s natural size.&lt;/p&gt;
+
+&lt;p&gt;If this is applied to an image, this means that there are no situations where the image has a small gutter along each side, which means that each and every moment along the responsive spectrum has been thought of and cared for.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 02 Jan 2016 12:00:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/designing-for-every-moment/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/designing-for-every-moment/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Giving back</title>
+        <description>&lt;p&gt;Everything I’ve learned about working on the web, I’ve learned on the web. From reading blogs to doing Treehouse courses to simply reading Twitter, it all took place on one website or another. Up to this point, I’ve really only been taking things in. I don’t think it’s a bad thing, I’ve simply been learning as much as I can. However, I think the time has come that I try to give back a little.&lt;/p&gt;
+
+&lt;p&gt;I am switching my website from portfolio to blog, and starting to share what I know. In my experience, when searching for an answer to a specific question, I know that a short, concise post can be all it takes to put the last piece into a puzzle. I’ll be taking that approach, posting snippets of code and quick explanations of how I solved a problem.&lt;/p&gt;
+
+&lt;p&gt;If this is the first post you’ve read here, then there is already more! Head back to posts to read them.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 01 Jan 2016 12:00:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/giving-back/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/giving-back/</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>

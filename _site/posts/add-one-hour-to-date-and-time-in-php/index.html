@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Add 1 hour to date &amp; time in PHP</title>
+  <meta name="description" content="This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and...">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+
+  
+  <script src='/js/prism.js' type="text/javascript"></script>
+  
+
+</head>
+
+
+  <body>
+
+    <header role="banner" class="site-header group">
+  <div class="name">
+    <a href="/">Sam Hermes</a>
+  </div>
+  <div class="toggle"><img src="/img/toggle.svg"></div>
+  <ul>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/work">Work</a></li>
+  </ul>
+</header>
+
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2016-01-04T12:00:00-06:00" itemprop="datePublished">1/4/2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Add 1 hour to date & time in PHP</h1>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <pre><code class="language-php">strtotime($time . '+ 1 hour');</code></pre>
+
+<p>This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.</p>
+
+  </div>
+
+</article>
+
+
+    <footer role="contentinfo" class="group">
+  <ul class="contact">
+    <li><a href="https://github.com/samhermes">GitHub</a></li>
+    <li><a href="https://twitter.com/samhermes">Twitter</a></li>
+  </ul>
+  <p class="copyright">&copy; 2016 Sam Hermes</p>
+</footer>
+
+
+  </body>
+
+</html>

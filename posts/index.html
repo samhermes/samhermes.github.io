@@ -1,64 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Sam Hermes</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <meta name="author" content="Sam Hermes">
-    <meta name="description" content="Web developer in St. Louis, MO">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,300' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/style.css" type="text/css">
-</head>
+---
+layout: default
+---
+<ul class="post-list">
+  {% for post in site.posts %}
+    <li>
+      <span class="post-meta">{{ post.date | date: "%-m/%-d/%Y" }}</span>
 
-<body>
-    <header role="banner" class="group">
-        <div class="name">
-            <a href="/">Sam Hermes</a>
-        </div>
-        <div class="toggle"><img src="/img/toggle.svg"></div>
-        <ul>
-            <li><a href="/posts">Posts</a></li>
-            <li><a href="/work">Work</a></li>
-            
-        </ul>
-    </header>
-
-    <ul class="posts">
-        <li>
-            <time>1/30/2016</time>
-            <h2><a href="/posts/output-featured-image-caption-wordpress">Output featured image caption in WordPress</a></h2>
-        </li>
-        <li>
-            <time>1/4/2016</time>
-            <h2><a href="/posts/add-one-hour-to-date-and-time-in-php">Add 1 hour to date &amp; time in PHP</a></h2>
-        </li>
-        <li>
-            <time>1/3/2016</time>
-            <h2><a href="/posts/using-vertical-height-media-queries-with-fixed-headers">Using vertical height media queries with fixed headers</a></h2>
-        </li>
-        <li>
-            <time>1/2/2016</time>
-            <h2><a href="/posts/designing-for-every-moment">Designing for every moment</a></h2>
-        </li>
-        <li>
-            <time>1/1/2016</time>
-            <h2><a href="/posts/giving-back">Giving back</a></h2>
-        </li>
-    </ul>
-
-    <footer role="contentinfo" class="group">
-        <ul class="contact">
-            <li><a href="https://github.com/samhermes">GitHub</a></li>
-            <li><a href="https://twitter.com/samhermes">Twitter</a></li>
-        </ul>
-        <p class="copyright">&copy; 2016 Sam Hermes</p>
-    </footer>
-    
-    <script>
-        var menu = document.querySelector('.toggle');
-        menu.onclick = function(e){
-            menu.classList.toggle('open');
-        }
-    </script>
-</body>
-</html>
+      <h2>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+    </li>
+  {% endfor %}
+</ul>
