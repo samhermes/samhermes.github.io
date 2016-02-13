@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Setting up Jekyll</title>
+  <meta name="description" content="I recently switched this site to Jekyll, and I thought I'd share the setup process.">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat|Rubik:400,300' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://samhermes.com/posts/setting-up-jekyll/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header role="banner" class="site-header group">
+  <div class="name">
+    <a href="/">Sam Hermes</a>
+  </div>
+  <div class="toggle"><img src="/img/toggle.svg"></div>
+  <ul>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/work">Work</a></li>
+  </ul>
+</header>
+
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2016-02-13T01:15:00-06:00" itemprop="datePublished">2/13/2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Setting up Jekyll</h1>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I recently switched this site to Jekyll, and I thought I’d share the setup process. Jekyll was a bit slow the last time I used it, so I was excited to find that the 3.0.0 update included speed improvements that make updates available in the browser almost immediately. Here are some of the configuration changes I made outside of the defaults:</p>
+
+<ul>
+  <li>Changed the permalink structure to <code class="highlighter-rouge">/posts/:title/</code>. I made this update in config.yml, refreshed the site, and nothing changed. A little digging, and I found out that changes to config.yml will not be processed while <code class="highlighter-rouge">jekyll serve</code> is running. You’ll need to ctrl-c and <code class="highlighter-rouge">jekyll serve</code> again.</li>
+  <li>I was using m/d/Y to display dates, and so in looking at how to set that up in Jekyll, I found an <a href="http://alanwsmith.com/jekyll-liquid-date-formatting-examples">article from Allan W. Smith</a> that detailed all of the possibilities. It can be accomplished with <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">post.date</span><span class="w"> </span><span class="err">|</span><span class="w"> </span><span class="err">date:</span><span class="w"> </span><span class="nt">"%-m/%-d/%Y"</span><span class="w"> </span><span class="err">}}</span></code>.</li>
+  <li>I display excerpts from posts on the homepage, and in order to specify those manually, you can add an <code class="highlighter-rouge">excerpt:</code> declaration to the YAML front matter on each post and specify the excerpt there. It can then be output with <code class="highlighter-rouge"><span class="p">{</span><span class="err">{</span><span class="w"> </span><span class="err">post.excerpt</span><span class="w"> </span><span class="p">}</span><span class="err">}</span></code>. Jekyll will automatically give you an excerpt, but for posts that start with a code snippet, that was not ideal.</li>
+  <li>For posts that include code snippets, I use <a href="http://prismjs.com/">prism.js</a> for formatting. To include the file only on posts that use it, I add <code class="highlighter-rouge">custom_js: prism</code>  to the front matter. In footer.html, I’ve added the following, which takes care of outputting the script tag:
+    <pre><code class="language-markup">{% if page.custom_js %}
+  {% for js_file in page.custom_js %}</code>
+    <code class="language-javascript">&lt;script src='/js/{{ js_file }}.js' type="text/javascript"&gt;&lt;/script&gt;</code>
+  <code class="language-markup">{% endfor %}
+{% endif %}</code></pre>
+    <p>This also allows for the possibility of additional js files, so I can just add the name of a file I’d like to include to the <code class="highlighter-rouge">custom_js</code> declaration. Learned this trick on <a href="http://mattgemmell.com/page-specific-assets-with-jekyll/">Matt Gemmell’s site</a>.</p>
+  </li>
+  <li>I wanted my 404 page to live at /404.html. By default, Jekyll takes that and moves it to /404/index.html. To change that, I added <code class="highlighter-rouge">permalink: /404.html</code> to the YAML front matter on the page.</li>
+</ul>
+
+<p>Phew. That was more that I thought. Hope this helps speed things up for you.</p>
+
+  </div>
+
+</article>
+
+
+    <footer role="contentinfo" class="group">
+  <ul class="contact">
+    <li><a href="https://github.com/samhermes">GitHub</a></li>
+    <li><a href="https://twitter.com/samhermes">Twitter</a></li>
+  </ul>
+  <p class="copyright">&copy; 2016 Sam Hermes</p>
+</footer>
+
+  
+<script src='/js/prism.js' type="text/javascript"></script>
+  
+
+
+
+  </body>
+
+</html>

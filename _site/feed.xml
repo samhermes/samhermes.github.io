@@ -5,9 +5,37 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 13 Feb 2016 13:03:12 -0600</pubDate>
-    <lastBuildDate>Sat, 13 Feb 2016 13:03:12 -0600</lastBuildDate>
+    <pubDate>Sat, 13 Feb 2016 15:22:46 -0600</pubDate>
+    <lastBuildDate>Sat, 13 Feb 2016 15:22:46 -0600</lastBuildDate>
     <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Setting up Jekyll</title>
+        <description>&lt;p&gt;I recently switched this site to Jekyll, and I thought I’d share the setup process. Jekyll was a bit slow the last time I used it, so I was excited to find that the 3.0.0 update included speed improvements that make updates available in the browser almost immediately. Here are some of the configuration changes I made outside of the defaults:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Changed the permalink structure to &lt;code class=&quot;highlighter-rouge&quot;&gt;/posts/:title/&lt;/code&gt;. I made this update in config.yml, refreshed the site, and nothing changed. A little digging, and I found out that changes to config.yml will not be processed while &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; is running. You’ll need to ctrl-c and &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt; again.&lt;/li&gt;
+  &lt;li&gt;I was using m/d/Y to display dates, and so in looking at how to set that up in Jekyll, I found an &lt;a href=&quot;http://alanwsmith.com/jekyll-liquid-date-formatting-examples&quot;&gt;article from Allan W. Smith&lt;/a&gt; that detailed all of the possibilities. It can be accomplished with &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post.date&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;date:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&quot;%-m/%-d/%Y&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}}&lt;/span&gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;I display excerpts from posts on the homepage, and in order to specify those manually, you can add an &lt;code class=&quot;highlighter-rouge&quot;&gt;excerpt:&lt;/code&gt; declaration to the YAML front matter on each post and specify the excerpt there. It can then be output with &lt;code class=&quot;highlighter-rouge&quot;&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;post.excerpt&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;}&lt;/span&gt;&lt;/code&gt;. Jekyll will automatically give you an excerpt, but for posts that start with a code snippet, that was not ideal.&lt;/li&gt;
+  &lt;li&gt;For posts that include code snippets, I use &lt;a href=&quot;http://prismjs.com/&quot;&gt;prism.js&lt;/a&gt; for formatting. To include the file only on posts that use it, I add &lt;code class=&quot;highlighter-rouge&quot;&gt;custom_js: prism&lt;/code&gt;  to the front matter. In footer.html, I’ve added the following, which takes care of outputting the script tag:
+    &lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;{% if page.custom_js %}
+  {% for js_file in page.custom_js %}&lt;/code&gt;
+    &lt;code class=&quot;language-javascript&quot;&gt;&amp;lt;script src=&#39;/js/{{ js_file }}.js&#39; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;&lt;/code&gt;
+  &lt;code class=&quot;language-markup&quot;&gt;{% endfor %}
+{% endif %}&lt;/code&gt;&lt;/pre&gt;
+    &lt;p&gt;This also allows for the possibility of additional js files, so I can just add the name of a file I’d like to include to the &lt;code class=&quot;highlighter-rouge&quot;&gt;custom_js&lt;/code&gt; declaration. Learned this trick on &lt;a href=&quot;http://mattgemmell.com/page-specific-assets-with-jekyll/&quot;&gt;Matt Gemmell’s site&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;I wanted my 404 page to live at /404.html. By default, Jekyll takes that and moves it to /404/index.html. To change that, I added &lt;code class=&quot;highlighter-rouge&quot;&gt;permalink: /404.html&lt;/code&gt; to the YAML front matter on the page.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Phew. That was more that I thought. Hope this helps speed things up for you.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Feb 2016 01:15:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/setting-up-jekyll/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/setting-up-jekyll/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Output featured image caption in WordPress</title>
