@@ -6,7 +6,7 @@
   padding: 30px 0;
   width: 100%;
   background: #fff;
-  box-shadow: 0px -5px 15px gainsboro;
+  box-shadow: 0px -7px 15px gainsboro;
   ul {
   	float: right;
   	list-style: none;
@@ -75,8 +75,10 @@
 		display: block;
 		float: right;
     cursor: pointer;
-		margin-right: 4%;
-		padding: 3px 0 0;
+    padding: 23px 4% 24px 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
 	}
 	.toggle.open img {
 		transform: rotate(180deg);
