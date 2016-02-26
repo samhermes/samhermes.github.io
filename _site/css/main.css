@@ -230,8 +230,7 @@ pre[class*="language-"] {
 .site-header {
   margin: 0 auto;
   padding: 25px 0;
-  width: 100%;
-  box-shadow: 0px -7px 15px gainsboro; }
+  width: 100%; }
   .site-header ul {
     float: right;
     list-style: none;
