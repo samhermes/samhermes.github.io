@@ -3,13 +3,16 @@
  */
 .site-header {
   margin: 0 auto;
-  padding: 25px 0;
+  padding: 30px 0 25px;
   width: 100%;
   ul {
   	float: right;
   	list-style: none;
-  	margin: 0 4% 0 0;
+  	margin: 0 45px 0 0;
   	padding: 0;
+    @media screen and (max-width: 865px) {
+      margin-right: 4%;
+    }
   }
   li {
     float: left;
@@ -60,7 +63,10 @@
 	font-size: 1.6em;
 	text-transform: uppercase;
 	letter-spacing: 2px;
-	margin-left: 4%;
+  margin-left: 45px;
+  @media screen and (max-width: 865px) {
+    margin-left: 4%;
+  }
 }
 .toggle {
 	display: none;
@@ -85,75 +91,6 @@
 		display: block;
 	}
 }
-
-/**
- * Site footer
- */
-.site-footer {
-    border-top: 1px solid $grey-color-light;
-    padding: $spacing-unit 0;
-}
-
-.footer-heading {
-    font-size: 18px;
-    margin-bottom: $spacing-unit / 2;
-}
-
-.contact-list,
-.social-media-list {
-    list-style: none;
-    margin-left: 0;
-}
-
-.footer-col-wrapper {
-    font-size: 15px;
-    color: $grey-color;
-    margin-left: -$spacing-unit / 2;
-    @extend %clearfix;
-}
-
-.footer-col {
-    float: left;
-    margin-bottom: $spacing-unit / 2;
-    padding-left: $spacing-unit / 2;
-}
-
-.footer-col-1 {
-    width: -webkit-calc(35% - (#{$spacing-unit} / 2));
-    width:         calc(35% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-2 {
-    width: -webkit-calc(20% - (#{$spacing-unit} / 2));
-    width:         calc(20% - (#{$spacing-unit} / 2));
-}
-
-.footer-col-3 {
-    width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-    width:         calc(45% - (#{$spacing-unit} / 2));
-}
-
-@include media-query($on-laptop) {
-    .footer-col-1,
-    .footer-col-2 {
-        width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-        width:         calc(50% - (#{$spacing-unit} / 2));
-    }
-
-    .footer-col-3 {
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
-@include media-query($on-palm) {
-    .footer-col {
-        float: none;
-        width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-        width:         calc(100% - (#{$spacing-unit} / 2));
-    }
-}
-
 
 /**
  * Latest posts
@@ -419,21 +356,26 @@ footer {
 	clear: both;
 	color: #999;
 	text-align: left;
-	background: #f8f8f8;
   @media screen and (max-width: 700px) {
   	padding: 80px 0 4.5%;
   }
   .copyright {
-  	margin: 0 0 0 4%;
+  	margin: 0 0 0 45px;
   	padding: 0;
   	font-size: 0.8em;
+    @media screen and (max-width: 865px) {
+      margin-left: 4%;
+    }
   }
   .contact {
   	list-style: none;
-  	margin: 0 4% 0 0;
+  	margin: 0 45px 0 0;
   	padding: 0;
   	font-size: 0.9em;
   	float: right;
+    @media screen and (max-width: 865px) {
+      margin-right: 4%;
+    }
   }
   .contact li {
   	padding: 0;
