@@ -5,9 +5,29 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 03 Mar 2016 22:26:20 -0600</pubDate>
-    <lastBuildDate>Thu, 03 Mar 2016 22:26:20 -0600</lastBuildDate>
-    <generator>Jekyll v3.1.2</generator>
+    <pubDate>Tue, 08 Mar 2016 14:33:08 -0600</pubDate>
+    <lastBuildDate>Tue, 08 Mar 2016 14:33:08 -0600</lastBuildDate>
+    <generator>Jekyll v3.1.1</generator>
+    
+      <item>
+        <title>Toggling elements with JavaScript</title>
+        <description>&lt;p&gt;One of the most performant ways to toggle an element with JavaScript is to apply and remove a class. Paul Irish pointed out last year that using jQuery’s .hide(), .show(), and .toggle() methods are very costly. I’ve used/am currently using each of these, as they are really easy to understand and implement. However, you’ll see that a plain JavaScript approach isn’t too difficult.&lt;/p&gt;
+
+&lt;p&gt;For my site, I needed a toggle for the menu on small screens. I used the following to add and remove a class named ‘open’, which has the proper styles to show the menu. In this case, it is performed when an element with the class of ‘toggle’ is clicked.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;&amp;lt;script&amp;gt;
+  var menu = document.querySelector(&#39;.toggle&#39;);
+  menu.onclick = function(){
+    menu.classList.toggle(&#39;open&#39;);
+  }
+&amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+</description>
+        <pubDate>Tue, 08 Mar 2016 14:20:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/toggling-elements-with-javascript/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/toggling-elements-with-javascript/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Setting up Jekyll</title>
