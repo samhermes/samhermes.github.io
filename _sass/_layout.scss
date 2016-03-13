@@ -256,6 +256,9 @@
     margin-bottom: 15px;
     font-size: 1.3em;
     line-height: 1.6;
+    @media screen and (max-width: 500px) {
+      font-size: 1.1em;
+    }
     pre {
       margin-top: 10px;
     }
