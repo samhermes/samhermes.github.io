@@ -252,7 +252,7 @@ pre[class*="language-"] {
       display: block; }
       @media screen and (min-width: 500px) {
         .site-header li a:hover {
-          border-bottom: 1px solid #ccc; } }
+          border-bottom: 1px solid #828282; } }
     .site-header li:first-child {
       margin-left: 0; }
     .site-header li:last-child {
@@ -334,11 +334,8 @@ pre[class*="language-"] {
 
 .post-list h2 {
   font-size: 1.5em;
-  font-weight: 300;
+  font-weight: 400;
   margin: 0; }
-
-.post-list.home h2 {
-  font-weight: 400; }
 
 .post-list a:hover {
   text-decoration: underline; }
