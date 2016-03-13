@@ -322,6 +322,9 @@ pre[class*="language-"] {
   padding: 5% 0 1%;
   margin: 0 auto;
   list-style: none; }
+  @media screen and (max-width: 500px) {
+    .post-list {
+      padding-bottom: 4%; } }
 
 .post-list li {
   margin-bottom: 40px; }
@@ -381,6 +384,9 @@ pre[class*="language-"] {
   transition: 0.1s;
   display: inline-block;
   letter-spacing: 0.5px; }
+  @media screen and (max-width: 500px) {
+    .view-all-posts a {
+      background: none; } }
 
 .view-all-posts a:hover {
   background: #E8E8E8; }
