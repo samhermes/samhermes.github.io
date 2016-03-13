@@ -1,17 +1,20 @@
-/**
- * Site header
- */
+
+/* Site Header */
+
 .site-header {
-  margin: 0 auto;
   padding: 30px 0 25px;
   width: 100%;
   height: 26px;
+  @media screen and (max-width: 1020px) {
+    max-width: 870px;
+    margin: 0 auto;
+  }
   ul {
   	float: right;
   	list-style: none;
   	margin: 0 45px 0 0;
   	padding: 0;
-    @media screen and (max-width: 865px) {
+    @media screen and (max-width: 1020px) {
       margin-right: 4%;
     }
   }
@@ -24,8 +27,10 @@
     a {
     	padding: 6px 0;
     	display: block;
-      &:hover {
-        border-bottom: 1px solid #ccc;
+      @media screen and (min-width: 500px) {
+        &:hover {
+          border-bottom: 1px solid #ccc;
+        }
       }
     }
     &:first-child {
@@ -36,6 +41,7 @@
     }
   }
   @media screen and (max-width: 500px) {
+    height: auto;
     padding: 20px 0;
     ul {
    		float: none;
@@ -49,6 +55,7 @@
    		margin: 0;
    		font-size: 14px;
    		text-align: center;
+      padding: 0;
       &:last-child {
      		margin: 0;
      		border-bottom: 1px solid rgb(240, 240, 240);
@@ -69,7 +76,7 @@
 	text-transform: uppercase;
 	letter-spacing: 2px;
   margin-left: 45px;
-  @media screen and (max-width: 865px) {
+  @media screen and (max-width: 1020px) {
     margin-left: 4%;
   }
 }
@@ -77,40 +84,35 @@
 	display: none;
 }
 @media screen and (max-width: 500px) {
-	.name {
-		letter-spacing: 1.6px;
-	}
-	.toggle {
-		display: block;
-		float: right;
+  .name {
+  	letter-spacing: 1.6px;
+  }
+  .toggle {
+  	display: block;
+  	float: right;
     cursor: pointer;
     padding: 23px 4% 24px 20px;
     position: absolute;
     top: 0;
     right: 0;
-	}
-	.toggle.open img {
-		transform: rotate(180deg);
-	}
-	.open + ul {
-		display: block;
-	}
+  }
+  .toggle.open img {
+    -webkit-transform: rotate(180deg);
+  	transform: rotate(180deg);
+  }
+  .open + ul {
+  	display: block;
+  }
 }
 
-/**
- * Latest posts
- */
+/* Post List */
+
 .post-list {
 	max-width: 800px;
 	width: 92%;
 	padding: 5% 0 1%;
 	margin: 0 auto;
 	list-style: none;
-}
-@media screen and (max-width: 500px) {
-	.post-list {
-		padding-top: 8%;
-	}
 }
 .post-list li {
 	margin-bottom: 40px;
@@ -119,8 +121,8 @@
 	margin-bottom: 10%;
 }
 .post-list h2 {
+  font-size: 1.5em;
 	font-weight: 300;
-	letter-spacing: 0.3px;
 	margin: 0;
 }
 .post-list.home h2 {
@@ -174,11 +176,102 @@
 .view-all-posts a:hover {
 	background: #E8E8E8;
 }
+@media screen and (max-width: 500px) {
+	.post-list {
+		padding-top: 8%;
+	}
+  .post-list h2 {
+    font-size: 1.35em;
+  }
+  .post-list p {
+    font-size: 1.15em;
+  }
+}
 
-/* WORK */
+/* Post Page */
+
+.post {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 5% 0 3%;
+  width: 92%;
+  @media screen and (max-width: 500px) {
+    padding-top: 8%;
+  }
+}
+.post .post-meta {
+  font-size: 1em;
+  line-height: 1.2;
+  margin: 0 0 10px;
+}
+.post-title {
+  font-size: 1.8em;
+  margin: 0 0 25px;
+  font-weight: 400;
+  @media screen and (max-width: 500px) {
+    font-size: 1.6em;
+  }
+}
+.post-content {
+  margin-bottom: $spacing-unit;
+  h2 {
+    font-size: 32px;
+    @include media-query($on-laptop) {
+      font-size: 28px;
+    }
+  }
+  h3 {
+    font-size: 26px;
+    @include media-query($on-laptop) {
+      font-size: 22px;
+    }
+  }
+  h4 {
+    font-size: 20px;
+    @include media-query($on-laptop) {
+      font-size: 18px;
+    }
+  }
+  p {
+    font-size: 1.3em;
+    line-height: 1.6;
+    @media screen and (max-width: 500px) {
+      font-size: 1.1em;
+    }
+  }
+  .last-updated {
+  	text-transform: uppercase;
+  	font-size: 0.8em;
+  	margin: 3em 0 0;
+  }
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.2em;
+  }
+  ul > li {
+    margin-bottom: 15px;
+    font-size: 1.3em;
+    line-height: 1.6;
+    pre {
+      margin-top: 10px;
+    }
+  }
+  ul > li:before {
+    display: block;
+    float: left;
+    content: "—";
+    width: 1.2em;
+    margin-left: -1.2em;
+  }
+  a {
+    border-bottom: 3px solid gainsboro;
+  }
+}
+
+/* Work Page */
 
 .work {
-	width: 97.2%;
 	max-width: 1556px;
 	padding: 0;
 	margin: 0 auto;
@@ -193,25 +286,24 @@
 	font-weight: normal;
 	text-transform: uppercase;
 	margin: 0 0 10px;
-	padding: 0 2.6%;
+	padding: 0 45px;
 }
 .work header p {
 	font-size: 1em;
 	margin: 0;
 	max-width: 550px;
-	padding: 0 2.6%;
+	padding: 0 45px;
 }
 .work ul {
 	margin: 0 auto;
-	padding: 0;
-	width: 100%;
+	padding: 0 15px;
 	list-style: none;
 }
 .work ul li {
 	width: 33.333333%;
 	display: inline-block;
 	margin: 0 0 75px;
-	padding: 0 2.6%;
+	padding: 0 30px;
 	vertical-align: top;
 	box-sizing: border-box;
 }
@@ -234,10 +326,21 @@
 .work a:hover {
 	text-decoration: underline;
 }
-@media screen and (max-width: 1000px) {
-	.work ul li {
+@media screen and (max-width: 1020px) {
+  .work {
+    max-width: 870px;
+  }
+  .work ul {
+    padding: 0;
+  }
+  .work ul li {
 		width: 50%;
 	}
+  .work h1,
+  .work header p,
+  .work ul li {
+    padding: 0 4%;
+  }
 }
 @media screen and (max-width: 600px) {
 	.work ul li {
@@ -245,135 +348,27 @@
 	}
 }
 
+/* Site Footer */
 
-
-/**
- * Page content
- */
-.page-content {
-    a:hover {
-      text-decoration: underline;
-    }
-}
-
-.page-heading {
-    font-size: 20px;
-}
-
-.post-link {
-    font-size: 24px;
-}
-
-
-
-/**
- * Posts
- */
-.post {
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 5% 0 3%;
-    width: 92%;
-}
-@media screen and (max-width: 500px) {
-	.post {
-		padding-top: 8%;
-	}
-}
-
-.post .post-meta {
-    font-size: 1em;
-    line-height: 1.2;
-    margin: 0 0 10px;
-}
-
-.post-title {
-    font-size: 1.8em;
-    margin: 0 0 4.2%;
-    font-weight: 400;
-    letter-spacing: -0.3px;
-}
-
-.post-content {
-    margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
-
-    p {
-        font-size: 21px;
-        line-height: 1.6;
-    }
-
-    .last-updated {
-      	text-transform: uppercase;
-      	font-size: 0.8em;
-      	margin: 3em 0 0;
-    }
-
-    ul {
-      list-style: none;
-      margin-left: 0;
-      padding-left: 1.2em;
-    }
-
-    ul > li {
-      margin-bottom: 15px;
-      font-size: 1.3em;
-      line-height: 1.6;
-      pre {
-        margin-top: 10px;
-      }
-    }
-
-    ul > li:before {
-      display: block;
-      float: left;
-      content: "—";
-      width: 1.2em;
-      margin-left: -1.2em;
-    }
-
-    a {
-      border-bottom: 3px solid gainsboro;
-    }
-}
 footer {
 	margin: 0 auto;
 	padding: 100px 0 35px;
 	clear: both;
 	color: #999;
 	text-align: left;
+  @media screen and (max-width: 1020px) {
+    max-width: 800px;
+    width: 92%;
+  }
   @media screen and (max-width: 700px) {
-  	padding: 80px 0 4.5%;
+  	padding: 80px 0 6%;
   }
   .copyright {
   	margin: 0 0 0 45px;
   	padding: 0;
   	font-size: 0.8em;
-    @media screen and (max-width: 865px) {
-      margin-left: 4%;
+    @media screen and (max-width: 1020px) {
+      margin-left: 0;
     }
   }
   .contact {
@@ -382,8 +377,8 @@ footer {
   	padding: 0;
   	font-size: 0.9em;
   	float: right;
-    @media screen and (max-width: 865px) {
-      margin-right: 4%;
+    @media screen and (max-width: 1020px) {
+      margin-right: 0;
     }
   }
   .contact li {
@@ -404,6 +399,8 @@ footer {
   	color: #666;
   }
 }
+
+/* 404 Page */
 
 .fourohfour {
 	max-width: 1200px;
