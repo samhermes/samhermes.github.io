@@ -7,7 +7,6 @@
 
 # Site settings
 title: Sam Hermes
-email: your-email@domain.com
 description: Web developer at Washington University in St. Louis
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://samhermes.com" # the base hostname & protocol for your site
