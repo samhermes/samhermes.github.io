@@ -43,7 +43,21 @@ $on-laptop:        800px;
     }
 }
 
+@font-face {
+	font-family: 'Roboto';
+	src: url('/font/Roboto-Regular.woff2') format('woff2'),
+		url('/font/Roboto-Regular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
 
+@font-face {
+	font-family: 'Roboto';
+	src: url('/font/Roboto-Light.woff2') format('woff2'),
+		url('/font/Roboto-Light.woff') format('woff');
+	font-weight: 300;
+	font-style: normal;
+}
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
