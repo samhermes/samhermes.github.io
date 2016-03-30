@@ -423,8 +423,8 @@ pre[class*="language-"] {
   margin: 0 0 10px; }
 
 .post-title {
-  font-size: 1.8em;
-  margin: 0 0 25px;
+  font-size: 2.2em;
+  margin: 0 0 30px;
   font-weight: 400; }
   @media screen and (max-width: 500px) {
     .post-title {
@@ -480,6 +480,8 @@ pre[class*="language-"] {
     margin-left: -1.2em; }
   .post-content a {
     border-bottom: 3px solid gainsboro; }
+  .post-content code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
 
 /* Work Page */
 .work {

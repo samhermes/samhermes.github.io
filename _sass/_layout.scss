@@ -208,8 +208,8 @@
   margin: 0 0 10px;
 }
 .post-title {
-  font-size: 1.8em;
-  margin: 0 0 25px;
+  font-size: 2.2em;
+  margin: 0 0 30px;
   font-weight: 400;
   @media screen and (max-width: 500px) {
     font-size: 1.6em;
@@ -275,6 +275,9 @@
   }
   a {
     border-bottom: 3px solid gainsboro;
+  }
+  code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
 }
 

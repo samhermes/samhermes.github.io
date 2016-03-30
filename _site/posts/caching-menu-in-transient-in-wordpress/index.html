@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Caching a menu in a transient in WordPress</title>
+  <meta name="description" content="Menus in WordPress are expensive to generate, in terms of site performance. What if we stored the menu in a transient, and applied the current page classes o...">
+
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://samhermes.com/posts/caching-menu-in-transient-in-wordpress/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header role="banner" class="site-header group">
+  <div class="name">
+    <a href="/">Sam Hermes</a>
+  </div>
+  <div class="toggle"><img src="/img/toggle.svg"></div>
+  <ul>
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/work">Work</a></li>
+  </ul>
+</header>
+
+
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <p class="post-meta"><time datetime="2016-03-30T16:38:00-05:00" itemprop="datePublished">3/30/2016</time></p>
+    <h1 class="post-title" itemprop="name headline">Caching a menu in a transient in WordPress</h1>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Menus in WordPress are expensive to generate, in terms of site performance. On every page load, the site is rebuilding almost the exact same thing, and it gets more expensive as the number of menu items increases. The only difference between pages is the current page classes that get applied. What if we stored the menu in a transient, and applied the current page classes on the front end using JavaScript?</p>
+
+<p>The first thing we do is check to see if the transient doesn’t exist with a conditional (which it doesn’t, yet), using get_transient and passing in the name of the transient, which we’ll specify later.</p>
+
+<pre><code class="language-php">if ( ! get_transient( 'header-menu' ) ) {</code></pre>
+
+<p>Next, if the transient doesn’t exist (which it doesn’t, yet), we generate the menu, and store the result in a variable.</p>
+
+<pre><code class="language-php">$menu = wp_nav_menu( array(
+  'theme_location' =&gt; 'header-menu',
+  'echo' =&gt; 0
+) );</code></pre>
+
+<p>We need to disable echo here, as we don’t want to print it to the page just yet.</p>
+
+<p>Once we have the menu stored in a variable, we can set a transient. This part of the process is relatively simple. You give the transient a name, pass in the menu variable, and tell it how long to keep it before clearing it.</p>
+
+<pre><code class="language-php">set_transient( 'header-menu', $menu, 60*60*24 );</code></pre>
+
+<p>In this example, I’ve named the transient “header-menu”, and told it to save it for 1 day (60 seconds times 60 times 24). I’m not sure what the ideal transient lifetime is, but if the menu will rarely change, you could set it for much longer than a day.</p>
+
+<p>Next, continuing with the conditional, if the transient does exist, we just need to retrieve it and set it to the menu variable. And, after that, we echo out the menu variable.</p>
+
+<pre><code class="language-php">} else {
+  $menu = get_transient( 'header-menu' );
+}
+echo $menu;</code></pre>
+
+<p>The last piece of the transient is clearing it whenever an update is made to the menu. This function can be added to functions.php. This function looks for a menu in the ‘header-menu’ menu location.</p>
+
+<pre><code class="language-php">function site_nav_clear_transient( $menu_id ) {
+  $theme_locations = get_nav_menu_locations();
+  $term = get_term( $theme_locations['header-menu'], 'nav_menu' );
+  $id = $term-&gt;term_id;
+  if ( $menu_id = $id ) {
+    delete_transient( 'header-menu' );
+  }
+}
+add_action( 'wp_update_nav_menu', 'site_nav_clear_transient' );</code></pre>
+
+<p>That’s it for the transient, but now we need to reapply the class for the current page. We accomplish that with a little jQuery.</p>
+
+<p>This approach is fairly simple. On page load, we get the URL of the current page using <code>window.location.href</code>, store the result in a variable, and then use that variable to find a matching <code>href</code> attribute. It’s as simple as:</p>
+
+<pre><code class="language-javascript">var url = window.location.href;
+$('.header-menu a[href="' + url + '"]').addClass('current-page');</code></pre>
+
+<p>The jQuery selector looks for an anchor tag inside of an element with the class of ‘header-menu’, matches the url variable we passed in, and then adds a class of ‘current-page’.</p>
+
+  </div>
+
+</article>
+
+
+    <footer role="contentinfo" class="group">
+  <ul class="contact">
+    <li><a href="https://github.com/samhermes">GitHub</a></li>
+    <li><a href="https://twitter.com/samhermes">Twitter</a></li>
+  </ul>
+  <p class="copyright">&copy; 2016 Sam Hermes</p>
+</footer>
+<script>
+    var menu = document.querySelector('.toggle');
+    menu.onclick = function(){
+        menu.classList.toggle('open');
+    }
+</script>
+
+  
+<script src='/js/prism.js' type="text/javascript"></script>
+  
+
+
+
+  </body>
+
+</html>
