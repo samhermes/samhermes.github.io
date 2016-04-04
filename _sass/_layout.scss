@@ -74,7 +74,7 @@
 	font-family: 'Montserrat', sans-serif;
 	font-size: 1.6em;
 	text-transform: uppercase;
-	letter-spacing: 2px;
+	letter-spacing: 1.6px;
   margin-left: 45px;
   @media screen and (max-width: 1020px) {
     margin-left: 4%;
@@ -85,13 +85,13 @@
 }
 @media screen and (max-width: 500px) {
   .name {
-  	letter-spacing: 1.6px;
+  	font-size: 1.4em;
   }
   .toggle {
   	display: block;
   	float: right;
     cursor: pointer;
-    padding: 23px 4% 24px 20px;
+    padding: 20px 4% 23px 20px;
     position: absolute;
     top: 0;
     right: 0;
