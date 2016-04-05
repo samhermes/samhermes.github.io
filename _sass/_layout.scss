@@ -43,6 +43,7 @@
   @media screen and (max-width: 500px) {
     height: auto;
     padding: 20px 0;
+    border-bottom: 1px solid rgb(240, 240, 240);
     ul {
    		float: none;
    		display: none;
@@ -58,7 +59,6 @@
       padding: 0;
       &:last-child {
      		margin: 0;
-     		border-bottom: 1px solid rgb(240, 240, 240);
      	}
       a {
      		padding: 10px 0;
