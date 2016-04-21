@@ -1,4 +1,43 @@
 
+/* Home */
+
+.home {
+  padding: 0 0 150px;
+}
+.home h2 {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  margin: 0 auto 40px;
+  max-width: 800px;
+	width: 92%;
+  border-bottom: 1px solid #efefef;
+}
+
+.intro {
+  max-width: 400px;
+  margin: 70px auto;
+  width: 92%;
+  text-align: center;
+  @media screen and (max-width: 500px) {
+    margin: 50px auto 70px;
+  }
+  img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: block;
+  }
+  h1 {
+    font-weight: normal;
+    font-size: 1.5em;
+  }
+  p {
+    max-width: 250px;
+    margin: 0 auto;
+  }
+}
+
 /* Site Header */
 
 .site-header {
@@ -112,6 +151,9 @@
   @media screen and (max-width: 500px) {
     padding-bottom: 4%;
   }
+  .home & {
+    padding: 0;
+  }
 }
 .post-list li {
 	margin-bottom: 40px;
@@ -119,7 +161,7 @@
 .post-list.home li {
 	margin-bottom: 10%;
 }
-.post-list h2 {
+.post-list h3 {
   font-size: 1.7em;
 	font-weight: 400;
 	margin: 0;
@@ -176,9 +218,6 @@
 	background: #E8E8E8;
 }
 @media screen and (max-width: 500px) {
-	.post-list {
-		padding-top: 8%;
-	}
   .post-list h2 {
     font-size: 1.35em;
   }

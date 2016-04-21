@@ -15,77 +15,57 @@
 </head>
 
 
-  <body>
+  <body class="home">
 
-    <header role="banner" class="site-header group">
-  <div class="name">
-    <a href="/">Sam Hermes</a>
-  </div>
-  <div class="toggle"><img src="/img/toggle.svg"></div>
-  <ul>
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/work">Work</a></li>
-  </ul>
-</header>
+    <div class="intro">
+  <img src="img/samhermes.jpg">
+  <h1>Sam Hermes</h1>
+  <p>Web developer at Washington University in St. Louis</p>
+</div>
 
+<h2>Posts</h2>
 
-    <ul class="post-list home">
+<ul class="post-list home">
   
     <li>
       <span class="post-meta">3/30/2016</span>
 
-      <h2>
+      <h3>
         <a class="post-link" href="/posts/caching-menu-in-transient-in-wordpress/">Caching a menu in a transient in WordPress</a>
-      </h2>
+      </h3>
       <p>Menus in WordPress are expensive to generate, in terms of site performance. What if we stored the menu in a transient, and applied the current page classes on the front end using JavaScript?</p>
     </li>
   
     <li>
       <span class="post-meta">3/8/2016</span>
 
-      <h2>
+      <h3>
         <a class="post-link" href="/posts/toggling-elements-with-javascript/">Toggling elements with JavaScript</a>
-      </h2>
+      </h3>
       <p>One of the most performant ways to toggle an element with JavaScript is to apply and remove a class.</p>
     </li>
   
     <li>
       <span class="post-meta">2/13/2016</span>
 
-      <h2>
+      <h3>
         <a class="post-link" href="/posts/setting-up-jekyll/">Setting up Jekyll</a>
-      </h2>
+      </h3>
       <p>I recently switched this site to Jekyll, and I thought I'd share the setup process.</p>
     </li>
   
     <li>
       <span class="post-meta">1/30/2016</span>
 
-      <h2>
+      <h3>
         <a class="post-link" href="/posts/output-featured-image-caption-wordpress/">Output featured image caption in WordPress</a>
-      </h2>
+      </h3>
       <p>It's relatively easy and well documented to output a featured image, but getting the caption is a little trickier.</p>
     </li>
   
 </ul>
 
 <div class="view-all-posts"><a href="/posts">View All Posts</a></div>
-
-
-    <footer role="contentinfo" class="group">
-  <ul class="contact">
-    <li><a href="https://github.com/samhermes">GitHub</a></li>
-    <li><a href="https://twitter.com/samhermes">Twitter</a></li>
-  </ul>
-  <p class="copyright">&copy; 2016 Sam Hermes</p>
-</footer>
-<script>
-    var menu = document.querySelector('.toggle');
-    menu.onclick = function(){
-        menu.classList.toggle('open');
-    }
-</script>
-
 
 
   </body>

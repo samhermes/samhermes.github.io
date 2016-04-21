@@ -1,14 +1,22 @@
 ---
-layout: default
+layout: home
 ---
+<div class="intro">
+  <img src="img/samhermes.jpg">
+  <h1>Sam Hermes</h1>
+  <p>Web developer at Washington University in St. Louis</p>
+</div>
+
+<h2>Posts</h2>
+
 <ul class="post-list home">
   {% for post in site.posts limit:4 %}
     <li>
       <span class="post-meta">{{ post.date | date: "%-m/%-d/%Y" }}</span>
 
-      <h2>
+      <h3>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
+      </h3>
       <p>{{ post.excerpt }}</p>
     </li>
   {% endfor %}
