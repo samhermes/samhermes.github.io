@@ -7,13 +7,10 @@ layout: home
   <p>Web developer at Washington University in St. Louis</p>
 </div>
 
-<h2>Posts</h2>
-
 <ul class="post-list home">
-  {% for post in site.posts limit:4 %}
+  {% for post in site.posts %}
     <li>
       <span class="post-meta">{{ post.date | date: "%-m/%-d/%Y" }}</span>
-
       <h3>
         <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h3>
@@ -21,5 +18,3 @@ layout: home
     </li>
   {% endfor %}
 </ul>
-
-<div class="view-all-posts"><a href="/posts">View All Posts</a></div>

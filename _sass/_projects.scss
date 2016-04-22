@@ -8,23 +8,13 @@
 	background: linear-gradient(135deg,  rgb(51,198,244) 0%,rgb(45,69,152) 100%);
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#33c6f4', endColorstr='#2d4598',GradientType=1 );
 }
-.stlmetrolink header,
-.stlmetrolink footer {
-	background: none;
-  box-shadow: none;
-}
-.stlmetrolink .toggle img {
-	-webkit-filter: contrast(200%);
-	filter: contrast(200%);
-}
-.stlmetrolink .name a,
-.stlmetrolink header a {
-	color: #fff;
-}
 .stlmetrolink .project {
 	color: #fff;
-	margin: 7% auto;
+	margin: 0 auto;
 	width: 92%;
+	padding: 10% 0;
+	min-height: 100vh;
+	box-sizing: border-box;
 	text-align: center;
 }
 .stlmetrolink .project img {
@@ -78,14 +68,4 @@ a.launch-stlmetrolink {
 }
 a.launch-stlmetrolink:hover {
 	border-color: rgba(255,255,255,0.5);
-}
-.stlmetrolink .article-link {
-	font-size: 1em;
-}
-.stlmetrolink footer,
-.stlmetrolink .contact li a {
-	color: rgba(255,255,255,0.85);
-}
-.stlmetrolink .contact li a:hover {
-	color: rgba(255,255,255,0.5);
 }
