@@ -5,9 +5,42 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Apr 2016 14:13:32 -0500</pubDate>
-    <lastBuildDate>Sun, 24 Apr 2016 14:13:32 -0500</lastBuildDate>
+    <pubDate>Sun, 24 Apr 2016 14:32:37 -0500</pubDate>
+    <lastBuildDate>Sun, 24 Apr 2016 14:32:37 -0500</lastBuildDate>
     <generator>Jekyll v3.1.3</generator>
+    
+      <item>
+        <title>Maintaining state with sessionStorage</title>
+        <description>&lt;p&gt;When a multi-level menu is collapsed on a small screen, it can difficult to communicate a sense of place as someone is navigating between pages. If the page is several levels deep in the hierarchy, it is really frustrating to dig back down to it if you’d like to view a sibling page. One way to manage this is to let the browser remember your location with sessionStorage.&lt;/p&gt;
+
+&lt;p&gt;To start, you need to give a unique ID to each menu item that has children. If you’re working with WordPress, you could use the built in page ID, since you know that it will be unique.&lt;/p&gt;
+
+&lt;p&gt;We only need to keep one ID in sessionStorage at a time, so we listen for a click event on all of the elements serving as a toggle and update sessionStorage each time.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;$(&#39;.main-menu li&#39;).click(function() {
+  var menu_state = $(this).prop(&#39;class&#39;).match(/page-([0-9]+)/)[1];
+  sessionStorage.setItem(&#39;menu_state&#39;, menu_state);
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This sets the name of the sessionStorage item to be ‘menu_state’, and then stores the ID as the value. As a submenu is toggled, this value is updated. Move to another page, and the last value is still remembered by the browser.&lt;/p&gt;
+
+&lt;p&gt;You can view all of the sessionStorage items that have been set in your browser in the web inspector. In Chrome, go to the Resources tab. In Safari and Firefox, go to the Storage tab. A nice feature of sessionStorage is that the browser clears it as soon as you close the page.&lt;/p&gt;
+
+&lt;p&gt;Retrieving a value from sessionStorage is very similar to setting it. We perform this action when the document is ready instead of waiting for a click event.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;var menu_state = sessionStorage.getItem(&#39;menu_state&#39;);
+if( menu_state ) {
+  $(&#39;.page-&#39; + menu_state).addClass(&#39;open&#39;);
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This applies a class of &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; to the menu that was open on the last page. Now, given that &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; has a bit of CSS behind it, when someone opens the mobile menu, they’ll still be in the same place where they were. Magic.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Apr 2016 00:00:00 -0500</pubDate>
+        <link>http://samhermes.com/posts/maintaining-state-with-sessionstorage/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/maintaining-state-with-sessionstorage/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Caching a menu in a transient in WordPress</title>
