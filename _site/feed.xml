@@ -5,9 +5,41 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jul 2016 02:04:28 -0500</pubDate>
-    <lastBuildDate>Sun, 24 Jul 2016 02:04:28 -0500</lastBuildDate>
+    <pubDate>Sun, 24 Jul 2016 02:20:11 -0500</pubDate>
+    <lastBuildDate>Sun, 24 Jul 2016 02:20:11 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Sticky elements with Stickyfill</title>
+        <description>&lt;p&gt;Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browsers natively, the best way right now is to use a polyfill. This is where Stickyfill comes in. If &lt;code class=&quot;highlighter-rouge&quot;&gt;position: sticky&lt;/code&gt; is not supported, it mimics the behavior. As soon as support comes to all major browsers, the polyfill can be removed. At the moment, it is supported in Firefox and Safari, and is behind a flag in Chrome and Opera. Considering that it is most commonly used on larger screens, the support is strong.&lt;/p&gt;
+
+&lt;p&gt;You can &lt;a href=&quot;https://github.com/wilddeer/stickyfill&quot;&gt;download sticky fill on Github&lt;/a&gt;. There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.&lt;/p&gt;
+
+&lt;p&gt;Taken directly from the readme, you can hook Stickyfill up with the following JavaScript:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;var stickyElements = document.getElementsByClassName(&#39;sticky&#39;);
+for (var i = stickyElements.length - 1; i &amp;gt;= 0; i--) {
+  Stickyfill.add(stickyElements[i]);
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I have been using Stickyfill with a WordPress site, so I have changed the class to simply &lt;code class=&quot;highlighter-rouge&quot;&gt;stick&lt;/code&gt; so that it will not interfere with sticky posts.&lt;/p&gt;
+
+&lt;p&gt;While your implementation may be much more complex, applying the following styles to a sidebar would be all you would need to get started.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;In my project, I set the value of top to &lt;code class=&quot;highlighter-rouge&quot;&gt;15px&lt;/code&gt; to give a little room above the element. Also, I added an additional selector that would account for the WordPress admin bar, so the value of top is &lt;code class=&quot;highlighter-rouge&quot;&gt;47px&lt;/code&gt; when the &lt;code class=&quot;highlighter-rouge&quot;&gt;.admin-bar&lt;/code&gt; class is present. This makes sure that even users who are signed in see a properly formatted site.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 24 Jul 2016 00:00:00 -0500</pubDate>
+        <link>http://samhermes.com/posts/sticky-elements-with-stickyfill/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/sticky-elements-with-stickyfill/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Maintaining state with sessionStorage</title>

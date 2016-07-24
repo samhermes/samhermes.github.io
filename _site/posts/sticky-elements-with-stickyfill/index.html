@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Sticky elements with Stickyfill</title>
+  <meta name="description" content="There are many ways to implement sticky behavior, but as support comes to browsers natively, the best way right now is to use a polyfill.">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://samhermes.com/posts/sticky-elements-with-stickyfill/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+</head>
+
+
+  <body>
+
+    <header class="site-header group">
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
+    <ul>
+      <li><a href="/">Posts</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+</header>
+
+
+    <article class="post">
+
+  <header class="post-header">
+    <p class="post-meta"><time>7/24/2016</time></p>
+    <h1 class="post-title">Sticky elements with Stickyfill</h1>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browsers natively, the best way right now is to use a polyfill. This is where Stickyfill comes in. If <code class="highlighter-rouge">position: sticky</code> is not supported, it mimics the behavior. As soon as support comes to all major browsers, the polyfill can be removed. At the moment, it is supported in Firefox and Safari, and is behind a flag in Chrome and Opera. Considering that it is most commonly used on larger screens, the support is strong.</p>
+
+<p>You can <a href="https://github.com/wilddeer/stickyfill">download sticky fill on Github</a>. There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.</p>
+
+<p>Taken directly from the readme, you can hook Stickyfill up with the following JavaScript:</p>
+
+<pre><code class="language-javascript">var stickyElements = document.getElementsByClassName('sticky');
+for (var i = stickyElements.length - 1; i &gt;= 0; i--) {
+  Stickyfill.add(stickyElements[i]);
+}</code></pre>
+
+<p>I have been using Stickyfill with a WordPress site, so I have changed the class to simply <code class="highlighter-rouge">stick</code> so that it will not interfere with sticky posts.</p>
+
+<p>While your implementation may be much more complex, applying the following styles to a sidebar would be all you would need to get started.</p>
+
+<pre><code class="language-css">.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}</code></pre>
+
+<p>In my project, I set the value of top to <code class="highlighter-rouge">15px</code> to give a little room above the element. Also, I added an additional selector that would account for the WordPress admin bar, so the value of top is <code class="highlighter-rouge">47px</code> when the <code class="highlighter-rouge">.admin-bar</code> class is present. This makes sure that even users who are signed in see a properly formatted site.</p>
+
+  </div>
+
+</article>
+
+
+    
+  
+<script src='/js/prism.js' type="text/javascript"></script>
+  
+
+
+
+  </body>
+
+</html>
