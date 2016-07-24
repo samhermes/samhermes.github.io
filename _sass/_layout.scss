@@ -2,7 +2,7 @@
 /* Home */
 
 .home {
-  padding: 0 0 150px;
+  padding: 0 0 10%;
 }
 .home h2 {
   font-size: 0.9em;
@@ -14,62 +14,47 @@
   border-bottom: 1px solid #efefef;
 }
 
-.intro {
-  max-width: 400px;
-  margin: 90px auto 50px;
-  width: 92%;
-  text-align: center;
-  @media screen and (max-width: 500px) {
-    margin: 50px auto 10px;
-  }
-  img {
-    max-width: 150px;
-    border-radius: 50%;
-    margin: 0 auto 25px;
-    display: block;
-  }
-  h1 {
-    font-weight: normal;
-    font-size: 1.5em;
-  }
-  p {
-    max-width: 250px;
-    margin: 0 auto;
-  }
-}
-
 /* Site Header */
 
 .site-header {
-  padding: 30px 0 25px;
-  width: 100%;
-  a {
-    margin-left: 45px;
-    &:hover {
-      text-decoration: underline;
-      svg {
-        transform: translateX(-2px);
-      }
-    }
-    @media screen and (max-width: 1020px) {
-      margin-left: 4%;
-    }
-  }
-  @media screen and (max-width: 1020px) {
-    max-width: 870px;
-    margin: 0 auto;
-  }
-  @media screen and (max-width: 500px) {
-    padding: 20px 0;
-
+  background: #1f2223;
+  padding: 15px 4%;
+  width: auto;
+  @media screen and (min-width: 868px) {
+    padding: 15px 25px;
   }
 }
-#back {
-  width: 7px;
-  height: 12px;
-  margin-right: 8px;
-  position: relative;
-  transition: transform 0.1s linear;
+.site-header a {
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+.site-title {
+  text-transform: uppercase;
+  color: #fff;
+  float: left;
+  margin: 0;
+  font-size: 1.5em;
+  font-weight: 400;
+  line-height: 1;
+  padding: 3px 0 0;
+}
+.site-header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right;
+}
+.site-header li {
+  float: left;
+  color: rgba(255, 255, 255, 0.92);
+  margin-left: 20px;
+  padding: 6px 0;
+  text-transform: uppercase;
+  font-size: 0.9em;
+
+  &:first-child {
+    margin-left: 0;
+  }
 }
 
 /* Post List */
@@ -77,11 +62,11 @@
 .post-list {
 	max-width: 800px;
 	width: 92%;
-	padding: 60px 0 0;
+	padding: 45px 0;
 	margin: 0 auto;
 	list-style: none;
-  @media screen and (max-width: 500px) {
-    padding-bottom: 4%;
+  @media screen and (min-width: 700px) {
+    padding-top: 4%;
   }
 }
 .post-list li {
@@ -157,10 +142,10 @@
 .post {
   margin: 0 auto;
   max-width: 800px;
-  padding: 4% 0 12%;
+  padding: 30px 0;
   width: 92%;
-  @media screen and (max-width: 500px) {
-    padding-top: 8%;
+  @media screen and (min-width: 868px) {
+    padding-top: 4%;
   }
 }
 .post .post-meta {
@@ -170,7 +155,7 @@
 }
 .post-title {
   font-size: 2.2em;
-  margin: 0 0 30px;
+  margin: 0 0 1em;
   font-weight: 400;
   @media screen and (max-width: 500px) {
     font-size: 1.6em;
@@ -199,6 +184,7 @@
   p {
     font-size: 1.3em;
     line-height: 1.6;
+    margin-bottom: 30px;
     @media screen and (max-width: 500px) {
       font-size: 1.1em;
     }
@@ -242,83 +228,32 @@
   }
 }
 
-/* Work Page */
+/* About Page */
 
-.work {
-	max-width: 1556px;
-	padding: 0;
-	margin: 0 auto;
-}
-.work header {
-	padding: 0;
-	margin: 50px auto 60px;
-	background: none;
-}
-.work h1 {
-	font-size: 1.4em;
-	font-weight: normal;
-	text-transform: uppercase;
-	margin: 0 0 10px;
-	padding: 0 45px;
-}
-.work header p {
-	font-size: 1em;
-	margin: 0;
-	max-width: 550px;
-	padding: 0 45px;
-}
-.work ul {
-	margin: 0 auto;
-	padding: 0 15px;
-	list-style: none;
-}
-.work ul li {
-	width: 33.333333%;
-	display: inline-block;
-	margin: 0 0 75px;
-	padding: 0 30px;
-	vertical-align: top;
-	box-sizing: border-box;
-}
-.work ul li img {
-	display: block;
-	border: 1px solid rgb(240, 240, 240);
-}
-.work h2 {
-    font-size: 1.1em;
-    font-weight: 300;
-    margin: 22px 0 2px;
-}
-.work p {
-	margin: 0;
-	font-size: 13px;
-}
-.work a {
-	font-size: 15px;
-}
-.work a:hover {
-	text-decoration: underline;
-}
-@media screen and (max-width: 1020px) {
-  .work {
-    max-width: 870px;
+.about {
+  max-width: 650px;
+  margin: 40px auto 60px;
+  width: 92%;
+  @media screen and (min-width: 868px) {
+    margin: 90px auto 50px;
   }
-  .work ul {
-    padding: 0;
+  img {
+    max-width: 120px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    display: block;
   }
-  .work ul li {
-		width: 50%;
-	}
-  .work h1,
-  .work header p,
-  .work ul li {
-    padding: 0 4%;
+  h2 {
+    font-size: 1.6em;
+    margin-bottom: 35px;
+    text-align: center;
   }
-}
-@media screen and (max-width: 600px) {
-	.work ul li {
-		width: 100%;
-	}
+  p {
+    margin: 0 auto 20px;
+    font-size: 1.2em;
+    line-height: 1.5;
+    margin: 1em 0;
+  }
 }
 
 /* Site Footer */
