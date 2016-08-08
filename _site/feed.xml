@@ -5,9 +5,20 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 07 Aug 2016 22:01:51 -0500</pubDate>
-    <lastBuildDate>Sun, 07 Aug 2016 22:01:51 -0500</lastBuildDate>
+    <pubDate>Mon, 08 Aug 2016 08:14:00 -0500</pubDate>
+    <lastBuildDate>Mon, 08 Aug 2016 08:14:00 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Hover effects on links should be quick</title>
+        <description>&lt;p&gt;When applying a hover effect to a text link, only a quick transition will likely be noticed. Users will rarely hover over a link long enough to see the full transition. I find that adding just 0.1s of transition to a link color can be just enough, and especially to a large button. It removes the harshness of the color change, without looking laborious.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 08 Aug 2016 00:00:00 -0500</pubDate>
+        <link>http://samhermes.com/posts/hover-effects-on-links-should-be-quick/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/hover-effects-on-links-should-be-quick/</guid>
+        
+        
+      </item>
     
       <item>
         <title>What changes on hover should be actionable</title>
@@ -271,23 +282,6 @@ if ( ! empty( $post_thumbnail_caption ) ) {
         <pubDate>Sun, 03 Jan 2016 12:00:00 -0600</pubDate>
         <link>http://samhermes.com/posts/using-vertical-height-media-queries-with-fixed-headers/</link>
         <guid isPermaLink="true">http://samhermes.com/posts/using-vertical-height-media-queries-with-fixed-headers/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Designing for every moment</title>
-        <description>&lt;p&gt;Responsive design is truly about each and every point in between the smallest supported viewport and the largest, which leaves a lot of possibilities. If truly designing for a fully responsive experience, you should give attention to the awkward moments of change. One of those moments is when an element comes into contact with the edge of the screen.&lt;/p&gt;
-
-&lt;p&gt;If there is a centered image on the page with no border or additional styles around it, what happens when the width of the browser window is about 10px wider than the image? It leaves a small gutter along each side. Is this an issue? Maybe not. I still think it deserves consideration.&lt;/p&gt;
-
-&lt;p&gt;It depends on the case, but on a few occasions I have adjusted the behavior of those images so that there are no awkward in-between moments. When the image got to have less than 10px on each side, I stretched the image to fill the entire width of the screen. This is usually okay, as long as the image has a little extra resolution to give. Of course, we wouldn’t want to stretch an image beyond it’s natural size.&lt;/p&gt;
-
-&lt;p&gt;If this is applied to an image, this means that there are no situations where the image has a small gutter along each side, which means that each and every moment along the responsive spectrum has been thought of and cared for.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 02 Jan 2016 12:00:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/designing-for-every-moment/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/designing-for-every-moment/</guid>
         
         
       </item>
