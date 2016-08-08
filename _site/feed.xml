@@ -5,15 +5,49 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 24 Jul 2016 02:25:03 -0500</pubDate>
-    <lastBuildDate>Sun, 24 Jul 2016 02:25:03 -0500</lastBuildDate>
+    <pubDate>Sun, 07 Aug 2016 21:56:05 -0500</pubDate>
+    <lastBuildDate>Sun, 07 Aug 2016 21:56:05 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>What changes on hover should be actionable</title>
+        <description>&lt;p&gt;This falls clearly in the realm of opinion, but I thought I’d share my thoughts anyway. If an item has a hover state, that hover state should highlight the part of the item that an action can be taken on. To illustrate this, I’ve created an example card. When hovering over the card, an outline appears. However, only the link at the bottom is actionable.&lt;/p&gt;
+
+&lt;div class=&quot;card-container&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;h1&gt;Porano Pasta&lt;/h1&gt;
+    &lt;p&gt;Fast Casual Italian&lt;/p&gt;
+    &lt;a href=&quot;http://poranopasta.com&quot;&gt;Visit Site&lt;/a&gt;
+    
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hover states are becoming less and less important, but I still feel that this requires some consideration. I think that anything that changes when you hover over it should be one link. If there are multiple links within the element, then there should be no hover effect applied. Again, the card example, but with the link covering the entire element.&lt;/p&gt;
+
+&lt;div class=&quot;card-container&quot;&gt;
+  &lt;a href=&quot;http://poranopasta.com&quot;&gt;
+    &lt;div class=&quot;card&quot;&gt;
+      &lt;h1&gt;Porano Pasta&lt;/h1&gt;
+      &lt;p&gt;Fast Casual Italian&lt;/p&gt;
+      &lt;p class=&quot;action&quot;&gt;Visit Site&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Usually, as a page is navigated, the hover states are what indicates that something is actionable, so keeping this behavior will provide a more cohesive experience.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Aug 2016 00:00:00 -0500</pubDate>
+        <link>http://samhermes.com/posts/what-changes-on-hover-should-be-actionable/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/what-changes-on-hover-should-be-actionable/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Sticky elements with Stickyfill</title>
         <description>&lt;p&gt;Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browsers natively, the best way right now is to use a polyfill. This is where Stickyfill comes in. If &lt;code class=&quot;highlighter-rouge&quot;&gt;position: sticky&lt;/code&gt; is not supported, it mimics the behavior. As soon as support comes to all major browsers, the polyfill can be removed. At the moment, it is supported in Firefox and Safari, and is behind a flag in Chrome and Opera. Considering that it is most commonly used on larger screens, the support is strong.&lt;/p&gt;
 
-&lt;p&gt;You can &lt;a href=&quot;https://github.com/wilddeer/stickyfill&quot;&gt;download sticky fill on Github&lt;/a&gt;. There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.&lt;/p&gt;
+&lt;p&gt;You can &lt;a href=&quot;https://github.com/wilddeer/stickyfill&quot;&gt;download Stickyfill on Github&lt;/a&gt;. There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.&lt;/p&gt;
 
 &lt;p&gt;Taken directly from the readme, you can hook Stickyfill up with the following JavaScript:&lt;/p&gt;
 
@@ -255,21 +289,6 @@ if ( ! empty( $post_thumbnail_caption ) ) {
         <pubDate>Sat, 02 Jan 2016 12:00:00 -0600</pubDate>
         <link>http://samhermes.com/posts/designing-for-every-moment/</link>
         <guid isPermaLink="true">http://samhermes.com/posts/designing-for-every-moment/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Giving back</title>
-        <description>&lt;p&gt;Everything I’ve learned about working on the web, I’ve learned on the web. From reading blogs to doing Treehouse courses to simply reading Twitter, it all took place on one website or another. Up to this point, I’ve really only been taking things in. I don’t think it’s a bad thing, I’ve simply been learning as much as I can. However, I think the time has come that I try to give back a little.&lt;/p&gt;
-
-&lt;p&gt;I am switching my website from portfolio to blog, and starting to share what I know. In my experience, when searching for an answer to a specific question, I know that a short, concise post can be all it takes to put the last piece into a puzzle. I’ll be taking that approach, posting snippets of code and quick explanations of how I solved a problem.&lt;/p&gt;
-
-&lt;p&gt;If this is the first post you’ve read here, then there is already more! Head back to posts to read them.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 01 Jan 2016 12:00:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/giving-back/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/giving-back/</guid>
         
         
       </item>
