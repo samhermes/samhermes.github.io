@@ -13,7 +13,6 @@ This falls clearly in the realm of opinion, but I thought I’d share my thought
     <h1>Porano Pasta</h1>
     <p>Fast Casual Italian</p>
     <a href="http://poranopasta.com">Visit Site</a>
-    </a>
   </div>
 </div>
 
