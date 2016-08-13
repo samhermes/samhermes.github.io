@@ -296,15 +296,21 @@ pre[class*="language-"] {
 .post-list {
   max-width: 800px;
   width: 92%;
-  padding: 45px 0;
+  padding: 35px 0;
   margin: 0 auto;
   list-style: none; }
+  @media screen and (min-width: 400px) {
+    .post-list {
+      padding: 45px 0; } }
   @media screen and (min-width: 700px) {
     .post-list {
       padding-top: 5%; } }
 
 .post-list li {
-  margin-bottom: 60px; }
+  margin-bottom: 45px; }
+  @media screen and (min-width: 400px) {
+    .post-list li {
+      margin-bottom: 60px; } }
 
 .post-list h3 {
   font-size: 1.5em;
