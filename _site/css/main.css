@@ -215,12 +215,12 @@ pre[class*="language-"] {
 
 /* Site Header */
 .site-header {
-  background: #1f2223;
-  padding: 15px 4%;
+  background: #1D1D1D;
+  padding: 10px 4%;
   width: auto; }
   @media screen and (min-width: 868px) {
     .site-header {
-      padding: 15px 25px; } }
+      padding: 10px 25px; } }
 
 .site-header a {
   color: #fff;
@@ -231,14 +231,14 @@ pre[class*="language-"] {
   color: #fff;
   float: left;
   margin: 0;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 400;
   line-height: 1;
-  padding: 0; }
+  padding: 1px 0 0; }
   @media screen and (min-width: 400px) {
     .site-title {
-      font-size: 1.5em;
-      padding: 3px 0 0; } }
+      font-size: 1.3em;
+      padding: 5px 0 0; } }
 
 .site-header ul {
   list-style: none;
