@@ -5,9 +5,38 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 25 Aug 2016 12:21:03 -0500</pubDate>
-    <lastBuildDate>Thu, 25 Aug 2016 12:21:03 -0500</lastBuildDate>
+    <pubDate>Thu, 25 Aug 2016 22:34:08 -0500</pubDate>
+    <lastBuildDate>Thu, 25 Aug 2016 22:34:08 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Adding syntax highlighting to code</title>
+        <description>&lt;p&gt;When I started working on the last iteration of my site, I knew I was going to need to figure out how to display code snippets. I considered using Github Gists or Codepen, but they both seemed to be a bit overkill. Also, I wanted control over the appearance and formatting.&lt;/p&gt;
+
+&lt;p&gt;If I wasn’t going to be embedding the code, that meant I would need to add it directly to the post, wrap it in &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; tags, and style it. I could handle the first two steps, but needed help styling it. There are a number of JavaScript libraries that will apply syntax highlighting to your code, but I landed on &lt;a href=&quot;http://prismjs.com&quot;&gt;Prism.js&lt;/a&gt;. It was the lightest option, and was the easiest to tweak the styles of. I am using the Okaidia theme and added PHP to the list of default languages.&lt;/p&gt;
+
+&lt;p&gt;Since I’m using Jekyll to build my site, I wasn’t sure how to conditionally include Prism only on the posts I’m using code snippets in. Using an &lt;a href=&quot;http://mattgemmell.com/page-specific-assets-with-jekyll/&quot;&gt;article by Matt Gemmell&lt;/a&gt;, I added YAML front matter that specified the name of the JavaScript file to include.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;custom_js: prism&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then, in the footer, I added a &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop that added a script tag for each javascript file included.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;{% if page.custom_js %}
+  {% for js_file in page.custom_js %}
+&amp;lt;script src=&#39;/js/{{ js_file }}.js&#39; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;
+  {% endfor %}
+{% endif %}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Prism comes with the appropriate styles bundled with it, which I just copied and included in my main stylesheet, tweaking them slightly.&lt;/p&gt;
+
+&lt;p&gt;With Prism running on the page, all that’s needed to properly activate it is the appropriate class for the language of the code snippet. For the above snippet, I added &lt;code class=&quot;highlighter-rouge&quot;&gt;class=&quot;language-markup&quot;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt;  element to add the appropriate highlighting. Now when making a new post, I just need to include the YAML front matter and add a class, and that’s it!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 25 Aug 2016 00:00:00 -0500</pubDate>
+        <link>http://samhermes.com/posts/adding-syntax-highlighting-to-code/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/adding-syntax-highlighting-to-code/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Hover effects on links should be quick</title>
@@ -254,34 +283,6 @@ if ( ! empty( $post_thumbnail_caption ) ) {
         <pubDate>Mon, 04 Jan 2016 12:00:00 -0600</pubDate>
         <link>http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</link>
         <guid isPermaLink="true">http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Using vertical height media queries with fixed headers</title>
-        <description>&lt;p&gt;On a site with tall pages, setting up a fixed header can make a lot of sense. Why not use that extra screen real estate? The philosophies of responsive design can and should apply to this as well. Screen height should be taken into account, and fixed headers should be disabled if there is not enough height for them to be useful (although, I would argue that they are never useful).&lt;/p&gt;
-
-&lt;p&gt;Let’s say that the fixed header on a site is 80px tall. Nothing too unruly, but it might get in the way of someone on a smaller laptop as they are browsing your site. In this example, you could set the header to fixed if the viewport is at least 800px tall. Any shorter and let that header scroll away out of sight.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-css&quot;&gt;@media screen and (min-height: 800px) {
-    header {
-        position: fixed;
-        top: 0;
-        left: 0;
-    }
-    body {
-        margin-top: 80px;
-    }
-}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You’ll want to replace the space you’re creating when the header is fixed by applying the height of the header as margin-top of the body element.&lt;/p&gt;
-
-&lt;p&gt;To take this a bit further, you could combine this with a max-width media query so that the header would not be fixed below a specified width, something like 600px. In that way, you are only applying a fixed header when there is plenty of room.&lt;/p&gt;
-</description>
-        <pubDate>Sun, 03 Jan 2016 12:00:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/using-vertical-height-media-queries-with-fixed-headers/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/using-vertical-height-media-queries-with-fixed-headers/</guid>
         
         
       </item>
