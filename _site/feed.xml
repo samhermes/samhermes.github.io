@@ -5,9 +5,52 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 03 Sep 2016 15:23:05 -0500</pubDate>
-    <lastBuildDate>Sat, 03 Sep 2016 15:23:05 -0500</lastBuildDate>
+    <pubDate>Wed, 14 Sep 2016 15:30:32 -0500</pubDate>
+    <lastBuildDate>Wed, 14 Sep 2016 15:30:32 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Preparing SVG for the web</title>
+        <description>&lt;p&gt;I used to be really scared of using SVG, and now I’m just a little bit scared. I think the scary part is that you can easily see the mess inside. It’s all right there, open to edit and optimize. I’ve been working with SVG for a while now, and I’ve come to rest on what I’ve found to be the best way to prepare them for the web. As they are complex, these may not be the best in each and every case, but this is what works for me.&lt;/p&gt;
+
+&lt;h2 id=&quot;saving-from-illustrator&quot;&gt;Saving from Illustrator&lt;/h2&gt;
+
+&lt;p&gt;I followed the save dialog example given in the &lt;a href=&quot;https://css-tricks.com/using-svg/&quot;&gt;CSS Tricks article on using SVG&lt;/a&gt; for a while before I got comfortable with it. The article doesn’t get into details of the options, so let me step through those. You’ll have to toggle the ‘More Options’ button to get to all of these.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;SVG Profile&lt;/strong&gt;&lt;br /&gt;
+Set this to SVG 1.1, which is the current supported version in modern browsers.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;CSS Properties&lt;/strong&gt;&lt;br /&gt;
+There’s not a big difference between using a style element, or applying presentation attributes, but I like to use presentation attributes. It makes the resulting document cleaner, and doesn’t muddy it up with classes. We already have enough classes. If you’re going to inline the SVG and use CSS to add additional styles, then classes are the way to go. For static images, presentation attributes make the most sense to me.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Decimal Places&lt;/strong&gt;&lt;br /&gt;
+You’ll want to adjust the amount of decimals on an image by image basis, as some images will break down if you use too few, but it’s always better for performance if you use fewer. I like to get down to about 1 or 2 if possible.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Checkboxes&lt;/strong&gt;&lt;br /&gt;
+I hate to generalize, but if there’s a checkbox with a check in it, uncheck it. We don’t want to preserve editing capabilities, include slicing data or XMP, or make it responsive.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Much of this I was able to verify using an &lt;a href=&quot;http://stackoverflow.com/questions/13236365/optimal-settings-for-exporting-svgs-for-the-web-from-illustrator&quot;&gt;incredibly helpful answer given on Stack Overflow&lt;/a&gt;. It details even further the reasons behind settings, and talks about fonts and images, both of which don’t really seem to belong inside of an SVG.&lt;/p&gt;
+
+&lt;p&gt;Once the SVG has been saved from Illustrator, further optimization is necessary. Illustrator includes a generator comment inside the SVG, and does not do any minimization.&lt;/p&gt;
+
+&lt;h2 id=&quot;optimizing-for-the-web&quot;&gt;Optimizing for the web&lt;/h2&gt;
+
+&lt;p&gt;Illustrator gives you a big glob of stuff that you do not need, or want to send down the pipe. SVG is already a little heavier than a PNG anyway, depending, so it’s important to make it as slim as possible.&lt;/p&gt;
+
+&lt;p&gt;I use SVGO on the command line to optimize all SVGs. It works great, and I’ll give it credit for warming me up to the command line in general. You just type &lt;code class=&quot;highlighter-rouge&quot;&gt;svgo&lt;/code&gt;, a space, drag and drop the file onto the terminal window, and hit enter. Done. It will tell you what percentage it has shaved off, which always feels awesome. There is also a web interface, created by Jake Archibald, that will perform the same tasks. It’s accessible at &lt;a href=&quot;https://jakearchibald.github.io/svgomg&quot;&gt;https://jakearchibald.github.io/svgomg&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;A few things you’ll want to look out for:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Make sure that the height and width are set inside the SVG, not just in CSS. This improves compatibility across browsers. Can I use reports an issue in IE 9–11 where SVGs don’t scale properly without height, width, viewBox, and CSS rules specified, and I’ve had an SVG without height and width collapse to about 3px tall on an older Android device.&lt;/li&gt;
+  &lt;li&gt;It’s best if the viewBox attribute starts with &lt;code class=&quot;highlighter-rouge&quot;&gt;0 0&lt;/code&gt;, followed by the width and height of the graphic. This puts the origin of the graphic at the natural origin and matches the viewport to the height and width. A fantastic, thorough explanation of this has been written by Sara Soueidan at &lt;a href=&quot;https://sarasoueidan.com/blog/svg-coordinate-systems&quot;&gt;https://jakearchibald.github.io/svgomg&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 14 Sep 2016 00:00:00 -0500</pubDate>
+        <link>http://samhermes.com/posts/preparing-svg-for-the-web/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/preparing-svg-for-the-web/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Adding syntax highlighting to code</title>
@@ -270,19 +313,6 @@ if ( ! empty( $post_thumbnail_caption ) ) {
         <pubDate>Sat, 30 Jan 2016 12:00:00 -0600</pubDate>
         <link>http://samhermes.com/posts/output-featured-image-caption-wordpress/</link>
         <guid isPermaLink="true">http://samhermes.com/posts/output-featured-image-caption-wordpress/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Add 1 hour to date &amp; time in PHP</title>
-        <description>&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;strtotime($time . &#39;+ 1 hour&#39;);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 04 Jan 2016 12:00:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</guid>
         
         
       </item>
