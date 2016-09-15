@@ -380,10 +380,10 @@ pre[class*="language-"] {
 .post-content {
   margin-bottom: 30px; }
   .post-content h2 {
-    font-size: 32px; }
+    font-size: 30px; }
     @media screen and (max-width: 800px) {
       .post-content h2 {
-        font-size: 28px; } }
+        font-size: 24px; } }
   .post-content h3 {
     font-size: 26px; }
     @media screen and (max-width: 800px) {
@@ -408,7 +408,8 @@ pre[class*="language-"] {
   .post-content ul {
     list-style: none;
     margin-left: 0;
-    padding-left: 1.5em; }
+    padding-left: 1.5em;
+    margin-bottom: 30px; }
   .post-content ul > li {
     margin-bottom: 15px;
     font-size: 1.3em;
@@ -427,7 +428,11 @@ pre[class*="language-"] {
     width: 1.2em;
     margin-left: -1.2em; }
   .post-content a {
-    border-bottom: 3px solid gainsboro; }
+    color: #4492ff; }
+    .post-content a:hover {
+      text-decoration: underline; }
+  .post-content strong {
+    font-weight: normal; }
   .post-content code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; }
 

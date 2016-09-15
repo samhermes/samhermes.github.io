@@ -192,9 +192,9 @@
 .post-content {
   margin-bottom: $spacing-unit;
   h2 {
-    font-size: 32px;
+    font-size: 30px;
     @include media-query($on-laptop) {
-      font-size: 28px;
+      font-size: 24px;
     }
   }
   h3 {
@@ -226,6 +226,7 @@
     list-style: none;
     margin-left: 0;
     padding-left: 1.5em;
+    margin-bottom: 30px;
   }
   ul > li {
     margin-bottom: 15px;
@@ -249,7 +250,13 @@
     margin-left: -1.2em;
   }
   a {
-    border-bottom: 3px solid gainsboro;
+    color: rgb(68, 146, 255);
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  strong {
+    font-weight: normal;
   }
   code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
