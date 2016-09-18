@@ -17,15 +17,14 @@
 /* Site Header */
 
 .site-header {
-  background: #1D1D1D;
   padding: 10px 4%;
   width: auto;
   @media screen and (min-width: 868px) {
-    padding: 10px 25px;
+    padding: 12px 25px;
   }
 }
 .site-header a {
-  color: #fff;
+  color: #333;
   letter-spacing: 0.02em;
 }
 .site-title {
@@ -43,10 +42,10 @@
   }
 
   img {
-    width: 150px;
+    width: 140px;
     height: auto;
     @media screen and (min-width: 350px) {
-      width: 178px;
+      width: 165px;
     }
   }
 }
@@ -68,11 +67,15 @@
     margin-left: 25px;
   }
   @media screen and (min-width: 400px) {
-    padding: 8px 0;
+    padding: 9px 0 0;
   }
 
   &:first-child {
     margin-left: 0;
+  }
+
+  a:hover {
+    color: #4492ff;
   }
 }
 

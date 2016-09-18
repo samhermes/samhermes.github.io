@@ -215,15 +215,14 @@ pre[class*="language-"] {
 
 /* Site Header */
 .site-header {
-  background: #1D1D1D;
   padding: 10px 4%;
   width: auto; }
   @media screen and (min-width: 868px) {
     .site-header {
-      padding: 10px 25px; } }
+      padding: 12px 25px; } }
 
 .site-header a {
-  color: #fff;
+  color: #333;
   letter-spacing: 0.02em; }
 
 .site-title {
@@ -240,11 +239,11 @@ pre[class*="language-"] {
       font-size: 1.3em;
       padding: 5px 0 6px; } }
   .site-title img {
-    width: 150px;
+    width: 140px;
     height: auto; }
     @media screen and (min-width: 350px) {
       .site-title img {
-        width: 178px; } }
+        width: 165px; } }
 
 .site-header ul {
   list-style: none;
@@ -265,9 +264,11 @@ pre[class*="language-"] {
       margin-left: 25px; } }
   @media screen and (min-width: 400px) {
     .site-header li {
-      padding: 8px 0; } }
+      padding: 9px 0 0; } }
   .site-header li:first-child {
     margin-left: 0; }
+  .site-header li a:hover {
+    color: #4492ff; }
 
 /* Post List */
 .post-list {
