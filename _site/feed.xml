@@ -5,8 +5,8 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>http://samhermes.com/</link>
     <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Sep 2016 20:29:05 -0500</pubDate>
-    <lastBuildDate>Tue, 27 Sep 2016 20:29:05 -0500</lastBuildDate>
+    <pubDate>Tue, 27 Sep 2016 20:37:33 -0500</pubDate>
+    <lastBuildDate>Tue, 27 Sep 2016 20:37:33 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -77,17 +77,6 @@ I hate to generalize, but if there’s a checkbox with a check in it, uncheck it
         <pubDate>Thu, 25 Aug 2016 00:00:00 -0500</pubDate>
         <link>http://samhermes.com/posts/adding-syntax-highlighting-to-code/</link>
         <guid isPermaLink="true">http://samhermes.com/posts/adding-syntax-highlighting-to-code/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Hover effects on links should be quick</title>
-        <description>&lt;p&gt;When applying a hover effect to a text link, only a quick transition will likely be noticed. Users will rarely hover over a link long enough to see the full transition. I find that adding just 0.1s of transition to a link color can be just enough, and especially to a large button. It removes the harshness of the color change, without looking laborious.&lt;/p&gt;
-</description>
-        <pubDate>Mon, 08 Aug 2016 00:00:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/hover-effects-on-links-should-be-quick/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/hover-effects-on-links-should-be-quick/</guid>
         
         
       </item>
@@ -313,6 +302,19 @@ if ( ! empty( $post_thumbnail_caption ) ) {
         <pubDate>Sat, 30 Jan 2016 12:00:00 -0600</pubDate>
         <link>http://samhermes.com/posts/output-featured-image-caption-wordpress/</link>
         <guid isPermaLink="true">http://samhermes.com/posts/output-featured-image-caption-wordpress/</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Add 1 hour to date &amp; time in PHP</title>
+        <description>&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;strtotime($time . &#39;+ 1 hour&#39;);&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 04 Jan 2016 12:00:00 -0600</pubDate>
+        <link>http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</link>
+        <guid isPermaLink="true">http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</guid>
         
         
       </item>

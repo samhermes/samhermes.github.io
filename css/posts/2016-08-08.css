@@ -45,4 +45,9 @@
   margin: 0 auto;
   max-width: 280px;
   border: 0;
+  color: #1D1D1D;
+}
+
+.card-container > a:hover {
+  text-decoration: none;
 }
