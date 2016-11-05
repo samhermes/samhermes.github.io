@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $brand-color;
+  color: $text-color;
   text-decoration: none;
 
   &:hover {
@@ -88,11 +88,11 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: $grey-color;
-  border-left: 4px solid $grey-color-light;
+  color: #828282;
+  border-left: 0.25em solid lighten(#828282, 40%);
   padding-left: $spacing-unit / 2;
-  font-size: 18px;
-  letter-spacing: -1px;
+  font-size: 1.125em;
+  letter-spacing: -0.056em;
   font-style: italic;
 
   > :last-child {
@@ -107,7 +107,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 18px;
+  font-size: 1em;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -124,12 +124,16 @@ pre[class*="language-"] {
 	-moz-hyphens: none;
 	-ms-hyphens: none;
 	hyphens: none;
+
+	@media screen and (min-width: 31.25em) {
+		font-size: 1.125em;
+	}
 }
 pre[class*="language-"] {
 	padding: 1em;
 	overflow: auto;
-	border-radius: 5px;
-  margin: 30px 0;
+	border-radius: 0.3em;
+  margin: 1.8em 0;
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {

@@ -11,15 +11,15 @@
 
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://samhermes.com/posts/toggling-elements-with-javascript/">
-  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+  <link rel="canonical" href="https://samhermes.com/posts/toggling-elements-with-javascript/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="https://samhermes.com/feed.xml">
 </head>
 
 
   <body>
 
     <header class="site-header group">
-    <h1 class="site-title"><a href="/"><img src="/img/sam-hermes.svg" alt="Sam Hermes" width="178" height="21"></a></h1>
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
     <ul>
       <li><a href="/">Posts</a></li>
       <li><a href="/about">About</a></li>
@@ -31,10 +31,10 @@
 
   <header class="post-header">
     <p class="post-meta"><time>3/8/2016</time></p>
-    <h1 class="post-title">Toggling elements with JavaScript</h1>
+    <h2 class="post-title">Toggling elements with JavaScript</h2>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     <p>One of the most performant ways to toggle an element with JavaScript is to apply and remove a class. Paul Irish pointed out last year that using jQuery’s .hide(), .show(), and .toggle() methods are very costly. I’ve used/am currently using each of these, as they are really easy to understand and implement. However, you’ll see that a plain JavaScript approach isn’t too difficult.</p>
 
 <p>For my site, I needed a toggle for the menu on small screens. I used the following to add and remove a class named ‘open’, which has the proper styles to show the menu. In this case, it is performed when an element with the class of ‘toggle’ is clicked.</p>

@@ -11,15 +11,15 @@
 
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://samhermes.com/posts/caching-menu-in-transient-in-wordpress/">
-  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+  <link rel="canonical" href="https://samhermes.com/posts/caching-menu-in-transient-in-wordpress/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="https://samhermes.com/feed.xml">
 </head>
 
 
   <body>
 
     <header class="site-header group">
-    <h1 class="site-title"><a href="/"><img src="/img/sam-hermes.svg" alt="Sam Hermes" width="178" height="21"></a></h1>
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
     <ul>
       <li><a href="/">Posts</a></li>
       <li><a href="/about">About</a></li>
@@ -31,10 +31,10 @@
 
   <header class="post-header">
     <p class="post-meta"><time>3/30/2016</time></p>
-    <h1 class="post-title">Caching a menu in a transient in WordPress</h1>
+    <h2 class="post-title">Caching a menu in a transient in WordPress</h2>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     <p>Menus in WordPress are expensive to generate, in terms of site performance. On every page load, the site is rebuilding almost the exact same thing, and it gets more expensive as the number of menu items increases. The only difference between pages is the current page classes that get applied. What if we stored the menu in a transient, and applied the current page classes on the front end using JavaScript?</p>
 
 <p>The first thing we do is check to see if the transient doesn’t exist with a conditional (which it doesn’t, yet), using get_transient and passing in the name of the transient, which we’ll specify later.</p>

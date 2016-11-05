@@ -11,15 +11,15 @@
 
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://samhermes.com/posts/sticky-elements-with-stickyfill/">
-  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+  <link rel="canonical" href="https://samhermes.com/posts/sticky-elements-with-stickyfill/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="https://samhermes.com/feed.xml">
 </head>
 
 
   <body>
 
     <header class="site-header group">
-    <h1 class="site-title"><a href="/"><img src="/img/sam-hermes.svg" alt="Sam Hermes" width="178" height="21"></a></h1>
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
     <ul>
       <li><a href="/">Posts</a></li>
       <li><a href="/about">About</a></li>
@@ -31,10 +31,10 @@
 
   <header class="post-header">
     <p class="post-meta"><time>7/24/2016</time></p>
-    <h1 class="post-title">Sticky elements with Stickyfill</h1>
+    <h2 class="post-title">Sticky elements with Stickyfill</h2>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     <p>Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browsers natively, the best way right now is to use a polyfill. This is where Stickyfill comes in. If <code class="highlighter-rouge">position: sticky</code> is not supported, it mimics the behavior. As soon as support comes to all major browsers, the polyfill can be removed. At the moment, it is supported in Firefox and Safari, and is behind a flag in Chrome and Opera. Considering that it is most commonly used on larger screens, the support is strong.</p>
 
 <p>You can <a href="https://github.com/wilddeer/stickyfill">download Stickyfill on Github</a>. There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.</p>

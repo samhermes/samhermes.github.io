@@ -3,10 +3,10 @@
   <channel>
     <title>Sam Hermes</title>
     <description>Web developer at Washington University in St. Louis</description>
-    <link>http://samhermes.com/</link>
-    <atom:link href="http://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 27 Sep 2016 20:37:33 -0500</pubDate>
-    <lastBuildDate>Tue, 27 Sep 2016 20:37:33 -0500</lastBuildDate>
+    <link>https://samhermes.com/</link>
+    <atom:link href="https://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 04 Nov 2016 21:44:37 -0500</pubDate>
+    <lastBuildDate>Fri, 04 Nov 2016 21:44:37 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -46,8 +46,8 @@ I hate to generalize, but if there’s a checkbox with a check in it, uncheck it
 &lt;/ul&gt;
 </description>
         <pubDate>Wed, 14 Sep 2016 00:00:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/preparing-svg-for-the-web/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/preparing-svg-for-the-web/</guid>
+        <link>https://samhermes.com/posts/preparing-svg-for-the-web/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/preparing-svg-for-the-web/</guid>
         
         
       </item>
@@ -75,8 +75,8 @@ I hate to generalize, but if there’s a checkbox with a check in it, uncheck it
 &lt;p&gt;With Prism running on the page, all that’s needed to properly activate it is the appropriate class for the language of the code snippet. For the above snippet, I added &lt;code class=&quot;highlighter-rouge&quot;&gt;class=&quot;language-markup&quot;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt;  element to add the appropriate highlighting. Now when making a new post, I just need to include the YAML front matter and add a class, and that’s it!&lt;/p&gt;
 </description>
         <pubDate>Thu, 25 Aug 2016 00:00:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/adding-syntax-highlighting-to-code/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/adding-syntax-highlighting-to-code/</guid>
+        <link>https://samhermes.com/posts/adding-syntax-highlighting-to-code/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/adding-syntax-highlighting-to-code/</guid>
         
         
       </item>
@@ -108,8 +108,8 @@ I hate to generalize, but if there’s a checkbox with a check in it, uncheck it
 &lt;p&gt;Usually, as a page is navigated, the hover states are what indicates that something is actionable, so keeping this behavior will provide a more cohesive experience.&lt;/p&gt;
 </description>
         <pubDate>Sun, 07 Aug 2016 00:00:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/what-changes-on-hover-should-be-actionable/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/what-changes-on-hover-should-be-actionable/</guid>
+        <link>https://samhermes.com/posts/what-changes-on-hover-should-be-actionable/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/what-changes-on-hover-should-be-actionable/</guid>
         
         
       </item>
@@ -140,8 +140,8 @@ for (var i = stickyElements.length - 1; i &amp;gt;= 0; i--) {
 &lt;p&gt;In my project, I set the value of top to &lt;code class=&quot;highlighter-rouge&quot;&gt;15px&lt;/code&gt; to give a little room above the element. Also, I added an additional selector that would account for the WordPress admin bar, so the value of top is &lt;code class=&quot;highlighter-rouge&quot;&gt;47px&lt;/code&gt; when the &lt;code class=&quot;highlighter-rouge&quot;&gt;.admin-bar&lt;/code&gt; class is present. This makes sure that even users who are signed in see a properly formatted site.&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Jul 2016 00:00:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/sticky-elements-with-stickyfill/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/sticky-elements-with-stickyfill/</guid>
+        <link>https://samhermes.com/posts/sticky-elements-with-stickyfill/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/sticky-elements-with-stickyfill/</guid>
         
         
       </item>
@@ -173,8 +173,8 @@ if( menu_state ) {
 &lt;p&gt;This applies a class of &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; to the menu that was open on the last page. Now, given that &lt;code class=&quot;highlighter-rouge&quot;&gt;open&lt;/code&gt; has a bit of CSS behind it, when someone opens the mobile menu, they’ll still be in the same place where they were. Magic.&lt;/p&gt;
 </description>
         <pubDate>Sun, 24 Apr 2016 00:00:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/maintaining-state-with-sessionstorage/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/maintaining-state-with-sessionstorage/</guid>
+        <link>https://samhermes.com/posts/maintaining-state-with-sessionstorage/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/maintaining-state-with-sessionstorage/</guid>
         
         
       </item>
@@ -231,8 +231,8 @@ $(&#39;.header-menu a[href=&quot;&#39; + url + &#39;&quot;]&#39;).addClass(&#39;
 &lt;p&gt;The jQuery selector looks for an anchor tag inside of an element with the class of ‘header-menu’, matches the url variable we passed in, and then adds a class of ‘current-page’.&lt;/p&gt;
 </description>
         <pubDate>Wed, 30 Mar 2016 16:38:00 -0500</pubDate>
-        <link>http://samhermes.com/posts/caching-menu-in-transient-in-wordpress/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/caching-menu-in-transient-in-wordpress/</guid>
+        <link>https://samhermes.com/posts/caching-menu-in-transient-in-wordpress/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/caching-menu-in-transient-in-wordpress/</guid>
         
         
       </item>
@@ -251,8 +251,8 @@ $(&#39;.header-menu a[href=&quot;&#39; + url + &#39;&quot;]&#39;).addClass(&#39;
 &amp;lt;/script&amp;gt;&lt;/code&gt;&lt;/pre&gt;
 </description>
         <pubDate>Tue, 08 Mar 2016 14:20:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/toggling-elements-with-javascript/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/toggling-elements-with-javascript/</guid>
+        <link>https://samhermes.com/posts/toggling-elements-with-javascript/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/toggling-elements-with-javascript/</guid>
         
         
       </item>
@@ -279,8 +279,8 @@ $(&#39;.header-menu a[href=&quot;&#39; + url + &#39;&quot;]&#39;).addClass(&#39;
 &lt;p&gt;Phew. That was more that I thought. Hope this helps speed things up for you.&lt;/p&gt;
 </description>
         <pubDate>Sat, 13 Feb 2016 01:15:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/setting-up-jekyll/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/setting-up-jekyll/</guid>
+        <link>https://samhermes.com/posts/setting-up-jekyll/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/setting-up-jekyll/</guid>
         
         
       </item>
@@ -300,8 +300,8 @@ if ( ! empty( $post_thumbnail_caption ) ) {
 &lt;p class=&quot;last-updated&quot;&gt;Last Updated: 2/3/2016&lt;/p&gt;
 </description>
         <pubDate>Sat, 30 Jan 2016 12:00:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/output-featured-image-caption-wordpress/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/output-featured-image-caption-wordpress/</guid>
+        <link>https://samhermes.com/posts/output-featured-image-caption-wordpress/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/output-featured-image-caption-wordpress/</guid>
         
         
       </item>
@@ -313,8 +313,8 @@ if ( ! empty( $post_thumbnail_caption ) ) {
 &lt;p&gt;This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.&lt;/p&gt;
 </description>
         <pubDate>Mon, 04 Jan 2016 12:00:00 -0600</pubDate>
-        <link>http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</link>
-        <guid isPermaLink="true">http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</guid>
+        <link>https://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/</guid>
         
         
       </item>

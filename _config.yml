@@ -8,8 +8,7 @@
 # Site settings
 title: Sam Hermes
 description: Web developer at Washington University in St. Louis
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://samhermes.com" # the base hostname & protocol for your site
+url: "https://samhermes.com" # the base hostname & protocol for your site
 permalink: /posts/:title/
 
 # Build settings

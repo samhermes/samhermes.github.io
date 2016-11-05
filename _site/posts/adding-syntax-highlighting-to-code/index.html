@@ -11,15 +11,15 @@
 
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://samhermes.com/posts/adding-syntax-highlighting-to-code/">
-  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+  <link rel="canonical" href="https://samhermes.com/posts/adding-syntax-highlighting-to-code/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="https://samhermes.com/feed.xml">
 </head>
 
 
   <body>
 
     <header class="site-header group">
-    <h1 class="site-title"><a href="/"><img src="/img/sam-hermes.svg" alt="Sam Hermes" width="178" height="21"></a></h1>
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
     <ul>
       <li><a href="/">Posts</a></li>
       <li><a href="/about">About</a></li>
@@ -31,10 +31,10 @@
 
   <header class="post-header">
     <p class="post-meta"><time>8/25/2016</time></p>
-    <h1 class="post-title">Adding syntax highlighting to code</h1>
+    <h2 class="post-title">Adding syntax highlighting to code</h2>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     <p>When I started working on the last iteration of my site, I knew I was going to need to figure out how to display code snippets. I considered using Github Gists or Codepen, but they both seemed to be a bit overkill. Also, I wanted control over the appearance and formatting.</p>
 
 <p>If I wasn’t going to be embedding the code, that meant I would need to add it directly to the post, wrap it in <code class="highlighter-rouge">&lt;pre&gt;</code> tags, and style it. I could handle the first two steps, but needed help styling it. There are a number of JavaScript libraries that will apply syntax highlighting to your code, but I landed on <a href="http://prismjs.com">Prism.js</a>. It was the lightest option, and was the easiest to tweak the styles of. I am using the Okaidia theme and added PHP to the list of default languages.</p>

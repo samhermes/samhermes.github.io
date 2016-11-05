@@ -11,15 +11,15 @@
 
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/">
-  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+  <link rel="canonical" href="https://samhermes.com/posts/add-one-hour-to-date-and-time-in-php/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="https://samhermes.com/feed.xml">
 </head>
 
 
   <body>
 
     <header class="site-header group">
-    <h1 class="site-title"><a href="/"><img src="/img/sam-hermes.svg" alt="Sam Hermes" width="178" height="21"></a></h1>
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
     <ul>
       <li><a href="/">Posts</a></li>
       <li><a href="/about">About</a></li>
@@ -31,10 +31,10 @@
 
   <header class="post-header">
     <p class="post-meta"><time>1/4/2016</time></p>
-    <h1 class="post-title">Add 1 hour to date & time in PHP</h1>
+    <h2 class="post-title">Add 1 hour to date & time in PHP</h2>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     <pre><code class="language-php">strtotime($time . '+ 1 hour');</code></pre>
 
 <p>This is probably the most magical thing I’ve ever done PHP. Pass in the date and time (in this case, in a variable), tell it what you want to do with it, and out comes the updated date and time. I needed to add an hour to the time I was working with. Seems simple until you think about transition to the next day. This function takes care of advancing the date to the next day if necessary.</p>

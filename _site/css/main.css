@@ -1,14 +1,4 @@
 @charset "UTF-8";
-@font-face {
-  font-family: 'Roboto';
-  src: url("/font/Roboto-Regular.woff2") format("woff2"), url("/font/Roboto-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
-  font-family: 'Roboto';
-  src: url("/font/Roboto-Light.woff2") format("woff2"), url("/font/Roboto-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal; }
 /**
  * Reset some basic elements
  */
@@ -22,7 +12,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 300 16px "Roboto", sans-serif;
+  font: 300 100% -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #1D1D1D;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
@@ -37,7 +27,7 @@ body {
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure {
-  margin-bottom: 15px; }
+  margin-bottom: 0.9em; }
 
 /**
  * Images
@@ -53,13 +43,13 @@ figure > img {
   display: block; }
 
 figcaption {
-  font-size: 14px; }
+  font-size: 87.5%; }
 
 /**
  * Lists
  */
 ul, ol {
-  margin-left: 30px; }
+  margin-left: 1.8em; }
 
 li > ul,
 li > ol {
@@ -85,10 +75,10 @@ a {
  */
 blockquote {
   color: #828282;
-  border-left: 4px solid #e8e8e8;
-  padding-left: 15px;
-  font-size: 18px;
-  letter-spacing: -1px;
+  border-left: 0.25em solid #e8e8e8;
+  padding-left: 0.9em;
+  font-size: 1.125em;
+  letter-spacing: -0.056em;
   font-style: italic; }
   blockquote > :last-child {
     margin-bottom: 0; }
@@ -100,7 +90,7 @@ code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 18px;
+  font-size: 1em;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -115,12 +105,16 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none; }
+  @media screen and (min-width: 31.25em) {
+    code[class*="language-"],
+    pre[class*="language-"] {
+      font-size: 1.125em; } }
 
 pre[class*="language-"] {
   padding: 1em;
   overflow: auto;
-  border-radius: 5px;
-  margin: 30px 0; }
+  border-radius: 0.3em;
+  margin: 1.8em 0; }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
@@ -200,50 +194,25 @@ pre[class*="language-"] {
   display: table;
   clear: both; }
 
-/* Home */
-.home {
-  padding: 0 0 10%; }
-
-.home h2 {
-  font-size: 0.9em;
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  margin: 0 auto 40px;
-  max-width: 800px;
-  width: 92%;
-  border-bottom: 1px solid #efefef; }
-
 /* Site Header */
 .site-header {
-  padding: 10px 4%;
+  padding: 1em 5%;
   width: auto; }
-  @media screen and (min-width: 868px) {
+  @media screen and (min-width: 54.25em) {
     .site-header {
-      padding: 12px 25px; } }
-
-.site-header a {
-  color: #333;
-  letter-spacing: 0.02em; }
+      padding: 1.2em 2.1em; } }
 
 .site-title {
-  text-transform: uppercase;
-  color: #fff;
   float: left;
   margin: 0;
-  font-size: 1.1em;
   font-weight: 400;
-  line-height: 1;
-  padding: 4px 0; }
-  @media screen and (min-width: 400px) {
+  font-size: 1.4em; }
+  @media screen and (min-width: 28.125em) {
     .site-title {
-      font-size: 1.3em;
-      padding: 5px 0 6px; } }
-  .site-title img {
-    width: 140px;
-    height: auto; }
-    @media screen and (min-width: 350px) {
-      .site-title img {
-        width: 165px; } }
+      font-size: 1.6em; } }
+  @media screen and (min-width: 62.5em) {
+    .site-title {
+      font-size: 1.8em; } }
 
 .site-header ul {
   list-style: none;
@@ -254,117 +223,128 @@ pre[class*="language-"] {
 .site-header li {
   float: left;
   color: rgba(255, 255, 255, 0.92);
-  margin-left: 20px;
-  padding: 6px 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
+  margin-left: 1.25em;
+  padding: 0.25em 0 0;
+  font-size: 1em;
   font-weight: normal; }
-  @media screen and (min-width: 350px) {
+  @media screen and (min-width: 21.875em) {
     .site-header li {
-      margin-left: 25px; } }
-  @media screen and (min-width: 400px) {
+      margin-left: 1.56em; } }
+  @media screen and (min-width: 28.125em) {
     .site-header li {
-      padding: 9px 0 0; } }
+      padding: 0.325em 0 0;
+      font-size: 1.1em; } }
+  @media screen and (min-width: 62.5em) {
+    .site-header li {
+      font-size: 1.2em;
+      padding: 0.4em 0 0; } }
   .site-header li:first-child {
     margin-left: 0; }
   .site-header li a:hover {
-    color: #4492ff; }
+    text-decoration: underline; }
 
 /* Post List */
 .post-list {
-  max-width: 800px;
-  width: 92%;
-  padding: 35px 0;
+  list-style: none;
+  max-width: 50em;
   margin: 0 auto;
-  list-style: none; }
-  @media screen and (min-width: 400px) {
+  padding: 1.875em 0 7.5em;
+  width: 90%; }
+  @media screen and (min-width: 54.25em) {
     .post-list {
-      padding: 45px 0; } }
-  @media screen and (min-width: 700px) {
-    .post-list {
-      padding-top: 5%; } }
+      padding: 4% 0 12%; } }
 
 .post-list li {
-  margin-bottom: 45px; }
-  @media screen and (min-width: 400px) {
+  margin-bottom: 2.5em; }
+  @media screen and (min-width: 28.125em) {
     .post-list li {
-      margin-bottom: 60px; } }
+      margin-bottom: 4em; } }
 
-.post-list h3 {
+.post-list h2 {
   font-size: 1.3em;
   font-weight: 400;
   margin: 0; }
-  @media screen and (min-width: 400px) {
-    .post-list h3 {
-      font-size: 1.7em; } }
+  @media screen and (min-width: 28.125em) {
+    .post-list h2 {
+      font-size: 1.45em; } }
+  @media screen and (min-width: 62.5em) {
+    .post-list h2 {
+      font-size: 1.6em; } }
 
 .post-list a:hover {
   text-decoration: underline; }
 
 .post-list .post-meta {
   font-size: 0.8em;
-  letter-spacing: 0.3px;
   display: block;
-  margin: 0 0 8px; }
+  margin: 0 0 0.625em; }
+  @media screen and (min-width: 37.5em) {
+    .post-list .post-meta {
+      font-size: 1em; } }
 
 .post-list p {
-  font-size: 1.2em;
+  font-size: 1.05em;
   line-height: 1.5;
-  margin: 0.6em 0; }
+  margin: 0.8em 0; }
+  @media screen and (min-width: 28.125em) {
+    .post-list p {
+      font-size: 1.3em; } }
 
-@media screen and (max-width: 500px) {
-  .post-list h2 {
-    font-size: 1.35em; }
-
-  .post-list p {
-    font-size: 1.1em; } }
 /* Post Page */
 .post {
   margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 0 120px;
-  width: 92%; }
-  @media screen and (min-width: 868px) {
+  max-width: 50em;
+  padding: 1.875em 0 7.5em;
+  width: 90%; }
+  @media screen and (min-width: 54.25em) {
     .post {
       padding: 4% 0 12%; } }
 
 .post .post-meta {
-  font-size: 1em;
-  line-height: 1.2;
-  margin: 0 0 10px; }
+  font-size: 0.8em;
+  margin: 0 0 0.625em; }
+  @media screen and (min-width: 37.5em) {
+    .post .post-meta {
+      font-size: 1em; } }
 
 .post-title {
   font-size: 1.5em;
   margin: 0 0 0.92em;
   font-weight: 400; }
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 37.5em) {
+    .post-title {
+      font-size: 1.8em; } }
+  @media screen and (min-width: 62.5em) {
     .post-title {
       font-size: 2.2em; } }
 
 .post-content {
-  margin-bottom: 30px; }
+  margin-bottom: 1.8em; }
   .post-content h2 {
     font-size: 1.8em; }
-    @media screen and (max-width: 800px) {
+    @media screen and (min-width: 50em) {
       .post-content h2 {
         font-size: 1.4em; } }
   .post-content h3 {
     font-size: 1.6em; }
-    @media screen and (max-width: 800px) {
+    @media screen and (min-width: 50em) {
       .post-content h3 {
         font-size: 1.3em; } }
   .post-content h4 {
     font-size: 1.2em; }
-    @media screen and (max-width: 800px) {
+    @media screen and (min-width: 50em) {
       .post-content h4 {
         font-size: 1.1em; } }
   .post-content p {
-    font-size: 1.3em;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 30px; }
-    @media screen and (max-width: 500px) {
+    margin-bottom: 1.8em; }
+    @media screen and (min-width: 37.5em) {
       .post-content p {
-        font-size: 1.1em; } }
+        font-size: 1.2em; } }
+    @media screen and (min-width: 62.5em) {
+      .post-content p {
+        font-size: 1.4em; } }
   .post-content .last-updated {
     text-transform: uppercase;
     font-size: 0.8em;
@@ -373,16 +353,16 @@ pre[class*="language-"] {
     list-style: none;
     margin-left: 0;
     padding-left: 1.5em;
-    margin-bottom: 30px; }
+    margin-bottom: 1.8em; }
   .post-content ul > li {
-    margin-bottom: 15px;
-    font-size: 1.3em;
+    margin-bottom: 1em;
+    font-size: 1.05em;
     line-height: 1.6; }
-    @media screen and (max-width: 500px) {
+    @media screen and (min-width: 31.25em) {
       .post-content ul > li {
-        font-size: 1.1em; } }
+        font-size: 1.3em; } }
     .post-content ul > li pre {
-      margin-top: 10px; }
+      margin-top: 0.625em; }
     .post-content ul > li p {
       font-size: 1em; }
   .post-content ul > li:before {
@@ -392,9 +372,7 @@ pre[class*="language-"] {
     width: 1.2em;
     margin-left: -1.2em; }
   .post-content a {
-    color: #4492ff; }
-    .post-content a:hover {
-      text-decoration: underline; }
+    text-decoration: underline; }
   .post-content strong {
     font-weight: normal; }
   .post-content code {
@@ -402,36 +380,38 @@ pre[class*="language-"] {
 
 /* About Page */
 .about {
-  max-width: 650px;
-  margin: 40px auto 60px;
-  width: 92%; }
-  @media screen and (min-width: 868px) {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 1.875em 0 7.5em;
+  width: 90%; }
+  @media screen and (min-width: 54.25em) {
     .about {
-      margin: 90px auto 50px; } }
+      padding: 4% 0 12%; } }
   .about h2 {
-    font-size: 2.2em;
+    font-size: 1.5em;
     margin: 0 0 1em;
     font-weight: 400; }
-    @media screen and (max-width: 500px) {
+    @media screen and (min-width: 37.5em) {
       .about h2 {
-        font-size: 1.6em; } }
+        font-size: 1.8em; } }
+    @media screen and (min-width: 62.5em) {
+      .about h2 {
+        font-size: 2.2em; } }
   .about p {
-    font-size: 1.3em;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 30px; }
-    @media screen and (max-width: 500px) {
+    margin-bottom: 1.8em; }
+    @media screen and (min-width: 37.5em) {
       .about p {
-        font-size: 1.1em; } }
+        font-size: 1.3em; } }
   .about a {
-    color: #4492ff; }
-    .about a:hover {
-      text-decoration: underline; }
+    text-decoration: underline; }
 
 /* 404 Page */
 .fourohfour {
-  max-width: 1200px;
-  width: 92%;
-  margin: 50px auto 0;
+  max-width: 75em;
+  width: 90%;
+  margin: 3.2em auto 0;
   text-align: center;
   line-height: 1.5;
   font-size: 0.9em; }

@@ -11,15 +11,15 @@
 
   <link rel="stylesheet" href="/css/main.css">
   
-  <link rel="canonical" href="http://samhermes.com/posts/maintaining-state-with-sessionstorage/">
-  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://samhermes.com/feed.xml">
+  <link rel="canonical" href="https://samhermes.com/posts/maintaining-state-with-sessionstorage/">
+  <link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="https://samhermes.com/feed.xml">
 </head>
 
 
   <body>
 
     <header class="site-header group">
-    <h1 class="site-title"><a href="/"><img src="/img/sam-hermes.svg" alt="Sam Hermes" width="178" height="21"></a></h1>
+    <h1 class="site-title"><a href="/">Sam Hermes</a></h1>
     <ul>
       <li><a href="/">Posts</a></li>
       <li><a href="/about">About</a></li>
@@ -31,10 +31,10 @@
 
   <header class="post-header">
     <p class="post-meta"><time>4/24/2016</time></p>
-    <h1 class="post-title">Maintaining state with sessionStorage</h1>
+    <h2 class="post-title">Maintaining state with sessionStorage</h2>
   </header>
 
-  <div class="post-content" itemprop="articleBody">
+  <div class="post-content">
     <p>When a multi-level menu is collapsed on a small screen, it can difficult to communicate a sense of place as someone is navigating between pages. If the page is several levels deep in the hierarchy, it is really frustrating to dig back down to it if you’d like to view a sibling page. One way to manage this is to let the browser remember your location with sessionStorage.</p>
 
 <p>To start, you need to give a unique ID to each menu item that has children. If you’re working with WordPress, you could use the built in page ID, since you know that it will be unique.</p>

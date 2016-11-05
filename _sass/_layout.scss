@@ -1,52 +1,22 @@
-
-/* Home */
-
-.home {
-  padding: 0 0 10%;
-}
-.home h2 {
-  font-size: 0.9em;
-  text-transform: uppercase;
-  padding-bottom: 10px;
-  margin: 0 auto 40px;
-  max-width: 800px;
-	width: 92%;
-  border-bottom: 1px solid #efefef;
-}
-
 /* Site Header */
 
 .site-header {
-  padding: 10px 4%;
+  padding: 1em 5%;
   width: auto;
-  @media screen and (min-width: 868px) {
-    padding: 12px 25px;
+  @media screen and (min-width: 54.25em) {
+    padding: 1.2em 2.1em;
   }
-}
-.site-header a {
-  color: #333;
-  letter-spacing: 0.02em;
 }
 .site-title {
-  text-transform: uppercase;
-  color: #fff;
   float: left;
   margin: 0;
-  font-size: 1.1em;
   font-weight: 400;
-  line-height: 1;
-  padding: 4px 0;
-  @media screen and (min-width: 400px) {
-    font-size: 1.3em;
-    padding: 5px 0 6px;
+  font-size: 1.4em;
+  @media screen and (min-width: 28.125em) {
+    font-size: 1.6em;
   }
-
-  img {
-    width: 140px;
-    height: auto;
-    @media screen and (min-width: 350px) {
-      width: 165px;
-    }
+  @media screen and (min-width: 62.5em) {
+    font-size: 1.8em;
   }
 }
 .site-header ul {
@@ -58,16 +28,20 @@
 .site-header li {
   float: left;
   color: rgba(255, 255, 255, 0.92);
-  margin-left: 20px;
-  padding: 6px 0;
-  text-transform: uppercase;
-  font-size: 0.9em;
+  margin-left: 1.25em;
+  padding: 0.25em 0 0;
+  font-size: 1em;
   font-weight: normal;
-  @media screen and (min-width: 350px) {
-    margin-left: 25px;
+  @media screen and (min-width: 21.875em) {
+    margin-left: 1.56em;
   }
-  @media screen and (min-width: 400px) {
-    padding: 9px 0 0;
+  @media screen and (min-width: 28.125em) {
+    padding: 0.325em 0 0;
+    font-size: 1.1em;
+  }
+  @media screen and (min-width: 62.5em) {
+    font-size: 1.2em;
+    padding: 0.4em 0 0;
   }
 
   &:first-child {
@@ -75,37 +49,37 @@
   }
 
   a:hover {
-    color: #4492ff;
+    text-decoration: underline;
   }
 }
 
 /* Post List */
 
 .post-list {
-	max-width: 800px;
-	width: 92%;
-	padding: 35px 0;
+  list-style: none;
+	max-width: 50em;
 	margin: 0 auto;
-	list-style: none;
-  @media screen and (min-width: 400px) {
-    padding: 45px 0;
-  }
-  @media screen and (min-width: 700px) {
-    padding-top: 5%;
+	padding: 1.875em 0 7.5em;
+  width: 90%;
+  @media screen and (min-width: 54.25em) {
+    padding: 4% 0 12%;
   }
 }
 .post-list li {
-	margin-bottom: 45px;
-  @media screen and (min-width: 400px) {
-    margin-bottom: 60px;
+	margin-bottom: 2.5em;
+  @media screen and (min-width: 28.125em) {
+    margin-bottom: 4em;
   }
 }
-.post-list h3 {
+.post-list h2 {
   font-size: 1.3em;
 	font-weight: 400;
 	margin: 0;
-  @media screen and (min-width: 400px) {
-    font-size: 1.7em;
+  @media screen and (min-width: 28.125em) {
+    font-size: 1.45em;
+  }
+  @media screen and (min-width: 62.5em) {
+    font-size: 1.6em;
   }
 }
 .post-list a:hover {
@@ -113,21 +87,18 @@
 }
 .post-list .post-meta {
 	font-size: 0.8em;
-	letter-spacing: 0.3px;
 	display: block;
-	margin: 0 0 8px;
+	margin: 0 0 0.625em;
+  @media screen and (min-width: 37.5em) {
+    font-size: 1em;
+  }
 }
 .post-list p {
-	font-size: 1.2em;
+	font-size: 1.05em;
 	line-height: 1.5;
-	margin: 0.6em 0;
-}
-@media screen and (max-width: 500px) {
-  .post-list h2 {
-    font-size: 1.35em;
-  }
-  .post-list p {
-    font-size: 1.1em;
+	margin: 0.8em 0;
+  @media screen and (min-width: 28.125em) {
+    font-size: 1.3em;
   }
 }
 
@@ -135,23 +106,28 @@
 
 .post {
   margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 0 120px;
-  width: 92%;
-  @media screen and (min-width: 868px) {
+  max-width: 50em;
+  padding: 1.875em 0 7.5em;
+  width: 90%;
+  @media screen and (min-width: 54.25em) {
     padding: 4% 0 12%;
   }
 }
 .post .post-meta {
-  font-size: 1em;
-  line-height: 1.2;
-  margin: 0 0 10px;
+  font-size: 0.8em;
+  margin: 0 0 0.625em;
+  @media screen and (min-width: 37.5em) {
+    font-size: 1em;
+  }
 }
 .post-title {
   font-size: 1.5em;
   margin: 0 0 0.92em;
   font-weight: 400;
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 37.5em) {
+    font-size: 1.8em;
+  }
+  @media screen and (min-width: 62.5em) {
     font-size: 2.2em;
   }
 }
@@ -159,28 +135,31 @@
   margin-bottom: $spacing-unit;
   h2 {
     font-size: 1.8em;
-    @include media-query($on-laptop) {
+    @media screen and (min-width: 50em) {
       font-size: 1.4em;
     }
   }
   h3 {
     font-size: 1.6em;
-    @include media-query($on-laptop) {
+    @media screen and (min-width: 50em) {
       font-size: 1.3em;
     }
   }
   h4 {
     font-size: 1.2em;
-    @include media-query($on-laptop) {
+    @media screen and (min-width: 50em) {
       font-size: 1.1em;
     }
   }
   p {
-    font-size: 1.3em;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 30px;
-    @media screen and (max-width: 500px) {
-      font-size: 1.1em;
+    margin-bottom: 1.8em;
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.2em;
+    }
+    @media screen and (min-width: 62.5em) {
+      font-size: 1.4em;
     }
   }
   .last-updated {
@@ -192,17 +171,17 @@
     list-style: none;
     margin-left: 0;
     padding-left: 1.5em;
-    margin-bottom: 30px;
+    margin-bottom: 1.8em;
   }
   ul > li {
-    margin-bottom: 15px;
-    font-size: 1.3em;
+    margin-bottom: 1em;
+    font-size: 1.05em;
     line-height: 1.6;
-    @media screen and (max-width: 500px) {
-      font-size: 1.1em;
+    @media screen and (min-width: 31.25em) {
+      font-size: 1.3em;
     }
     pre {
-      margin-top: 10px;
+      margin-top: 0.625em;
     }
     p {
       font-size: 1em;
@@ -216,10 +195,7 @@
     margin-left: -1.2em;
   }
   a {
-    color: rgb(68, 146, 255);
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
   strong {
     font-weight: normal;
@@ -232,42 +208,43 @@
 /* About Page */
 
 .about {
-  max-width: 650px;
-  margin: 40px auto 60px;
-  width: 92%;
-  @media screen and (min-width: 868px) {
-    margin: 90px auto 50px;
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 1.875em 0 7.5em;
+  width: 90%;
+  @media screen and (min-width: 54.25em) {
+    padding: 4% 0 12%;
   }
   h2 {
-    font-size: 2.2em;
+    font-size: 1.5em;
     margin: 0 0 1em;
     font-weight: 400;
-    @media screen and (max-width: 500px) {
-      font-size: 1.6em;
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.8em;
+    }
+    @media screen and (min-width: 62.5em) {
+      font-size: 2.2em;
     }
   }
   p {
-    font-size: 1.3em;
+    font-size: 1.05em;
     line-height: 1.6;
-    margin-bottom: 30px;
-    @media screen and (max-width: 500px) {
-      font-size: 1.1em;
+    margin-bottom: 1.8em;
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.3em;
     }
   }
   a {
-    color: rgb(68, 146, 255);
-    &:hover {
-      text-decoration: underline;
-    }
+    text-decoration: underline;
   }
 }
 
 /* 404 Page */
 
 .fourohfour {
-	max-width: 1200px;
-	width: 92%;
-	margin: 50px auto 0;
+	max-width: 75em;
+	width: 90%;
+	margin: 3.2em auto 0;
 	text-align: center;
 	line-height: 1.5;
 	font-size: 0.9em;
