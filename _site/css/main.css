@@ -247,10 +247,15 @@ pre[class*="language-"] {
   width: 90%;
   max-width: 480px;
   margin: 0 auto;
-  padding: 5% 0 0;
-  overflow: hidden; }
+  padding: 5% 0 0; }
   .pride img {
-    margin-bottom: -2px; }
+    margin-bottom: -2px;
+    overflow: hidden; }
+  .pride h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: center; }
 
 /* Post List */
 .post-list {

@@ -58,10 +58,18 @@
   max-width: 480px;
   margin: 0 auto;
   padding: 5% 0 0;
-  overflow: hidden;
+  
 
   img {
     margin-bottom: -2px;
+    overflow: hidden;
+  }
+
+  h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    margin: 40px 0;
+    text-align: center;
   }
 }
 
