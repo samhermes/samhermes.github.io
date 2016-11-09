@@ -243,6 +243,15 @@ pre[class*="language-"] {
   .site-header li a:hover {
     text-decoration: underline; }
 
+.pride {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 5% 0 0;
+  overflow: hidden; }
+  .pride img {
+    margin-bottom: -2px; }
+
 /* Post List */
 .post-list {
   list-style: none;

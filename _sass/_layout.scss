@@ -53,6 +53,18 @@
   }
 }
 
+.pride {
+  width: 90%;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 5% 0 0;
+  overflow: hidden;
+
+  img {
+    margin-bottom: -2px;
+  }
+}
+
 /* Post List */
 
 .post-list {
