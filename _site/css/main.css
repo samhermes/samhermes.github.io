@@ -340,7 +340,8 @@ pre[class*="language-"] {
       .post-content h2 {
         font-size: 1.6em; } }
   .post-content h3 {
-    font-size: 1.3em; }
+    font-size: 1.3em;
+    font-weight: 400; }
     @media screen and (min-width: 37.5em) {
       .post-content h3 {
         font-size: 1.5em; } }
