@@ -107,7 +107,7 @@ code[class*="language-"],
 pre[class*="language-"] {
 	color: #f8f8f2;
 	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-  font-size: 1em;
+	font-size: 1rem;
 	direction: ltr;
 	text-align: left;
 	white-space: pre;
@@ -126,14 +126,14 @@ pre[class*="language-"] {
 	hyphens: none;
 
 	@media screen and (min-width: 31.25em) {
-		font-size: 1.125em;
+		font-size: 1.125rem;
 	}
 }
 pre[class*="language-"] {
 	padding: 1em;
 	overflow: auto;
 	border-radius: 0.3em;
-  margin: 1.8em 0;
+	margin: 1.8rem 0;
 }
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {

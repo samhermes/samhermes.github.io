@@ -7,7 +7,7 @@ excerpt: I’ve been working with SVG for a while now, and I’ve come to rest o
 ---
 I used to be really scared of using SVG, and now I’m just a little bit scared. I think the scary part is that you can easily see the mess inside. It’s all right there, open to edit and optimize. I’ve been working with SVG for a while now, and I’ve come to rest on what I’ve found to be the best way to prepare them for the web. As they are complex, these may not be the best in each and every case, but this is what works for me.
 
-## Saving from Illustrator
+### Saving from Illustrator
 
 I followed the save dialog example given in the [CSS Tricks article on using SVG](https://css-tricks.com/using-svg/) for a while before I got comfortable with it. The article doesn't get into details of the options, so let me step through those. You’ll have to toggle the ‘More Options’ button to get to all of these.
 
@@ -24,13 +24,13 @@ Much of this I was able to verify using an [incredibly helpful answer given on S
 
 Once the SVG has been saved from Illustrator, further optimization is necessary. Illustrator includes a generator comment inside the SVG, and does not do any minimization.
 
-## Optimizing for the web
+### Optimizing for the web
 
 Illustrator gives you a big glob of stuff that you do not need, or want to send down the pipe. SVG is already a little heavier than a PNG anyway, depending, so it’s important to make it as slim as possible.
 
 I use SVGO on the command line to optimize all SVGs. It works great, and I’ll give it credit for warming me up to the command line in general. You just type `svgo`, a space, drag and drop the file onto the terminal window, and hit enter. Done. It will tell you what percentage it has shaved off, which always feels awesome. There is also a web interface, created by Jake Archibald, that will perform the same tasks. It’s accessible at [https://jakearchibald.github.io/svgomg](https://jakearchibald.github.io/svgomg).
 
-A few things you’ll want to look out for:
+#### A few things you’ll want to look out for:
 
 - Make sure that the height and width are set inside the SVG, not just in CSS. This improves compatibility across browsers. Can I use reports an issue in IE 9–11 where SVGs don’t scale properly without height, width, viewBox, and CSS rules specified, and I’ve had an SVG without height and width collapse to about 3px tall on an older Android device.
 - It’s best if the viewBox attribute starts with `0 0`, followed by the width and height of the graphic. This puts the origin of the graphic at the natural origin and matches the viewport to the height and width. A fantastic, thorough explanation of this has been written by Sara Soueidan at [https://sarasoueidan.com/blog/svg-coordinate-systems](https://sarasoueidan.com/blog/svg-coordinate-systems).
