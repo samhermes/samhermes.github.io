@@ -243,19 +243,36 @@ pre[class*="language-"] {
   .site-header li a:hover {
     text-decoration: underline; }
 
-.pride {
+/* About Intro */
+.about-intro {
+  margin: 2.5em auto 2.5em;
+  max-width: 30em;
   width: 90%;
-  max-width: 480px;
-  margin: 0 auto;
-  padding: 5% 0 0; }
-  .pride img {
-    margin-bottom: -2px;
-    overflow: hidden; }
-  .pride h2 {
-    font-size: 1.6em;
-    font-weight: 700;
-    margin: 40px 0;
-    text-align: center; }
+  text-align: center; }
+  @media screen and (min-width: 45em) {
+    .about-intro {
+      max-width: 40em;
+      margin: 4% auto 4%; } }
+  .about-intro p {
+    font-size: 1.3rem;
+    line-height: 1.5; }
+    @media screen and (min-width: 28.125em) {
+      .about-intro p {
+        font-size: 1.4rem; } }
+    @media screen and (min-width: 45em) {
+      .about-intro p {
+        font-size: 1.6rem; } }
+  .about-intro a {
+    display: inline-block;
+    padding: 0.8em 1.7em;
+    border-radius: 0.2em;
+    background: #744ea8;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 0.85rem;
+    transition: background 0.1s; }
+    .about-intro a:hover {
+      background: #604387; }
 
 /* Post List */
 .post-list {
@@ -267,6 +284,21 @@ pre[class*="language-"] {
   @media screen and (min-width: 54.25em) {
     .post-list {
       padding: 4% 0 12%; } }
+  .post-list .post-list-heading {
+    font-size: 0.8rem;
+    margin: 0 0 2.5em;
+    text-transform: uppercase;
+    text-align: center; }
+    @media screen and (min-width: 28.125em) {
+      .post-list .post-list-heading {
+        font-size: 0.9rem; } }
+  .post-list .see-all {
+    text-align: center; }
+    .post-list .see-all a {
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      display: inline-block;
+      padding: 0.8em 3em; }
 
 .post-list li {
   margin-bottom: 2.5em; }
@@ -303,6 +335,9 @@ pre[class*="language-"] {
   @media screen and (min-width: 28.125em) {
     .post-list p {
       font-size: 1.3em; } }
+
+.post-list.home li:last-of-type {
+  margin-bottom: 2.2em; }
 
 /* Post Page */
 .post {
