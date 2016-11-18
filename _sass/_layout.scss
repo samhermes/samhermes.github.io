@@ -77,9 +77,8 @@
   a {
     display: inline-block;
     padding: 0.6em 1.2em;
+    border: 1px solid #2e2e2e;
     border-radius: 0.2em;
-    background: #f2f2f2;
-    box-shadow: 0 0.25em 0.375em rgba(155, 154, 180, 0.3);
     text-transform: uppercase;
     color: #2e2e2e;
     font-size: 0.75rem;
@@ -89,9 +88,8 @@
       font-size: 0.85rem;
     }
     &:hover {
-      background: #f6f6f6;
       transform: translateY(-1px);
-      box-shadow: 0 0.25em 0.375em rgba(155, 154, 180, 0.4);
+      box-shadow: 0 0.25em 0.375em rgba(155, 154, 180, 0.2);
     }
   }
 }
