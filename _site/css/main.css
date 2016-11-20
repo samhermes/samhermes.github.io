@@ -296,6 +296,9 @@ pre[class*="language-"] {
     position: relative;
     z-index: 1;
     margin-left: 5%; }
+    @media screen and (min-width: 45em) {
+      .about-intro a {
+        margin-left: 0; } }
     @media screen and (min-width: 28.125em) {
       .about-intro a {
         padding: 0.8em 1.7em;
