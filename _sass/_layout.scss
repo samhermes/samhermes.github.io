@@ -4,6 +4,7 @@
   position: fixed;
   top: 0;
   left: 0;
+  z-index: 2;
   width: 100%;
   background: #fff;
   box-sizing: border-box;
@@ -52,7 +53,7 @@
   @media screen and (min-width: 28.125em) {
     padding-top: 58px;
   }
-  @media screen and (min-width: 54.25em) {
+  @media screen and (min-width: 56.25em) {
     padding-top: 74px;
   }
 }
@@ -60,21 +61,48 @@
 /* About Intro */
 
 .about-intro {
-  margin: 2.5em auto;
-  width: 90%;
+  padding: 2.5em 0;
+  background: #000 url(/img/home/home-small.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+  position: relative;
+  &::after {
+    background: rgba(0, 0, 0, 0.35);
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   @media screen and (min-width: 45em) {
-    max-width: 34em;
-    margin: 3.5em auto;
+    padding: 3.5em 0;
     text-align: center;
-    width: 75%;
+    background-image: url(/img/home/home.jpg);
+  }
+  @media (-webkit-min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi) {
+    background-image: url(/img/home/home-small@2x.jpg);
+  }
+  @media (min-width: 45em) and (-webkit-min-device-pixel-ratio: 2),
+         (min-width: 45em) and (min-resolution: 192dpi) {
+    background-image: url(/img/home/home@2x.jpg);
   }
   p {
+    position: relative;
+    z-index: 1;
     font-size: 1.3rem;
     line-height: 1.5;
+    margin: 0 auto 1em;
+    width: 90%;
+    text-shadow: 2px 2px 15px #000;
     @media screen and (min-width: 28.125em) {
       font-size: 1.4rem;
     }
     @media screen and (min-width: 45em) {
+      max-width: 34rem;
+      width: 75%;
       font-size: 1.6rem;
     }
   }
@@ -85,8 +113,12 @@
     border-radius: 0.2em;
     text-transform: uppercase;
     color: #2e2e2e;
+    background: #fff;
     font-size: 0.75rem;
     transition: 0.2s;
+    position: relative;
+    z-index: 1;
+    margin-left: 5%;
     @media screen and (min-width: 28.125em) {
       padding: 0.8em 1.7em;
       font-size: 0.85rem;
