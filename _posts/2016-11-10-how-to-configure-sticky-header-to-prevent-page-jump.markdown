@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  How to configure sticky header to prevent page jump
+title:  How to configure a sticky header to prevent page jump
 date:   2016-11-10
 categories:
 excerpt: As I’ve been out browsing the web lately, I’ve come across quite a few sticky headers that are implemented in a way that causes the page to jump up as scrolling begins.
