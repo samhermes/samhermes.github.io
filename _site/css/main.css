@@ -242,7 +242,7 @@ pre[class*="language-"] {
 
 /* About Intro */
 .about-intro {
-  padding: 2.5em 0;
+  padding: 4em 0;
   background: #000 url(/img/home/home-small.jpg) no-repeat center;
   background-size: cover;
   color: #fff;
