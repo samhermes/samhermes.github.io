@@ -191,10 +191,6 @@ pre[class*="language-"] {
 
 /* Site Header */
 .site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
   width: 100%;
   background: #fff;
   box-sizing: border-box;
@@ -231,12 +227,20 @@ pre[class*="language-"] {
     .site-header li a:hover {
       text-decoration: underline; }
 
-.page {
-  padding-top: 49px; }
-  @media screen and (min-width: 28.125em) {
+/* Fixed Header */
+@media screen and (max-width: 56.24em) and (min-height: 32em) {
+  .site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2; }
+
+  .page {
+    padding-top: 49px; } }
+  @media screen and (max-width: 56.24em) and (min-height: 32em) and (min-width: 28.125em) {
     .page {
       padding-top: 58px; } }
-  @media screen and (min-width: 56.25em) {
+  @media screen and (max-width: 56.24em) and (min-height: 32em) and (min-width: 56.25em) {
     .page {
       padding-top: 74px; } }
 
