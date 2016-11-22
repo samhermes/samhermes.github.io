@@ -207,24 +207,25 @@ pre[class*="language-"] {
     float: left; }
     .site-header a img {
       display: block; }
-  .site-header ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    float: right; }
-  .site-header li {
+
+/* Site Navigation */
+.site-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right; }
+  .site-nav li {
     float: left;
-    color: rgba(255, 255, 255, 0.92);
     margin-left: 1.25em;
     font-size: 0.9em;
     font-weight: normal;
     text-transform: uppercase; }
     @media screen and (min-width: 21.875em) {
-      .site-header li {
+      .site-nav li {
         margin-left: 1.56em; } }
-    .site-header li:first-child {
+    .site-nav li:first-child {
       margin-left: 0; }
-    .site-header li a:hover {
+    .site-nav li a:hover {
       text-decoration: underline; }
 
 /* Fixed Header */
@@ -243,6 +244,42 @@ pre[class*="language-"] {
   @media screen and (max-width: 56.24em) and (min-height: 32em) and (min-width: 56.25em) {
     .page {
       padding-top: 74px; } }
+
+/* Site Footer */
+.site-footer {
+  width: 100%;
+  background: #1f2223;
+  box-sizing: border-box;
+  padding: 1em 5%; }
+  @media screen and (min-width: 28.125em) {
+    .site-footer {
+      padding: 1.3em 5%; } }
+  @media screen and (min-width: 56.25em) {
+    .site-footer {
+      padding: 1.8em; } }
+  .site-footer .site-nav {
+    float: left;
+    padding-top: 0.365rem; }
+    .site-footer .site-nav li a {
+      color: #fff; }
+
+.social {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: right; }
+  .social li {
+    float: left;
+    margin-left: 1.25em; }
+    .social li:first-child {
+      margin-left: 0; }
+    .social li img {
+      width: 1.7em; }
+    .social li a {
+      opacity: 1;
+      transition: opacity 0.2s; }
+      .social li a:hover {
+        opacity: 0.75; }
 
 /* About Intro */
 .about-intro {
@@ -319,7 +356,7 @@ pre[class*="language-"] {
   width: 90%; }
   @media screen and (min-width: 54.25em) {
     .post-list {
-      padding: 5% 0 12%; } }
+      padding: 5% 0 8%; } }
   .post-list .post-list-heading {
     font-size: 0.8rem;
     margin: 0 0 2.5em;
