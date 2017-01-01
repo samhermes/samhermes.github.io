@@ -1,10 +1,7 @@
 ---
 layout: default
 ---
-<div class="about-intro">
-	<p>I'm a web developer at Washington University in St. Louis in the Office of Public Affairs.</p>
-	<a href="/about">More About Me</a>
-</div>
+<div class="about-intro"></div>
 <div class="post-list">
   <p class="post-list-heading">Recent Posts</p>
   <ul>
