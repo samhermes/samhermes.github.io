@@ -3,7 +3,7 @@ layout: post
 title:  The long game of web development
 date:   2017-01-01
 categories:
-excerpt: High density screens and the web are at odds. On one side, we want sites to look as crisp as possible, no matter where they are being viewed, but on the other hand, performance is incredibly important.
+excerpt: Web development depends so heavily on the past and the future, both respecting the standards and best practices that came before, and looking to the future and working in a way that will allow for flexibility down the line.
 ---
 I recently finished reading *The World Beyond Your Head* by Matthew B. Crawford, and in the book he speaks of observing the individuals working as organ builders. He tells of the slowness of the process, much done by hand, then spends a bit of time musing on the long game of organ building. In it, one must respect the work of the person who came before, and also think of the person who will be maintaining the organ, and learning from their work in the future.
 
