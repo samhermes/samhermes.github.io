@@ -13,3 +13,9 @@ permalink: /posts/:title/
 
 # Build settings
 markdown: kramdown
+
+# New collections
+collections:
+  journal:
+    output: true
+    permalink: /journal/:title/

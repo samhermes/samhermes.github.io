@@ -265,7 +265,8 @@
 
 /* Post Page */
 
-.post {
+.post,
+.journal {
   margin: 0 auto;
   max-width: 50em;
   padding: 1.875em 0 7.5em;
@@ -364,6 +365,63 @@
   }
   code {
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  }
+}
+
+/* Journal List */
+
+.journal-list {
+  max-width: 35em;
+  margin: 0 auto;
+  padding: 1.875em 0 7.5em;
+  width: 90%;
+  @media screen and (min-width: 54.25em) {
+    padding: 3.2% 0 8%;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+      margin-bottom: 2.5em;
+      @media screen and (min-width: 60em) {
+        margin-bottom: 4em;
+      }
+    }
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  .post-meta {
+    padding: 0 0 0.525em;
+    border-bottom: 2px solid gainsboro;
+    margin: 0 0 0.625em;
+    @media screen and (min-width: 37.5em) {
+      font-size: 1em;
+    }
+  }
+  .post-date {
+    float: left;
+    font-size: 1em;
+    font-weight: 500;
+  }
+  .post-link {
+    float: right;
+    font-size: 0.9em;
+  }
+  p {
+    font-size: 1em;
+    line-height: 1.5;
+    margin: 0 0 0.8em;
+    @media screen and (min-width: 28.125em) {
+      font-size: 1.2em;
+    }
+    &:first-of-type {
+      clear: both;
+    }
+  }
+  .post-list.home li:last-of-type {
+    margin-bottom: 2.2em;
   }
 }
 
