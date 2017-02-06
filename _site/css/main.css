@@ -1,4 +1,14 @@
 @charset "UTF-8";
+@font-face {
+  font-family: 'Clear Sans';
+  src: url("/fonts/clearsans-regular-webfont.woff2") format("woff2"), url("/fonts/clearsans-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'Clear Sans Italic';
+  src: url("/fonts/clearsans-italic-webfont.woff2") format("woff2"), url("/fonts/clearsans-italic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 /**
  * Reset some basic elements
  */
@@ -12,7 +22,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 300 100% "Nunito";
+  font: 300 100% "Clear Sans", sans-serif;
   color: #1D1D1D;
   -webkit-text-size-adjust: 100%; }
 
@@ -77,6 +87,10 @@ blockquote {
   font-style: italic; }
   blockquote > :last-child {
     margin-bottom: 0; }
+
+em {
+  font-family: 'Clear Sans Italic', sans-serif;
+  line-height: 1; }
 
 /**
  * Code formatting
@@ -264,7 +278,7 @@ pre[class*="language-"] {
       padding: 1.8em; } }
   .site-footer .site-nav {
     float: left;
-    padding-top: 0.365rem; }
+    padding-top: 0.28rem; }
     .site-footer .site-nav li a {
       color: #fff; }
 
@@ -298,7 +312,7 @@ pre[class*="language-"] {
   margin: 6% 0 0.2rem; }
   @media screen and (min-width: 28.125em) {
     .home-header {
-      margin: 10% 0 0.9rem; } }
+      margin: 10% 0 3rem; } }
   .home-header img {
     display: block;
     margin: 0 0 0.8rem;
