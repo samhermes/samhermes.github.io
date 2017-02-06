@@ -16,6 +16,6 @@ markdown: kramdown
 
 # New collections
 collections:
-  journal:
+  log:
     output: true
-    permalink: /journal/:title/
+    permalink: /log/:title/
