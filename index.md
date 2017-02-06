@@ -1,9 +1,11 @@
 ---
-layout: default
+layout: home
 ---
-<div class="about-intro"></div>
+<header class="home-header">
+  <img src="/img/samhermes.svg" alt="Sam Hermes">
+  <p>Front-End Web Developer</p>
+</header>
 <div class="post-list">
-  <p class="post-list-heading">Recent Posts</p>
   <ul>
   {% for post in site.posts limit:3 %}
     <li>
