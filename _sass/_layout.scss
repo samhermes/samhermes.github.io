@@ -140,7 +140,7 @@
     display: block;
     margin: 0 0 0.8rem;
     max-width: 60%;
-    width: 350px;
+    width: 300px;
 
     @media screen and (min-width: 28.125em) {
       margin: 0 0 1.2rem;
@@ -148,12 +148,12 @@
   }
 
   p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: 400;
     margin: 0;
 
     @media screen and (min-width: 28.125em) {
-      font-size: 1.4rem;
+      font-size: 1.2rem;
     }
   }
 }
