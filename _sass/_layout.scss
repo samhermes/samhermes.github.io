@@ -140,10 +140,10 @@
     display: block;
     margin: 0 0 0.8rem;
     max-width: 60%;
-    width: 300px;
+    width: 250px;
 
     @media screen and (min-width: 28.125em) {
-      margin: 0 0 1.2rem;
+      margin: 0 0 1rem;
     }
   }
 
@@ -243,6 +243,7 @@
 .home .post-list {
   margin: 0;
   width: 100%;
+  max-width: 60em;
 
   @media screen and (min-width: 54.25em) {
     padding: 4rem 0 8%;

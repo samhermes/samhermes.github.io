@@ -1,13 +1,18 @@
 @charset "UTF-8";
 @font-face {
-  font-family: 'Clear Sans';
-  src: url("/fonts/clearsans-regular-webfont.woff2") format("woff2"), url("/fonts/clearsans-regular-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: 'Nunito Sans';
+  src: url("/fonts/nunitosans-light-webfont.woff2") format("woff2"), url("/fonts/nunitosans-light-webfont.woff") format("woff");
+  font-weight: 300;
   font-style: normal; }
 @font-face {
-  font-family: 'Clear Sans Italic';
-  src: url("/fonts/clearsans-italic-webfont.woff2") format("woff2"), url("/fonts/clearsans-italic-webfont.woff") format("woff");
-  font-weight: normal;
+  font-family: 'Nunito Sans';
+  src: url("/fonts/nunitosans-lightitalic-webfont.woff2") format("woff2"), url("/fonts/nunitosans-lightitalic-webfont.woff") format("woff");
+  font-weight: 300;
+  font-style: italic; }
+@font-face {
+  font-family: 'Nunito Sans';
+  src: url("/fonts/nunitosans-regular-webfont.woff2") format("woff2"), url("/fonts/nunitosans-regular-webfont.woff") format("woff");
+  font-weight: 400;
   font-style: normal; }
 /**
  * Reset some basic elements
@@ -22,7 +27,7 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 300 100% "Clear Sans", sans-serif;
+  font: 300 100% "Nunito Sans", sans-serif;
   color: #1D1D1D;
   -webkit-text-size-adjust: 100%; }
 
@@ -87,10 +92,6 @@ blockquote {
   font-style: italic; }
   blockquote > :last-child {
     margin-bottom: 0; }
-
-em {
-  font-family: 'Clear Sans Italic', sans-serif;
-  line-height: 1; }
 
 /**
  * Code formatting
@@ -317,10 +318,10 @@ pre[class*="language-"] {
     display: block;
     margin: 0 0 0.8rem;
     max-width: 60%;
-    width: 300px; }
+    width: 250px; }
     @media screen and (min-width: 28.125em) {
       .home-header img {
-        margin: 0 0 1.2rem; } }
+        margin: 0 0 1rem; } }
   .home-header p {
     font-size: 1rem;
     font-weight: 400;
@@ -405,7 +406,8 @@ pre[class*="language-"] {
 
 .home .post-list {
   margin: 0;
-  width: 100%; }
+  width: 100%;
+  max-width: 60em; }
   @media screen and (min-width: 54.25em) {
     .home .post-list {
       padding: 4rem 0 8%; } }

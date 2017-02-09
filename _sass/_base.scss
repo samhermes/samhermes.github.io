@@ -1,16 +1,24 @@
 @font-face {
-    font-family: 'Clear Sans';
-    src: url('/fonts/clearsans-regular-webfont.woff2') format('woff2'),
-         url('/fonts/clearsans-regular-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Nunito Sans';
+    src: url('/fonts/nunitosans-light-webfont.woff2') format('woff2'),
+         url('/fonts/nunitosans-light-webfont.woff') format('woff');
+    font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Clear Sans Italic';
-    src: url('/fonts/clearsans-italic-webfont.woff2') format('woff2'),
-         url('/fonts/clearsans-italic-webfont.woff') format('woff');
-    font-weight: normal;
+    font-family: 'Nunito Sans';
+    src: url('/fonts/nunitosans-lightitalic-webfont.woff2') format('woff2'),
+         url('/fonts/nunitosans-lightitalic-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    src: url('/fonts/nunitosans-regular-webfont.woff2') format('woff2'),
+         url('/fonts/nunitosans-regular-webfont.woff') format('woff');
+    font-weight: 400;
     font-style: normal;
 }
 
@@ -109,11 +117,6 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
-}
-
-em {
-	font-family: 'Clear Sans Italic', sans-serif;
-	line-height: 1;
 }
 
 /**
