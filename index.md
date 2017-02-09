@@ -9,10 +9,10 @@ layout: home
   <ul>
   {% for post in site.posts limit:5 %}
     <li>
-      <span class="post-meta">{{ post.date | date: "%b %-d %Y" }}</span>
-      <h2>
-        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-      </h2>
+    <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">
+      <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+      <h2>{{ post.title }}</h2>
+    </a>
     </li>
   {% endfor %}
   </ul>

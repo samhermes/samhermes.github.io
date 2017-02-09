@@ -120,20 +120,23 @@
 }
 
 .home {
-  width: 90%;
-  max-width: 90em;
-  margin: 0 auto 5%;
+  background: #fafafa;
+  > div {
+    width: 90%;
+    max-width: 90em;
+    margin: 0 auto 5%;
 
-  @media screen and (min-width: 28.125em) {
-    width: 80%;
-  }
+    @media screen and (min-width: 28.125em) {
+      width: 80%;
+    }
+  } 
 }
 
 .home-header {
-  margin: 6% 0 0.2rem;
+  padding: 6% 0 0.2rem;
 
   @media screen and (min-width: 28.125em) {
-    margin: 10% 0 3rem;
+    padding: 10% 0 3rem;
   }
 
   img {
@@ -158,7 +161,7 @@
   }
 }
 
-.home + .site-footer {
+.home .site-footer {
   @media screen and (min-width: 28.125em) {
     padding-left: 10%;
     padding-right: 10%;
@@ -247,6 +250,54 @@
 
   @media screen and (min-width: 54.25em) {
     padding: 4rem 0 8%;
+  }
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2%;
+  }
+
+  li {
+    box-sizing: border-box;
+    box-shadow: 0 1em 1.5em 0 rgba(85, 105, 122, 0.1);
+    border-radius: 0.2em;
+    background: #fff;
+    margin-bottom: 4%;
+    width: 100%;
+
+    @media screen and (min-width: 28.125em) {
+      width: 46%;
+      margin: 0 2% 6%;
+    }
+
+    @media screen and (min-width: 54.25em) {
+      width: 29.3333%;
+    }
+
+    a {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 1.5em;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+
+  h2 {
+    margin-bottom: 0.3rem;
+    @media screen and (min-width: 28.125em) {
+      font-size: 1.5em;
+    }
+  }
+
+  .post-meta {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #9eb3cb;
   }
 
   .see-all {

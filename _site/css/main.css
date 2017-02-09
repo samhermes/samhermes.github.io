@@ -302,18 +302,20 @@ pre[class*="language-"] {
         opacity: 0.75; }
 
 .home {
-  width: 90%;
-  max-width: 90em;
-  margin: 0 auto 5%; }
-  @media screen and (min-width: 28.125em) {
-    .home {
-      width: 80%; } }
+  background: #fafafa; }
+  .home > div {
+    width: 90%;
+    max-width: 90em;
+    margin: 0 auto 5%; }
+    @media screen and (min-width: 28.125em) {
+      .home > div {
+        width: 80%; } }
 
 .home-header {
-  margin: 6% 0 0.2rem; }
+  padding: 6% 0 0.2rem; }
   @media screen and (min-width: 28.125em) {
     .home-header {
-      margin: 10% 0 3rem; } }
+      padding: 10% 0 3rem; } }
   .home-header img {
     display: block;
     margin: 0 0 0.8rem;
@@ -331,7 +333,7 @@ pre[class*="language-"] {
         font-size: 1.2rem; } }
 
 @media screen and (min-width: 28.125em) {
-  .home + .site-footer {
+  .home .site-footer {
     padding-left: 10%;
     padding-right: 10%; } }
 
@@ -411,6 +413,40 @@ pre[class*="language-"] {
   @media screen and (min-width: 54.25em) {
     .home .post-list {
       padding: 4rem 0 8%; } }
+  .home .post-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2%; }
+  .home .post-list li {
+    box-sizing: border-box;
+    box-shadow: 0 1em 1.5em 0 rgba(85, 105, 122, 0.1);
+    border-radius: 0.2em;
+    background: #fff;
+    margin-bottom: 4%;
+    width: 100%; }
+    @media screen and (min-width: 28.125em) {
+      .home .post-list li {
+        width: 46%;
+        margin: 0 2% 6%; } }
+    @media screen and (min-width: 54.25em) {
+      .home .post-list li {
+        width: 29.3333%; } }
+    .home .post-list li a {
+      display: block;
+      box-sizing: border-box;
+      height: 100%;
+      padding: 1.5em; }
+      .home .post-list li a:hover {
+        text-decoration: none; }
+  .home .post-list h2 {
+    margin-bottom: 0.3rem; }
+    @media screen and (min-width: 28.125em) {
+      .home .post-list h2 {
+        font-size: 1.5em; } }
+  .home .post-list .post-meta {
+    font-size: 0.8em;
+    text-transform: uppercase;
+    color: #9eb3cb; }
   .home .post-list .see-all {
     text-align: left; }
     .home .post-list .see-all a {
