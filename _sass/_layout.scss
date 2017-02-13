@@ -77,7 +77,6 @@
 
 .site-footer {
   width: 100%;
-  background: #1f2223;
   box-sizing: border-box;
   padding: 1em 5%;
   @media screen and (min-width: 28.125em) {
@@ -89,8 +88,13 @@
   .site-nav {
     float: left;
     padding-top: 0.28rem;
-    li a {
-      color: #fff;
+
+    li {
+      font-size: 0.85rem;
+    }
+
+    a {
+      color: #5d5d5d;
     }
   }
 }
@@ -133,20 +137,24 @@
 }
 
 .home-header {
-  padding: 6% 0 0.2rem;
+  padding: 1.875em 0 0.2rem;
 
   @media screen and (min-width: 28.125em) {
-    padding: 10% 0 3rem;
+    padding: 10% 0;
   }
 
   img {
     display: block;
     margin: 0 0 0.8rem;
-    max-width: 60%;
-    width: 250px;
+    width: 175px;
 
     @media screen and (min-width: 28.125em) {
+      width: 210px;
+    }
+
+    @media screen and (min-width: 37.5em) {
       margin: 0 0 1rem;
+      width: 250px;
     }
   }
 
@@ -156,6 +164,10 @@
     margin: 0;
 
     @media screen and (min-width: 28.125em) {
+      font-size: 1.1rem;
+    }
+
+    @media screen and (min-width: 37.5em) {
       font-size: 1.2rem;
     }
   }
@@ -248,8 +260,8 @@
   width: 100%;
   max-width: 60em;
 
-  @media screen and (min-width: 54.25em) {
-    padding: 4rem 0 8%;
+  @media screen and (min-width: 28.125em) {
+    padding: 0 0 8%;
   }
 
   ul {
@@ -266,7 +278,7 @@
     margin-bottom: 4%;
     width: 100%;
 
-    @media screen and (min-width: 28.125em) {
+    @media screen and (min-width: 37.5em) {
       width: 46%;
       margin: 0 2% 6%;
     }
@@ -302,8 +314,12 @@
 
   .see-all {
     text-align: left;
+    
     a {
       padding-left: 0;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: #5d5d5d;
     }
   }
 }
