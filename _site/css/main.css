@@ -633,14 +633,17 @@ pre[class*="language-"] {
 .fourohfour {
   max-width: 75em;
   width: 90%;
-  margin: 3.2em auto 0;
+  margin: 8rem auto;
   text-align: center;
   line-height: 1.5;
   font-size: 0.9em; }
+  @media screen and (min-width: 28.125em) {
+    .fourohfour {
+      margin: 12rem auto; } }
 
 .fourohfour h2 {
   font-size: 4.04em;
-  color: #515151;
+  color: #1d1d1d;
   font-weight: 300;
   margin: 0; }
 
