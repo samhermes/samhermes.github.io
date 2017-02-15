@@ -13,6 +13,8 @@ permalink: /posts/:title/
 
 # Build settings
 markdown: kramdown
+sass:
+  style: compressed
 
 # New collections
 collections:
