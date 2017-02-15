@@ -174,9 +174,14 @@
 }
 
 .home .site-footer {
+  width: 90%;
+  max-width: 90em;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0;
+
   @media screen and (min-width: 28.125em) {
-    padding-left: 10%;
-    padding-right: 10%;
+    width: 80%;
   }
 }
 
@@ -267,7 +272,10 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -2%;
+
+    @media screen and (min-width: 37.5em) {
+      margin: 0 -2%;
+    }
   }
 
   li {

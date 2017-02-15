@@ -339,10 +339,15 @@ pre[class*="language-"] {
       .home-header p {
         font-size: 1.2rem; } }
 
-@media screen and (min-width: 28.125em) {
-  .home .site-footer {
-    padding-left: 10%;
-    padding-right: 10%; } }
+.home .site-footer {
+  width: 90%;
+  max-width: 90em;
+  margin: 0 auto;
+  padding-left: 0;
+  padding-right: 0; }
+  @media screen and (min-width: 28.125em) {
+    .home .site-footer {
+      width: 80%; } }
 
 /* Post List */
 .post-list {
@@ -422,8 +427,10 @@ pre[class*="language-"] {
       padding: 0 0 8%; } }
   .home .post-list ul {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -2%; }
+    flex-wrap: wrap; }
+    @media screen and (min-width: 37.5em) {
+      .home .post-list ul {
+        margin: 0 -2%; } }
   .home .post-list li {
     box-sizing: border-box;
     box-shadow: 0 1em 1.5em 0 rgba(85, 105, 122, 0.1);
