@@ -15,9 +15,3 @@ permalink: /posts/:title/
 markdown: kramdown
 sass:
   style: compressed
-
-# New collections
-collections:
-  log:
-    output: true
-    permalink: /log/:title/
