@@ -9,11 +9,12 @@
     padding: 1.3em 5%;
   }
   @media screen and (min-width: 56.25em) {
-    padding: 1.8em;
+    padding: 1.3em 1.8em;
   }
-  a {
+  > a {
     display: block;
     max-width: 150px;
+    margin: 0.4em 0;
     float: left;
     @media screen and (min-width: 28.125em) {
       max-width: 170px;
@@ -28,31 +29,30 @@
 
 .site-nav {
   list-style: none;
-  margin: 0;
+  margin: 0 -0.625rem 0 0;
   padding: 0;
   float: right;
   li {
     float: left;
-    margin-left: 1.25em;
-    font-size: 0.9em;
+    margin-left: 0.4rem;
+    font-size: 0.85em;
     font-weight: normal;
     text-transform: uppercase;
-    @media screen and (min-width: 21.875em) {
-      margin-left: 1.56em;
+    @media screen and (min-width: 28.125em) {
+      margin-left: 0.7rem;
     }
     &:first-child {
       margin-left: 0;
     }
     a {
       color: #5d5d5d;
+      display: block;
+      padding: 0.5rem 0.625rem;
+      border-radius: 0.4em;
       &:hover {
-        text-decoration: underline;
+        background: #f8f8fa;
       }
     }
-  }
-
-  .site-header & {
-    margin: 0.1rem 0 0;
   }
 }
 
@@ -66,12 +66,9 @@
     z-index: 2;
   }
   .page {
-    padding-top: 49px;
+    padding-top: 66px;
     @media screen and (min-width: 28.125em) {
-      padding-top: 58px;
-    }
-    @media screen and (min-width: 56.25em) {
-      padding-top: 74px;
+      padding-top: 75px;
     }
   }
 }
@@ -86,11 +83,11 @@
     padding: 1.3em 5%;
   }
   @media screen and (min-width: 56.25em) {
-    padding: 1.8em;
+    padding: 1.3em 1.8em;
   }
   .site-nav {
     float: left;
-    padding-top: 0.28rem;
+    margin: 0 0 0 -0.625rem;
 
     li {
       font-size: 0.85rem;
@@ -182,6 +179,10 @@
   @media screen and (min-width: 28.125em) {
     width: 80%;
   }
+
+  a:hover {
+    background: #f1f1f2;
+  }
 }
 
 /* Post List */
@@ -244,9 +245,7 @@
 	font-size: 0.8em;
 	display: block;
 	margin: 0 0 0.625em;
-  @media screen and (min-width: 37.5em) {
-    font-size: 1em;
-  }
+  text-transform: uppercase;
 }
 .post-list p {
 	font-size: 1.05em;
@@ -314,8 +313,6 @@
   }
 
   .post-meta {
-    font-size: 0.8em;
-    text-transform: uppercase;
     color: #9eb3cb;
   }
 
@@ -345,9 +342,7 @@
 .post .post-meta {
   font-size: 0.8em;
   margin: 0 0 0.625em;
-  @media screen and (min-width: 37.5em) {
-    font-size: 1em;
-  }
+  text-transform: uppercase;
 }
 .post-title {
   font-size: 1.5em;
@@ -438,7 +433,7 @@
 /* About Page */
 
 .about {
-  max-width: 50em;
+  max-width: 40em;
   margin: 0 auto;
   padding: 1.875em 0 7.5em;
   width: 90%;
