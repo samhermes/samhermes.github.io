@@ -2,7 +2,7 @@
 layout: home
 ---
 <header class="home-header">
-  <img src="/img/samhermes.svg" alt="Sam Hermes">
+  {% include samhermes.svg %}
   <p>Front-End Web Developer</p>
 </header>
 <div class="post-list">
