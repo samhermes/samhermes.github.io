@@ -1,17 +1,12 @@
 /* Site Header */
 
 .site-header {
-  width: 90%;
-  max-width: 90em;
   background: #fff;
   box-sizing: border-box;
-  padding: 0.95em 0 0.2em;
+  padding: 0.6em 5% 0.2em;
   margin: 0 auto;
-  @media screen and (min-width: 28.125em) {
-    padding: 1.3em 0;
-  }
-  @media screen and (min-width: 62.5em) {
-    width: 80%;
+  @media screen and (min-width: 45.625em) {
+    padding: 0.95em 1.3em;
   }
   > a {
     display: block;
@@ -20,11 +15,11 @@
   }
   svg {
     display: block;
-    width: 150px;
-    height: 19px;
+    width: 130px;
+    height: 16px;
     @media screen and (min-width: 28.125em) {
-      width: 170px;
-      height: 21px;
+      width: 150px;
+      height: 19px;
     }
   }
 }
@@ -42,7 +37,7 @@
     font-weight: normal;
     text-transform: uppercase;
     @media screen and (min-width: 28.125em) {
-      margin-left: 0.7rem;
+      margin-left: 0.3rem;
       font-size: 0.85em;
     }
     &:first-child {
@@ -63,16 +58,11 @@
 /* Site Footer */
 
 .site-footer {
-  width: 90%;
-  max-width: 90em;
   box-sizing: border-box;
-  padding: 1em 0 1.2em;
+  padding: 1em 5% 1.2em;
   margin: 0 auto;
-  @media screen and (min-width: 28.125em) {
-    padding: 1.3em 0 1.8em;
-  }
-  @media screen and (min-width: 62.5em) {
-    width: 80%;
+  @media screen and (min-width: 45.625em) {
+    padding: 0.95em 1.3em;
   }
   .site-nav {
     float: left;
@@ -183,7 +173,7 @@
 	padding: 1.875em 0 7.5em;
   width: 90%;
   @media screen and (min-width: 54.25em) {
-    padding: 4% 0 12%;
+    padding: 5% 0 12%;
   }
   .post-list-heading {
     font-size: 0.8rem;
@@ -201,9 +191,6 @@
     padding: 0;
     li {
       margin-bottom: 2.5em;
-      @media screen and (min-width: 60em) {
-        margin-bottom: 4em;
-      }
     }
   }
   .see-all {
@@ -326,20 +313,23 @@
   padding: 1.875em 0 7.5em;
   width: 90%;
   @media screen and (min-width: 54.25em) {
-    padding: 4% 0 12%;
+    padding: 5% 0 12%;
   }
 }
 .post .post-meta {
   font-size: 0.8em;
   margin: 0 0 0.625em;
   text-transform: uppercase;
+  color: #858495;
 }
 .post-title {
-  font-size: 1.5em;
+  font-size: 1.8em;
+  line-height: 1.2;
   margin: 0 0 1em;
   font-weight: 400;
   @media screen and (min-width: 37.5em) {
-    font-size: 1.8em;
+    font-size: 2.2em;
+    line-height: 1.25;
   }
 }
 .post-content {
@@ -428,7 +418,7 @@
   padding: 1.875em 0 7.5em;
   width: 90%;
   @media screen and (min-width: 54.25em) {
-    padding: 4% 0 12%;
+    padding: 5% 0 12%;
   }
   h2 {
     font-size: 1.5em;
