@@ -59,8 +59,16 @@
   box-sizing: border-box;
   padding: 1em 5% 1.2em;
   margin: 0 auto;
+  position: relative;
   @media screen and (min-width: 45.625em) {
     padding: 1.3em 1.65em;
+  }
+  .pride {
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: 1.72em;
+    margin-left: -9px;
   }
   .site-nav {
     float: left;
