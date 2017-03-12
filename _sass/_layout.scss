@@ -279,7 +279,11 @@
       display: block;
       box-sizing: border-box;
       height: 100%;
-      padding: 1.5em;
+      padding: 1.2em;
+
+      @media screen and (min-width: 28.125em) {
+        padding: 1.5em;
+      }
 
       &:hover {
         text-decoration: none;
