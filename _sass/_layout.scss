@@ -67,8 +67,11 @@
     border-radius: 2px;
     position: absolute;
     left: 50%;
-    bottom: 1.72em;
+    bottom: 1.62em;
     margin-left: -9px;
+    @media screen and (min-width: 45.625em) {
+      bottom: 1.72em;
+    }
   }
   .site-nav {
     float: left;
@@ -78,7 +81,7 @@
 
 .social {
   list-style: none;
-  margin: 0;
+  margin: 0.125em 0 0;
   padding: 0;
   float: right;
   li {
