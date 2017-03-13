@@ -27,7 +27,7 @@
 }
 .post-list h2 {
   font-size: 1.3em;
-	font-weight: 400;
+  font-weight: 400;
 	margin: 0;
   @media screen and (min-width: 28.125em) {
     font-size: 1.45em;
@@ -89,6 +89,7 @@
   margin-bottom: $spacing-unit;
   h2 {
     font-size: 1.4em;
+    font-weight: 400;
     @media screen and (min-width: 37.5em) {
       font-size: 1.6em;
     }
@@ -102,6 +103,7 @@
   }
   h4 {
     font-size: 1.05em;
+    font-weight: 400;
     @media screen and (min-width: 37.5em) {
       font-size: 1.1em;
     }
