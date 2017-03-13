@@ -15,10 +15,8 @@ layout: home
     </a>
     </li>
   {% endfor %}
+    <li class="see-all"><a href="/posts"><span>See All</span></a></li>
   </ul>
-  <div class="see-all">
-    <a href="/posts">See All</a>
-  </div>
 </div>
 
 

@@ -4,17 +4,18 @@
 @charset "utf-8";
 
 // Our variables
-$base-font-family: 'Nunito Sans', sans-serif;
+$base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   100%;
 $base-font-weight: 300;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
 $spacing-unit:     1.8em;
 $text-color:       #1D1D1D;
-$content-width:    50em;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout"
+	"base",
+	"global",
+	"home",
+	"posts",
+	"about"
 ;
