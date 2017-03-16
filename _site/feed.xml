@@ -5,9 +5,24 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>https://samhermes.com/</link>
     <atom:link href="https://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 13 Mar 2017 14:59:11 -0500</pubDate>
-    <lastBuildDate>Mon, 13 Mar 2017 14:59:11 -0500</lastBuildDate>
+    <pubDate>Thu, 16 Mar 2017 11:13:40 -0500</pubDate>
+    <lastBuildDate>Thu, 16 Mar 2017 11:13:40 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>We don’t need AMP</title>
+        <description>&lt;p&gt;&lt;a href=&quot;http://shoptalkshow.com/episodes/248-amp/&quot;&gt;Episode #248 of Shop Talk Show&lt;/a&gt; is all about AMP (accelerated mobile pages) and how the project relates to the web at large. After listening, I have some thoughts. It’s made fairly clear in the episode that AMP is a crutch used by publishers who have lost control of their website’s performance. AMP has a very tight set of constraints built into it that prioritize performance. Comparing it to a traditional website, it makes sense why it is so effective. The defeating part of it is that it doesn’t have to exist. We can make pages that are better than AMP on the web.&lt;/p&gt;
+
+&lt;p&gt;Development teams have been fighting constraints as long as the web has existed, and sometimes performance just doesn’t win out. Now they’ve been presented with, essentially, an easy way out. Instead of reprioritizing performance internally, AMP can be used to make the case for performance, and it wins out because it puts you in a good place with Google. This isn’t a good for the long-term.&lt;/p&gt;
+
+&lt;p&gt;The guests in the episode don’t seem to be able to defend the AMP project very well, and it’s a bit hard to get on board listening to the discussion. It reeks a bit of “business reasons,” which is never a good reason in itself to do something. The fact of the matter is, AMP doesn’t need to exist. What we should be doing is using AMP as a model to improve what we already have. We should be removing as much code as possible from our sites, simplifying the layout, and caching as much as we possibly can. The future of the web depends on it.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Mar 2017 00:00:00 -0500</pubDate>
+        <link>https://samhermes.com/posts/we-dont-need-amp/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/we-dont-need-amp/</guid>
+        
+        
+      </item>
     
       <item>
         <title>The two worlds of web development</title>
@@ -258,64 +273,6 @@ if( menu_state ) {
         <pubDate>Sun, 24 Apr 2016 00:00:00 -0500</pubDate>
         <link>https://samhermes.com/posts/maintaining-state-with-sessionstorage/</link>
         <guid isPermaLink="true">https://samhermes.com/posts/maintaining-state-with-sessionstorage/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Caching a menu in a transient in WordPress</title>
-        <description>&lt;p&gt;Menus in WordPress are expensive to generate, in terms of site performance. On every page load, the site is rebuilding almost the exact same thing, and it gets more expensive as the number of menu items increases. The only difference between pages is the current page classes that get applied. What if we stored the menu in a transient, and applied the current page classes on the front end using JavaScript?&lt;/p&gt;
-
-&lt;p&gt;The first thing we do is check to see if the transient doesn’t exist with a conditional (which it doesn’t, yet), using get_transient and passing in the name of the transient, which we’ll specify later.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;if ( ! get_transient( &#39;header-menu&#39; ) ) {&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Next, if the transient doesn’t exist (which it doesn’t, yet), we generate the menu, and store the result in a variable.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;$menu = wp_nav_menu( array(
-  &#39;theme_location&#39; =&amp;gt; &#39;header-menu&#39;,
-  &#39;echo&#39; =&amp;gt; 0
-) );&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;We need to disable echo here, as we don’t want to print it to the page just yet.&lt;/p&gt;
-
-&lt;p&gt;Once we have the menu stored in a variable, we can set a transient. This part of the process is relatively simple. You give the transient a name, pass in the menu variable, and tell it how long to keep it before clearing it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;set_transient( &#39;header-menu&#39;, $menu, 60*60*24 );&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;In this example, I’ve named the transient “header-menu”, and told it to save it for 1 day (60 seconds times 60 times 24). I’m not sure what the ideal transient lifetime is, but if the menu will rarely change, you could set it for much longer than a day.&lt;/p&gt;
-
-&lt;p&gt;Next, continuing with the conditional, if the transient does exist, we just need to retrieve it and set it to the menu variable. And, after that, we echo out the menu variable.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;} else {
-  $menu = get_transient( &#39;header-menu&#39; );
-}
-echo $menu;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The last piece of the transient is clearing it whenever an update is made to the menu. This function can be added to functions.php. This function looks for a menu in the ‘header-menu’ menu location.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;function site_nav_clear_transient( $menu_id ) {
-  $theme_locations = get_nav_menu_locations();
-  $term = get_term( $theme_locations[&#39;header-menu&#39;], &#39;nav_menu&#39; );
-  $id = $term-&amp;gt;term_id;
-  if ( $menu_id = $id ) {
-    delete_transient( &#39;header-menu&#39; );
-  }
-}
-add_action( &#39;wp_update_nav_menu&#39;, &#39;site_nav_clear_transient&#39; );&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;That’s it for the transient, but now we need to reapply the class for the current page. We accomplish that with a little jQuery.&lt;/p&gt;
-
-&lt;p&gt;This approach is fairly simple. On page load, we get the URL of the current page using &lt;code&gt;window.location.href&lt;/code&gt;, store the result in a variable, and then use that variable to find a matching &lt;code&gt;href&lt;/code&gt; attribute. It’s as simple as:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;var url = window.location.href;
-$(&#39;.header-menu a[href=&quot;&#39; + url + &#39;&quot;]&#39;).addClass(&#39;current-page&#39;);&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;The jQuery selector looks for an anchor tag inside of an element with the class of ‘header-menu’, matches the url variable we passed in, and then adds a class of ‘current-page’.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 30 Mar 2016 16:38:00 -0500</pubDate>
-        <link>https://samhermes.com/posts/caching-menu-in-transient-in-wordpress/</link>
-        <guid isPermaLink="true">https://samhermes.com/posts/caching-menu-in-transient-in-wordpress/</guid>
         
         
       </item>
