@@ -61,6 +61,7 @@
     background: #fff;
     margin-bottom: 6%;
     width: 100%;
+    position: relative;
     @media screen and (min-width: 37.5em) {
       width: 46%;
       margin: 0 2% 6%;
@@ -73,6 +74,20 @@
       box-sizing: border-box;
       height: 100%;
       padding: 1.2em;
+      &.post-link::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 0.2em 0.2em 0 0;
+        background-color: #efefef;
+        transition: background-color 0.15s;
+      }
+      &.post-link:hover::before {
+        background-color: #1F3A93;
+      }
       @media screen and (min-width: 28.125em) {
         padding: 1.5em;
       }
