@@ -5,8 +5,8 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>https://samhermes.com/</link>
     <atom:link href="https://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 24 Apr 2017 21:33:56 -0500</pubDate>
-    <lastBuildDate>Mon, 24 Apr 2017 21:33:56 -0500</lastBuildDate>
+    <pubDate>Tue, 25 Apr 2017 11:57:53 -0500</pubDate>
+    <lastBuildDate>Tue, 25 Apr 2017 11:57:53 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -30,8 +30,8 @@ if ( get_query_var( &#39;paged&#39; ) ) {
 &lt;p&gt;I’ll note that &lt;code class=&quot;highlighter-rouge&quot;&gt;paginate_links()&lt;/code&gt; works without making the modification I’ve outlined, if that’s the pagination structure you’re looking for. In my case, it was a bit more than I needed.&lt;/p&gt;
 </description>
         <pubDate>Mon, 24 Apr 2017 00:00:00 -0500</pubDate>
-        <link>https://samhermes.com/posts/next-posts-link/</link>
-        <guid isPermaLink="true">https://samhermes.com/posts/next-posts-link/</guid>
+        <link>https://samhermes.com/posts/next-posts-link-prev-posts-link-static-front-page/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/next-posts-link-prev-posts-link-static-front-page/</guid>
         
         
         <category>wordpress</category>
