@@ -121,6 +121,12 @@
     @media screen and (min-width: 62.5em) {
       font-size: 1.25rem;
     }
+    code {
+      font-size: 1rem;
+      @media screen and (min-width: 37.5em) {
+        font-size: 1.1rem;
+      }
+    }
   }
   .last-updated {
   	text-transform: uppercase;
