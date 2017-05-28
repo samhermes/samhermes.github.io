@@ -170,3 +170,44 @@
     font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
 }
+.about-me {
+  position: relative;
+  box-shadow: 0 0.15em 0.8em 0 rgba(85, 105, 122, 0.1);
+  border-radius: 0.2em;
+  background: #fff;
+  margin: 3em -0.3em 0;
+  padding: 1.2em;
+
+  @media screen and (min-width: 30em) {
+    padding: 1.15em 1.2em 1.2em 7.08em;
+    margin: 3em -0.6em 0;
+  }
+
+  img {
+    width: 3.125em;
+    border-radius: 0.2em;
+    margin-bottom: 0.8em;
+
+    @media screen and (min-width: 30em) {
+      width: 4.68em;
+      position: absolute;
+      left: 1.2em;
+      margin: 0.2em 0 0;
+    }
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.45;
+  }
+
+  .name {
+    margin-bottom: 0.2em;
+    font-weight: 500;
+    font-size: 1.125em;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
