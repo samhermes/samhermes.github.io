@@ -2,7 +2,6 @@
 layout: post
 title: Adding Ajax search to a WordPress theme
 date: 2017-05-20
-categories: wordpress
 custom_js: prism
 ---
 

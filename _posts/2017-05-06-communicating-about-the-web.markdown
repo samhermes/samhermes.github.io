@@ -2,7 +2,6 @@
 layout: post
 title: Communicating about the web
 date: 2017-05-06
-categories:
 ---
 The longer that I work in web development, the more time I spend thinking about the communication that surrounds the work I’m doing. How do I talk about what I’ve done? How do I best explain how to use a feature or tool? What happens when I’m no longer working on this project? The language that we use, whether we’re talking to another developer, a designer, or a user, is really important.
 

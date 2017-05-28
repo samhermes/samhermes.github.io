@@ -2,8 +2,6 @@
 layout: post
 title:  "Setting up Jekyll"
 date:   2016-02-13 01:15:00 -0600
-categories:
-excerpt: I recently switched this site to Jekyll, and I thought I'd share the setup process.
 custom_js: prism
 ---
 I recently switched this site to Jekyll, and I thought I'd share the setup process. Jekyll was a bit slow the last time I used it, so I was excited to find that the 3.0.0 update included speed improvements that make updates available in the browser almost immediately. Here are some of the configuration changes I made outside of the defaults:

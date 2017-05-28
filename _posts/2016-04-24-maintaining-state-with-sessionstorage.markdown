@@ -2,8 +2,6 @@
 layout: post
 title:  Maintaining state with sessionStorage
 date:   2016-04-24
-categories:
-excerpt: When a multi-level menu is collapsed on a small screen, it can difficult to communicate a sense of place as someone is navigating between pages. One way to manage this is to let the browser remember your location with sessionStorage.
 custom_js: prism
 ---
 When a multi-level menu is collapsed on a small screen, it can difficult to communicate a sense of place as someone is navigating between pages. If the page is several levels deep in the hierarchy, it is really frustrating to dig back down to it if you’d like to view a sibling page. One way to manage this is to let the browser remember your location with sessionStorage.
