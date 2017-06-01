@@ -9,7 +9,7 @@ There are a few plugins that will add Ajax search for you, but what if you wante
 
 I’ve broken out the functionality into separate files, which keeps this feature modular. We’ll be creating `ajax-search.php` and `ajax-search.js`.
 
-Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in `functions.php`. We’ll use this in `ajax-search.js` to send our requests for search results.
+Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in `functions.php`. We’ll use this in `ajax-search.js` to send requests for search results.
 
 <pre><code class="language-php">wp_localize_script( 'ajax-search', 'ajaxurl', admin_url( 'admin-ajax.php' ) );</code></pre>
 
@@ -61,6 +61,9 @@ Now, for creating the files. I’m going to start with `ajax-search.php`. This i
   
   die();
 }
+
+/* We need to hook into both wp_ajax and wp_ajax_nopriv_ in order for
+   the search to work for both logged in and logged out users. */
 add_action( 'wp_ajax_ajax_search', 'ajax_search' );
 add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );</code></pre>
 

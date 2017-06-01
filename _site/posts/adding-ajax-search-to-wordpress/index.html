@@ -32,7 +32,7 @@
 
 <p>I’ve broken out the functionality into separate files, which keeps this feature modular. We’ll be creating <code class="highlighter-rouge">ajax-search.php</code> and <code class="highlighter-rouge">ajax-search.js</code>.</p>
 
-<p>Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in <code class="highlighter-rouge">functions.php</code>. We’ll use this in <code class="highlighter-rouge">ajax-search.js</code> to send our requests for search results.</p>
+<p>Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in <code class="highlighter-rouge">functions.php</code>. We’ll use this in <code class="highlighter-rouge">ajax-search.js</code> to send requests for search results.</p>
 
 <pre><code class="language-php">wp_localize_script( 'ajax-search', 'ajaxurl', admin_url( 'admin-ajax.php' ) );</code></pre>
 
@@ -84,6 +84,9 @@
   
   die();
 }
+
+/* We need to hook into both wp_ajax and wp_ajax_nopriv_ in order for
+   the search to work for both logged in and logged out users. */
 add_action( 'wp_ajax_ajax_search', 'ajax_search' );
 add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );</code></pre>
 
