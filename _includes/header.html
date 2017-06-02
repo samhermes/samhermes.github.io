@@ -1,5 +1,9 @@
 <header class="site-header group">
-    <a href="/">{% include samhermes.svg %}</a>
+	{% if page.layout == 'post' %}
+	    <a class="logomark" href="/">{% include s.svg %}</a>
+	{% else %}
+		<a class="logotype" href="/">{% include samhermes.svg %}</a>
+	{% endif %}
     <ul class="site-nav">
       <li><a href="/posts">Posts</a></li>
       <li><a href="/about">About</a></li>

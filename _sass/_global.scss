@@ -1,21 +1,35 @@
 .site-header {
-  padding: 0.6em 5% 0.2em;
+  padding: 0.6em 5% 0;
   margin: 0 auto;
   @media screen and (min-width: 45.625em) {
-    padding: 1.3em 1.65em;
+    padding: 1.3em 1.65em 0;
   }
   > a {
     display: block;
-    margin: 0.35em 0;
     float: left;
   }
   svg {
     display: block;
-    width: 130px;
-    height: 16px;
-    @media screen and (min-width: 28.125em) {
-      width: 150px;
-      height: 19px;
+  }
+  .logotype {
+    margin: 0.35em 0;
+    svg {
+      width: 130px;
+      height: 16px;
+      @media screen and (min-width: 28.125em) {
+        width: 150px;
+        height: 19px;
+      }
+    }
+  }
+  .logomark {
+    svg {
+      width: 40px;
+      height: 40px;
+      @media screen and (min-width: 28.125em) {
+        width: 50px;
+        height: 50px;
+      }
     }
   }
 }
