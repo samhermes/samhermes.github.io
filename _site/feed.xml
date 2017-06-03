@@ -5,9 +5,43 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>https://samhermes.com/</link>
     <atom:link href="https://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 02 Jun 2017 10:39:37 -0500</pubDate>
-    <lastBuildDate>Fri, 02 Jun 2017 10:39:37 -0500</lastBuildDate>
+    <pubDate>Sat, 03 Jun 2017 12:57:29 -0500</pubDate>
+    <lastBuildDate>Sat, 03 Jun 2017 12:57:29 -0500</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>Unregistering widgets in WordPress</title>
+        <description>&lt;p&gt;If you’ve ever installed Jetpack, you’re probably familiar with widget overload. Sometimes it’s better to cut down on the number of widgets available to your users, both for the benefit of their cognitive load and just for the fact that they may never use some of them. Meta widget, anyone?&lt;/p&gt;
+
+&lt;p&gt;Unregistering a widget is a fairly small bit of code, but getting all of the information you need can sometimes be the tricky part.&lt;/p&gt;
+
+&lt;p&gt;Here is a function that hooks into the &lt;code class=&quot;highlighter-rouge&quot;&gt;widgets_init&lt;/code&gt; action in WordPress, and in the function it calls &lt;code class=&quot;highlighter-rouge&quot;&gt;unregister_widget()&lt;/code&gt; on the widget to remove, the meta widget in this case.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;function unregister_widgets() {
+  unregister_widget( &#39;WP_Meta&#39; );
+}
+add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Where do we know to get the class of the widget though? For all of the WordPress core widgets, you can &lt;a href=&quot;https://codex.wordpress.org/Function_Reference/unregister_widget&quot;&gt;reference the codex&lt;/a&gt;, where all of the widget names are listed. Each starts with &lt;code class=&quot;highlighter-rouge&quot;&gt;WP_&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;What about widgets that come from other sources, such as a plugin or theme? That can take a little more work. The first and easiest way is to search the source code, and see if you can find where &lt;code class=&quot;highlighter-rouge&quot;&gt;register_widget()&lt;/code&gt; is being called. In Sublime Text or Atom, you could perform a Find in Files for anywhere that &lt;code class=&quot;highlighter-rouge&quot;&gt;register_widget&lt;/code&gt; appears in the project and grab the class name from there.&lt;/p&gt;
+
+&lt;p&gt;If you don’t have the plugin or theme locally, you could also search the repository on GitHub. Opening the &lt;a href=&quot;https://github.com/Automattic/Jetpack&quot;&gt;Jetpack repository&lt;/a&gt;, the search field in the header will perform searches only within the current repository, so a search for &lt;code class=&quot;highlighter-rouge&quot;&gt;register_widget&lt;/code&gt; there will return the same results as if we had searched in a text editor.&lt;/p&gt;
+
+&lt;p&gt;One last piece is adding a conditional to only unregister widgets if the plugin is actually active. It appears that &lt;code class=&quot;highlighter-rouge&quot;&gt;unregister_widget&lt;/code&gt; fails gracefully if it can’t find the widget class, but it would be better to just ignore it entirely if the plugin or theme isn’t active. This might take a little investigation as well, but you can check to see if the main class of the plugin exists.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;if ( class_exists( &#39;Jetpack&#39; ) ) {
+  unregister_widget( &#39;Jetpack_Gallery_Widget&#39; );
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;If you’re unregistering a group of Jetpack widgets, adding this conditional will be much faster than checking for each widget individually.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 03 Jun 2017 00:00:00 -0500</pubDate>
+        <link>https://samhermes.com/posts/unregistering-widgets-in-wordpress/</link>
+        <guid isPermaLink="true">https://samhermes.com/posts/unregistering-widgets-in-wordpress/</guid>
+        
+        
+      </item>
     
       <item>
         <title>Adding Ajax search to a WordPress theme</title>
@@ -340,35 +374,6 @@ I hate to generalize, but if there’s a checkbox with a check in it, uncheck it
         <pubDate>Wed, 14 Sep 2016 00:00:00 -0500</pubDate>
         <link>https://samhermes.com/posts/preparing-svg-for-the-web/</link>
         <guid isPermaLink="true">https://samhermes.com/posts/preparing-svg-for-the-web/</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Adding syntax highlighting to code</title>
-        <description>&lt;p&gt;When I started working on the last iteration of my site, I knew I was going to need to figure out how to display code snippets. I considered using Github Gists or Codepen, but they both seemed to be a bit overkill. Also, I wanted control over the appearance and formatting.&lt;/p&gt;
-
-&lt;p&gt;If I wasn’t going to be embedding the code, that meant I would need to add it directly to the post, wrap it in &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;pre&amp;gt;&lt;/code&gt; tags, and style it. I could handle the first two steps, but needed help styling it. There are a number of JavaScript libraries that will apply syntax highlighting to your code, but I landed on &lt;a href=&quot;http://prismjs.com&quot;&gt;Prism.js&lt;/a&gt;. It was the lightest option, and was the easiest to tweak the styles of. I am using the Okaidia theme and added PHP to the list of default languages.&lt;/p&gt;
-
-&lt;p&gt;Since I’m using Jekyll to build my site, I wasn’t sure how to conditionally include Prism only on the posts I’m using code snippets in. Using an &lt;a href=&quot;http://mattgemmell.com/page-specific-assets-with-jekyll/&quot;&gt;article by Matt Gemmell&lt;/a&gt;, I added YAML front matter that specified the name of the JavaScript file to include.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;custom_js: prism&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then, in the footer, I added a &lt;code class=&quot;highlighter-rouge&quot;&gt;for&lt;/code&gt; loop that added a script tag for each javascript file included.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&quot;language-markup&quot;&gt;{% if page.custom_js %}
-  {% for js_file in page.custom_js %}
-&amp;lt;script src=&#39;/js/{{ js_file }}.js&#39; type=&quot;text/javascript&quot;&amp;gt;&amp;lt;/script&amp;gt;
-  {% endfor %}
-{% endif %}&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Prism comes with the appropriate styles bundled with it, which I just copied and included in my main stylesheet, tweaking them slightly.&lt;/p&gt;
-
-&lt;p&gt;With Prism running on the page, all that’s needed to properly activate it is the appropriate class for the language of the code snippet. For the above snippet, I added &lt;code class=&quot;highlighter-rouge&quot;&gt;class=&quot;language-markup&quot;&lt;/code&gt; to the &lt;code class=&quot;highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt;  element to add the appropriate highlighting. Now when making a new post, I just need to include the YAML front matter and add a class, and that’s it!&lt;/p&gt;
-</description>
-        <pubDate>Thu, 25 Aug 2016 00:00:00 -0500</pubDate>
-        <link>https://samhermes.com/posts/adding-syntax-highlighting-to-code/</link>
-        <guid isPermaLink="true">https://samhermes.com/posts/adding-syntax-highlighting-to-code/</guid>
         
         
       </item>
