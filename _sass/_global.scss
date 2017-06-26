@@ -4,7 +4,7 @@
   @media screen and (min-width: 45.625em) {
     padding: 1.3em 1.65em 0;
   }
-  > a {
+  .logomark {
     display: block;
     float: left;
   }
@@ -56,6 +56,7 @@
       display: block;
       padding: 0.5rem 0.625rem;
       border-radius: 0.4em;
+      font-weight: 400;
       &:hover {
         background: #f8f8fa;
       }
@@ -67,20 +68,20 @@
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1em 5% 1.2em;
+  padding: 1em 5% 1.5em;
   margin: 0 auto;
   position: relative;
   @media screen and (min-width: 45.625em) {
-    padding: 1.3em 1.65em;
+    padding: 1.3em 1.65em 2em;
   }
   .pride {
     border-radius: 2px;
     position: absolute;
     left: 50%;
-    bottom: 1.62em;
+    bottom: 1.92em;
     margin-left: -15px;
     @media screen and (min-width: 45.625em) {
-      bottom: 1.72em;
+      bottom: 2.42em;
     }
   }
   .site-nav {
