@@ -5,9 +5,9 @@
     <description>Web developer at Washington University in St. Louis</description>
     <link>https://samhermes.com/</link>
     <atom:link href="https://samhermes.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 26 Jun 2017 16:11:35 -0500</pubDate>
-    <lastBuildDate>Mon, 26 Jun 2017 16:11:35 -0500</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <pubDate>Thu, 13 Jul 2017 13:00:07 -0500</pubDate>
+    <lastBuildDate>Thu, 13 Jul 2017 13:00:07 -0500</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
         <title>Unregistering widgets in WordPress</title>
@@ -18,9 +18,9 @@
 &lt;p&gt;Here is a function that hooks into the &lt;code class=&quot;highlighter-rouge&quot;&gt;widgets_init&lt;/code&gt; action in WordPress, and in the function it calls &lt;code class=&quot;highlighter-rouge&quot;&gt;unregister_widget()&lt;/code&gt; on the widget to remove, the meta widget in this case.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;function unregister_widgets() {
-  unregister_widget( &#39;WP_Meta&#39; );
+  unregister_widget( 'WP_Meta' );
 }
-add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;&lt;/pre&gt;
+add_action( 'widgets_init', 'unregister_widgets' );&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Where do we know to get the class of the widget though? For all of the WordPress core widgets, you can &lt;a href=&quot;https://codex.wordpress.org/Function_Reference/unregister_widget&quot;&gt;reference the codex&lt;/a&gt;, where all of the widget names are listed. Each starts with &lt;code class=&quot;highlighter-rouge&quot;&gt;WP_&lt;/code&gt;.&lt;/p&gt;
 
@@ -30,8 +30,8 @@ add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;
 
 &lt;p&gt;One last piece is adding a conditional to only unregister widgets if the plugin is actually active. It appears that &lt;code class=&quot;highlighter-rouge&quot;&gt;unregister_widget&lt;/code&gt; fails gracefully if it can’t find the widget class, but it would be better to just ignore it entirely if the plugin or theme isn’t active. This might take a little investigation as well, but you can check to see if the main class of the plugin exists.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;if ( class_exists( &#39;Jetpack&#39; ) ) {
-  unregister_widget( &#39;Jetpack_Gallery_Widget&#39; );
+&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;if ( class_exists( 'Jetpack' ) ) {
+  unregister_widget( 'Jetpack_Gallery_Widget' );
 }&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you’re unregistering a group of Jetpack widgets, adding this conditional will be much faster than checking for each widget individually.&lt;/p&gt;
@@ -51,7 +51,7 @@ add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;
 
 &lt;p&gt;Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in &lt;code class=&quot;highlighter-rouge&quot;&gt;functions.php&lt;/code&gt;. We’ll use this in &lt;code class=&quot;highlighter-rouge&quot;&gt;ajax-search.js&lt;/code&gt; to send requests for search results.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;wp_localize_script( &#39;ajax-search&#39;, &#39;ajaxurl&#39;, admin_url( &#39;admin-ajax.php&#39; ) );&lt;/code&gt;&lt;/pre&gt;
+&lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;wp_localize_script( 'ajax-search', 'ajaxurl', admin_url( 'admin-ajax.php' ) );&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;You’ll want to customize the &lt;code class=&quot;highlighter-rouge&quot;&gt;ajax-search&lt;/code&gt; bit to work with your naming structure. You’ll be less likely to run into conflicts if you use &lt;code class=&quot;highlighter-rouge&quot;&gt;[theme-name]-ajax-search&lt;/code&gt; instead.&lt;/p&gt;
 
@@ -61,17 +61,17 @@ add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;
 
 &lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;function ajax_search() {
   // Get search term from search field
-  $search = sanitize_text_field( $_POST[ &#39;query&#39; ] );
+  $search = sanitize_text_field( $_POST[ 'query' ] );
   
   // Set up query using search string, limit to 8 results
   $query = new WP_Query(
     array(
-      &#39;posts_per_page&#39; =&amp;gt; 8,
-      &#39;s&#39; =&amp;gt; $search
+      'posts_per_page' =&amp;gt; 8,
+      's' =&amp;gt; $search
     )
   );
   
-  $output = &#39;&#39;;
+  $output = '';
   
   // Run search query
   if ( $query-&amp;gt;have_posts() ) {
@@ -79,20 +79,20 @@ add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;
       
       /* Output a link to each result
          This is where the post thumbnail, excerpt, or anything else could be added */
-      echo &#39;&amp;lt;a href=&quot;&#39; . get_permalink() . &#39;&quot;&amp;gt;&#39; . get_the_title() . &#39;&amp;lt;/a&amp;gt;&#39;;
+      echo '&amp;lt;a href=&quot;' . get_permalink() . '&quot;&amp;gt;' . get_the_title() . '&amp;lt;/a&amp;gt;';
     
     endwhile;        
     
     // If there is more than one page of results, add link to the full results page
     if ( $query-&amp;gt;max_num_pages &amp;gt; 1 ) {
       // We use urlencode() here to handle any spaces or odd characters in the search string
-      echo &#39;&amp;lt;a class=&quot;see-all-results&quot; href=&quot;&#39; . get_site_url() . &#39;?s=&#39; . urlencode( $search ) . &#39;&quot;&amp;gt;View all results&amp;lt;/a&amp;gt;&#39;;
+      echo '&amp;lt;a class=&quot;see-all-results&quot; href=&quot;' . get_site_url() . '?s=' . urlencode( $search ) . '&quot;&amp;gt;View all results&amp;lt;/a&amp;gt;';
     }
     
   } else {
     
     // There are no results, output a message
-    echo &#39;&amp;lt;p class=&quot;no-results&quot;&amp;gt;No results&amp;lt;/p&amp;gt;&#39;;
+    echo '&amp;lt;p class=&quot;no-results&quot;&amp;gt;No results&amp;lt;/p&amp;gt;';
   
   }
   
@@ -104,8 +104,8 @@ add_action( &#39;widgets_init&#39;, &#39;unregister_widgets&#39; );&lt;/code&gt;
 
 /* We need to hook into both wp_ajax and wp_ajax_nopriv_ in order for
    the search to work for both logged in and logged out users. */
-add_action( &#39;wp_ajax_ajax_search&#39;, &#39;ajax_search&#39; );
-add_action( &#39;wp_ajax_nopriv_ajax_search&#39;, &#39;ajax_search&#39; );&lt;/code&gt;&lt;/pre&gt;
+add_action( 'wp_ajax_ajax_search', 'ajax_search' );
+add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;The contents of &lt;code class=&quot;highlighter-rouge&quot;&gt;ajax-search.php&lt;/code&gt; could be included inside of &lt;code class=&quot;highlighter-rouge&quot;&gt;functions.php&lt;/code&gt;, but keeping it separate makes &lt;code class=&quot;highlighter-rouge&quot;&gt;functions.php&lt;/code&gt; cleaner and easier to understand.&lt;/p&gt;
 
@@ -114,9 +114,9 @@ add_action( &#39;wp_ajax_nopriv_ajax_search&#39;, &#39;ajax_search&#39; );&lt;/c
 &lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;jQuery(document).ready( function($) {
 
   // Set up variables for each of the pertinent elements
-  var $searchWrap = $(&#39;.search-form&#39;),
-      $searchField = $(&#39;.search-form .search-field&#39;),
-      $loadingIcon = $(&#39;.search-form .loading&#39;),
+  var $searchWrap = $('.search-form'),
+      $searchField = $('.search-form .search-field'),
+      $loadingIcon = $('.search-form .loading'),
       termExists = &quot;&quot;;
   
   // Debounce function from https://davidwalsh.name/javascript-debounce-function
@@ -136,13 +136,13 @@ add_action( &#39;wp_ajax_nopriv_ajax_search&#39;, &#39;ajax_search&#39; );&lt;/c
   };
   
   // Add results container and disable autocomplete on search field
-  $searchWrap.append(&#39;&amp;lt;div class=&quot;results&quot;&amp;gt;&amp;lt;/div&amp;gt;&#39;);
-  var $searchResults = $(&#39;.search-form .results&#39;);
-  $searchField.attr(&#39;autocomplete&#39;, &#39;off&#39;);
+  $searchWrap.append('&amp;lt;div class=&quot;results&quot;&amp;gt;&amp;lt;/div&amp;gt;');
+  var $searchResults = $('.search-form .results');
+  $searchField.attr('autocomplete', 'off');
   
   // Perform search on keyup in search field, hide/show loading icon
   $searchField.keyup( function() {
-    $loadingIcon.css(&#39;display&#39;, &#39;block&#39;);
+    $loadingIcon.css('display', 'block');
     
     // If the search field is not empty, perform the search function
     if( $searchField.val() !== &quot;&quot; ) {
@@ -151,7 +151,7 @@ add_action( &#39;wp_ajax_nopriv_ajax_search&#39;, &#39;ajax_search&#39; );&lt;/c
     } else {
       termExists = false;
       $searchResults.empty();
-      $loadingIcon.css(&#39;display&#39;, &#39;none&#39;);
+      $loadingIcon.css('display', 'none');
     }
   });
   
@@ -159,21 +159,21 @@ add_action( &#39;wp_ajax_nopriv_ajax_search&#39;, &#39;ajax_search&#39; );&lt;/c
   var doSearch = debounce(function() {
     var query = $searchField.val();
     $.ajax({
-      type: &#39;POST&#39;,
+      type: 'POST',
       url: ajaxurl, // ajaxurl comes from the localize_script we added to functions.php
       data: {
-        action: &#39;ajax_search&#39;,
+        action: 'ajax_search',
         query: query,
       },
       success: function(result) {
         if ( termExists ) {
-          // `result` here is what we&#39;ve specified in ajax-search.php
-          $searchResults.html(&#39;&lt;div class=&quot;results-list&quot;&gt;&#39; + result + &#39;&lt;/div&gt;&#39;);
+          // `result` here is what we've specified in ajax-search.php
+          $searchResults.html('&lt;div class=&quot;results-list&quot;&gt;' + result + '&lt;/div&gt;');
         }
       },
       complete: function() {
         // Whether or not results are returned, hide the loading icon once the request is complete
-        $loadingIcon.css(&#39;display&#39;, &#39;none&#39;);
+        $loadingIcon.css('display', 'none');
       }
     });
   }, 200);
@@ -216,10 +216,10 @@ add_action( &#39;wp_ajax_nopriv_ajax_search&#39;, &#39;ajax_search&#39; );&lt;/c
 
 &lt;pre&gt;&lt;code class=&quot;language-php&quot;&gt;global $paged;
     
-if ( get_query_var( &#39;paged&#39; ) ) {
-	$paged = get_query_var( &#39;paged&#39; );
-} elseif ( get_query_var( &#39;page&#39; ) ) {
-	$paged = get_query_var( &#39;page&#39; );
+if ( get_query_var( 'paged' ) ) {
+	$paged = get_query_var( 'paged' );
+} elseif ( get_query_var( 'page' ) ) {
+	$paged = get_query_var( 'page' );
 } else {
 	$paged = 1;
 }&lt;/code&gt;&lt;/pre&gt;
@@ -318,10 +318,10 @@ if ( get_query_var( &#39;paged&#39; ) ) {
 &lt;h3 id=&quot;apply-padding-to-the-top-or-bottom-of-the-nearest-element&quot;&gt;Apply padding to the top or bottom of the nearest element&lt;/h3&gt;
 &lt;p&gt;This works well if you have an stable environment in which to do it. If the header is the same across the entire site, you can be certain that this will always give you the desired outcome. Right next to the JavaScript that you are using to change the positioning of the header, just grab a calculation of the current height of the sticky element and apply that value as top or bottom padding to the nearest element. &lt;em&gt;dusts off hands, walks away&lt;/em&gt;&lt;/p&gt;
 
-&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;var navHeight = document.getElementById(&#39;site-header&#39;).offsetHeight,
-	page = document.getElementById(&#39;page&#39;);
+&lt;pre&gt;&lt;code class=&quot;language-javascript&quot;&gt;var navHeight = document.getElementById('site-header').offsetHeight,
+	page = document.getElementById('page');
 
-page.style.paddingTop = navHeight + &#39;px&#39;;&lt;/code&gt;&lt;/pre&gt;
+page.style.paddingTop = navHeight + 'px';&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Keep in mind that &lt;code class=&quot;highlighter-rouge&quot;&gt;.offsetHeight&lt;/code&gt; will include padding and border, but not margin.&lt;/p&gt;
 
