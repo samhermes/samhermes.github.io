@@ -17,5 +17,6 @@ layout: harper
 
 <div class="harper-get">
 	<p>Harper is available for download from Github.</p>
-	<a href="https://github.com/samhermes/harper">Get Harper</a>
+	<a class="download-link" href="https://github.com/samhermes/harper">Get Harper</a>
+	<a class="demo-link" href="http://samhermes.co/harper">View Demo</a>
 </div>

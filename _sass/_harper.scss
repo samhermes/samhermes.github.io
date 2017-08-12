@@ -45,10 +45,17 @@
 
 	a {
 		display: inline-block;
-		background: #ff3653;
 		padding: 0.75em 1.25em;
 		border-radius: 5px;
 		color: #fff;
+
+		&.download-link {
+			background: #ff3653;
+		}
+
+		&.demo-link {
+			background: #888;
+		}
 
 		&:hover {
 			background: #333;
