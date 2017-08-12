@@ -12,7 +12,7 @@ layout: harper
 </div>
 
 <div class="harper-features">
-
+	<!-- What is Harper for? What is its purpose? Who would want to use it? -->
 </div>
 
 <div class="harper-get">
@@ -20,3 +20,5 @@ layout: harper
 	<a class="download-link" href="https://github.com/samhermes/harper">Get Harper</a>
 	<a class="demo-link" href="http://samhermes.co/harper">View Demo</a>
 </div>
+
+<!-- Link to Harper documentation -->
