@@ -1,0 +1,57 @@
+.harper {
+	margin-bottom: 5em;
+}
+
+.harper-intro,
+.harper-get {
+	box-sizing: border-box;
+	max-width: 75em;
+	margin: 0 auto;
+    padding: 2em;
+
+    p {
+		font-size: 1.2em;
+	}
+}
+
+.harper-intro {
+	@media screen and (min-width: 37.5em) {
+		display: flex;
+	}
+}
+
+.harper-intro-image {
+	@media screen and (min-width: 37.5em) {
+		width: 60%;
+	}
+}
+
+.harper-intro-text {
+	@media screen and (min-width: 37.5em) {
+		width: 40%;
+		padding: 15% 0;
+	}
+
+	h1 {
+		font-weight: 500;
+		font-size: 3em;
+		margin-bottom: 0.5em;
+	}
+}
+
+.harper-get {
+	text-align: center;
+	padding: 3em 0;
+
+	a {
+		display: inline-block;
+		background: #ff3653;
+		padding: 0.75em 1.25em;
+		border-radius: 5px;
+		color: #fff;
+
+		&:hover {
+			background: #333;
+		}
+	}
+}
