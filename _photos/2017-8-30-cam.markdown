@@ -1,0 +1,6 @@
+---
+layout: photo
+title: Contemporary Art Museum, Saint Louis
+date: 2017-08-30
+image: cam.jpg
+---

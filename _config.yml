@@ -15,3 +15,7 @@ permalink: /posts/:title/
 markdown: kramdown
 sass:
   style: compressed
+
+# Add custom collections
+collections:
+- photos
