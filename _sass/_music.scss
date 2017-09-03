@@ -7,6 +7,10 @@
 	margin-top: -10em;
 	margin-left: -10em;
 	animation: music-on-loop 6s infinite linear;
+
+	circle {
+		fill: #ff6c6c;
+	}
 }
 
 @keyframes music-on-loop {
