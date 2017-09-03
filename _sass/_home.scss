@@ -64,7 +64,8 @@
   }
 }
 
-.home .post-list {
+.home .post-list,
+.home .project-list {
   margin: 0;
   width: auto;
   padding: 7% 5% 0;
@@ -88,6 +89,9 @@
   ul {
     display: flex;
     flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+
     @media screen and (min-width: 37.5em) {
       margin: 0 -3%;
     }
@@ -111,6 +115,10 @@
       box-sizing: border-box;
       height: 100%;
       flex-grow: 1;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   h3 {
@@ -133,6 +141,18 @@
       font-size: 0.8rem;
       font-weight: 500;
     }
+  }
+}
+
+.home .project-list {
+  @media screen and (min-width: 28.125em) {
+    h2 {
+      margin: 0 0 3%;
+    }
+  }
+
+  img {
+    margin-bottom: 1.2em;
   }
 }
 

@@ -17,5 +17,16 @@ layout: home
     <li class="see-all"><a href="/posts"><span>See All &rarr;</span></a></li>
   </ul>
 </div>
-
+<div class="project-list">
+  <h2>Projects</h2>
+  <ul>
+  {% for project in site.projects limit:4 %}
+    <li>
+      <img src="/img/projects/{{ project.image }}" alt="">
+      <h3><a class="post-link" href="{{ project.project_url | prepend: site.baseurl }}">{{ project.title }}</a></h3>
+      <span class="post-meta">{{ project.description }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 
