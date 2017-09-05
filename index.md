@@ -22,7 +22,6 @@ layout: home
   <ul>
   {% for project in site.projects limit:4 %}
     <li>
-      <img src="/img/projects/{{ project.image }}" alt="">
       <h3><a class="post-link" href="{{ project.project_url | prepend: site.baseurl }}">{{ project.title }}</a></h3>
       <span class="post-meta">{{ project.description }}</span>
     </li>
