@@ -3,7 +3,7 @@ layout: home
 ---
 <header class="home-header">
   {% include samhermes.svg %}
-  <p>Front End Web Developer</p>
+  <p>UI Developer</p>
 </header>
 <div class="post-list">
   <h2>Recently Posted</h2>
