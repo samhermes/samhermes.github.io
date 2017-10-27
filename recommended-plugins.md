@@ -2,14 +2,14 @@
 layout: page
 title: Recommended Plugins
 ---
-<strong>[Post Category Filter](https://wordpress.org/plugins/admin-category-filter)</strong><br>
+[Post Category Filter](https://wordpress.org/plugins/admin-category-filter)<br>
 Great for sites with many categories, allows users to quick search for a category.
 
-<strong>[Query Monitor](https://wordpress.org/plugins/query-monitor/)</strong>
+[Query Monitor](https://wordpress.org/plugins/query-monitor/)
 
-<strong>[Simple History](https://wordpress.org/plugins/simple-history/)</strong>
+[Simple History](https://wordpress.org/plugins/simple-history/)
 
-<strong>[FakerPress](https://wordpress.org/plugins/fakerpress/)</strong><br>
+[FakerPress](https://wordpress.org/plugins/fakerpress/)<br>
 Makes it really quick and easy to generate different types of dummy content during development.
 
-<strong>[iThemes Security](https://wordpress.org/plugins/better-wp-security/)</strong>
+[iThemes Security](https://wordpress.org/plugins/better-wp-security/)
