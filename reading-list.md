@@ -22,5 +22,8 @@ title: Reading List
 	<li>Thinking, Fast and Slow<br>
 		<span class="author">Daniel Kahneman</span>
 	</li>
+	<li>Quiet: The Power of Introverts in a World That Can't Stop Talking<br>
+		<span class="author">Susan Cain</span>
+	</li>
 </ul>
 
