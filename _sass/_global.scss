@@ -72,7 +72,7 @@
   margin: 0 auto;
   position: relative;
   @media screen and (min-width: 45.625em) {
-    padding: 1.3em 1.65em 2em;
+    padding: 1.3em 1.65em 1.6em;
   }
   .pride {
     border-radius: 2px;
@@ -81,7 +81,7 @@
     bottom: 1.92em;
     margin-left: -15px;
     @media screen and (min-width: 45.625em) {
-      bottom: 2.42em;
+      bottom: 2em;
     }
   }
   .site-nav {
@@ -106,9 +106,8 @@
     }
     a {
       opacity: 1;
-      transition: opacity 0.2s;
       &:hover {
-        opacity: 0.75;
+        opacity: 0.5;
       }
     }
   }

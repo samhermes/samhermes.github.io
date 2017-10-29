@@ -1,0 +1,22 @@
+---
+layout: default
+custom_js: lazyload
+---
+<div class="photo-list">
+	<ul>
+	  {% for photo in site.photos reversed %}
+	  {% assign loopindex = forloop.index %}
+	    <li>
+	    	{% if loopindex < 3 %}
+	    		<img src="/img/photos/{{ photo.image }}" alt="">
+	    	{% else %}
+	    		<img class="lazyload" data-src="/img/photos/{{ photo.image }}" alt="">
+		    	<noscript>
+		    		<img src="/img/photos/{{ photo.image }}" alt="">
+		    	</noscript>
+	    	{% endif %}
+	    	<p class="photo-caption">{{ photo.title }}</p>
+	    </li>
+	  {% endfor %}
+	</ul>
+</div>

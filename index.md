@@ -3,7 +3,7 @@ layout: home
 ---
 <header class="home-header">
   {% include samhermes.svg %}
-  <p>Web Developer</p>
+  <p>UI Developer</p>
 </header>
 <div class="post-list">
   <h2>Recently Posted</h2>
@@ -17,5 +17,15 @@ layout: home
     <li class="see-all"><a href="/posts"><span>See All &rarr;</span></a></li>
   </ul>
 </div>
-
+<div class="project-list">
+  <h2>Projects</h2>
+  <ul>
+  {% for project in site.projects limit:4 %}
+    <li>
+      <h3><a class="post-link" href="{{ project.project_url | prepend: site.baseurl }}">{{ project.title }}</a></h3>
+      <span class="post-meta">{{ project.description }}</span>
+    </li>
+  {% endfor %}
+  </ul>
+</div>
 

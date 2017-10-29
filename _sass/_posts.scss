@@ -85,7 +85,8 @@
     line-height: 1.25;
   }
 }
-.post-content {
+.post-content,
+.page-content {
   margin-bottom: $spacing-unit;
   h2 {
     font-size: 1.4em;
@@ -126,20 +127,13 @@
       background: #f1f2f3;
       padding: 0.1em 0.5em 0.2em;
       border-radius: 0.2em;
+      word-wrap: break-word;
       @media screen and (min-width: 37.5em) {
         font-size: 1.1rem;
       }
     }
   }
-  .last-updated {
-  	text-transform: uppercase;
-  	font-size: 0.8em;
-  	margin: 3em 0 0;
-  }
   ul {
-    list-style: none;
-    margin-left: 0;
-    padding-left: 1.3em;
     margin-bottom: 1.8rem;
     font-size: 1.05rem;
     @media screen and (min-width: 37.5em) {
@@ -148,6 +142,28 @@
     @media screen and (min-width: 62.5em) {
       font-size: 1.25rem;
     }
+
+    & > li {
+      margin-bottom: 1em;
+    }
+  }
+  a {
+    text-decoration: underline;
+  }
+  strong {
+    font-weight: normal;
+  }
+}
+.post-content {
+  .last-updated {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin: 3em 0 0;
+  }
+  ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 1.3em;
   }
   ul > li {
     margin-bottom: 1em;
@@ -163,12 +179,6 @@
     width: 1.2em;
     margin-left: -1.2em;
   }
-  a {
-    text-decoration: underline;
-  }
-  strong {
-    font-weight: normal;
-  }
   code {
     font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
   }
@@ -182,7 +192,7 @@
   padding: 1.2em;
 
   @media screen and (min-width: 30em) {
-    padding: 1.1em 1.2em 1.2em 7.08em;
+    padding: 1.1em 1.2em 1.2em;
   }
 
   img {
