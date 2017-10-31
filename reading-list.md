@@ -11,6 +11,9 @@ title: Reading List
 	<li>Originals: How Non-Conformists Move the World<br>
 		<span class="author">Adam Grant</span>
 	</li>
+	<li>A Little Bit Wicked<br>
+		<span class="author">Kristin Chenoweth</span>
+	</li>
 </ul>
 
 ## Completed
