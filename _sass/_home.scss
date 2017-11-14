@@ -108,13 +108,13 @@
     box-sizing: border-box;
     border-radius: 0.2em;
     background: #fff;
-    margin-bottom: 6%;
+    margin-bottom: 1.5rem;
     width: 100%;
     display: flex;
     flex-direction: column;
     @media screen and (min-width: 37.5em) {
       width: 44%;
-      margin: 0 3% 5%;
+      margin: 0 3% 3.5rem;
     }
     @media screen and (min-width: 60.25em) {
       width: 27.3333%;
