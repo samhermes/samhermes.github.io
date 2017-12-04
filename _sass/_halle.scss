@@ -1,9 +1,9 @@
-.harper {
+.halle {
 	margin-bottom: 5em;
 }
 
-.harper-intro,
-.harper-get {
+.halle-intro,
+.halle-get {
 	box-sizing: border-box;
 	max-width: 75em;
 	margin: 0 auto;
@@ -14,19 +14,19 @@
 	}
 }
 
-.harper-intro {
+.halle-intro {
 	@media screen and (min-width: 37.5em) {
 		display: flex;
 	}
 }
 
-.harper-intro-image {
+.halle-intro-image {
 	@media screen and (min-width: 37.5em) {
 		width: 60%;
 	}
 }
 
-.harper-intro-text {
+.halle-intro-text {
 	@media screen and (min-width: 37.5em) {
 		width: 40%;
 		padding: 15% 0;
@@ -39,7 +39,7 @@
 	}
 }
 
-.harper-get {
+.halle-get {
 	text-align: center;
 	padding: 3em 0;
 
