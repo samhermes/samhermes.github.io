@@ -3,7 +3,7 @@ layout: halle
 ---
 <div class="halle-intro">
 	<div class="halle-intro-image">
-		<img src="">
+		<img src="/img/projects/screenshot.jpg">
 	</div>
 	<div class="halle-intro-text">
 		<h1>Halle</h1>
