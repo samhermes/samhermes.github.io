@@ -7,7 +7,8 @@
 	box-sizing: border-box;
 	max-width: 75em;
 	margin: 0 auto;
-    padding: 2em;
+	width: 90%;
+	padding: 2em 0;
 
     p {
 		font-size: 1.2em;
@@ -15,39 +16,57 @@
 }
 
 .halle-intro {
-	@media screen and (min-width: 37.5em) {
+	@media screen and (min-width: 50em) {
 		display: flex;
+		justify-content: space-between;
 	}
 }
 
 .halle-intro-image {
-	@media screen and (min-width: 37.5em) {
-		width: 60%;
+	margin-bottom: 2em;
+
+	@media screen and (min-width: 50em) {
+		width: 50%;
+		text-align: right;
+		margin-bottom: 0;
 	}
 
 	img {
-		max-width: 50%;
-		margin: 0 auto;
 		display: block;
+		margin: 0 auto;
+		max-width: 22em;
+		width: 100%;
+		box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+
+		@media screen and (min-width: 50em) {
+			display: inline-block;
+		}
 	}
 }
 
 .halle-intro-text {
-	@media screen and (min-width: 37.5em) {
-		width: 40%;
-		padding: 15% 0;
+	text-align: center;
+
+	@media screen and (min-width: 50em) {
+		width: 43%;
+		padding: 8.4em 0 0;
+		text-align: left;
 	}
 
 	h1 {
 		font-weight: 500;
 		font-size: 3em;
-		margin-bottom: 0.5em;
+		margin-bottom: 0.05em;
+	}
+
+	.subhead {
+		margin: 0 0 1.7em; 
 	}
 }
 
 .halle-get {
 	text-align: center;
-	padding: 3em 0;
+	padding: 5em 0 3em;
 
 	a {
 		display: inline-block;
@@ -61,10 +80,10 @@
 		}
 
 		&.download-link {
-			background: #ff3653;
+			background: #160893;
 
 			&:hover {
-				background: darken(#ff3653, 15%);
+				background: darken(#160893, 12%);
 			}
 		}
 
@@ -72,7 +91,7 @@
 			background: #656565;
 
 			&:hover {
-				background: darken(#656565, 15%);
+				background: darken(#656565, 12%);
 			}
 		}
 	}

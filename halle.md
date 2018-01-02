@@ -7,6 +7,7 @@ layout: halle
 	</div>
 	<div class="halle-intro-text">
 		<h1>Halle</h1>
+		<p class="subhead">for WordPress</p>
 		<p>Share your story with the world.</p>
 	</div>
 </div>
