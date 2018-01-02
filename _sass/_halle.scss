@@ -54,17 +54,26 @@
 		padding: 0.75em 1.25em;
 		border-radius: 5px;
 		color: #fff;
+		margin-right: 0.5em;
+
+		&:last-child {
+			margin-right: 0;
+		}
 
 		&.download-link {
 			background: #ff3653;
+
+			&:hover {
+				background: darken(#ff3653, 15%);
+			}
 		}
 
 		&.demo-link {
-			background: #888;
-		}
+			background: #656565;
 
-		&:hover {
-			background: #333;
+			&:hover {
+				background: darken(#656565, 15%);
+			}
 		}
 	}
 }

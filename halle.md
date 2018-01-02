@@ -17,7 +17,7 @@ layout: halle
 
 <div class="halle-get">
 	<p>Halle is available for download from Github.</p>
-	<a class="download-link" href="https://github.com/samhermes/halle">Get Halle</a>
+	<a class="download-link" href="https://github.com/samhermes/halle">View on GitHub</a>
 	<a class="demo-link" href="http://samhermes.co/halle-demo">View Demo</a>
 </div>
 
