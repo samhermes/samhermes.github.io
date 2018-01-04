@@ -5,6 +5,9 @@ title: Reading List
 ## Currently
 
 <ul class="book-list">
+	<li>The Untethered Soul<br>
+		<span class="author">Michael Singer</span>
+	</li>
 	<li>Originals: How Non-Conformists Move the World<br>
 		<span class="author">Adam Grant</span>
 	</li>
@@ -13,6 +16,9 @@ title: Reading List
 ## Completed
 
 <ul class="book-list">
+	<li>A Man Called Ove<br>
+		<span class="author">Fredrik Backman</span>
+	</li>
 	<li>The Paradox of Choice: Why More Is Less<br>
 		<span class="author">Barry Schwartz</span>
 	</li>
