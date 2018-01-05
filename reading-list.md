@@ -1,38 +1,37 @@
 ---
 layout: page
 title: Reading List
+custom_js:
+- vue.min
+- reading-list
 ---
-## Currently
+<div id="app">
+
+<div class="status-toggle-wrap">
+	<template v-for="(status, index) in statuses">
+		<div class="status-toggle" :class="{ active : currentStatus == status.id }">
+			<input type="radio"
+			:id="status.id"
+			:value="status.id"
+			:name="status.id"
+			v-model="currentStatus">
+			<label :for="status.id" v-html="status.title"></label>
+		</div>
+	</template>
+</div>
+
+<div class="loading" v-show="loading">
+	{% include loading.svg %}
+</div>
 
 <ul class="book-list">
-	<li>The Untethered Soul<br>
-		<span class="author">Michael Singer</span>
+<template v-for="book in books">
+	<li>
+		<p class="book-title" v-html="book.title.rendered"></p>
+		<p class="author" v-html="book.fields.author"></p>
 	</li>
-	<li>Originals: How Non-Conformists Move the World<br>
-		<span class="author">Adam Grant</span>
-	</li>
+</template>
 </ul>
 
-## Completed
-
-<ul class="book-list">
-	<li>A Man Called Ove<br>
-		<span class="author">Fredrik Backman</span>
-	</li>
-	<li>The Paradox of Choice: Why More Is Less<br>
-		<span class="author">Barry Schwartz</span>
-	</li>
-	<li>A Little Bit Wicked<br>
-		<span class="author">Kristin Chenoweth</span>
-	</li>
-	<li>What Happened<br>
-		<span class="author">Hillary Clinton</span>
-	</li>
-	<li>Thinking, Fast and Slow<br>
-		<span class="author">Daniel Kahneman</span>
-	</li>
-	<li>Quiet: The Power of Introverts in a World That Can't Stop Talking<br>
-		<span class="author">Susan Cain</span>
-	</li>
-</ul>
+</div>
 
