@@ -1,17 +1,23 @@
 var apiURL = 'https://samhermes.co/reading-list/wp-json/wp/v2/posts?categories='
 
-/**
- * Posts demo with ability to change author
- */
-
-var posts = new Vue({
+var books = new Vue({
 
 	el: '#app',
 
 	data: {
-		statuses: ['1', '2'],
+		statuses: [
+			{
+				id: 1,
+				title: 'Currently',
+			},
+			{
+				id: 2,
+				title: 'Completed',
+			}
+		],
 		currentStatus: '1',
-		posts: null
+		books: null,
+		loading: false
 	},
 
 	created: function() {
@@ -24,12 +30,14 @@ var posts = new Vue({
 
 	methods: {
 		fetchData: function() {
+			this.loading = true
 			var xhr = new XMLHttpRequest()
 			var self = this
 			xhr.open('GET', apiURL + self.currentStatus)
 			xhr.onload = function() {
-				self.posts = JSON.parse(xhr.responseText)
-			}
+				this.loading = false
+				self.books = JSON.parse(xhr.responseText)
+			}.bind(this)
 			xhr.send()
 		}
 	}

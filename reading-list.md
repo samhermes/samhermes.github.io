@@ -8,22 +8,27 @@ custom_js:
 <div id="app">
 
 <div class="status-toggle-wrap">
-	<template v-for="status in statuses">
-		<div class="status-toggle">
+	<template v-for="(status, index) in statuses">
+		<div class="status-toggle" :class="{ active : currentStatus == status.id }">
 			<input type="radio"
-			:id="status"
-			:value="status"
-			name="status"
+			:id="status.id"
+			:value="status.id"
+			:name="status.id"
 			v-model="currentStatus">
-			<label :for="status">Status: {{ status }}</label>
+			<label :for="status.id" v-html="status.title"></label>
 		</div>
 	</template>
 </div>
 
+<div class="loading" v-show="loading">
+	{% include loading.svg %}
+</div>
+
 <ul class="book-list">
-<template v-for="post in posts">
+<template v-for="book in books">
 	<li>
-		<p class="book-title" v-html="post.title.rendered"></p>
+		<p class="book-title" v-html="book.title.rendered"></p>
+		<p class="author" v-html="book.fields.author"></p>
 	</li>
 </template>
 </ul>
