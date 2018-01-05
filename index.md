@@ -20,10 +20,10 @@ layout: home
 <div class="project-list">
   <h2>Projects</h2>
   <ul>
-  {% for project in site.projects limit:4 %}
+  {% for project in site.projects reversed %}
     <li>
       <h3><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h3>
-      <span class="post-meta">{{ project.description }}</span>
+      <p class="project-description">{{ project.description }}</p>
     </li>
   {% endfor %}
   </ul>
