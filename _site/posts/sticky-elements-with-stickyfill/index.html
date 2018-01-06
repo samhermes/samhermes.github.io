@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Sticky elements with Stickyfill</title>
+<meta name="description" content="Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browse...">
+
+<link rel="stylesheet" href="/css/main.css?v=1.0.1">
+
+<link rel="canonical" href="http://localhost:4000/posts/sticky-elements-with-stickyfill/">
+<link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/json" title="Sam Hermes" href="http://localhost:4000/feed.json" />
+
+<header class="site-header group">
+	<div class="contain">
+    <a class="logomark" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 292"><title>Sam Hermes</title><circle cx="146" cy="146" r="146" fill="#1d1d1d"/><path d="M86.2 190.41l19-15c10.6 17.2 25.4 25.2 43.8 25.2 19.6 0 29.8-9.6 29.8-22.8 0-17.4-18.6-20.8-38.2-25C118 148.21 94 142.21 94 113c0-22.8 20.8-41.8 50.2-41.8 25 0 41.4 9 55.6 25l-18 14.2C173.2 98.81 163.2 91 144.2 91c-19.6 0-27.8 9.2-27.8 21.8 0 14.8 17.2 17.6 36.2 21.6 23 4.8 48.6 11.4 48.6 43.2 0 22.4-18.4 43.6-51.6 43.6-30.4.01-49.6-11.99-63.4-30.79z" fill="#ffffff"/></svg></a>
+    <ul class="site-nav">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/photos">Photos</a></li>
+    </ul>
+   	</div>
+</header>
+
+<div class="page">
+<article class="post">
+
+  <header class="post-header">
+    <p class="post-meta"><time>July 24, 2016</time></p>
+    <h2 class="post-title">Sticky elements with Stickyfill</h2>
+  </header>
+
+  <div class="post-content">
+    <p>Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browsers natively, the best way right now is to use a polyfill. This is where Stickyfill comes in. If <code class="highlighter-rouge">position: sticky</code> is not supported, it mimics the behavior. As soon as support comes to all major browsers, the polyfill can be removed. At the moment, it is supported in Firefox and Safari, and is behind a flag in Chrome and Opera. Considering that it is most commonly used on larger screens, the support is strong.</p>
+
+<p>You can <a href="https://github.com/wilddeer/stickyfill">download Stickyfill on Github</a>. There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.</p>
+
+<p>Taken directly from the readme, you can hook Stickyfill up with the following JavaScript:</p>
+
+<pre><code class="language-javascript">var stickyElements = document.getElementsByClassName('sticky');
+for (var i = stickyElements.length - 1; i &gt;= 0; i--) {
+  Stickyfill.add(stickyElements[i]);
+}</code></pre>
+
+<p>I have been using Stickyfill with a WordPress site, so I have changed the class to simply <code class="highlighter-rouge">stick</code> so that it will not interfere with sticky posts.</p>
+
+<p>While your implementation may be much more complex, applying the following styles to a sidebar would be all you would need to get started.</p>
+
+<pre><code class="language-css">.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+}</code></pre>
+
+<p>In my project, I set the value of top to <code class="highlighter-rouge">15px</code> to give a little room above the element. Also, I added an additional selector that would account for the WordPress admin bar, so the value of top is <code class="highlighter-rouge">47px</code> when the <code class="highlighter-rouge">.admin-bar</code> class is present. This makes sure that even users who are signed in see a properly formatted site.</p>
+
+  </div>
+
+  <div class="about-me">
+  	<p class="name">Sam Hermes</p>
+  	<p class="description">I'm a web developer at Washington University in St. Louis. I write about WordPress, PHP, CSS, SVG, and more.</p>
+  </div>
+</article>
+
+</div>
+<footer class="site-footer group">
+	<ul class="site-nav">
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/photos">Photos</a></li>
+	</ul>
+	<svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" class="pride"><path fill="#E40303" d="M0 0h30v3H0z"/><path fill="#FF8C00" d="M0 3h30v3H0z"/><path fill="#FFED00" d="M0 6h30v3H0z"/><path fill="#008026" d="M0 9h30v3H0z"/><path fill="#004DFF" d="M0 12h30v3H0z"/><path fill="#750787" d="M0 15h30v3H0z"/></svg>
+	<ul class="social">
+		<li><a href="https://codepen.io/samhermes"><img src="/img/codepen.svg"></a></li>
+		<li><a href="https://github.com/samhermes"><img src="/img/github.svg"></a></li>
+	</ul>
+</footer>
+
+
+  
+<script src="/js/prism.js"></script>
+  
+
+

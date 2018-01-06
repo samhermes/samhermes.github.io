@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Explaining accessible modals</title>
+<meta name="description" content="Accessibility on the web is tricky, and modals are even trickier. Fortunately, there seem to be quite a few resources for getting there, one being Frend. It ...">
+
+<link rel="stylesheet" href="/css/main.css?v=1.0.1">
+
+<link rel="canonical" href="http://localhost:4000/posts/explaining-accessible-modals/">
+<link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/json" title="Sam Hermes" href="http://localhost:4000/feed.json" />
+
+<header class="site-header group">
+	<div class="contain">
+    <a class="logomark" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 292"><title>Sam Hermes</title><circle cx="146" cy="146" r="146" fill="#1d1d1d"/><path d="M86.2 190.41l19-15c10.6 17.2 25.4 25.2 43.8 25.2 19.6 0 29.8-9.6 29.8-22.8 0-17.4-18.6-20.8-38.2-25C118 148.21 94 142.21 94 113c0-22.8 20.8-41.8 50.2-41.8 25 0 41.4 9 55.6 25l-18 14.2C173.2 98.81 163.2 91 144.2 91c-19.6 0-27.8 9.2-27.8 21.8 0 14.8 17.2 17.6 36.2 21.6 23 4.8 48.6 11.4 48.6 43.2 0 22.4-18.4 43.6-51.6 43.6-30.4.01-49.6-11.99-63.4-30.79z" fill="#ffffff"/></svg></a>
+    <ul class="site-nav">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/photos">Photos</a></li>
+    </ul>
+   	</div>
+</header>
+
+<div class="page">
+<article class="post">
+
+  <header class="post-header">
+    <p class="post-meta"><time>August 18, 2017</time></p>
+    <h2 class="post-title">Explaining accessible modals</h2>
+  </header>
+
+  <div class="post-content">
+    <p>Accessibility on the web is tricky, and modals are even trickier. Fortunately, there seem to be quite a few resources for getting there, one being <a href="https://frend.co">Frend</a>. It includes a component for an accessible modal that provides a small JavaScript library that hooks up to a modal and takes care of the rest. Only problem is that it’s a little too component-ized to understand what’s going on under the hood. The documentation says that you can just call <code class="highlighter-rouge">var myModal = Frdialogmodal();</code> and you’re good to go. But what’s really happening, and how might we adapt it for our own use?</p>
+
+<p>Before I dig into this, I think it’s worth pointing out that “modal” is sort of a loose definition of what this will work for. In my current project, it’s less of a modal and more of a change of focus. In the Frend component, the main work that the JavaScript is doing is keeping the focus within the modal content while it is open and then putting the focus back where it was when the modal is closed. Someone who is tabbing through the site should be able to enter the context of the modal and then get back out of it when they’re ready. This works for modals or any event where you might be shifting context based on user input.</p>
+
+<h2 id="event-binding">Event binding</h2>
+
+<p>First things first, the display of a modal has to be triggered by an action taken by the user. Likely, that’s a click on a button. When a click event occurs, we want to attach an event listener that will listen for <code class="highlighter-rouge">keydown</code> events like so: <code class="highlighter-rouge">document.addEventListener('keydown', modalTab);</code></p>
+
+<h2 id="collecting-all-focusable-elements">Collecting all focusable elements</h2>
+
+<p>Next up, if we’re going to be using the tab key, we need to find all of the elements that we want to be tabbed through. Essentially, we want to begin restricting focus states to a select group of elements that are inside the modal, and then loop through them as if the modal were a miniature webpage.</p>
+
+<p>We’re going to pass an array of all possible types of focusable elements into a function that will perform a <code class="highlighter-rouge">querySelectorAll()</code> within the context of the modal. Then we’ll end up with all of the elements to be tabbed through.</p>
+
+<p>Here’s an array containing all possible focusable elements:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">focusableSelectors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'a[href]'</span><span class="p">,</span> <span class="s1">'area[href]'</span><span class="p">,</span> <span class="s1">'input:not([disabled])'</span><span class="p">,</span> <span class="s1">'select:not([disabled])'</span><span class="p">,</span> <span class="s1">'textarea:not([disabled])'</span><span class="p">,</span> <span class="s1">'button:not([disabled])'</span><span class="p">,</span> <span class="s1">'iframe'</span><span class="p">,</span> <span class="s1">'object'</span><span class="p">,</span> <span class="s1">'embed'</span><span class="p">,</span> <span class="s1">'[contenteditable]'</span><span class="p">,</span> <span class="s1">'[tabindex]:not([tabindex^="-"])'</span><span class="p">];</span></code></pre></figure>
+
+<p>Those are some pretty tricky selectors! For the most part, this will take care of just about anything you’d put in a modal, but you’ll want to make sure that this list matches up with reality.</p>
+
+<p>Once we know what types of elements could be focusable, we need to look inside of the modal content and gather up any element that matches. We can do that with the following:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.modal'</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">focusableElements</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
+  <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">modal</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span> <span class="nx">focusableSelectors</span><span class="p">.</span><span class="nx">join</span><span class="p">()</span> <span class="p">)</span> <span class="p">);</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>With this function, if there are two anchor tags and a close button in the modal, an array with the two anchor links and button will be returned. This function will be used in the next step anytime the tab key is pressed.</p>
+
+<h2 id="handling-tab-keydown">Handling tab keydown</h2>
+
+<p>Now that the event listener is waiting for <code class="highlighter-rouge">keydown</code> events and we’ve got a list of all focusable elements, we can check to see if the user is using the tab key. This will be done within the <code class="highlighter-rouge">modalTab()</code> function, so let’s get that started.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="kd">function</span> <span class="nx">modalTab</span><span class="p">(</span><span class="nx">event</span><span class="p">)</span> <span class="p">{</span></code></pre></figure>
+
+<p>It’s important to pass the <code class="highlighter-rouge">event</code> in to the function so that we can capture which key is being used. Our first check will be just that, through the following check:</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="k">if</span> <span class="p">(</span><span class="nx">event</span><span class="p">.</span><span class="nx">keyCode</span> <span class="o">===</span> <span class="mi">9</span><span class="p">)</span> <span class="p">{</span></code></pre></figure>
+
+<p>The magic key code for the tab key is <code class="highlighter-rouge">9</code>. When I first learned that keys were mapped to numbers, it seemed like something that could fall apart pretty easily, but it holds up! Tech!</p>
+
+<h2 id="creating-a-focus-loop">Creating a focus loop</h2>
+
+<p>We now move into controlling what happens when the first or last element is tabbed past. We want to drop the user’s focus state back on the first element if they get to the end of the modal and hit tab, and this should work in the inverse as well.</p>
+
+<p>The following code is still inside the <code class="highlighter-rouge">modalTab()</code> function, and inside the conditional tag we created above that’s checking to make sure the <code class="highlighter-rouge">keyCode</code> is <code class="highlighter-rouge">9</code>.</p>
+
+<figure class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="c1">// Get the index of the currently focused element within the modal</span>
+<span class="kd">var</span> <span class="nx">focusedIndex</span> <span class="o">=</span> <span class="nx">focusableElements</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="nb">document</span><span class="p">.</span><span class="nx">activeElement</span><span class="p">);</span>
+
+<span class="c1">// If the shift key is not in use, check to see if we're on the last element</span>
+<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="nx">e</span><span class="p">.</span><span class="nx">shiftKey</span> <span class="o">&amp;&amp;</span> <span class="nx">focusedIndex</span> <span class="o">===</span> <span class="nx">focusableElements</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Focus first item within modal</span>
+  <span class="nx">focusableElements</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="nx">focus</span><span class="p">();</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="c1">// If the shift key is in use, we're going backwards, so check to see if we're on the first element</span>
+<span class="p">}</span> <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="nx">e</span><span class="p">.</span><span class="nx">shiftKey</span> <span class="o">&amp;&amp;</span> <span class="p">(</span><span class="nx">focusedIndex</span> <span class="o">===</span> <span class="mi">0</span> <span class="o">||</span> <span class="nx">focusedIndex</span> <span class="o">===</span> <span class="o">-</span><span class="mi">1</span><span class="p">))</span> <span class="p">{</span>
+  <span class="c1">// Focus last item within modal</span>
+  <span class="nx">focusableElements</span><span class="p">[</span><span class="nx">focusableElements</span><span class="p">.</span><span class="nx">length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">].</span><span class="nx">focus</span><span class="p">();</span>
+  <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+<span class="p">}</span></code></pre></figure>
+
+<p>We really don’t need to know what’s happening on the elements between the first and last element of the modal, their focus state can remain untouched by our script. We’re just waiting for the first or last.</p>
+
+<h2 id="removing-event-listener-on-close">Removing event listener on close</h2>
+
+<p>We really only want to listen for keydown events while the modal is open, so we’ll want to remove this event listener when the modal is closed. Since this could unexpectedly cause issues with other elements on the page, it’s safest to restrict our functions to just the modal. We’d remove the event listener like so: <code class="highlighter-rouge">document.removeEventListener('keydown', modalTab);</code></p>
+
+<h2 id="additional-considerations">Additional considerations</h2>
+
+<p>Beyond handling the focus state, we’ll also want to manage state on a few other items. By default, the container of the modal should receive <code class="highlighter-rouge">role="dialog"</code> as well as <code class="highlighter-rouge">aria-hidden="true"</code>. When the modal is opened, the <code class="highlighter-rouge">aria-hidden</code> attribute should be updated to <code class="highlighter-rouge">false</code>, and then set back to <code class="highlighter-rouge">true</code>  on close. This could be done with the following: <code class="highlighter-rouge">modal.setAttribute('aria-hidden', true);</code></p>
+
+<p>This will vary based on what content is contained within the modal, but the first element should receive focus when the modal is opened. Whether this is just the first anchor tag or the modal container itself, the focus should be added to get the user started off properly.</p>
+
+<p>To learn more about how this works, the JS file for the Frend modal component is a great place to start. Much of what I went over in this post is contained within. <a href="https://github.com/frend/frend.co/blob/gh-pages/_components/dialogmodal/dialogmodal.js">View it on Github</a></p>
+
+  </div>
+
+  <div class="about-me">
+  	<p class="name">Sam Hermes</p>
+  	<p class="description">I'm a web developer at Washington University in St. Louis. I write about WordPress, PHP, CSS, SVG, and more.</p>
+  </div>
+</article>
+
+</div>
+<footer class="site-footer group">
+	<ul class="site-nav">
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/photos">Photos</a></li>
+	</ul>
+	<svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" class="pride"><path fill="#E40303" d="M0 0h30v3H0z"/><path fill="#FF8C00" d="M0 3h30v3H0z"/><path fill="#FFED00" d="M0 6h30v3H0z"/><path fill="#008026" d="M0 9h30v3H0z"/><path fill="#004DFF" d="M0 12h30v3H0z"/><path fill="#750787" d="M0 15h30v3H0z"/></svg>
+	<ul class="social">
+		<li><a href="https://codepen.io/samhermes"><img src="/img/codepen.svg"></a></li>
+		<li><a href="https://github.com/samhermes"><img src="/img/github.svg"></a></li>
+	</ul>
+</footer>
+
+
+  
+<script src="/js/prism.js"></script>
+  
+
+
