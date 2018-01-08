@@ -6,8 +6,10 @@
 
 .home-header {
   padding: 5.5em 5% 5%;
-  background: #1D1D1D;
-  background: url('/img/home/header-sm.jpg') no-repeat center;
+  background-color: #1D1D1D;
+  background-image: url('/img/home/header-sm.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
