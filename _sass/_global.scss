@@ -1,8 +1,9 @@
 .site-header {
-  padding: 0.6em 5% 0;
+  padding: 0.6em 5%;
+  background: #1d1d1d;
   margin: 0 auto;
   @media screen and (min-width: 45.625em) {
-    padding: 1.3em 1.65em 0;
+    padding: 1em 1.65em;
   }
   .logomark {
     display: block;
@@ -38,27 +39,30 @@
 
 .site-nav {
   list-style: none;
-  margin: 0 -0.625rem 0 0;
+  margin: 0.4em 0 0 0;
   padding: 0;
   float: right;
+  @media screen and (min-width: 28.125em) {
+    margin: 0.55em 0 0 0;
+  }
   li {
     float: left;
     font-size: 0.75em;
     text-transform: uppercase;
     @media screen and (min-width: 28.125em) {
-      margin-left: 0.3rem;
+      margin-left: 0.5rem;
     }
     &:first-child {
       margin-left: 0;
     }
     a {
-      color: #5d5d5d;
+      color: #fff;
       display: block;
       padding: 0.5rem 0.625rem;
       border-radius: 0.4em;
       font-weight: 400;
       &:hover {
-        background: #f8f8fa;
+        background: #353535;
       }
     }
   }
@@ -87,6 +91,12 @@
   .site-nav {
     float: left;
     margin: 0 0 0 -0.625rem;
+    a {
+      color: #5d5d5d;
+      &:hover {
+        background: #f8f8fa;
+      }
+    }
   }
 }
 

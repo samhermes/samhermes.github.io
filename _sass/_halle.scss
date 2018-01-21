@@ -10,7 +10,11 @@
 	width: 90%;
 	padding: 2em 0;
 
-    p {
+	@media screen and (min-width: 50em) {
+		padding: 5em 0;
+	}
+
+	p {
 		font-size: 1.2em;
 	}
 }
