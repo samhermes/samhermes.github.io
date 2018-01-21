@@ -10,19 +10,23 @@ You can [download Stickyfill on Github](https://github.com/wilddeer/stickyfill).
 
 Taken directly from the readme, you can hook Stickyfill up with the following JavaScript:
 
-<pre><code class="language-javascript">var stickyElements = document.getElementsByClassName('sticky');
+```js
+var stickyElements = document.getElementsByClassName('sticky');
 for (var i = stickyElements.length - 1; i >= 0; i--) {
   Stickyfill.add(stickyElements[i]);
-}</code></pre>
+}
+```
 
 I have been using Stickyfill with a WordPress site, so I have changed the class to simply `stick` so that it will not interfere with sticky posts.
 
 While your implementation may be much more complex, applying the following styles to a sidebar would be all you would need to get started.
 
-<pre><code class="language-css">.sticky {
+```css
+.sticky {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-}</code></pre>
+}
+```
 
 In my project, I set the value of top to `15px` to give a little room above the element. Also, I added an additional selector that would account for the WordPress admin bar, so the value of top is `47px` when the `.admin-bar` class is present. This makes sure that even users who are signed in see a properly formatted site.

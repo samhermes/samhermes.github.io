@@ -11,10 +11,12 @@ Unregistering a widget is a fairly small bit of code, but getting all of the inf
 
 Here is a function that hooks into the `widgets_init` action in WordPress, and in the function it calls `unregister_widget()` on the widget to remove, the meta widget in this case.
 
-<pre><code class="language-php">function unregister_widgets() {
+```php
+function unregister_widgets() {
   unregister_widget( 'WP_Meta' );
 }
-add_action( 'widgets_init', 'unregister_widgets' );</code></pre>
+add_action( 'widgets_init', 'unregister_widgets' );
+```
 
 Where do we know to get the class of the widget though? For all of the WordPress core widgets, you can [reference the codex](https://codex.wordpress.org/Function_Reference/unregister_widget), where all of the widget names are listed. Each starts with `WP_`.
 
@@ -24,8 +26,10 @@ If you don’t have the plugin or theme locally, you could also search the repos
 
 One last piece is adding a conditional to only unregister widgets if the plugin is actually active. It appears that `unregister_widget` fails gracefully if it can’t find the widget class, but it would be better to just ignore it entirely if the plugin or theme isn’t active. This might take a little investigation as well, but you can check to see if the main class of the plugin exists.
 
-<pre><code class="language-php">if ( class_exists( 'Jetpack' ) ) {
+```php
+if ( class_exists( 'Jetpack' ) ) {
   unregister_widget( 'Jetpack_Gallery_Widget' );
-}</code></pre>
+}
+```
 
 If you’re unregistering a group of Jetpack widgets, adding this conditional will be much faster than checking for each widget individually.

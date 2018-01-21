@@ -8,7 +8,8 @@ On a site with tall pages, setting up a fixed header can make a lot of sense. Wh
 
 Let's say that the fixed header on a site is 80px tall. Nothing too unruly, but it might get in the way of someone on a smaller laptop as they are browsing your site. In this example, you could set the header to fixed if the viewport is at least 800px tall. Any shorter and let that header scroll away out of sight.
 
-<pre><code class="language-css">@media screen and (min-height: 800px) {
+```css
+@media screen and (min-height: 800px) {
     header {
         position: fixed;
         top: 0;
@@ -17,7 +18,8 @@ Let's say that the fixed header on a site is 80px tall. Nothing too unruly, but 
     body {
         margin-top: 80px;
     }
-}</code></pre>
+}
+```
 
 You’ll want to replace the space you’re creating when the header is fixed by applying the height of the header as margin-top of the body element.
 

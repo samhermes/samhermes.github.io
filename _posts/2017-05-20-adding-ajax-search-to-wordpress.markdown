@@ -11,7 +11,9 @@ I’ve broken out the functionality into separate files, which keeps this featur
 
 Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in `functions.php`. We’ll use this in `ajax-search.js` to send requests for search results.
 
-<pre><code class="language-php">wp_localize_script( 'ajax-search', 'ajaxurl', admin_url( 'admin-ajax.php' ) );</code></pre>
+```php
+wp_localize_script( 'ajax-search', 'ajaxurl', admin_url( 'admin-ajax.php' ) );
+```
 
 You’ll want to customize the `ajax-search` bit to work with your naming structure. You’ll be less likely to run into conflicts if you use `[theme-name]-ajax-search` instead.
 
@@ -19,7 +21,8 @@ Next, I’ve added a loading icon inside the search field to let users know that
 
 Now, for creating the files. I’m going to start with `ajax-search.php`. This is where the template will be stored for the search results. Here we can control what is returned, add a thumbnail, excerpt, date, author, or simply return the title. There’s just one function in this file, and it attaches to the `wp_ajax_` hook in WordPress.
 
-<pre><code class="language-php">function ajax_search() {
+```php
+function ajax_search() {
   // Get search term from search field
   $search = sanitize_text_field( $_POST[ 'query' ] );
   
@@ -65,13 +68,15 @@ Now, for creating the files. I’m going to start with `ajax-search.php`. This i
 /* We need to hook into both wp_ajax and wp_ajax_nopriv_ in order for
    the search to work for both logged in and logged out users. */
 add_action( 'wp_ajax_ajax_search', 'ajax_search' );
-add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );</code></pre>
+add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );
+```
 
 The contents of `ajax-search.php` could be included inside of `functions.php`, but keeping it separate makes `functions.php` cleaner and easier to understand.
 
 Up next, let’s spend some time with the JavaScript to make it work. This example relies on jQuery, but could be reworked to use vanilla JavaScript. Essentially, we listen to the search field for changes. We’ll debounce the number of requests that can be made, but ensure that the user knows that we’re working nonetheless.
 
-<pre><code class="language-javascript">jQuery(document).ready( function($) {
+```js
+jQuery(document).ready( function($) {
 
   // Set up variables for each of the pertinent elements
   var $searchWrap = $('.search-form'),
@@ -138,6 +143,7 @@ Up next, let’s spend some time with the JavaScript to make it work. This examp
     });
   }, 200);
   
-});</code></pre>
+});
+```
 
 That just about does it. The last piece is styling for the results. You’re likely to have plenty of ideas of your own, so I'll close this up here. If there's anything I've missed or been a bit unclear about, direct a tweet to [@samhermes](https://twitter.com/samhermes).

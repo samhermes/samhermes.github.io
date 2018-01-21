@@ -20,20 +20,20 @@ We’re going to pass an array of all possible types of focusable elements into 
 
 Here’s an array containing all possible focusable elements:
 
-{% highlight javascript %}
+```js
 var focusableSelectors = ['a[href]', 'area[href]', 'input:not([disabled])', 'select:not([disabled])', 'textarea:not([disabled])', 'button:not([disabled])', 'iframe', 'object', 'embed', '[contenteditable]', '[tabindex]:not([tabindex^="-"])'];
-{% endhighlight %}
+```
 
 Those are some pretty tricky selectors! For the most part, this will take care of just about anything you’d put in a modal, but you’ll want to make sure that this list matches up with reality.
 
 Once we know what types of elements could be focusable, we need to look inside of the modal content and gather up any element that matches. We can do that with the following:
 
-{% highlight javascript %}
+```js
 var modal = document.querySelector('.modal');
 var focusableElements = function() { 
   return [].slice.call( modal.querySelectorAll( focusableSelectors.join() ) );
 }
-{% endhighlight %}
+```
 
 With this function, if there are two anchor tags and a close button in the modal, an array with the two anchor links and button will be returned. This function will be used in the next step anytime the tab key is pressed.
 
@@ -41,15 +41,15 @@ With this function, if there are two anchor tags and a close button in the modal
 
 Now that the event listener is waiting for `keydown` events and we've got a list of all focusable elements, we can check to see if the user is using the tab key. This will be done within the `modalTab()` function, so let’s get that started.
 
-{% highlight javascript %}
+```js
 function modalTab(event) {
-{% endhighlight %}
+```
 
 It’s important to pass the `event` in to the function so that we can capture which key is being used. Our first check will be just that, through the following check:
 
-{% highlight javascript %}
+```js
 if (event.keyCode === 9) {
-{% endhighlight %}
+```
 
 The magic key code for the tab key is `9`. When I first learned that keys were mapped to numbers, it seemed like something that could fall apart pretty easily, but it holds up! Tech!
 
@@ -59,7 +59,7 @@ We now move into controlling what happens when the first or last element is tabb
 
 The following code is still inside the `modalTab()` function, and inside the conditional tag we created above that’s checking to make sure the `keyCode` is `9`.
 
-{% highlight javascript %}
+```js
 // Get the index of the currently focused element within the modal
 var focusedIndex = focusableElements.indexOf(document.activeElement);
 
@@ -74,7 +74,7 @@ if (!e.shiftKey && focusedIndex === focusableElements.length - 1) {
   focusableElements[focusableElements.length - 1].focus();
   e.preventDefault();
 }
-{% endhighlight %}
+```
 
 We really don’t need to know what’s happening on the elements between the first and last element of the modal, their focus state can remain untouched by our script. We’re just waiting for the first or last.
 

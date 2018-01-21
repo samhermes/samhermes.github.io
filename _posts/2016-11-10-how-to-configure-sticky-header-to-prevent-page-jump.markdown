@@ -11,10 +11,12 @@ Fortunately, the fix is simple and straightforward. We must simply fill the gap 
 ### Apply padding to the top or bottom of the nearest element
 This works well if you have an stable environment in which to do it. If the header is the same across the entire site, you can be certain that this will always give you the desired outcome. Right next to the JavaScript that you are using to change the positioning of the header, just grab a calculation of the current height of the sticky element and apply that value as top or bottom padding to the nearest element. *dusts off hands, walks away*
 
-<pre><code class="language-javascript">var navHeight = document.getElementById('site-header').offsetHeight,
+```js
+var navHeight = document.getElementById('site-header').offsetHeight,
 	page = document.getElementById('page');
 
-page.style.paddingTop = navHeight + 'px';</code></pre>
+page.style.paddingTop = navHeight + 'px';
+```
 
 Keep in mind that `.offsetHeight` will include padding and border, but not margin.
 
