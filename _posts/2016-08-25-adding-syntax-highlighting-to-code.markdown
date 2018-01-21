@@ -10,16 +10,16 @@ If I wasn’t going to be embedding the code, that meant I would need to add it 
 
 Since I’m using Jekyll to build my site, I wasn’t sure how to conditionally include Prism only on the posts I’m using code snippets in. Using an [article by Matt Gemmell](http://mattgemmell.com/page-specific-assets-with-jekyll/), I added YAML front matter that specified the name of the JavaScript file to include.
 
-```
+```markdown
 custom_js: prism
 ```
 
 Then, in the footer, I added a `for` loop that added a script tag for each javascript file included.
 
-```
+```markup
 {% raw %}{% if page.custom_js %}
   {% for js_file in page.custom_js %}
-&lt;script src='/js/{{ js_file }}.js' type="text/javascript"&gt;&lt;/script&gt;
+<script src='/js/{{ js_file }}.js' type="text/javascript"></script>
   {% endfor %}
 {% endif %}{% endraw %}
 ```
