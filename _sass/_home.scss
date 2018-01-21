@@ -7,12 +7,6 @@
 .home-header {
   padding: 5.5em 5% 5%;
   background: #1D1D1D;
-  background: url('/img/home/header-sm.jpg') no-repeat center;
-  background-size: cover;
-
-  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-    background-image: url('/img/home/header-sm-2x.jpg');
-  }
 
   @media screen and (min-width: 28.125em) {
     padding: 6.5em 10% 5%;
@@ -20,11 +14,6 @@
 
   @media screen and (min-width: 45em) {
     padding-top: 10%;
-    background-image: url('/img/home/header-lg.jpg');
-
-    @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
-      background-image: url('/img/home/header-lg-2x.jpg');
-    }
   }
 
   .contain {
