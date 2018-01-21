@@ -20,46 +20,46 @@ We begin by enabling grid on the parent element with a new value for the display
 
 From there, we need to decide the widths for each column. For a sidebar, we could set up a fixed or flexible width for it. Here, we give it a fixed width of `15em`.
 
-{% highlight css %}
+```css
 .two-column {
 	display: grid;
 	grid-template-columns: 15em 1fr;
 }
-{% endhighlight %}
+```
 
 As you probably noticed, we’ve got a new measurement in use here. CSS grid adds the `fr` unit, or fraction unit. It’s incredibly powerful, and here, using `1fr`, it fills up the remaining space.
 
 We can use the fraction unit to develop our own grid system of sorts, and the possibilities are unlimited. To create a percentage-based layout similar to what we’ve already done, we use two values in fractions.
 
-{% highlight css %}
+```css
 .two-column {
 	display: grid;
 	grid-template-columns: 10fr 4fr;
 }
-{% endhighlight %}
+```
 
 If we’re on a fairly large screen, this layout probably looks great. However, we probably only want to apply it when the screen is wider than `600px`, or `37.5em`, or so.
 
-{% highlight css %}
+```css
 @media screen and (min-width: 37.5em) {
 	.two-column {
 		display: grid;
 		grid-template-columns: 15em 1fr;
 	}
 }
-{% endhighlight %}
+```
 
 This feels really familiar, and goes along with what we’ve been doing with flexbox. Using grid with media queries, we only apply the layout changes when we’d like them to take effect.
 
 The last piece of this layout is the most exciting. Whereas we needed to perform quite a bit of management of the margin between elements with float layouts, this is no longer an issue. Grid gap takes care of this in a clean, simple way. Floats required adding margin to both sides, or removing it from the last child. Grid gap just gets to the point.
 
-{% highlight css %}
+```css
 .two-column {
 	display: grid;
 	grid-template-columns: 15em 1fr;
 	grid-gap: 5em;
 }
-{% endhighlight %}
+```
 
 Here we’re telling grid to set the first column to `15em`, then add a blank `5em` gap, and then fill up the remaining space with the second element. A flexible or fixed value could be used here, just like with our column measurements.
 

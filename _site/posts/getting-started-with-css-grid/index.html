@@ -46,38 +46,42 @@
 
 <p>From there, we need to decide the widths for each column. For a sidebar, we could set up a fixed or flexible width for it. Here, we give it a fixed width of <code class="highlighter-rouge">15em</code>.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.two-column</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.two-column</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
 	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">15em</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>As you probably noticed, we’ve got a new measurement in use here. CSS grid adds the <code class="highlighter-rouge">fr</code> unit, or fraction unit. It’s incredibly powerful, and here, using <code class="highlighter-rouge">1fr</code>, it fills up the remaining space.</p>
 
 <p>We can use the fraction unit to develop our own grid system of sorts, and the possibilities are unlimited. To create a percentage-based layout similar to what we’ve already done, we use two values in fractions.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.two-column</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.two-column</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
 	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">10</span><span class="n">fr</span> <span class="m">4</span><span class="n">fr</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>If we’re on a fairly large screen, this layout probably looks great. However, we probably only want to apply it when the screen is wider than <code class="highlighter-rouge">600px</code>, or <code class="highlighter-rouge">37.5em</code>, or so.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">37.5em</span><span class="p">)</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">@media</span> <span class="n">screen</span> <span class="n">and</span> <span class="p">(</span><span class="n">min-width</span><span class="p">:</span> <span class="m">37.5em</span><span class="p">)</span> <span class="p">{</span>
 	<span class="nc">.two-column</span> <span class="p">{</span>
 		<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
 		<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">15em</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
 	<span class="p">}</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>This feels really familiar, and goes along with what we’ve been doing with flexbox. Using grid with media queries, we only apply the layout changes when we’d like them to take effect.</p>
 
 <p>The last piece of this layout is the most exciting. Whereas we needed to perform quite a bit of management of the margin between elements with float layouts, this is no longer an issue. Grid gap takes care of this in a clean, simple way. Floats required adding margin to both sides, or removing it from the last child. Grid gap just gets to the point.</p>
 
-<figure class="highlight"><pre><code class="language-css" data-lang="css"><span class="nc">.two-column</span> <span class="p">{</span>
+<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">.two-column</span> <span class="p">{</span>
 	<span class="nl">display</span><span class="p">:</span> <span class="n">grid</span><span class="p">;</span>
 	<span class="py">grid-template-columns</span><span class="p">:</span> <span class="m">15em</span> <span class="m">1</span><span class="n">fr</span><span class="p">;</span>
 	<span class="py">grid-gap</span><span class="p">:</span> <span class="m">5em</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<span class="p">}</span>
+</code></pre></div></div>
 
 <p>Here we’re telling grid to set the first column to <code class="highlighter-rouge">15em</code>, then add a blank <code class="highlighter-rouge">5em</code> gap, and then fill up the remaining space with the second element. A flexible or fixed value could be used here, just like with our column measurements.</p>
 
