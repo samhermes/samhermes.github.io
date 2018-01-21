@@ -12,11 +12,11 @@ One of the most common layouts, this used to require a pairing of floats and wid
 
 We begin by enabling grid on the parent element with a new value for the display property.
 
-{% highlight css %}
+```css
 .two-column {
 	display: grid;
 }
-{% endhighlight %}
+```
 
 From there, we need to decide the widths for each column. For a sidebar, we could set up a fixed or flexible width for it. Here, we give it a fixed width of `15em`.
 
