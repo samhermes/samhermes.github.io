@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>How to configure a sticky header to prevent page jump</title>
+<meta name="description" content="As I’ve been out browsing the web lately, I’ve come across quite a few sticky headers that are implemented in a way that causes the page to jump up as scroll...">
+
+<link rel="stylesheet" href="/css/main.css?v=1.0.1">
+
+<link rel="canonical" href="http://localhost:4000/posts/how-to-configure-sticky-header-to-prevent-page-jump/">
+<link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/json" title="Sam Hermes" href="http://localhost:4000/feed.json" />
+
+<header class="site-header group">
+	<div class="contain">
+    <a class="logomark" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 292"><title>Sam Hermes</title><circle cx="146" cy="146" r="146" fill="#1d1d1d"/><path d="M86.2 190.41l19-15c10.6 17.2 25.4 25.2 43.8 25.2 19.6 0 29.8-9.6 29.8-22.8 0-17.4-18.6-20.8-38.2-25C118 148.21 94 142.21 94 113c0-22.8 20.8-41.8 50.2-41.8 25 0 41.4 9 55.6 25l-18 14.2C173.2 98.81 163.2 91 144.2 91c-19.6 0-27.8 9.2-27.8 21.8 0 14.8 17.2 17.6 36.2 21.6 23 4.8 48.6 11.4 48.6 43.2 0 22.4-18.4 43.6-51.6 43.6-30.4.01-49.6-11.99-63.4-30.79z" fill="#ffffff"/></svg></a>
+    <ul class="site-nav">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/photos">Photos</a></li>
+    </ul>
+   	</div>
+</header>
+
+<div class="page">
+<article class="post">
+
+  <header class="post-header">
+    <p class="post-meta"><time>November 10, 2016</time></p>
+    <h2 class="post-title">How to configure a sticky header to prevent page jump</h2>
+  </header>
+
+  <div class="post-content">
+    <p>As I’ve been out browsing the web lately, I’ve come across quite a few sticky headers that are implemented in a way that causes the page to jump up as scrolling begins. They are statically positioned at the top of the page, and then convert to fixed position when the page is scrolled down to a certain point. That works well, except removing an element from its position in the page leaves a gap, and that gap will close immediately after the element is removed, causing the page to jump up.</p>
+
+<p>Fortunately, the fix is simple and straightforward. We must simply fill the gap left by a sticky header. We can fill it in a number of ways, a few of which I will detail now.</p>
+
+<h3 id="apply-padding-to-the-top-or-bottom-of-the-nearest-element">Apply padding to the top or bottom of the nearest element</h3>
+<p>This works well if you have an stable environment in which to do it. If the header is the same across the entire site, you can be certain that this will always give you the desired outcome. Right next to the JavaScript that you are using to change the positioning of the header, just grab a calculation of the current height of the sticky element and apply that value as top or bottom padding to the nearest element. <em>dusts off hands, walks away</em></p>
+
+<pre><code class="language-javascript">var navHeight = document.getElementById('site-header').offsetHeight,
+	page = document.getElementById('page');
+
+page.style.paddingTop = navHeight + 'px';</code></pre>
+
+<p>Keep in mind that <code class="highlighter-rouge">.offsetHeight</code> will include padding and border, but not margin.</p>
+
+<h3 id="add-an-empty-div-after-the-sticky-header">Add an empty <code class="highlighter-rouge">&lt;div&gt;</code> after the sticky header</h3>
+<p>This method is used by Stickyfill, which I’ve written about before. This method is a little more flexible if you’re looking to make multiple items sticky or if you aren’t sure what elements will be reliably above or below the header. Rather than reinventing a wheel, add Stickyfill to your project and follow its implementation. It does an excellent job and won’t lead to issues with page jump.</p>
+
+  </div>
+
+  <div class="about-me">
+  	<p class="name">Sam Hermes</p>
+  	<p class="description">I'm a web developer at Washington University in St. Louis. I write about WordPress, PHP, CSS, SVG, and more.</p>
+  </div>
+</article>
+
+</div>
+<footer class="site-footer group">
+	<ul class="site-nav">
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/photos">Photos</a></li>
+	</ul>
+	<svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" class="pride"><path fill="#E40303" d="M0 0h30v3H0z"/><path fill="#FF8C00" d="M0 3h30v3H0z"/><path fill="#FFED00" d="M0 6h30v3H0z"/><path fill="#008026" d="M0 9h30v3H0z"/><path fill="#004DFF" d="M0 12h30v3H0z"/><path fill="#750787" d="M0 15h30v3H0z"/></svg>
+	<ul class="social">
+		<li><a href="https://codepen.io/samhermes"><img src="/img/codepen.svg"></a></li>
+		<li><a href="https://github.com/samhermes"><img src="/img/github.svg"></a></li>
+	</ul>
+</footer>
+
+
+  
+<script src="/js/prism.js"></script>
+  
+
+

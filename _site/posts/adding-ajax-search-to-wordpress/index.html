@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Adding Ajax search to a WordPress theme</title>
+<meta name="description" content="There are a few plugins that will add Ajax search for you, but what if you wanted to integrate it into your theme yourself for more control over functionalit...">
+
+<link rel="stylesheet" href="/css/main.css?v=1.0.1">
+
+<link rel="canonical" href="http://localhost:4000/posts/adding-ajax-search-to-wordpress/">
+<link rel="alternate" type="application/rss+xml" title="Sam Hermes" href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/json" title="Sam Hermes" href="http://localhost:4000/feed.json" />
+
+<header class="site-header group">
+	<div class="contain">
+    <a class="logomark" href="/"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 292 292"><title>Sam Hermes</title><circle cx="146" cy="146" r="146" fill="#1d1d1d"/><path d="M86.2 190.41l19-15c10.6 17.2 25.4 25.2 43.8 25.2 19.6 0 29.8-9.6 29.8-22.8 0-17.4-18.6-20.8-38.2-25C118 148.21 94 142.21 94 113c0-22.8 20.8-41.8 50.2-41.8 25 0 41.4 9 55.6 25l-18 14.2C173.2 98.81 163.2 91 144.2 91c-19.6 0-27.8 9.2-27.8 21.8 0 14.8 17.2 17.6 36.2 21.6 23 4.8 48.6 11.4 48.6 43.2 0 22.4-18.4 43.6-51.6 43.6-30.4.01-49.6-11.99-63.4-30.79z" fill="#ffffff"/></svg></a>
+    <ul class="site-nav">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/photos">Photos</a></li>
+    </ul>
+   	</div>
+</header>
+
+<div class="page">
+<article class="post">
+
+  <header class="post-header">
+    <p class="post-meta"><time>May 20, 2017</time></p>
+    <h2 class="post-title">Adding Ajax search to a WordPress theme</h2>
+  </header>
+
+  <div class="post-content">
+    <p>There are a few plugins that will add Ajax search for you, but what if you wanted to integrate it into your theme yourself for more control over functionality and appearance? Let’s see what we can do.</p>
+
+<p>I’ve broken out the functionality into separate files, which keeps this feature modular. We’ll be creating <code class="highlighter-rouge">ajax-search.php</code> and <code class="highlighter-rouge">ajax-search.js</code>.</p>
+
+<p>Before starting, there are a few things we need to do elsewhere first. The following will output the URL of the Ajax file that is part of WordPress core, and needs to be included in <code class="highlighter-rouge">functions.php</code>. We’ll use this in <code class="highlighter-rouge">ajax-search.js</code> to send requests for search results.</p>
+
+<pre><code class="language-php">wp_localize_script( 'ajax-search', 'ajaxurl', admin_url( 'admin-ajax.php' ) );</code></pre>
+
+<p>You’ll want to customize the <code class="highlighter-rouge">ajax-search</code> bit to work with your naming structure. You’ll be less likely to run into conflicts if you use <code class="highlighter-rouge">[theme-name]-ajax-search</code> instead.</p>
+
+<p>Next, I’ve added a loading icon inside the search field to let users know that their request is being processed. I have a custom <code class="highlighter-rouge">search-form.php</code> defined in the theme that adds an animated SVG with a style property of <code class="highlighter-rouge">display: none;</code>. This ensures that the icon will only be show when we’re ready.</p>
+
+<p>Now, for creating the files. I’m going to start with <code class="highlighter-rouge">ajax-search.php</code>. This is where the template will be stored for the search results. Here we can control what is returned, add a thumbnail, excerpt, date, author, or simply return the title. There’s just one function in this file, and it attaches to the <code class="highlighter-rouge">wp_ajax_</code> hook in WordPress.</p>
+
+<pre><code class="language-php">function ajax_search() {
+  // Get search term from search field
+  $search = sanitize_text_field( $_POST[ 'query' ] );
+  
+  // Set up query using search string, limit to 8 results
+  $query = new WP_Query(
+    array(
+      'posts_per_page' =&gt; 8,
+      's' =&gt; $search
+    )
+  );
+  
+  $output = '';
+  
+  // Run search query
+  if ( $query-&gt;have_posts() ) {
+    while ( $query-&gt;have_posts() ) : $query-&gt;the_post();
+      
+      /* Output a link to each result
+         This is where the post thumbnail, excerpt, or anything else could be added */
+      echo '&lt;a href="' . get_permalink() . '"&gt;' . get_the_title() . '&lt;/a&gt;';
+    
+    endwhile;        
+    
+    // If there is more than one page of results, add link to the full results page
+    if ( $query-&gt;max_num_pages &gt; 1 ) {
+      // We use urlencode() here to handle any spaces or odd characters in the search string
+      echo '&lt;a class="see-all-results" href="' . get_site_url() . '?s=' . urlencode( $search ) . '"&gt;View all results&lt;/a&gt;';
+    }
+    
+  } else {
+    
+    // There are no results, output a message
+    echo '&lt;p class="no-results"&gt;No results&lt;/p&gt;';
+  
+  }
+  
+  // Reset query
+  wp_reset_query();
+  
+  die();
+}
+
+/* We need to hook into both wp_ajax and wp_ajax_nopriv_ in order for
+   the search to work for both logged in and logged out users. */
+add_action( 'wp_ajax_ajax_search', 'ajax_search' );
+add_action( 'wp_ajax_nopriv_ajax_search', 'ajax_search' );</code></pre>
+
+<p>The contents of <code class="highlighter-rouge">ajax-search.php</code> could be included inside of <code class="highlighter-rouge">functions.php</code>, but keeping it separate makes <code class="highlighter-rouge">functions.php</code> cleaner and easier to understand.</p>
+
+<p>Up next, let’s spend some time with the JavaScript to make it work. This example relies on jQuery, but could be reworked to use vanilla JavaScript. Essentially, we listen to the search field for changes. We’ll debounce the number of requests that can be made, but ensure that the user knows that we’re working nonetheless.</p>
+
+<pre><code class="language-javascript">jQuery(document).ready( function($) {
+
+  // Set up variables for each of the pertinent elements
+  var $searchWrap = $('.search-form'),
+      $searchField = $('.search-form .search-field'),
+      $loadingIcon = $('.search-form .loading'),
+      termExists = "";
+  
+  // Debounce function from https://davidwalsh.name/javascript-debounce-function
+  function debounce(func, wait, immediate) {
+    var timeout;
+    return function() {
+      var context = this, args = arguments;
+      var later = function() {
+        timeout = null;
+        if (!immediate) func.apply(context, args);
+      };
+      var callNow = immediate &amp;&amp; !timeout;
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+      if (callNow) func.apply(context, args);
+    };
+  };
+  
+  // Add results container and disable autocomplete on search field
+  $searchWrap.append('&lt;div class="results"&gt;&lt;/div&gt;');
+  var $searchResults = $('.search-form .results');
+  $searchField.attr('autocomplete', 'off');
+  
+  // Perform search on keyup in search field, hide/show loading icon
+  $searchField.keyup( function() {
+    $loadingIcon.css('display', 'block');
+    
+    // If the search field is not empty, perform the search function
+    if( $searchField.val() !== "" ) {
+      termExists = true;
+      doSearch();
+    } else {
+      termExists = false;
+      $searchResults.empty();
+      $loadingIcon.css('display', 'none');
+    }
+  });
+  
+  // Make search Ajax request every 200 milliseconds, output results
+  var doSearch = debounce(function() {
+    var query = $searchField.val();
+    $.ajax({
+      type: 'POST',
+      url: ajaxurl, // ajaxurl comes from the localize_script we added to functions.php
+      data: {
+        action: 'ajax_search',
+        query: query,
+      },
+      success: function(result) {
+        if ( termExists ) {
+          // `result` here is what we've specified in ajax-search.php
+          $searchResults.html('<div class="results-list">' + result + '</div>');
+        }
+      },
+      complete: function() {
+        // Whether or not results are returned, hide the loading icon once the request is complete
+        $loadingIcon.css('display', 'none');
+      }
+    });
+  }, 200);
+  
+});</code></pre>
+
+<p>That just about does it. The last piece is styling for the results. You’re likely to have plenty of ideas of your own, so I’ll close this up here. If there’s anything I’ve missed or been a bit unclear about, direct a tweet to <a href="https://twitter.com/samhermes">@samhermes</a>.</p>
+
+  </div>
+
+  <div class="about-me">
+  	<p class="name">Sam Hermes</p>
+  	<p class="description">I'm a web developer at Washington University in St. Louis. I write about WordPress, PHP, CSS, SVG, and more.</p>
+  </div>
+</article>
+
+</div>
+<footer class="site-footer group">
+	<ul class="site-nav">
+		<li><a href="/posts">Posts</a></li>
+		<li><a href="/photos">Photos</a></li>
+	</ul>
+	<svg xmlns="http://www.w3.org/2000/svg" width="30" height="18" viewBox="0 0 30 18" class="pride"><path fill="#E40303" d="M0 0h30v3H0z"/><path fill="#FF8C00" d="M0 3h30v3H0z"/><path fill="#FFED00" d="M0 6h30v3H0z"/><path fill="#008026" d="M0 9h30v3H0z"/><path fill="#004DFF" d="M0 12h30v3H0z"/><path fill="#750787" d="M0 15h30v3H0z"/></svg>
+	<ul class="social">
+		<li><a href="https://codepen.io/samhermes"><img src="/img/codepen.svg"></a></li>
+		<li><a href="https://github.com/samhermes"><img src="/img/github.svg"></a></li>
+	</ul>
+</footer>
+
+
+  
+<script src="/js/prism.js"></script>
+  
+
+

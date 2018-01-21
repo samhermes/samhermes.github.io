@@ -1,0 +1,54 @@
+.card-container {
+  background: #f3f3f3;
+  padding: 25px;
+  margin-bottom: 30px;
+}
+
+.card {
+  margin: 0 auto;
+  max-width: 250px;
+  padding: 15px;
+  transition: 0.2s;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 2px 20px 0 rgba(0, 0, 0, 0.1);
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  border: 1px solid tomato;
+}
+
+.card h1 {
+  margin: 0 0 15px;
+  font-size: 1.75em;
+  line-height: 1;
+}
+
+.card p {
+  margin: 0 0 35px;
+  font-size: 1em;
+}
+
+.card a,
+.card .action {
+  color: tomato;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin: 0;
+  border: 0;
+}
+
+.card-container > a {
+  display: block;
+  margin: 0 auto;
+  max-width: 280px;
+  border: 0;
+  color: #1D1D1D;
+  text-decoration: none;
+}
+
+.card-container > a:hover {
+  text-decoration: none;
+}
