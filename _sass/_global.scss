@@ -2,33 +2,25 @@
   padding: 0.6em 5%;
   background: #1d1d1d;
   margin: 0 auto;
+  
   @media screen and (min-width: 45.625em) {
     padding: 1em 1.65em;
   }
-  .logomark {
-    display: block;
-    float: left;
-  }
+
   svg {
     display: block;
   }
+
   .logotype {
-    margin: 0.35em 0;
+    display: block;
+    float: left;
+
     svg {
-      width: 130px;
-      height: 16px;
-      @media screen and (min-width: 28.125em) {
-        width: 150px;
-        height: 19px;
-      }
-    }
-  }
-  .logomark {
-    svg {
-      width: 40px;
+      width: 150px;
       height: 40px;
+
       @media screen and (min-width: 28.125em) {
-        width: 50px;
+        width: 175px;
         height: 50px;
       }
     }

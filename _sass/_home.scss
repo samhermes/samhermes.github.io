@@ -16,6 +16,20 @@
     padding-top: 10%;
   }
 
+  .logotype {
+    margin: 0.35em 0;
+
+    svg {
+      width: 130px;
+      height: 16px;
+      
+      @media screen and (min-width: 28.125em) {
+        width: 150px;
+        height: 19px;
+      }
+    }
+  }
+
   .contain {
     width: 90%;
     max-width: 90em;
