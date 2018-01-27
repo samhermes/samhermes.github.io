@@ -8,7 +8,7 @@ custom_js:
 <div id="app">
 
 <div class="status-toggle-wrap">
-	<template v-for="(status, index) in statuses">
+	<template v-for="status in statuses">
 		<div class="status-toggle" :class="{ active : currentStatus == status.id }">
 			<input type="radio"
 			:id="status.id"

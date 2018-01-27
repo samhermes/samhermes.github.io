@@ -6,14 +6,8 @@ var books = new Vue({
 
 	data: {
 		statuses: [
-			{
-				id: 1,
-				title: 'Currently',
-			},
-			{
-				id: 2,
-				title: 'Completed',
-			}
+			{ id: 1, title: 'Currently' },
+			{ id: 2, title: 'Completed' }
 		],
 		currentStatus: '1',
 		books: null,
