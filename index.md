@@ -14,7 +14,7 @@ layout: home
       <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
     </li>
   {% endfor %}
-    <li class="see-all"><a href="/posts"><span>See All &rarr;</span></a></li>
+    <li class="see-all"><a href="/posts"><span>All Posts &rarr;</span></a></li>
   </ul>
 </div>
 <div class="project-list">
