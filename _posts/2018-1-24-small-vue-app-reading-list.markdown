@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A small Vue app&#58; Reading List
+title: A small Vue app - Reading List
 date: 2018-01-24
 custom_js: prism
 ---
