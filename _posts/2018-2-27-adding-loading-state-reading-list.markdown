@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Adding a loading state to my small Vue app
+title: Adding a loading state to Reading List
 date: 2018-02-27
 custom_js: prism
 ---
