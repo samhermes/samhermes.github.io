@@ -37,25 +37,27 @@
   list-style: none;
   margin: 0 0 0 auto;
   padding: 0;
-  @media screen and (min-width: 28.125em) {
-    margin: 0 0 0 auto;
-  }
+
   li {
     float: left;
     font-size: 0.75em;
     text-transform: uppercase;
+
     @media screen and (min-width: 28.125em) {
       margin-left: 0.5rem;
     }
+
     &:first-child {
       margin-left: 0;
     }
+
     a {
       color: #fff;
       display: block;
       padding: 0.5rem 0.625rem;
       border-radius: 0.4em;
       font-weight: 400;
+
       &:hover {
         background: #353535;
       }
@@ -70,24 +72,30 @@
   padding: 1em 5% 1.5em;
   margin: 0 auto;
   position: relative;
+
   @media screen and (min-width: 45.625em) {
     padding: 1.3em 1.65em 1.6em;
   }
+
   .pride {
     border-radius: 2px;
     position: absolute;
     left: 50%;
     bottom: 1.92em;
     margin-left: -15px;
+
     @media screen and (min-width: 45.625em) {
       bottom: 2em;
     }
   }
+
   .site-nav {
     float: left;
     margin: 0 0 0 -0.625rem;
+
     a {
       color: #5d5d5d;
+
       &:hover {
         background: #f8f8fa;
       }
@@ -100,6 +108,7 @@
   padding: 0;
   margin: 0.125em 0 0;
   float: right;
+
   li {
     float: left;
     margin-left: 1.25em;
@@ -130,17 +139,19 @@
   margin: 8rem auto;
   text-align: center;
   line-height: 1.5;
-  font-size: 0.9em;
+
   @media screen and (min-width: 28.125em) {
     margin: 12rem auto;
   }
-}
-.fourohfour h2 {
-  font-size: 4.04em;
-  color: #1d1d1d;
-  font-weight: 300;
-  margin: 0;
-}
-.fourohfour a {
-  text-decoration: underline;
+
+  h2 {
+    font-size: 4.04em;
+    color: #1d1d1d;
+    font-weight: 300;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
 }
