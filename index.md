@@ -2,7 +2,10 @@
 layout: home
 ---
 <header class="home-header">
-  {% include samhermes.svg %}
+  <h1>
+    {% include samhermes.svg %}
+    <span class="screen-reader-text">Sam Hermes</span>
+  </h1>
   <p>Front End Developer</p>
 </header>
 <div class="post-list">
