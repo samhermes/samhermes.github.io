@@ -1,7 +1,7 @@
 .site-header {
   padding: 1em 5%;
-  background: #1d1d1d;
   margin: 0 auto;
+  border-bottom: 1px solid #efefef;
   
   @media screen and (min-width: 45.625em) {
     padding: 1em 1.65em;
@@ -13,6 +13,10 @@
 
   svg {
     display: block;
+
+    path {
+      fill: $text-color;
+    }
   }
 
   .logotype {
@@ -52,14 +56,14 @@
     }
 
     a {
-      color: #fff;
+      color: $text-color;
       display: block;
       padding: 0.5rem 0.625rem;
       border-radius: 0.4em;
       font-weight: 400;
 
       &:hover {
-        background: #353535;
+        background: #f1f2f3;
       }
     }
   }
