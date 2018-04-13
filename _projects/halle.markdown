@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Halle
-date: 2017-11-02
-description: Custom WordPress theme
+date: 2018-03-18
+description: Design & development of public WordPress theme
 permalink: /halle
 ---
