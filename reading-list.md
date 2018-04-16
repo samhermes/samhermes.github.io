@@ -24,8 +24,9 @@ custom_js:
 	{% include loading.svg %}
 </div>
 
+<div v-if="books">
 <ul class="book-list">
-<template v-for="book in books">
+<template v-for="book in paginatedData">
 	<li>
 		<p class="book-title" v-html="book.title.rendered"></p>
 		<p class="author" v-html="book.fields.author"></p>
@@ -33,5 +34,10 @@ custom_js:
 </template>
 </ul>
 
+<nav v-if="pageCount >= 1" class="book-list-nav">
+	<button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">&larr;<span class="screen-reader-text"> Previous</span></button>
+	<button type="button" :disabled="pageNumber >= pageCount -1" v-on:click="nextPage"><span class="screen-reader-text">Next </span> &rarr;</button>
+</nav>
 </div>
 
+</div>

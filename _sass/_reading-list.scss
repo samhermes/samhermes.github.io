@@ -88,6 +88,28 @@ ul.book-list {
 	}
 }
 
+.book-list-nav {
+	text-align: center;
+
+	button {
+		background: #333;
+		border: 1px solid #333;
+		border-radius: 3px;
+		font-size: 1em;
+		padding: 0.4em 0.8em 0.43em;
+		margin: 0 0.5em;
+		color: #fafafa;
+		cursor: pointer;
+
+		&:disabled {
+			background: #fff;
+			border-color: gainsboro;
+			color: #666;
+			cursor: default;
+		}
+	}
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);

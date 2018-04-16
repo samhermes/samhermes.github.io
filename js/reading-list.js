@@ -11,7 +11,9 @@ var books = new Vue({
 		],
 		currentStatus: '1',
 		books: null,
-		loading: false
+		loading: false,
+		pageNumber: 0,
+		size: 5,
 	},
 
 	created: function() {
@@ -33,6 +35,26 @@ var books = new Vue({
 				self.books = JSON.parse(xhr.responseText)
 			}.bind(this)
 			xhr.send()
+		},
+		nextPage: function() {
+			this.pageNumber++;
+		},
+		prevPage: function() {
+			this.pageNumber--;
+		}
+	},
+
+	computed: {
+		pageCount() {
+			let l = this.books.length,
+			s = this.size;
+			return Math.floor(l/s);
+		},
+
+		paginatedData() {
+			const start = this.pageNumber * this.size,
+			end = start + this.size;
+			return this.books.slice(start, end);
 		}
 	}
 })
