@@ -3,6 +3,9 @@ layout: default
 custom_js: lazyload
 ---
 <div class="photo-list">
+	<header class="post-header">
+		<h1 class="post-title">Photos</h1>
+	</header>
 	<ul>
 	  {% for photo in site.photos reversed %}
 	  {% assign loopindex = forloop.index %}
