@@ -36,7 +36,7 @@ custom_js:
 
 <nav v-if="pageCount >= 1" class="book-list-nav">
 	<button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">&larr;<span class="screen-reader-text"> Previous</span></button>
-	<button type="button" :disabled="pageNumber >= pageCount -1" v-on:click="nextPage"><span class="screen-reader-text">Next </span> &rarr;</button>
+	<button type="button" :disabled="pageNumber >= pageCount" v-on:click="nextPage"><span class="screen-reader-text">Next </span> &rarr;</button>
 </nav>
 </div>
 
