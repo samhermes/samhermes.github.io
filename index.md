@@ -17,8 +17,8 @@ layout: home
       <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
     </li>
   {% endfor %}
-    <li class="see-all"><a href="/posts"><span>All Posts &rarr;</span></a></li>
   </ul>
+  <p class="see-all"><a href="/posts"><span>All Posts &rarr;</span></a></p>
 </div>
 <div class="project-list">
   <h2>Projects</h2>
@@ -30,5 +30,6 @@ layout: home
     </li>
   {% endfor %}
   </ul>
+  <p class="see-all"><a href="/projects"><span>All Projects &rarr;</span></a></p>
 </div>
 

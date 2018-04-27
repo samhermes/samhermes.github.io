@@ -144,15 +144,15 @@
     @media screen and (min-width: 60.25em) {
       width: 27.3333%;
     }
+  }
 
-    a {
-      box-sizing: border-box;
-      height: 100%;
-      flex-grow: 1;
+  a {
+    box-sizing: border-box;
+    height: 100%;
+    flex-grow: 1;
 
-      &:hover {
-        text-decoration: underline;
-      }
+    &:hover {
+      text-decoration: underline;
     }
   }
 
@@ -186,6 +186,10 @@
 .home .project-list {
   padding-bottom: 2rem;
 
+  ul {
+    margin-bottom: 0.7rem;
+  }
+
   li {
     margin-bottom: 1.5rem;
 
@@ -200,6 +204,12 @@
 
   .project-description {
     line-height: 1.45;
+    margin: 0 0 1em;
+    font-size: 1rem;
+  }
+
+  .see-all {
+    clear: both;
   }
 }
 
