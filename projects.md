@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Projects
 ---
 <div class="post-list project-list">
 	<header class="post-header">

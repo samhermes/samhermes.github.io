@@ -1,5 +1,6 @@
 ---
 layout: halle
+title: Halle
 ---
 <div class="halle-intro">
 	<div class="halle-intro-image">

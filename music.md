@@ -1,5 +1,6 @@
 ---
 layout: music
+title: Music
 ---
 <div class="logomark">{% include s.svg %}</div>
 

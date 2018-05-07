@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Photos
 custom_js: lazyload
 ---
 <div class="photo-list">

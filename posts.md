@@ -1,5 +1,6 @@
 ---
 layout: default
+title: Posts
 ---
 <div class="post-list">
 	<header class="post-header">
