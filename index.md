@@ -9,7 +9,7 @@ layout: home
   <p>Front End Developer</p>
 </header>
 <div class="post-list">
-  <h2>Recently Posted</h2>
+  <h2>Recently Posted <span class="see-all"><a href="/posts">See all &rarr;</a></span></h2>
   <ul>
   {% for post in site.posts limit:6 %}
     <li>
@@ -18,10 +18,10 @@ layout: home
     </li>
   {% endfor %}
   </ul>
-  <p class="see-all"><a href="/posts"><span>All Posts &rarr;</span></a></p>
+  
 </div>
 <div class="project-list">
-  <h2>Projects</h2>
+  <h2>Projects <span class="see-all"><a href="/projects">See all &rarr;</a></span></h2>
   <ul>
   {% for project in site.projects reversed %}
     <li>
@@ -30,6 +30,6 @@ layout: home
     </li>
   {% endfor %}
   </ul>
-  <p class="see-all"><a href="/projects"><span>All Projects &rarr;</span></a></p>
+  
 </div>
 
