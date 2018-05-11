@@ -124,10 +124,6 @@
   h3 {
     font-size: 1.3em;
     font-weight: 400;
-
-    @media screen and (min-width: 37.5em) {
-      font-size: 1.5em;
-    }
   }
 
   h4 {
@@ -192,6 +188,13 @@
 
   strong {
     font-weight: normal;
+  }
+
+  hr {
+    margin: 0 0 1.8rem;
+    border: 0;
+    height: 1px;
+    background: gainsboro;
   }
 }
 
