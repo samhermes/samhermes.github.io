@@ -239,9 +239,23 @@
   border-radius: 0.4em;
   margin: 4em 0 0;
   padding: 1.2em;
+  display: flex;
 
   @media screen and (min-width: 30em) {
     padding: 1.1em 1.2em 1.2em;
+  }
+
+  img {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    padding: 0.2rem 0;
+
+    @media screen and (min-width: 30em) {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 1.2rem;
+    }
   }
 
   p {
@@ -253,6 +267,7 @@
     margin-bottom: 0.2em;
     font-weight: 400;
     font-size: 1.35em;
+    line-height: 1.2;
   }
 
   a {
