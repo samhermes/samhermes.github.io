@@ -11,7 +11,7 @@ layout: home
 <div class="post-list">
   <h2>Recently Posted <span class="see-all"><a href="/posts">See all &rarr;</a></span></h2>
   <ul>
-  {% for post in site.posts limit:6 %}
+  {% for post in site.posts limit:4 %}
     <li>
       <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
       <h3><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
