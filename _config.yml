@@ -7,7 +7,7 @@
 
 # Site settings
 title: Sam Hermes
-description: Front End Developer at Washington University in St. Louis
+description: Sam Hermes is a web developer at Washington University in St. Louis. He writes about front end development.
 url: "https://samhermes.com"
 permalink: /posts/:title/
 
