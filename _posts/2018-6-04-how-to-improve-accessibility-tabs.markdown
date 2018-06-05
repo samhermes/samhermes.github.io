@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to make accessible tabs
+title: How to improve the accessibility of tabs
 date: 2018-06-04
 custom_js: prism
 ---
