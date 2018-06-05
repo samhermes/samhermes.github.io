@@ -1,7 +1,10 @@
+.page {
+  background: #fff;
+}
+
 .site-header {
   padding: 1em 5%;
   margin: 0 auto;
-  border-bottom: 1px solid #efefef;
   
   @media screen and (min-width: 45.625em) {
     padding: 1em 1.65em;
@@ -63,7 +66,7 @@
       font-weight: 400;
 
       &:hover {
-        background: #f1f2f3;
+        background: #fff;
       }
     }
   }
@@ -76,7 +79,6 @@
   padding: 1em 5% 1.5em;
   margin: 0 auto;
   position: relative;
-  background: #f6f7f8;
 
   @media screen and (min-width: 45.625em) {
     padding: 1.3em 1.65em;
@@ -100,14 +102,6 @@
 
   .site-nav {
     margin: 0 0 0 -0.625rem;
-
-    a {
-      color: #5d5d5d;
-
-      &:hover {
-        background: #fff;
-      }
-    }
   }
 }
 
@@ -143,12 +137,15 @@
 .fourohfour {
   max-width: 75em;
   width: 90%;
-  margin: 8rem auto;
+  margin: 0 auto;
+  padding: 5rem 0;
   text-align: center;
   line-height: 1.5;
+  min-height: calc(100vh - 8.5rem);
+  box-sizing: border-box;
 
   @media screen and (min-width: 28.125em) {
-    margin: 12rem auto;
+    margin: 0 auto;
   }
 
   h2 {
