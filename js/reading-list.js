@@ -1,4 +1,4 @@
-var apiURL = 'https://samhermes.co/reading-list/wp-json/wp/v2/posts?per_page=99&categories='
+var apiURL = 'https://samhermes.co/content/wp-json/wp/v2/posts?per_page=99&categories='
 
 var books = new Vue({
 
