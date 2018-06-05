@@ -2,6 +2,6 @@
 layout: default
 title: Photos
 date: 2017-09-14
-description: Lazy loading images on scroll
+description: Lazy load images
 permalink: /photos
 ---

@@ -24,7 +24,7 @@ layout: home
   <h2>Projects <span class="see-all"><a href="/projects">See all &rarr;</a></span></h2>
   <ul>
   {% assign projects = site.projects | reverse %}
-  {% for project in projects limit:4 %}
+  {% for project in projects limit:6 %}
     <li>
       <h3><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h3>
       <p class="project-description">{{ project.description }}</p>
