@@ -27,7 +27,7 @@ layout: home
   {% for project in projects limit:6 %}
     <li>
       <h3><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h3>
-      <p class="project-description">{{ project.description }}</p>
+      <p class="project-description">{{ project.label }}</p>
     </li>
   {% endfor %}
   </ul>
