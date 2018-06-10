@@ -37,6 +37,7 @@ var books = new Vue({
 	methods: {
 		fetchData: function() {
 			this.loading = true
+			this.pageNumber = 0
 			var xhr = new XMLHttpRequest()
 			var self = this
 			xhr.open('GET', apiURL + self.currentStatus)
