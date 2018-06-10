@@ -28,7 +28,6 @@ custom_js:
 <ul class="book-list">
 	<book
 		v-for="book in paginatedData"
-		v-bind:key="book.id"
 		v-bind:book="book"
 	></book>
 </ul>
