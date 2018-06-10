@@ -26,12 +26,11 @@ custom_js:
 
 <div v-if="books">
 <ul class="book-list">
-<template v-for="book in paginatedData">
-	<li>
-		<p class="book-title" v-html="book.title.rendered"></p>
-		<p class="author" v-html="book.fields.author"></p>
-	</li>
-</template>
+	<book
+		v-for="book in paginatedData"
+		v-bind:key="book.id"
+		v-bind:book="book"
+	></book>
 </ul>
 
 <nav v-if="pageCount >= 1" class="book-list-nav">

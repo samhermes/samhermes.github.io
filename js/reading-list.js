@@ -1,3 +1,13 @@
+Vue.component('book', {
+  props: ['book'],
+  template: `
+  	<li>
+  		<p class="book-title">{{ book.title.rendered }}</p>
+  		<p class="author">{{ book.fields.author }}</p>
+  	</li>
+  `
+})
+
 var apiURL = 'https://samhermes.co/content/wp-json/wp/v2/posts?per_page=99&categories='
 
 var books = new Vue({
