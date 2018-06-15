@@ -25,12 +25,12 @@ custom_js:
 </div>
 
 <div v-if="books">
-<ul class="book-list">
+<books>
 	<book
 		v-for="book in paginatedData"
 		v-bind:book="book"
 	></book>
-</ul>
+</books>
 
 <nav v-if="pageCount >= 1" class="book-list-nav">
 	<button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">&larr;<span class="screen-reader-text"> Previous</span></button>

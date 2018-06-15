@@ -1,3 +1,11 @@
+Vue.component('books', {
+    template: `
+    <ul class="book-list">
+        <slot></slot>
+    </ul>
+    `
+});
+
 Vue.component('book', {
   props: ['book'],
   template: `
