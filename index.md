@@ -9,7 +9,7 @@ layout: home
   <p>Front End Developer</p>
 </header>
 <div class="post-list">
-  <h2>Posts <span class="see-all"><a href="/posts">See all &rarr;</a></span></h2>
+  <h2>Posts <span class="see-all"><a href="/posts">View all &rarr;</a></span></h2>
   <ul>
   {% for post in site.posts limit:4 %}
     <li>
@@ -21,7 +21,7 @@ layout: home
   
 </div>
 <div class="project-list">
-  <h2>Projects <span class="see-all"><a href="/projects">See all &rarr;</a></span></h2>
+  <h2>Projects <span class="see-all"><a href="/projects">View all &rarr;</a></span></h2>
   <ul>
   {% assign projects = site.projects | reverse %}
   {% for project in projects limit:6 %}
