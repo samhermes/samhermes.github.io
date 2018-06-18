@@ -9,3 +9,39 @@
     margin: 0;
   }
 }
+
+.page.projects {
+	.post-list {
+		max-width: 70em;
+
+		ul {
+			display: grid;
+			grid-gap: 3em;
+			grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+
+			li {
+				padding: 1.1em 1.5em;
+				margin: 0;
+				border-radius: 0.9em;
+				box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+				display: flex;
+				flex-direction: column;
+			}
+		}
+
+		.project-description {
+			margin-bottom: 2.5em;
+		}
+
+		.related-post-heading {
+			text-transform: uppercase;
+			font-weight: 700;
+			font-size: 0.9rem;
+			margin: auto 0 0.5em;
+		}
+
+		.related-post-title {
+			margin: 0;
+		}
+	}
+}
