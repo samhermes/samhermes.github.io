@@ -1,0 +1,54 @@
+.next-spacex-launch {
+	background: url(/img/projects/spacex-bg-large.jpg) black no-repeat center;
+	background-size: cover;
+	color: #fff;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: rgba(0,0,0,0.7);
+	}
+
+	.post {
+		box-sizing: border-box;
+		max-width: 100%;
+		width: 100%;
+		padding: 5%;
+		min-height: 100vh;
+		position: relative;
+		z-index: 1;
+	}
+
+	.post-header {
+		text-align: center;
+	}
+
+	.data-source {
+		text-align: center;
+
+		p {
+			margin: 0;
+		}
+
+		a {
+			color: #fff;
+		}
+	}
+
+	.data-source-heading {
+		text-transform: uppercase;
+		font-weight: 600;
+		font-size: 0.9em;
+	}
+
+	.photo-credit {
+		position: absolute;
+		left: 1.18em;
+		bottom: 1em;
+	}
+}
