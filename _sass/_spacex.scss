@@ -1,8 +1,12 @@
 .next-spacex-launch {
-	background: url(/img/projects/spacex-bg-large.jpg) black no-repeat center;
+	background: url(/img/projects/spacex-bg-small.jpg) black no-repeat center;
 	background-size: cover;
 	color: #fff;
 	position: relative;
+
+	@media screen and (min-width: 62.5em) {
+		background-image: url(/img/projects/spacex-bg-large.jpg);
+	}
 
 	&::after {
 		content: '';
