@@ -28,6 +28,38 @@
 		text-align: center;
 	}
 
+	#root {
+		padding: 1.5em;
+		border: 1px solid rgba(255,255,255,0.2);
+		margin-bottom: 3em;
+	}
+
+	.next-launch-date {
+		margin: 0;
+	}
+
+	.next-launch-time {
+		margin: 0 0 0.5em;
+	}
+
+	.launch-detail {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			margin: 0;
+		}
+
+		.detail-title {
+			text-transform: uppercase;
+			font-size: 0.75em;
+			letter-spacing: 0.03em;
+			color: #9f9f9f;
+			padding-right: 0.1em;
+		}
+	}
+
 	.data-source {
 		text-align: center;
 

@@ -1,10 +1,9 @@
 ---
 layout: page
 title: Next SpaceX Launch
-custom_js:
-- vue.min
-- reading-list
 ---
+
+<div id="root"></div>
 
 <div class="data-source">
 	<p class="data-source-heading">Data Source</p>
@@ -14,3 +13,5 @@ custom_js:
 <div class="photo-credit">
 	{% include spacex-unplash-credit.html %}
 </div>
+
+<script src="/next-spacex-launch/build/main.js"></script>
