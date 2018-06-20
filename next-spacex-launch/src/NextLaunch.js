@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
 
-class App extends Component {
+class NextLaunch extends Component {
   constructor() {
     super();
     this.state = {
@@ -14,7 +14,6 @@ class App extends Component {
     .then(results => {
       return results.json();
     }).then(data => {
-      console.log(data)
       this.setState({nextLaunch: data})
     });
   }
@@ -37,4 +36,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default NextLaunch;

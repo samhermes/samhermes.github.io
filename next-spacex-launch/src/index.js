@@ -1,5 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import NextLaunch from './NextLaunch';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<NextLaunch />, document.getElementById('root'));
