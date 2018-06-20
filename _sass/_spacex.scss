@@ -28,11 +28,20 @@
 		text-align: center;
 	}
 
+	.loading-state {
+		text-align: center;
+	}
+
 	.next-launch {
 		padding: 1.5em;
 		border: 1px solid rgba(255,255,255,0.2);
 		border-radius: 0.5em;
 		margin-bottom: 3em;
+		display: grid;
+
+		@media screen and (min-width: 62.5em) {
+			grid-template-columns: 1fr 3fr;
+		}
 	}
 
 	.next-launch-date {
@@ -43,7 +52,7 @@
 		margin: 0 0 0.5em;
 	}
 
-	.launch-detail {
+	.next-launch ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
