@@ -34,7 +34,7 @@ class NextLaunch extends Component {
               <Moment format="MMMM DD, YYYY">{this.state.nextLaunch.launch_date_local}</Moment>
             </h2>
             <p className="next-launch-time">
-              <Moment format="H:mm a">{this.state.nextLaunch.launch_date_local}</Moment>
+              <Moment format="H:mm a">{this.state.nextLaunch.launch_date_local}</Moment> (local time)
             </p>
           </div>
           <div className="launch-details">
