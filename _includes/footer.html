@@ -15,7 +15,11 @@
 
 {% if page.custom_js %}
   {% for js_file in page.custom_js %}
+  	{% if page.layout == 'post' %}
 <script src="/js/{{ js_file }}.js"></script>
+	{% else %}
+<script src="/{{ js_file }}.js"></script>
+	{% endif %}
   {% endfor %}
 {% endif %}
 <script>

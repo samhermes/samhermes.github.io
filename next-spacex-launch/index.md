@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Next SpaceX Launch
+custom_js: next-spacex-launch/build/js/main
 ---
 
 <div id="root"></div>
@@ -13,5 +14,3 @@ title: Next SpaceX Launch
 <div class="photo-credit">
 	{% include spacex-unplash-credit.html %}
 </div>
-
-<script src="/next-spacex-launch/build/static/js/main.js"></script>

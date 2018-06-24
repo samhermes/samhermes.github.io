@@ -2,8 +2,8 @@
 layout: page
 title: Reading List
 custom_js:
-- vue.min
-- reading-list
+- js/vue.min
+- js/reading-list
 ---
 <div id="app">
 

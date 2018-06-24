@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Photos
-custom_js: lazyload
+custom_js: js/lazyload
 ---
 <div class="photo-list">
 	<header class="post-header">
