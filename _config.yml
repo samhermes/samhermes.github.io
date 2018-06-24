@@ -15,6 +15,8 @@ permalink: /posts/:title/
 markdown: kramdown
 sass:
   style: compressed
+exclude: ['next-spacex-launch/node_modules']
+keep_files: ['next-spacex-launch/node_modules']
 
 # Add custom collections
 collections:
