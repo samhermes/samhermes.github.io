@@ -22,10 +22,14 @@
 		box-sizing: border-box;
 		max-width: 100%;
 		width: 100%;
-		padding: 5%;
+		padding: 2em 5% 3.5em;
 		min-height: calc(100vh - 8.5rem);
 		position: relative;
 		z-index: 1;
+
+		@media screen and (min-width: 54.25em) {
+			padding: 5%;
+		}
 	}
 
 	.post-header {
@@ -56,7 +60,7 @@
 		margin: 0 0 0.5em;
 	}
 
-	.next-launch ul {
+	.launch-details ul {
 		list-style: none;
 		margin: 0;
 		padding: 0;
@@ -71,6 +75,46 @@
 			letter-spacing: 0.03em;
 			color: #9f9f9f;
 			padding-right: 0.1em;
+		}
+	}
+
+	.upcoming-launches {
+		padding: 1.5em;
+		border: 1px solid rgba(255,255,255,0.2);
+		border-radius: 0.5em;
+		margin-bottom: 3em;
+
+		.launches {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+
+			> li {
+				margin-bottom: 1.5em;
+				display: grid;
+
+				@media screen and (min-width: 62.5em) {
+					grid-template-columns: 1fr 3fr;
+				}
+
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+
+		.launch-date {
+			margin: 0;
+			font-size: 1em;
+		}
+
+		.launch-time {
+			margin: 0 0 0.3em;
+			font-size: 0.8em;
+		}
+
+		.launch-detail {
+			font-size: 1.1rem;
 		}
 	}
 

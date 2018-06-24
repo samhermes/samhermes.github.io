@@ -14,4 +14,4 @@ title: Next SpaceX Launch
 	{% include spacex-unplash-credit.html %}
 </div>
 
-<script src="/next-spacex-launch/build/main.js"></script>
+<script src="/next-spacex-launch/build/static/js/main.js"></script>

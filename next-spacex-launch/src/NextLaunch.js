@@ -34,18 +34,14 @@ class NextLaunch extends Component {
               <Moment format="MMMM DD, YYYY">{this.state.nextLaunch.launch_date_local}</Moment>
             </h2>
             <p className="next-launch-time">
-              <Moment format="H:mm a">{this.state.nextLaunch.launch_date_local}</Moment> (local time)
+              <Moment format="h:mm a">{this.state.nextLaunch.launch_date_local}</Moment> (local time)
             </p>
           </div>
           <div className="launch-details">
             <ul className="launch-detail">
               <li><span className="detail-title">Mission</span> {this.state.nextLaunch.mission_name}</li>
               <li><span className="detail-title">Flight Number</span> {this.state.nextLaunch.flight_number}</li>
-            </ul>
-            <ul className="rocket-detail">
               <li><span className="detail-title">Rocket</span> {this.state.nextLaunch.rocket.rocket_name}</li>
-            </ul>
-            <ul className="launch-site-detail">
               <li><span className="detail-title">Launch Site</span> {this.state.nextLaunch.launch_site.site_name_long}</li>
             </ul>
           </div>
