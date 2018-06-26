@@ -155,7 +155,10 @@
     @media screen and (min-width: 62.5em) {
       font-size: 1.25rem;
     }
+  }
 
+  p,
+  li {
     code {
       font-size: 1rem;
       background: #f1f2f3;
@@ -227,7 +230,7 @@
   ul > li:before {
     display: block;
     float: left;
-    content: "—";
+    content: "–";
     width: 1.2em;
     margin-left: -1.2em;
   }
