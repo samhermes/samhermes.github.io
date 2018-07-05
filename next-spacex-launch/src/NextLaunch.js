@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
+import Loading from './Loading';
 
 class NextLaunch extends Component {
   constructor() {
@@ -25,7 +26,9 @@ class NextLaunch extends Component {
   render() {
     const { error, isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div class="loading-state"><p>Loading...</p></div>;
+      return(
+        <Loading />
+      )
     } else {
       return(
         <div className="next-launch">

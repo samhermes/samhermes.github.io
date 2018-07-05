@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Moment from 'react-moment';
+import Loading from './Loading';
 
 class UpcomingLaunches extends Component {
   constructor() {
@@ -25,7 +26,12 @@ class UpcomingLaunches extends Component {
   render() {
     const { error, isLoaded, items } = this.state;
     if (!isLoaded) {
-      return <div class="loading-state"><p>Loading...</p></div>;
+      return(
+        <div>
+          <h2>Upcoming Launches</h2>
+          <Loading />
+        </div>
+      )
     } else {
       return(
         <div>
