@@ -2,6 +2,7 @@
 layout: page
 title: Next SpaceX Launch
 custom_js: next-spacex-launch/build/js/main
+custom_css: /css/next-spacex-launch
 ---
 
 <div id="root"></div>

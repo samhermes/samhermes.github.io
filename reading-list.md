@@ -4,6 +4,7 @@ title: Reading List
 custom_js:
 - js/vue.min
 - js/reading-list
+custom_css: /css/reading-list
 ---
 <div id="app">
 
