@@ -13,3 +13,5 @@ Great for sites with many categories, allows users to quick search for a categor
 Makes it really quick and easy to generate different types of dummy content during development.
 
 [iThemes Security](https://wordpress.org/plugins/better-wp-security/)
+
+[Page Links To](https://wordpress.org/plugins/page-links-to/)
