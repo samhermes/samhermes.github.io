@@ -16,7 +16,7 @@ Vue.component('book', {
   `
 })
 
-var apiURL = 'https://samhermes.co/content/wp-json/wp/v2/posts?per_page=99&categories='
+var apiURL = 'https://samhermes.co/content/wp-json/wp/v2/posts?per_page=10'
 
 var books = new Vue({
 
@@ -30,8 +30,9 @@ var books = new Vue({
 		currentStatus: '1',
 		books: null,
 		loading: false,
-		pageNumber: 0,
-		size: 5,
+		pageNumber: 1,
+		pageCount: 0,
+		size: 10,
 	},
 
 	created: function() {
@@ -39,41 +40,45 @@ var books = new Vue({
 	},
 
 	watch: {
-		currentStatus: 'fetchData'
+		currentStatus: function () {
+			this.pageNumber = 1
+			this.fetchData()
+		},
+		pageNumber: 'fetchData'
 	},
 
 	methods: {
 		fetchData: function() {
 			this.loading = true
-			this.pageNumber = 0
 			var xhr = new XMLHttpRequest()
 			var self = this
-			xhr.open('GET', apiURL + self.currentStatus)
+			var page = ''
+
+			let category = '&categories=' + self.currentStatus
+			if ( this.pageNumber > 1 ) {
+				var page = '&page=' + this.pageNumber
+			}
+
+			xhr.open('GET', apiURL + category + page)
 			xhr.onload = function() {
 				this.loading = false
 				self.books = JSON.parse(xhr.responseText)
+				self.pageCount = xhr.getResponseHeader('X-WP-TotalPages')
 			}.bind(this)
 			xhr.send()
 		},
 		nextPage: function() {
 			this.pageNumber++;
+			this.scrollTop()
 		},
 		prevPage: function() {
 			this.pageNumber--;
-		}
-	},
-
-	computed: {
-		pageCount() {
-			let l = this.books.length,
-			s = this.size;
-			return Math.floor(l/s);
+			this.scrollTop()
 		},
-
-		paginatedData() {
-			const start = this.pageNumber * this.size,
-			end = start + this.size;
-			return this.books.slice(start, end);
+		scrollTop: function() {
+			var element = document.getElementById('app')
+			var top = element.offsetTop
+			window.scrollTo(0, top)
 		}
 	}
 })

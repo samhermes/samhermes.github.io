@@ -28,13 +28,13 @@ custom_css: /css/reading-list
 <div v-if="books">
 <books>
 	<book
-		v-for="book in paginatedData"
+		v-for="book in books"
 		v-bind:book="book"
 	></book>
 </books>
 
-<nav v-if="pageCount >= 1" class="book-list-nav">
-	<button type="button" :disabled="pageNumber === 0" v-on:click="prevPage">&larr;<span class="screen-reader-text"> Previous</span></button>
+<nav v-if="pageCount > 1" class="book-list-nav">
+	<button type="button" :disabled="pageNumber === 1" v-on:click="prevPage">&larr;<span class="screen-reader-text"> Previous</span></button>
 	<button type="button" :disabled="pageNumber >= pageCount" v-on:click="nextPage"><span class="screen-reader-text">Next </span> &rarr;</button>
 </nav>
 </div>
