@@ -8,8 +8,9 @@ layout: home
   </h1>
   <p>Front End Developer</p>
 </header>
+
 <div class="post-list">
-  <h2>Posts <span class="see-all"><a href="/posts">View all &rarr;</a></span></h2>
+  <h2>Posts</h2>
   <ul>
   {% for post in site.posts limit:4 %}
     <li>
@@ -18,10 +19,13 @@ layout: home
     </li>
   {% endfor %}
   </ul>
-  
+  <div class="view-all">
+    <a href="/posts">View all</a>
+  </div>
 </div>
+
 <div class="project-list">
-  <h2>Projects <span class="see-all"><a href="/projects">View all &rarr;</a></span></h2>
+  <h2>Projects</h2>
   <ul>
   {% assign projects = site.projects | reverse %}
   {% for project in projects limit:6 %}
@@ -31,6 +35,7 @@ layout: home
     </li>
   {% endfor %}
   </ul>
-  
+  <div class="view-all">
+    <a href="/projects">View all</a>
+  </div>
 </div>
-

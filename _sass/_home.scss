@@ -1,9 +1,5 @@
 .home {
   background: #f8f8f8;
-
-  > div {
-    margin: 0 auto 5%;
-  } 
 }
 
 .home-header {
@@ -35,7 +31,7 @@
     svg {
       width: 130px;
       height: 16px;
-      
+
       @media screen and (min-width: 28.125em) {
         width: 150px;
         height: 19px;
@@ -92,15 +88,15 @@
 .home .project-list {
   margin: 0;
   width: auto;
-  padding: 2.3rem 5% 0;
+  padding: 2.3rem 5% 6rem;
   max-width: none;
 
   @media screen and (min-width: 28.125em) {
-    padding: 2.5rem 10% 0;
+    padding: 2.5rem 10% 6rem;
   }
 
   @media screen and (min-width: 37.5em) {
-    padding: 3.5rem 10% 0;
+    padding: 3.5rem 10% 6rem;
   }
 
   @media screen and (min-width: 48em) {
@@ -110,17 +106,15 @@
   }
 
   @media screen and (min-width: 60.25em) {
-    padding: 5rem 10% 0;
+    padding: 4rem 10% 3rem;
   }
 
   h2 {
-    font-size: 0.9em;
-    text-transform: uppercase;
     font-weight: 600;
     margin: 0 0 2rem;
 
     @media screen and (min-width: 48em) {
-      margin: 0 0 3rem;
+      margin: 0.8rem 0 3rem;
       width: 25%;
     }
   }
@@ -128,7 +122,7 @@
   ul {
     display: grid;
     grid-gap: 2em;
-    margin: 0;
+    margin: 0 0 1rem;
     padding: 0;
 
     @media screen and (min-width: 48em) {
@@ -143,9 +137,13 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    padding: 1.4em 1.6em;
+    padding: 1em 1.1em;
     margin: 0;
     background: #fff;
+
+    @media screen and (min-width: 28.125em) {
+      padding: 1.4em 1.6em;
+    }
   }
 
   a {
@@ -168,49 +166,40 @@
     }
   }
 
-  .see-all {
-    text-transform: uppercase;
-    margin-left: 1em;
-    
-    @media screen and (min-width: 48em) {
-      display: block;
-      margin: 1em 0 0;
-    }
+  .view-all {
+    width: 100%;
+    text-align: right;
 
     a {
-      font-size: 0.7rem;
-      font-weight: 300;
-      padding: 1.1em 0;
+      display: inline-block;
+      font-size: 1.1rem;
+      font-weight: 500;
+      text-align: right;
+      padding: 1em 0 1em 1.5em;
+
+      &::after {
+        content: '';
+        height: 14px;
+        width: 8px;
+        background: url('/img/arrow.svg') no-repeat;
+        background-position: center;
+        background-size: cover;
+        margin-left: 0.5rem;
+        display: inline-block;
+      }
     }
-  }
-}
-
-.home .post-list {
-  ul {
-    margin-bottom: 3rem;
-
-    @media screen and (min-width: 48em) {
-      margin-bottom: 4rem;
-    }
-  }
-
-  li:last-child {
-    margin-bottom: 0;
   }
 }
 
 .home .project-list {
-  padding-bottom: 2rem;
-  padding-top: 3rem;
+  padding-top: 0;
 
-  @media screen and (min-width: 48em) {
-    padding-top: 4rem;
+  @media screen and (min-width: 60.25em) {
+    padding-bottom: 4rem;
   }
 
   ul {
-    margin-bottom: 0.7rem;
-
-    @media screen and (min-width: 48em) {
+    @media screen and (min-width: 70em) {
       grid-template-columns: 1fr 1fr 1fr;
     }
   }
@@ -227,10 +216,6 @@
     line-height: 1.45;
     margin: 0;
     font-size: 1rem;
-  }
-
-  .see-all {
-    clear: both;
   }
 }
 
