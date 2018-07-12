@@ -16,7 +16,7 @@ Vue.component('book', {
   `
 })
 
-var apiURL = 'https://samhermes.co/content/wp-json/wp/v2/posts?per_page=10'
+var apiURL = 'https://samhermes.co/content/wp-json/wp/v2/books?per_page=10'
 
 var books = new Vue({
 
