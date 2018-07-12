@@ -10,7 +10,7 @@ Vue.component('book', {
   props: ['book'],
   template: `
   	<li>
-  		<p class="book-title">{{ book.title.rendered }}</p>
+  		<p class="book-title" v-html="book.title.rendered">{{ book.title.rendered }}</p>
   		<p class="author">{{ book.fields.author }}</p>
   	</li>
   `
