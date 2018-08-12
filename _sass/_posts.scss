@@ -92,7 +92,8 @@
   color: #555;
 }
 
-.post-title {
+.post-title,
+.page-title {
   font-size: 1.8em;
   line-height: 1.2;
   margin: 0 0 1em;
@@ -103,13 +104,13 @@
     line-height: 1.25;
   }
 
-  .page & {
-    margin-bottom: 1.3em;
-  }
-
   .reading-list & {
     margin-bottom: 0;
   }
+}
+
+.page-title {
+  margin-bottom: 1.3em;
 }
 
 .post-content,

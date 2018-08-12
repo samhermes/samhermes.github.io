@@ -3,8 +3,8 @@ layout: default
 title: Projects
 ---
 <div class="post-list">
-	<header class="post-header">
-		<h1 class="post-title">Projects</h1>
+	<header class="page-header">
+		<h1 class="page-title">Projects</h1>
 	</header>
 	<ul>
 	  {% for project in site.projects reversed %}

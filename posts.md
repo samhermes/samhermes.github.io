@@ -3,8 +3,8 @@ layout: default
 title: Posts
 ---
 <div class="post-list">
-	<header class="post-header">
-		<h1 class="post-title">Posts</h1>
+	<header class="page-header">
+		<h1 class="page-title">Posts</h1>
 	</header>
 	<ul>
 	  {% for post in site.posts %}
