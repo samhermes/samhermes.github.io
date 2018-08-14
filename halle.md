@@ -42,7 +42,5 @@ title: Halle
 	<p>Search for &ldquo;Halle&rdquo; from your WordPress admin to install on your site. Or, you can download directly from the WordPress Theme Directory or GitHub.</p>
 	<a class="download-link" href="https://wordpress.org/themes/halle/">View on WordPress.org</a>
 	<a class="download-link" href="https://github.com/samhermes/halle">View on GitHub</a>
-	
-</div>
 
-<!-- Link to Halle documentation -->
+</div>
