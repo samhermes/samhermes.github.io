@@ -18,41 +18,31 @@
 .halle-intro,
 .halle-get {
 	box-sizing: border-box;
-	padding: 2em 0 2em;
+	padding: 2.5em 0 3em;
 	margin-bottom: 3em;
 
 	@media screen and (min-width: 50em) {
-		padding: 3em 0;
-		margin-bottom: 5em;
+		padding: 4em 0 6em;
+		margin-bottom: 8em;
 	}
 }
 
 .halle-intro {
-	background: rgba(136, 68, 114, 0.16);
-}
-
-.halle-intro-image {
-	margin-bottom: 2em;
-
-	@media screen and (min-width: 50em) {
-		margin-bottom: 3em;
-	}
-
-	img {
-		display: block;
-		margin: 0 auto;
-		max-width: 22em;
-		width: 100%;
-		box-shadow: 0 3px 20px rgba(0,0,0,0.2);
-
-		@media screen and (min-width: 50em) {
-			max-width: 60em;
-		}
-	}
+	background: rgb(255, 175, 216);
 }
 
 .halle-intro-text {
+	margin: 0 auto 2.75em;
+	max-width: 60em;
+	width: 90%;
 	text-align: center;
+
+	@media screen and (min-width: 50em) {
+		text-align: left;
+		margin-bottom: 3.5em;
+		display: flex;
+		align-items: center;
+	}
 
 	h1 {
 		font-weight: 500;
@@ -61,7 +51,11 @@
 	}
 
 	.subhead {
-		margin: 0 0 1.8rem; 
+		margin: 0 0 1.75rem;
+
+		@media screen and (min-width: 50em) {
+			margin: 0;
+		}
 	}
 
 	p {
@@ -82,13 +76,52 @@
 	}
 }
 
+.halle-nav {
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+
+	@media screen and (min-width: 50em) {
+		margin: 0 0 0 auto;
+		justify-content: flex-end;
+	}
+
+	li {
+		margin-left: 1.5rem;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+}
+
+.halle-intro-image {
+	img {
+		display: block;
+		margin: 0 auto;
+		max-width: 22em;
+		width: 90%;
+		box-shadow: 0 3px 20px rgba(0,0,0,0.2);
+
+		@media screen and (min-width: 50em) {
+			max-width: 60em;
+		}
+	}
+}
+
 .halle-featured {
 	margin: 0 auto 5em;
 	max-width: 60em;
 	width: 90%;
 
 	@media screen and (min-width: 50em) {
-		margin-bottom: 6em;
+		margin-bottom: 8em;
 	}
 
 	.featured-detail {
@@ -136,7 +169,7 @@
 	width: 90%;
 
 	@media screen and (min-width: 50em) {
-		margin-bottom: 5.5em;
+		margin-bottom: 8em;
 	}
 
 	.header-detail {
