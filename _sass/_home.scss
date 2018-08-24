@@ -1,5 +1,5 @@
 .home {
-  background: #f8edf2;
+  background: #f8f8f8;
 }
 
 .home-header {
@@ -7,7 +7,6 @@
   background: #1D1D1D;
   background: url('/img/home/header-sm.jpg') no-repeat center;
   background-size: cover;
-  background-position: bottom;
 
   @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
     background-image: url('/img/home/header-sm-2x.jpg');
@@ -18,7 +17,7 @@
   }
 
   @media screen and (min-width: 45em) {
-    padding-top: 15%;
+    padding-top: 10%;
     background-image: url('/img/home/header-lg.jpg');
 
     @media (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
