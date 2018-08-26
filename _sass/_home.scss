@@ -122,11 +122,16 @@
 
   ul {
     display: grid;
-    grid-gap: 2em;
+    grid-gap: 1em;
     margin: 0 0 1rem;
     padding: 0;
 
+    @media screen and (min-width: 28.125em) {
+      grid-gap: 1.5em;
+    }
+
     @media screen and (min-width: 48em) {
+      grid-gap: 2em;
       width: 75%;
       grid-template-columns: 1fr 1fr;
     }
