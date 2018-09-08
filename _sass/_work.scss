@@ -3,3 +3,48 @@
         max-width: 70em;
     }
 }
+
+.work-group {
+    border: 1px solid gainsboro;
+    border-radius: 0.75rem;
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.5rem;
+
+    @media screen and (min-width: 40em) {
+        padding: 1.7rem 2.2rem;
+        margin-bottom: 2.5rem;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        margin: 0 0 0.2rem;
+    }
+
+    .work-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-gap: 3em;
+        grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+
+        > li {
+            padding: 1.1em 1.5em;
+            margin: 0;
+            border-radius: 0.5em;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
+            border: 1px solid rgb(232, 232, 232);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-tags {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}
