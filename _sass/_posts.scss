@@ -97,7 +97,7 @@
   font-size: 1.8em;
   line-height: 1.2;
   margin: 0 0 1em;
-  font-weight: 400;
+  font-weight: 600;
 
   @media screen and (min-width: 37.5em) {
     font-size: 2.2em;
@@ -173,7 +173,8 @@
     }
   }
 
-  ul {
+  ul,
+  ol {
     margin-bottom: 1.8rem;
     font-size: 1.05rem;
 
@@ -187,6 +188,7 @@
 
     & > li {
       margin-bottom: 1em;
+      line-height: 1.6;
     }
   }
 
