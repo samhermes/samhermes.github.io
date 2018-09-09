@@ -10,7 +10,7 @@ title: Halle
 		</div>
 		<ul class="halle-nav">
 			<li><a href="https://samhermes.co/halle-demo">Demo</a></li>
-			<li><a href="https://samhermes.com/halle/docs">Documentation</a></li>
+			<li><a href="/halle/docs">Documentation</a></li>
 		</ul>
 	</div>
 	<div class="halle-intro-image">
