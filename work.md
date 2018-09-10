@@ -28,6 +28,25 @@ title: Work
         </ul>
     </li>
     <li>
+        <h3>WashU Patterns</h3>
+        <p>I created a pattern library to document the styles and components that my team was using most frequently. It also serves as a reference for coding and version control standards.</p>
+        <a class="project-link" href="http://wupa.wustl.edu/patterns">wupa.wustl.edu/patterns</a>
+        <ul class="project-tags">
+            <li>Design</li>
+            <li>Sass</li>
+        </ul>
+    </li>
+    <li>
+        <h3>WashU Web Theme</h3>
+        <p>I was a part of the web theme team, which manages a university-wide WordPress theme and suite of plugins. As part of the project, I was a member of a guidance group that was tasked with developing direction and maintenance the project.</p>
+        <a class="project-link" href="https://webtheme.wustl.edu">webtheme.wustl.edu</a>
+        <ul class="project-tags">
+            <li>Project Management</li>
+            <li>WordPress</li>
+            <li>Sass</li>
+        </ul>
+    </li>
+    <li>
         <h3>Research search</h3>
         <p>I implemented the homepage search feature, the most frequently used feature of this site. Accessibility was a top priority in my work on this, to ensure that all users would receive the same experience while searching.</p>
         <a class="project-link" href="https://research.wustl.edu">research.wustl.edu</a>
