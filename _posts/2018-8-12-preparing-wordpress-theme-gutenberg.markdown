@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Getting a WordPress theme ready for Gutenberg
+title: Preparing a WordPress theme for Gutenberg
 date: 2018-08-12
 custom_js: prism
 ---
