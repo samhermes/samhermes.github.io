@@ -3,11 +3,11 @@
 }
 
 .site-header {
-  padding: 1em 5%;
+  padding: 0.7em 5%;
   margin: 0 auto;
 
   @media screen and (min-width: 45.625em) {
-    padding: 1em 1.65em;
+    padding: 0.7em 1.65em;
   }
 
   .contain {
@@ -26,13 +26,13 @@
     display: block;
 
     svg {
-      width: 150px;
-      height: 19px;
-      margin: 0.3em 0;
+      width: 130px;
+      height: 16px;
+      margin: 0.4em 0;
 
       @media screen and (min-width: 28.125em) {
-        width: 160px;
-        height: 20px;
+        width: 140px;
+        height: 18px;
       }
     }
   }
@@ -76,12 +76,12 @@
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1em 5% 1.5em;
+  padding: 1em 5%;
   margin: 0 auto;
   position: relative;
 
   @media screen and (min-width: 45.625em) {
-    padding: 1.3em 1.65em;
+    padding: 1em 1.65em;
   }
 
   .contain {
