@@ -20,7 +20,7 @@ layout: home
   {% endfor %}
   </ul>
   <div class="view-all">
-    <a href="/posts">View all</a>
+    <a href="/posts">All Posts</a>
   </div>
 </div>
 
@@ -36,6 +36,6 @@ layout: home
   {% endfor %}
   </ul>
   <div class="view-all">
-    <a href="/projects">View all</a>
+    <a href="/projects">All Projects</a>
   </div>
 </div>
