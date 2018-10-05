@@ -110,7 +110,12 @@
 }
 
 .page-title {
-  margin-bottom: 1.3em;
+  margin-bottom: 3rem;
+  font-size: 2rem;
+
+  @media screen and (min-width: 37.5em) {
+    font-size: 2.4rem;
+  }
 }
 
 .post-content,
@@ -247,12 +252,13 @@
   position: relative;
   border: 1px solid #efefef;
   border-radius: 0.4em;
+  background: #f8f8f8;
   margin: 4em 0 0;
   padding: 1.2em;
   display: flex;
 
   @media screen and (min-width: 30em) {
-    padding: 1.1em 1.2em 1.2em;
+    padding: 1.2em 1.3em;
   }
 
   img {
@@ -277,7 +283,7 @@
   .name {
     margin-bottom: 0.2em;
     font-weight: 500;
-    font-size: 1.3em;
+    font-size: 1.4em;
     line-height: 1.2;
   }
 
