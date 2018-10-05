@@ -38,7 +38,7 @@ class UpcomingLaunches extends Component {
           <h2>Upcoming Launches</h2>
           <div className="upcoming-launches">
             <ul className="launches">
-              {this.state.upcomingLaunches.map(function(mission, index){
+              {this.state.upcomingLaunches.slice(0, 5).map(function(mission, index){
                 if ( index == 0 ) {
                   return false
                 } else {
