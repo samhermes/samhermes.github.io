@@ -24,7 +24,8 @@ map.on('load', function () {
 					'coordinates' : [ element.fields.coordinates.lng, element.fields.coordinates.lat ]
 				},
 				'properties' : {
-					'title' : element.title.rendered
+					'title' : element.title.rendered,
+					'visits' : element.fields.number_of_visits
 				}
 			}
 			features.push(feature)
@@ -38,14 +39,14 @@ map.on('load', function () {
 			}
 		})
 
-		map.addLayer({
-			"id": "points",
-			"type": "circle",
-			"source": "locations",
-			"paint": {
-				"circle-radius": 10,
-				"circle-color": "#007cbf"
-			}
+		features.forEach(function(marker) {
+			var popup = new mapboxgl.Popup()
+				.setText(marker.properties.title + ' — ' + marker.properties.visits);
+
+			new mapboxgl.Marker()
+			  .setLngLat(marker.geometry.coordinates)
+			  .setPopup(popup)
+			  .addTo(map);
 		});
 
 	}
