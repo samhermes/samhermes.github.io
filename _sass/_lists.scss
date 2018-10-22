@@ -1,0 +1,61 @@
+.back-to-lists {
+    margin-bottom: 1rem;
+    display: inline-block;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul.list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    > li {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid gainsboro;
+        margin: 0;
+        font-size: 1.4rem;
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        p {
+            margin: 0;
+
+            a {
+                &::after {
+                    content: '';
+                    display: inline-block;
+                    width: 0.5em;
+                    height: 0.5em;
+                    background: url('/img/out.svg') no-repeat;
+                    background-size: contain;
+                    vertical-align: middle;
+                    margin-top: -0.2rem;
+                    margin-left: 0.3rem;
+                }
+            }
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

@@ -20,5 +20,7 @@ keep_files: ['next-spacex-launch/node_modules']
 
 # Add custom collections
 collections:
-- photos
-- projects
+  photos:
+  projects:
+  lists:
+    output: true
