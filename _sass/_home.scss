@@ -4,7 +4,9 @@
 
 .home-header {
     padding: 3.5em 5% 7%;
-    background: #191970;
+	background: #191970;
+	background-image: url('/img/header-bg.jpg');
+	background-position: center;
 
     @media screen and (min-width: 28.125em) {
         padding: 5em 10% 3em;
