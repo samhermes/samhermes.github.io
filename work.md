@@ -2,6 +2,7 @@
 layout: page
 title: Work
 ---
+
 <div class="work-group">
 <div class="group-header">
 <h2>Washington University in St. Louis</h2>
@@ -9,7 +10,7 @@ title: Work
 </div>
 
 <ul class="work-list">
-    <li>
+    <!-- <li>
         <h3>Students site</h3>
         <p>I was the front end lead for this project, working on a flexible front end architecture to support the variety of components and templates needed for the site.</p>
         <a class="project-link" href="https://students.wustl.edu">students.wustl.edu</a>
@@ -17,7 +18,7 @@ title: Work
             <li>WordPress</li>
             <li>Sass</li>
         </ul>
-    </li>
+    </li> -->
     <li>
         <h3>Diversity maps</h3>
         <p>I used Mapbox GL JS to display faculty origin and degree data on an interative map. This demonstrated the global reach of the university. The Diversity team is able to make updates at their convenience from the WordPress admin.</p>
