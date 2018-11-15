@@ -1,6 +1,9 @@
 .back-to-lists {
     margin-bottom: 1rem;
     display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
 
     &:hover {
         text-decoration: underline;
