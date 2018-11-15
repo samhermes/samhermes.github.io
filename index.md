@@ -3,12 +3,17 @@ layout: home
 ---
 <header class="home-header">
   <div class="contain">
-    <img class="headshot" src="/img/samhermes.jpg" alt="Sam Hermes">
-    <h1>
-      {% include samhermes.svg %}
-      <span class="screen-reader-text">Sam Hermes</span>
-    </h1>
-    <p>Front End Developer</p>
+    <div class="site-title">
+      <h1>
+        {% include samhermes.svg %}
+        <span class="screen-reader-text">Sam Hermes</span>
+      </h1>
+      <p>Front End Developer</p>
+    </div>
+    <ul class="site-nav">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/projects">Projects</a></li>
+    </ul>
   </div>
 </header>
 

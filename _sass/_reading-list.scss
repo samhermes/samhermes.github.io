@@ -2,8 +2,6 @@
 * Reading List
 */
 .reading-list {
-	min-height: calc(100vh - 8.5rem);
-
 	.post {
 		padding-bottom: 5%;
 	}
@@ -11,7 +9,6 @@
 
 #app {
 	position: relative;
-	min-height: 15em;
 	padding-top: 2em;
 }
 

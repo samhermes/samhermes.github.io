@@ -1,5 +1,6 @@
 .page {
   background: #fff;
+  min-height: calc(100vh - 7.25rem);
 }
 
 .site-header {
@@ -129,7 +130,6 @@
   padding: 5rem 0;
   text-align: center;
   line-height: 1.5;
-  min-height: calc(100vh - 8.5rem);
   box-sizing: border-box;
 
   @media screen and (min-width: 28.125em) {
