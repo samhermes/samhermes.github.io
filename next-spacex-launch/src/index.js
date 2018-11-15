@@ -6,7 +6,7 @@ import UpcomingLaunches from './UpcomingLaunches';
 
 class App extends Component {
 	render() {
-		return(
+		return (
 			<div>
 				<NextLaunch />
 				<UpcomingLaunches />

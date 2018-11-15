@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Moment from 'react-moment';
+import format from 'date-fns/format';
 import Loading from './Loading';
 
 class NextLaunch extends Component {
@@ -13,31 +13,31 @@ class NextLaunch extends Component {
 
   componentDidMount() {
     fetch('https://api.spacexdata.com/v2/launches/next')
-    .then(results => {
-      return results.json();
-    }).then(data => {
-      this.setState({
-        isLoaded: true,
-        nextLaunch: data
+      .then(results => {
+        return results.json();
+      }).then(data => {
+        this.setState({
+          isLoaded: true,
+          nextLaunch: data
+        });
       });
-    });
   }
 
   render() {
-    const { error, isLoaded, items } = this.state;
+    const { isLoaded } = this.state;
     if (!isLoaded) {
-      return(
+      return (
         <Loading />
       )
     } else {
-      return(
+      return (
         <div className="next-launch">
           <div className="launch-time">
             <h2 className="next-launch-date">
-              <Moment format="MMMM DD, YYYY">{this.state.nextLaunch.launch_date_local}</Moment>
+              {format(this.state.nextLaunch.launch_date_local, 'MMMM DD, YYYY')}
             </h2>
             <p className="next-launch-time">
-              <Moment format="h:mm a">{this.state.nextLaunch.launch_date_local}</Moment> (local time)
+              {format(this.state.nextLaunch.launch_date_local, 'h:mm a')} (local time)
             </p>
           </div>
           <div className="launch-details">
