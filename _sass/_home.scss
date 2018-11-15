@@ -3,20 +3,17 @@
 }
 
 .home-header {
-    padding: 3.5em 5% 7%;
+    padding: 3.5em 0 7%;
 	background: #191970;
 
     @media screen and (min-width: 28.125em) {
-        padding: 5em 10% 3em;
+        padding: 5em 0 3em;
     }
 
     .contain {
         width: 90%;
-        max-width: 90em;
-
-        @media screen and (min-width: 28.125em) {
-            width: 80%;
-        }
+        max-width: 70em;
+        margin: 0 auto;
     }
 
     .headshot {
@@ -80,17 +77,18 @@
 
 .home .post-list,
 .home .project-list {
-    margin: 0;
+    margin: 0 auto;
     width: auto;
-    padding: 2.3rem 5% 6rem;
-    max-width: none;
+    padding: 2.3rem 0 6rem;
+    max-width: 70em;
+    width: 90%;
 
     @media screen and (min-width: 28.125em) {
-        padding: 2.5rem 10% 6rem;
+        padding: 2.5rem 0 6rem;
     }
 
     @media screen and (min-width: 37.5em) {
-        padding: 3.5rem 10% 6rem;
+        padding: 3.5rem 0 6rem;
     }
 
     @media screen and (min-width: 48em) {
@@ -100,7 +98,7 @@
     }
 
     @media screen and (min-width: 60.25em) {
-        padding: 4rem 10% 3rem;
+        padding: 4.5rem 0;
     }
 
     h2 {
@@ -196,7 +194,7 @@
     padding-top: 0;
 
     @media screen and (min-width: 60.25em) {
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
     }
 
     ul {
@@ -228,9 +226,7 @@
     .contain {
         margin: 0 auto;
         width: 90%;
-
-        @media screen and (min-width: 28.125em) {
-            width: 80%;
-        }
+        max-width: 70em;
+        margin: 0 auto;
     }
 }

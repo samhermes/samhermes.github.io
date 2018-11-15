@@ -2,12 +2,14 @@
 layout: home
 ---
 <header class="home-header">
-  <img class="headshot" src="/img/samhermes.jpg" alt="Sam Hermes">
-  <h1>
-    {% include samhermes.svg %}
-    <span class="screen-reader-text">Sam Hermes</span>
-  </h1>
-  <p>Front End Developer</p>
+  <div class="contain">
+    <img class="headshot" src="/img/samhermes.jpg" alt="Sam Hermes">
+    <h1>
+      {% include samhermes.svg %}
+      <span class="screen-reader-text">Sam Hermes</span>
+    </h1>
+    <p>Front End Developer</p>
+  </div>
 </header>
 
 <div class="post-list">
