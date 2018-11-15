@@ -10,9 +10,10 @@ title: Halle
 			<p class="subhead">for WordPress</p>
 		</div>
 		<ul class="halle-nav">
-			<li><a href="/halle/docs">Documentation</a></li>
+			<li><a href="/halle/docs">Docs</a></li>
 			<li><a href="https://samhermes.co/halle-demo">Demo</a></li>
 			<li class="external"><a href="https://wordpress.org/themes/halle/">WordPress.org</a></li>
+			<li class="external"><a href="https://github.com/samhermes/halle">GitHub</a></li>
 		</ul>
 	</div>
 	<div class="halle-intro-image">
@@ -21,32 +22,4 @@ title: Halle
 			<img src="/img/projects/halle-small.jpg" alt="Halle screenshot">
 		</picture>
 	</div>
-</div>
-
-<div class="halle-featured">
-	<div class="featured-detail">
-		<h2>Highlight your favorite stories</h2>
-		<p>Build a showcase of stories by adding them to a category called &ldquo;Featured,&rdquo; and Halle will display them front and center, ready to be seen.</p>
-	</div>
-	<div class="featured-image">
-		<img src="/img/projects/halle-wireframe.svg" alt="">
-	</div>
-</div>
-
-<div class="halle-header">
-	<div class="header-detail">
-		<h2>Make a good first impression</h2>
-		<p>Halle takes advantage of the custom header and custom logo features in WordPress. Fill your header with an immersive image, and mix and match with your logo.</p>
-	</div>
-	<div class="header-image">
-		<img src="/img/projects/halle-header.svg" alt="">
-	</div>
-</div>
-
-<div class="halle-get">
-	<h2>Get Halle</h2>
-	<p>Search for &ldquo;Halle&rdquo; from your WordPress admin to install on your site. Or, download directly from the WordPress Theme Directory or GitHub:</p>
-	<a class="download-link" href="https://wordpress.org/themes/halle/">View on WordPress.org</a>
-	<a class="download-link" href="https://github.com/samhermes/halle">View on GitHub</a>
-
 </div>
