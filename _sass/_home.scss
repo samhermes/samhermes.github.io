@@ -2,7 +2,7 @@
     padding-bottom: 2rem;
 
     .intro {
-        background: #1b1b1b;
+        background: #1d1d1d;
 
         .intro-text {
             max-width: 40em;
@@ -19,156 +19,143 @@
             color: #fff;
         }
     }
-}
 
-.home .post-list,
-.home .project-list {
-    margin: 0 auto;
-    width: auto;
-    padding: 2.3rem 0 4rem;
-    max-width: 40em;
-    width: 90%;
-
-    @media screen and (min-width: 28.125em) {
-        padding: 3rem 0 4rem;
-    }
-
-    h2 {
-        font-weight: 600;
-        margin: 0 0 1.5rem;
-        color: #090909;
-
-        @media screen and (min-width: 48em) {
-            margin: 0.8rem 0 3rem;
-            font-size: 2rem;
-        }
-    }
-
-    ul {
-        display: grid;
-        grid-gap: 2em;
-        margin: 0 0 1.5rem;
-        padding: 0;
+    .post-list,
+    .project-list {
+        margin: 0 auto;
+        width: auto;
+        padding: 2.3rem 0 4rem;
+        max-width: 40em;
+        width: 90%;
 
         @media screen and (min-width: 28.125em) {
-            grid-gap: 3em;
-        }
-    }
-
-    li {
-        box-sizing: border-box;
-        border-radius: 0.5em;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin: 0;
-    }
-
-    a {
-        box-sizing: border-box;
-        height: 100%;
-        flex-grow: 1;
-
-        &:hover {
-            text-decoration: underline;
-        }
-    }
-
-    h3 {
-        font-size: 1.3em;
-        font-weight: 400;
-        line-height: 1.25;
-        margin: 0;
-
-        @media screen and (min-width: 28.125em) {
-          font-size: 1.45em;
+            padding: 3rem 0 4rem;
         }
 
-        @media screen and (min-width: 62.5em) {
-          font-size: 1.6em;
-        }
-    }
-
-    .view-all {
-        width: 100%;
-        text-align: right;
-
-        a {
-            display: inline-block;
-            font-size: 1.1rem;
-            font-weight: 500;
-            text-align: right;
-            padding: 1em 0 1em 1.5em;
+        h2 {
+            font-weight: 600;
+            margin: 0 0 1.5rem;
             color: #090909;
 
-            &::after {
-                content: "";
-                height: 13px;
-                width: 8px;
-                background: url("/img/arrow.svg") no-repeat;
-                background-position: center;
-                background-size: cover;
-                margin-left: 0.5rem;
+            @media screen and (min-width: 48em) {
+                margin: 0.8rem 0 3rem;
+                font-size: 2rem;
+            }
+        }
+
+        ul {
+            display: grid;
+            grid-gap: 2em;
+            margin: 0 0 1.5rem;
+            padding: 0;
+
+            @media screen and (min-width: 28.125em) {
+                grid-gap: 3em;
+            }
+        }
+
+        li {
+            box-sizing: border-box;
+            border-radius: 0.5em;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+
+        a {
+            box-sizing: border-box;
+            height: 100%;
+            flex-grow: 1;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        h3 {
+            font-size: 1.3em;
+            font-weight: 400;
+            line-height: 1.25;
+            margin: 0;
+
+            @media screen and (min-width: 28.125em) {
+            font-size: 1.45em;
+            }
+
+            @media screen and (min-width: 62.5em) {
+            font-size: 1.6em;
+            }
+        }
+
+        .view-all {
+            width: 100%;
+            text-align: right;
+
+            a {
                 display: inline-block;
+                font-size: 1.1rem;
+                font-weight: 500;
+                text-align: right;
+                padding: 1em 0 1em 1.5em;
+                color: #090909;
+
+                &::after {
+                    content: "";
+                    height: 13px;
+                    width: 8px;
+                    background: url("/img/arrow.svg") no-repeat;
+                    background-position: center;
+                    background-size: cover;
+                    margin-left: 0.5rem;
+                    display: inline-block;
+                }
             }
         }
     }
-}
 
-.home .project-list {
-    padding-top: 0;
+    .project-list {
+        padding-top: 0;
 
-    @media screen and (min-width: 60.25em) {
-        padding-bottom: 4rem;
-    }
-
-    ul {
-        grid-gap: 1.5em;
-
-        @media screen and (min-width: 28.125em) {
-            grid-gap: 2em;
+        @media screen and (min-width: 60.25em) {
+            padding-bottom: 4rem;
         }
 
-        @media screen and (min-width: 70em) {
-            grid-template-columns: 1fr 1fr;
+        ul {
+            grid-gap: 1.5em;
+
+            @media screen and (min-width: 28.125em) {
+                grid-gap: 2em;
+            }
+
+            @media screen and (min-width: 70em) {
+                grid-template-columns: 1fr 1fr;
+            }
         }
-    }
 
-    li {
-        padding-top: 1.25em;
-        padding: 1em 1.2em;
-        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+        li {
+            padding-top: 1.25em;
+            padding: 1em 1.2em;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
 
-        @media screen and (min-width: 28.125em) {
-            padding: 1.1em 1.6em 1.2em;
+            @media screen and (min-width: 28.125em) {
+                padding: 1.1em 1.6em 1.2em;
+            }
         }
-    }
 
-    h3 {
-        font-size: 1.3em;
-        margin-bottom: 0.3rem;
+        h3 {
+            font-size: 1.3em;
+            margin-bottom: 0.3rem;
 
-        @media screen and (min-width: 28.125em) {
-          font-size: 1.5em;
+            @media screen and (min-width: 28.125em) {
+            font-size: 1.5em;
+            }
         }
-    }
 
-    .project-description {
-        line-height: 1.45;
-        margin: 0;
-        font-size: 1rem;
-    }
-}
-
-.home .site-footer {
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 1.75em;
-
-    .contain {
-        margin: 0 auto;
-        width: 90%;
-        max-width: 70em;
-        margin: 0 auto;
+        .project-description {
+            line-height: 1.45;
+            margin: 0;
+            font-size: 1rem;
+        }
     }
 }
