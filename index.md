@@ -1,24 +1,15 @@
 ---
-layout: home
+layout: default
+title: Home
 ---
-<header class="home-header">
-  <div class="contain">
-    <div class="site-title">
-      <h1>
-        {% include samhermes.svg %}
-        <span class="screen-reader-text">Sam Hermes</span>
-      </h1>
-      <p>Front End Developer</p>
-    </div>
-    <ul class="site-nav">
-      <li><a href="/posts">Posts</a></li>
-      <li><a href="/projects">Projects</a></li>
-    </ul>
+<div class="intro">
+  <div class="intro-text">
+    <p>Holy cabooses! I'm Sam, a front end web developer. Here, I write as I learn about WordPress, CSS, JS, accessibility, and more. I also have a few side projects that allow me to explore new ways of working.</p>
   </div>
-</header>
+</div>
 
 <div class="post-list">
-  <h2>Posts</h2>
+  <h2>Recent Posts</h2>
   <ul>
   {% for post in site.posts limit:4 %}
     <li>
@@ -33,7 +24,7 @@ layout: home
 </div>
 
 <div class="project-list">
-  <h2>Projects</h2>
+  <h2>Selected Projects</h2>
   <ul>
   {% assign projects = site.projects | reverse %}
   {% for project in projects limit:6 %}
