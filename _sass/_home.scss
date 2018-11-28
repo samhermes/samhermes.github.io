@@ -14,9 +14,31 @@
         p {
             font-size: 1.6rem;
             font-weight: 400;
-            margin: 0;
+            margin: 0 0 1.5rem;
             line-height: 1.3;
             color: #fff;
+        }
+
+        .cta {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fff;
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &::after {
+                content: "";
+                height: 13px;
+                width: 8px;
+                background: url("/img/arrow-reverse.svg") no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin-top: 0.1rem;
+                margin-left: 0.5rem;
+                display: inline-block;
+            }
         }
     }
 

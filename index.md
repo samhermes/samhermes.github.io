@@ -4,7 +4,8 @@ title: Home
 ---
 <div class="intro">
   <div class="intro-text">
-    <p>Holy cabooses! I'm Sam, a front end web developer. Here, I write as I learn about WordPress, CSS, JS, accessibility, and more. I also have a few side projects that allow me to explore new ways of working.</p>
+    <p>Holy cabooses, you're here! I'm Sam, a front end web developer. I write as I learn about CSS, JavaScript, accessibility, WordPress, and more. I also have a few side projects that allow me to explore new ways of working.</p>
+    <a class="cta" href="/about">More About Me</a>
   </div>
 </div>
 
