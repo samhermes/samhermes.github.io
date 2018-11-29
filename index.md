@@ -27,13 +27,22 @@ title: Home
 <div class="project-list">
   <h2>Selected Projects</h2>
   <ul>
-  {% assign projects = site.projects | reverse %}
-  {% for project in projects limit:6 %}
     <li>
-      <h3><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h3>
-      <p class="project-description">{{ project.label }}</p>
+      <h3><a class="post-link" href="/halle">Halle</a></h3>
+      <p class="project-description">WordPress theme</p>
     </li>
-  {% endfor %}
+    <li>
+      <h3><a class="post-link" href="https://wordpress.org/plugins/map-block-for-mapbox/">Map Block for Mapbox</a></h3>
+      <p class="project-description">WordPress plugin</p>
+    </li>
+    <li>
+      <h3><a class="post-link" href="/reading-list">Reading List</a></h3>
+      <p class="project-description">Vue app</p>
+    </li>
+    <li>
+      <h3><a class="post-link" href="https://github.com/samhermes/bathbomb">Bath Bomb</a></h3>
+      <p class="project-description">Front end framework</p>
+    </li>
   </ul>
   <div class="view-all">
     <a href="/projects">All Projects</a>
