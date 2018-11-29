@@ -7,16 +7,24 @@
         .intro-text {
             max-width: 40em;
             margin: 0 auto;
-            padding: 4em 0;
+            padding: 3em 0;
             width: 90%;
+
+            @media screen and (min-width: 28.125em) {
+                padding: 3.75em 0;
+            }
         }
 
         p {
-            font-size: 1.6rem;
+            font-size: 1.3rem;
             font-weight: 400;
             margin: 0 0 1.5rem;
             line-height: 1.3;
             color: #fff;
+
+            @media screen and (min-width: 28.125em) {
+                font-size: 1.6rem;
+            }
         }
 
         .cta {
