@@ -7,4 +7,9 @@ description: I designed and developed a WordPress theme, submitted it to the Wor
 permalink: /halle
 related_post: Submitting an accessibility-ready theme to WordPress
 related_post_slug: submitting-accessibility-ready-theme-wordpress
+links:
+ - title: GitHub
+   link: https://github.com/samhermes/halle
+ - title: WordPress.org
+   link: https://wordpress.org/themes/halle/
 ---

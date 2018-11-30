@@ -11,9 +11,20 @@ title: Projects
 	    <li>
 	      <h2><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h2>
       	<p class="project-description">{{ project.description }}</p>
+
+				{% if project.links %}
+				<ul class="project-links">
+					{% for link in project.links %}
+						<li class="project-link"><a href="{{ link.link }}">{{ link.title }}</a></li>
+					{% endfor %}
+				</ul>
+      	{% endif %}
+
       	{% if project.related_post %}
-      	<h3 class="related-post-heading">Related Post</h3>
-      	<p class="related-post-title"><a href="/posts/{{ project.related_post_slug }}">{{ project.related_post }}</a></p>
+				<div class="project-related-post">
+					<h3 class="related-post-heading">Related Post</h3>
+					<p class="related-post-title"><a href="/posts/{{ project.related_post_slug }}">{{ project.related_post }}</a></p>
+				</div>
       	{% endif %}
 	    </li>
 	  {% endfor %}

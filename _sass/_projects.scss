@@ -12,41 +12,66 @@
 
 .page.projects {
     .post-list {
-        max-width: 70em;
-
-        ul {
+        > ul {
             display: grid;
             grid-gap: 2.5em;
-            grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
 
             @media screen and (min-width: 45em) {
                 grid-gap: 4em;
             }
 
-            li {
+            > li {
                 padding: 1.6em 1.8em;
                 margin: 0;
                 border-radius: 0.5em;
                 box-shadow: 0 3px 15px rgba(0, 0, 0, 0.06);
                 display: flex;
                 flex-direction: column;
+
+                *:last-child {
+                    margin-bottom: 0;
+                }
             }
         }
 
         .project-description {
             font-size: 1.125rem;
-            margin-bottom: 2.5em;
+            margin-bottom: 2rem;
+        }
+
+        .project-links {
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 2.25rem;
+        }
+
+        .project-link {
+            margin: 0 1.5rem 0 0;
+            font-size: 1.125rem;
+            font-weight: 400;
 
             &:last-child {
-                margin-bottom: 0.2em;
+                margin-right: 0;
+            }
+
+            a::after {
+                content: "";
+                display: inline-block;
+                width: 0.5em;
+                height: 0.5em;
+                background: url("/img/out.svg") no-repeat;
+                background-size: contain;
+                vertical-align: middle;
+                margin-top: -0.2rem;
+                margin-left: 0.3rem;
             }
         }
 
         .related-post-heading {
             text-transform: uppercase;
             font-weight: 700;
-            font-size: 0.9rem;
-            margin: auto 0 0.5em;
+            font-size: 0.8rem;
+            margin: auto 0 0.3em;
         }
 
         .related-post-title {
