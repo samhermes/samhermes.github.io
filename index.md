@@ -5,7 +5,7 @@ title: Home
 <div class="intro">
   <div class="intro-text">
     <img class="headshot" src="/img/samhermes.jpg" alt="Sam Hermes headshot">
-    <p>I'm Sam, a front end web developer. Here, I write as I learn about CSS, JavaScript, accessibility, WordPress, and more. You'll also find a few side projects that I use to explore new ways of working.</p>
+    <p>I'm Sam, a front-end web developer. Here, I write as I learn about CSS, JavaScript, accessibility, WordPress, and more. You'll also find a few side projects that I use to explore new ways of working.</p>
   </div>
 </div>
 
