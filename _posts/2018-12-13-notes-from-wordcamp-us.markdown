@@ -4,8 +4,9 @@ title: Notes from WordCamp US
 date: 2018-12-13
 custom_js: prism
 ---
-**Thinking Like a Front-End Developer**<br>
-Chris Coyier
+## Thinking Like a Front-End Developer
+
+*Chris Coyier*
 
 During Chris’s talk, I pushed a [very small commit](https://github.com/samhermes/samhermes.github.io/commit/d6a66519092adee0376a1f748f27964551846e0a) to my website to change “front end” to “front-end.” I agreed with [his explanation](https://twitter.com/WordCampUS/status/1071065672313118720) of when to use which, even though it was different from the convention that I’d been using for a while.
 
@@ -13,8 +14,9 @@ I found his talk very fun to listen to, and appreciated how he acknowledged the 
 
 One intriguing idea that Chris spoke about was the idea of "front of the front end" vs "back of the front end." He got this from [speaking with Brad Frost on the ShopTalk Show](https://shoptalkshow.com/episodes/334/), and I think that it points to a natural divide that is happening. With React, working on the front end can actually end up looking a little like working on the back end. I’ve traditionally been more of a “front of the front” kind of developer.
 
-**Holy Blockamole: Tips On Learning Block Development**<br>
-Andrew Taylor
+## Holy Blockamole: Tips On Learning Block Development
+
+*Andrew Taylor*
 
 Andrew’s lightning talk gave a high-level overview of the ways that developers can work with Gutenberg, from creating templates to block development.
 
@@ -23,15 +25,15 @@ When working in a custom post type, it’s easy to set a pre-defined set of bloc
 ```php
 'template' => array (
     array( 'core/heading', array(
-    'placeholder' => __( 'Title...', 'my-plugin' ),
-    'level' => 4,
+        'placeholder' => __( 'Title...', 'my-plugin' ),
+        'level' => 4,
     ) ),
     array( 'core/image', array(
-    // Any block atribute can be set as the default.
-    'align' => 'wide',
+        // Any block atribute can be set as the default.
+        'align' => 'wide',
     ) ),
     array( 'core/paragraph', array(
-    'placeholder' => __( 'Bio...', 'my-plugin' ),
+        'placeholder' => __( 'Bio...', 'my-plugin' ),
     ) ),
 ),
 ```
@@ -42,8 +44,9 @@ The question that this posed, for me, was how would we set this up if our blocks
 
 In general, as more of the content in our sites becomes dependent on an array of plugins, how can we be sure that it all meshes well? Likely less of an issue than I think it is, but it will be interesting to see how it plays out in real life.
 
-**Investigating Regressions Quickly using Git Bisect**<br>
-John Blackbourn
+## Investigating Regressions Quickly using Git Bisect
+
+*John Blackbourn*
 
 John explained very succinctly how to use `git bisect`, a took for finding the place in your commit history where an issue was introduced. By cutting the number of commits in half each time, you can get down to the issue very quickly, even if there are a hundred or so commits.
 
@@ -54,8 +57,9 @@ Getting this started looks like this:
 
 It then guides you through until you find the bad commit. [John’s slides](https://speakerdeck.com/johnbillion/investigating-regressions-quickly-using-git-bisect) go into more detail about this. Like he said, I hope I never need to use this, but it’s nice to know that it’s there to help.
 
-**Gutenberg, GraphQL and Government: Building Blocks**<br>
-Jason Bahl
+## Gutenberg, GraphQL and Government: Building Blocks
+
+*Jason Bahl*
 
 Jason [answered a question](https://docs.google.com/presentation/d/1PwXjxpqbZcWBKD2xTPmuJlScJiiuOHZurVyB9vR-BH4/edit#slide=id.g4846d628b1_0_566) that had popped up during Andrew’s talk earlier. Andrew had spoken about how to limit blocks in a custom post type, but I wondered how this would be done for pages or posts. With a filter!
 
@@ -77,8 +81,9 @@ add_filter( 'allowed_block_types', function( $allowed ) {
 });
 ```
 
-**Who’s afraid of ARIA?**<br>
-Rian Rietveld
+## Who’s afraid of ARIA?
+
+*Rian Rietveld*
 
 I feel like I could make an entire post just about this talk. I love a good code demo, and this talk had lots of them. Rian made everything seem very simple and straightforward, which is refreshing when you’re talking about accessibility. In practice, I know that things get a little more complicated, but I learned a lot, nonetheless.
 
@@ -96,8 +101,9 @@ WordPress has functionality built into it that handles this for you. `wp.a11y.sp
 
 I highly recommend watching Rian’s talk when it becomes available.
 
-**Product Design Through Stories**<br>
-Tammie Lister
+## Product Design Through Stories
+
+*Tammie Lister*
 
 Just a few select quotes to share from [Tammie’s talk](https://speakerdeck.com/tammielis/product-design-through-stories), which may or may not be paraphrased. Life moves fast.
 
