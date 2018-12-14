@@ -48,7 +48,7 @@ In general, as more of the content in our sites becomes dependent on an array of
 
 *John Blackbourn*
 
-John explained very succinctly how to use `git bisect`, a took for finding the place in your commit history where an issue was introduced. By cutting the number of commits in half each time, you can get down to the issue very quickly, even if there are a hundred or so commits.
+John explained very succinctly how to use `git bisect`, a tool for finding the place in your commit history where an issue was introduced. By cutting the number of commits in half each time, you can get down to the issue very quickly, even if there are a hundred or so commits.
 
 Getting this started looks like this:
 `git bisect start`
