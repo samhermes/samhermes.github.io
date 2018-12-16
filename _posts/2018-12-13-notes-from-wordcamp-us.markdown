@@ -50,9 +50,9 @@ In general, as more of the content in our sites becomes dependent on an array of
 
 John explained very succinctly how to use `git bisect`, a tool for finding the place in your commit history where an issue was introduced. By cutting the number of commits in half each time, you can get down to the issue very quickly, even if there are a hundred or so commits.
 
-Getting this started looks like this:
-`git bisect start`
-`git bisect good "2.6.10"` - commit where it worked
+Getting this started looks like this:<br>
+`git bisect start`<br>
+`git bisect good "2.6.10"` - commit where it worked<br>
 `git bisect bad HEAD` - where it was broken (likely the latest commit)
 
 It then guides you through until you find the bad commit. [John’s slides](https://speakerdeck.com/johnbillion/investigating-regressions-quickly-using-git-bisect) go into more detail about this. Like he said, I hope I never need to use this, but it’s nice to know that it’s there to help.
@@ -87,10 +87,10 @@ add_filter( 'allowed_block_types', function( $allowed ) {
 
 I feel like I could make an entire post just about this talk. I love a good code demo, and this talk had lots of them. Rian made everything seem very simple and straightforward, which is refreshing when you’re talking about accessibility. In practice, I know that things get a little more complicated, but I learned a lot, nonetheless.
 
-`aria-expanded`
-This attribute is useful for menus or accordions, so that you can communicated that the following element is either hidden or visible. You would then toggle `aria-expanded` and the hidden attribute with JavaScript when the user opens or closes the menu or accordion.
+`aria-expanded`<br>
+This attribute is useful for menus or accordions, so that you can communicate that the following element is either hidden or visible. You would then toggle `aria-expanded` and the hidden attribute with JavaScript when the user opens or closes the menu or accordion.
 
-`aria-live`
+`aria-live`<br>
 This was the most interesting bit, as I think that this is difficult to get right. `aria-live` is used to tell the user about what’s changing on the screen. So, if they hit a button to save changes, we should tell them when the changes have been successfully saved.
 
 Initially, the element with the message in it would have `aria-live="polite"` applied to it. Using JavaScript, we would update that to `aria-live="assertive"`, triggering the screen reader to read it out.
