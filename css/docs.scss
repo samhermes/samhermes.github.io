@@ -28,7 +28,17 @@
             order: 1;
             width: calc(25% - 2em);
             padding-right: 2em;
-            padding-top: 3.3rem;
+            padding-top: 1.2rem;
+        }
+    }
+
+    .docs-back {
+        display: block;
+        font-size: 1.25rem;
+        margin-bottom: 3rem;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 
