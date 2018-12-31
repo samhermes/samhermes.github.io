@@ -1,8 +1,8 @@
 ---
-layout: halle
+layout: default
 title: Halle
+custom_css: /css/halle
 ---
-
 <div class="halle-intro">
 	<div class="halle-intro-text">
 		<div class="halle-title">
