@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 {% include head.html %}
-{% include header.html %}
-{% assign slug = page.title | slugify | prepend: ' ' %}
-<div class="page{{ slug }}">
-{{ content }}
-</div>
-{% include footer.html %}
+{% assign slug = page.title | slugify | prepend: 'page-' %}
+
+<body class="{{ slug }}">
+    {% include header.html %}
+    <div class="page">
+        {{ content }}
+    </div>
+    {% include footer.html %}
+</body>

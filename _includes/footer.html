@@ -6,24 +6,25 @@
 		</ul>
 
 		<ul class="social">
-			<li><a href="https://codepen.io/samhermes"><img src="/img/codepen.svg" alt="Sam Hermes on CodePen"></a></li>
-			<li><a href="https://github.com/samhermes"><img src="/img/github.svg" alt="Sam Hermes on GitHub"></a></li>
+			<li><a href="https://codepen.io/samhermes">{% include codepen.svg %}</a></li>
+			<li><a href="https://github.com/samhermes">{% include github.svg %}</a></li>
 		</ul>
 	</div>
 </footer>
 
 {% if page.custom_js %}
-  {% for js_file in page.custom_js %}
-  	{% if page.layout == 'post' %}
+{% for js_file in page.custom_js %}
+{% if page.layout == 'post' %}
 <script src="/js/{{ js_file }}.js"></script>
-	{% else %}
+{% else %}
 <script src="/{{ js_file }}.js"></script>
-	{% endif %}
-  {% endfor %}
+{% endif %}
+{% endfor %}
 {% endif %}
 <script>
-if ('serviceWorker' in navigator) {
-	navigator.serviceWorker.register('/js/service-worker.js');
-}
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.register('/js/service-worker.js');
+	}
 </script>
+
 </html>
