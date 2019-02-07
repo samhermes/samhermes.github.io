@@ -40,8 +40,8 @@ title: Home
       <p class="project-description">Vue app</p>
     </li>
     <li>
-      <h3><a class="post-link" href="https://github.com/samhermes/bathbomb">Bath Bomb</a></h3>
-      <p class="project-description">Front end framework</p>
+      <h3><a class="post-link" href="https://github.com/samhermes/components">Components</a></h3>
+      <p class="project-description">Front end component library</p>
     </li>
   </ul>
   <div class="view-all">
