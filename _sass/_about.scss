@@ -1,0 +1,21 @@
+.page-about {
+    .headshot {
+        width: 6rem;
+        height: 6rem;
+        float: right;
+        margin-top: 0.3rem;
+        margin-left: 1rem;
+        margin-bottom: 1rem;
+
+        @media screen and (min-width: 28.125em) {
+            width: 11rem;
+            height: 11rem;
+            margin-left: 2rem;
+        }
+
+        @media screen and (min-width: 45.625em) {
+            width: 15rem;
+            height: 15rem;
+        }
+    }
+}
