@@ -13,6 +13,7 @@
 
   .contain {
     display: flex;
+    align-items: center;
   }
 
   svg {
@@ -32,8 +33,9 @@
       margin: 0.4em 0;
 
       @media screen and (min-width: 28.125em) {
-        width: 140px;
-        height: 18px;
+        width: 160px;
+        height: 20px;
+        margin: 0.5em 0;
       }
     }
   }
