@@ -23,7 +23,7 @@ Previously, I was adding Google fonts to the editor using `add_editor_style( )` 
 
 Now that the fonts are enqueued, we need to use them for the post/page title and other text blocks. I created a new Sass file called `block-editor-styles.scss` in the theme, and enqueued it inside of the `halle_block_editor_styles()` function that I used above.
 
-Taking a cue from the [Gutenberg Handbook](https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#editor-styles), I started with a parent selector of `body.gutenberg-editor-page`, and then nested all of the following styles within.
+Taking a cue from the [Gutenberg Handbook](https://wordpress.org/gutenberg/handbook/extensibility/theme-support/#editor-styles), I started with a parent selector of `body.block-editor-page`, and then nested all of the following styles within.
 
 ```css
 .edit-post-visual-editor {
@@ -33,7 +33,7 @@ Taking a cue from the [Gutenberg Handbook](https://wordpress.org/gutenberg/handb
 
 The `.edit-post-visual-editor` class is a parent class for the editor, so this font family declaration cascades down into most elements in the editor. Gutenberg’s styles are taking the same approach, so overriding using this method is easy.
 
-Although the cascade works fairly well, both the post title and paragraphs need just a bit more specificity to override. Again, these are both nested inside of `body.gutenberg-editor-page`.
+Although the cascade works fairly well, both the post title and paragraphs need just a bit more specificity to override. Again, these are both nested inside of `body.block-editor-page`.
 
 ```css
 .editor-post-title__input,
