@@ -4,7 +4,7 @@ title: Notes from WordCamp US
 date: 2018-12-13
 custom_js: prism
 ---
-## Thinking Like a Front-End Developer
+<h2 class="margin-bottom-zero">Thinking Like a Front-End Developer</h2>
 
 *Chris Coyier*
 
@@ -14,7 +14,7 @@ I found his talk very fun to listen to, and appreciated how he acknowledged the 
 
 One intriguing idea that Chris spoke about was the idea of "front of the front end" vs "back of the front end." He got this from [speaking with Brad Frost on the ShopTalk Show](https://shoptalkshow.com/episodes/334/), and I think that it points to a natural divide that is happening. With React, working on the front end can actually end up looking a little like working on the back end. I’ve traditionally been more of a “front of the front” kind of developer.
 
-## Holy Blockamole: Tips On Learning Block Development
+<h2 class="margin-bottom-zero">Holy Blockamole: Tips On Learning Block Development</h2>
 
 *Andrew Taylor*
 
@@ -44,7 +44,7 @@ The question that this posed, for me, was how would we set this up if our blocks
 
 In general, as more of the content in our sites becomes dependent on an array of plugins, how can we be sure that it all meshes well? Likely less of an issue than I think it is, but it will be interesting to see how it plays out in real life.
 
-## Investigating Regressions Quickly using Git Bisect
+<h2 class="margin-bottom-zero">Investigating Regressions Quickly using Git Bisect</h2>
 
 *John Blackbourn*
 
@@ -57,7 +57,7 @@ Getting this started looks like this:<br>
 
 It then guides you through until you find the bad commit. [John’s slides](https://speakerdeck.com/johnbillion/investigating-regressions-quickly-using-git-bisect) go into more detail about this. Like he said, I hope I never need to use this, but it’s nice to know that it’s there to help.
 
-## Gutenberg, GraphQL and Government: Building Blocks
+<h2 class="margin-bottom-zero">Gutenberg, GraphQL and Government: Building Blocks</h2>
 
 *Jason Bahl*
 
@@ -81,7 +81,7 @@ add_filter( 'allowed_block_types', function( $allowed ) {
 });
 ```
 
-## Who’s afraid of ARIA?
+<h2 class="margin-bottom-zero">Who’s afraid of ARIA?</h2>
 
 *Rian Rietveld*
 
@@ -101,7 +101,7 @@ WordPress has functionality built into it that handles this for you. `wp.a11y.sp
 
 I highly recommend watching Rian’s talk when it becomes available.
 
-## Product Design Through Stories
+<h2 class="margin-bottom-zero">Product Design Through Stories</h2>
 
 *Tammie Lister*
 
