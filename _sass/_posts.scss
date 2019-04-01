@@ -301,7 +301,7 @@
     width: 3rem;
     height: 3rem;
     margin-right: 1rem;
-    padding: 0.2rem 0;
+    padding: 0.3rem 0;
     border-radius: 50%;
 
     @media screen and (min-width: 30em) {
@@ -312,8 +312,12 @@
   }
 
   p {
-    margin: 0;
+    margin: 0 0 0.35rem;
     line-height: 1.55;
+
+    &:last-child {
+      margin: 0;
+    }
   }
 
   .name {
@@ -324,6 +328,23 @@
   }
 
   a {
-    text-decoration: underline;
+    text-decoration: none;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &::after {
+      content: "";
+      height: 13px;
+      width: 8px;
+      background: url("/img/arrow.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+      margin-top: 0.1rem;
+      margin-left: 0.5rem;
+      display: inline-block;
+    }
   }
 }
