@@ -51,6 +51,10 @@
         .cta {
             font-size: 1.1rem;
             font-weight: 500;
+            background: #fff;
+            padding: 0.8rem 1.5rem;
+            border-radius: 2rem;
+            display: inline-block;
 
             &:hover {
                 text-decoration: underline;
