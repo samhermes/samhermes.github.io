@@ -294,7 +294,7 @@
   display: flex;
 
   @media screen and (min-width: 30em) {
-    padding: 1.2em 1.3em;
+    padding: 1.3em 1.6em;
   }
 
   img {
@@ -307,13 +307,17 @@
     @media screen and (min-width: 30em) {
       width: 4rem;
       height: 4rem;
-      margin-right: 1.2rem;
+      margin-right: 1.5rem;
     }
   }
 
   p {
     margin: 0 0 0.35rem;
     line-height: 1.55;
+
+    @media screen and (min-width: 30em) {
+      font-size: 1.2rem;
+    }
 
     &:last-child {
       margin: 0;
@@ -330,6 +334,7 @@
   a {
     text-decoration: none;
     font-weight: 500;
+    font-size: 1.1rem;
 
     &:hover {
       text-decoration: underline;
