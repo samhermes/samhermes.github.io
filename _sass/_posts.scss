@@ -177,15 +177,11 @@
   }
 
   p {
-    font-size: 1.05rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     margin-bottom: 1.8rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (min-width: 62.5em) {
       font-size: 1.4rem;
     }
 
