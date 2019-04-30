@@ -41,8 +41,8 @@ title: Home
       <p class="project-description">Vue app</p>
     </li>
     <li>
-      <h3><a class="post-link" href="https://codepen.io/collection/nkwwVP/">Components</a></h3>
-      <p class="project-description">Front end component library</p>
+      <h3><a class="post-link" href="/next-spacex-launch">Next SpaceX Launch</a></h3>
+      <p class="project-description">React app</p>
     </li>
   </ul>
   <div class="view-all">
