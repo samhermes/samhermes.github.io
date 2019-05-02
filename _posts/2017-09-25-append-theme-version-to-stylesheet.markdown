@@ -2,6 +2,7 @@
 layout: post
 title: Append theme version to stylesheet
 date: 2017-09-25
+categories: [WordPress]
 custom_js: prism
 ---
 With browsers getting more aggressive about holding on to local cache, it can be aggravating to hear that an end user doesn’t see updates, or they see something quite broken because a few styles are missing. This can be improved by appending a version number to the end of any stylesheet in your project.

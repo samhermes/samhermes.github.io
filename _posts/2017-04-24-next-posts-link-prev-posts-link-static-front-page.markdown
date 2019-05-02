@@ -2,6 +2,7 @@
 layout: post
 title: Using next_posts_link() and prev_posts_link() on static front page
 date: 2017-04-24
+categories: [WordPress]
 custom_js: prism
 ---
 If you have a custom query of posts on a static front page in WordPress, adding pagination can be a confusing experience. The answer is fairly simple, if you’ve done it before. Prior to last week, I had not done it before, and I was very lost. Search results were driving me all kinds of places. Fortunately, you’ve landed here.
@@ -10,7 +11,7 @@ The issue is that the `paged` query variable isn’t called `paged` on the homep
 
 ```php
 global $paged;
-    
+
 if ( get_query_var( 'paged' ) ) {
 	$paged = get_query_var( 'paged' );
 } elseif ( get_query_var( 'page' ) ) {

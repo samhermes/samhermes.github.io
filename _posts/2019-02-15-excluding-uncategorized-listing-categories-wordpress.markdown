@@ -2,6 +2,7 @@
 layout: post
 title: Excluding Uncategorized when listing categories in WordPress
 date: 2019-02-15
+categories: [WordPress]
 custom_js: prism
 ---
 Ah, the eternal dilemma. What’s the best way to show a list of categories without including the “Uncategorized” category that WordPress generates by default? I feel like I re-solve this issue each time that it comes up. The issue is that categories can be listed in a couple different contexts, so the solution differs. Sometimes we’re listing all of them on the site or sometimes we’re listing them for the current post. Let’s solve this once and for all!

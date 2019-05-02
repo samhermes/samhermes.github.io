@@ -18,9 +18,19 @@ sass:
 exclude: ['next-spacex-launch/node_modules']
 keep_files: ['next-spacex-launch/node_modules']
 
+plugins:
+  - jekyll-archives
+
 # Add custom collections
 collections:
   photos:
   projects:
   lists:
     output: true
+
+jekyll-archives:
+  enabled:
+    - categories
+  layout: archive
+  permalinks:
+    category: '/category/:name/'

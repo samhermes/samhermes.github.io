@@ -2,6 +2,7 @@
 layout: post
 title: Adding pagination in Vue
 date: 2018-04-19
+categories: [Vue]
 custom_js: prism
 ---
 So, I’ve been reading too much. The reading list that I’ve been maintaining has grown to an unwieldy length (I’m kind of making up problems to solve at this point…). To remedy this, we need pagination!

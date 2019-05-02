@@ -2,6 +2,7 @@
 layout: post
 title: How not to use React with Jekyll
 date: 2018-06-24
+categories: [React, Jekyll]
 ---
 To lay the groundwork a little, this site uses Jekyll and is hosted on GitHub Pages. Whenever I make a new project that I want to include on the site, I just create a new page in markdown and build out from there. When I made my reading list app, I used Vue and included that without issue. React, on the other hand, has proven to be a little more complex. Which, typical. For this project, I wanted to display information about upcoming SpaceX launches.
 

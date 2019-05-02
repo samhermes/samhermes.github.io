@@ -2,6 +2,7 @@
 layout: post
 title: A small Vue app - Reading List
 date: 2018-01-24
+categories: [Vue]
 custom_js: prism
 ---
 Getting into new JavaScript is difficult when you don’t have something useful to build with it, so I was excited when I put it together that I could add Vue to my existing reading list. I’ve had it as static content for a little while now. Making updates is manual, and ends up with lots of repeated code. So, my idea was to move the listings to a WordPress install, and then bring them into the page and display them using Vue. Here’s how I did that.

@@ -69,7 +69,7 @@
 <p>Once we know what types of elements could be focusable, we need to look inside of the modal content and gather up any element that matches. We can do that with the following:</p>
 
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">modal</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'.modal'</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">focusableElements</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> 
+<span class="kd">var</span> <span class="nx">focusableElements</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">return</span> <span class="p">[].</span><span class="nx">slice</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span> <span class="nx">modal</span><span class="p">.</span><span class="nx">querySelectorAll</span><span class="p">(</span> <span class="nx">focusableSelectors</span><span class="p">.</span><span class="nx">join</span><span class="p">()</span> <span class="p">)</span> <span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div></div>
@@ -127,6 +127,24 @@
 <p>To learn more about how this works, the JS file for the Frend modal component is a great place to start. Much of what I went over in this post is contained within. <a href="https://github.com/frend/frend.co/blob/gh-pages/_components/dialogmodal/dialogmodal.js">View it on Github</a></p>
 
   </div>
+
+  
+  <ul class="categories-list">
+    
+    <li><a
+        href="/category/javascript">JavaScript</a>
+    </li>
+    
+    <li><a
+        href="/category/components">Components</a>
+    </li>
+    
+    <li><a
+        href="/category/accessibility">Accessibility</a>
+    </li>
+    
+  </ul>
+  
 
   <div class="about-me">
     <img src="/img/samhermes.jpg" alt="Sam Hermes">

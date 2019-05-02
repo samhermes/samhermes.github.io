@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% include head.html %}
+{% assign slug = page.title | slugify | prepend: 'page-' %}
+
+<body class="{{ slug }}">
+    {% include header.html %}
+    <div class="page">
+        <div class="post-list">
+            <header class="page-header">
+                <h1 class="page-title">Category: {{ page.title }}</h1>
+            </header>
+
+            <ul>
+                {% for post in page.posts %}
+                <li>
+                    <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+                    <h2 class="post-title">
+                        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                    </h2>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% include footer.html %}
+</body>

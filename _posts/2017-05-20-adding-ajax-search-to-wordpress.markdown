@@ -2,6 +2,7 @@
 layout: post
 title: Adding Ajax search to a WordPress theme
 date: 2017-05-20
+categories: [WordPress, JavaScript]
 custom_js: prism
 ---
 
@@ -25,7 +26,7 @@ Now, for creating the files. I’m going to start with `ajax-search.php`. This i
 function ajax_search() {
   // Get search term from search field
   $search = sanitize_text_field( $_POST[ 'query' ] );
-  
+
   // Set up query using search string, limit to 8 results
   $query = new WP_Query(
     array(
@@ -33,35 +34,35 @@ function ajax_search() {
       's' => $search
     )
   );
-  
+
   $output = '';
-  
+
   // Run search query
   if ( $query->have_posts() ) {
     while ( $query->have_posts() ) : $query->the_post();
-      
+
       /* Output a link to each result
          This is where the post thumbnail, excerpt, or anything else could be added */
       echo '&lt;a href="' . get_permalink() . '"&gt;' . get_the_title() . '&lt;/a&gt;';
-    
-    endwhile;        
-    
+
+    endwhile;
+
     // If there is more than one page of results, add link to the full results page
     if ( $query->max_num_pages > 1 ) {
       // We use urlencode() here to handle any spaces or odd characters in the search string
       echo '&lt;a class="see-all-results" href="' . get_site_url() . '?s=' . urlencode( $search ) . '"&gt;View all results&lt;/a&gt;';
     }
-    
+
   } else {
-    
+
     // There are no results, output a message
     echo '&lt;p class="no-results"&gt;No results&lt;/p&gt;';
-  
+
   }
-  
+
   // Reset query
   wp_reset_query();
-  
+
   die();
 }
 
@@ -83,7 +84,7 @@ jQuery(document).ready( function($) {
       $searchField = $('.search-form .search-field'),
       $loadingIcon = $('.search-form .loading'),
       termExists = "";
-  
+
   // Debounce function from https://davidwalsh.name/javascript-debounce-function
   function debounce(func, wait, immediate) {
     var timeout;
@@ -99,16 +100,16 @@ jQuery(document).ready( function($) {
       if (callNow) func.apply(context, args);
     };
   };
-  
+
   // Add results container and disable autocomplete on search field
   $searchWrap.append('&lt;div class="results"&gt;&lt;/div&gt;');
   var $searchResults = $('.search-form .results');
   $searchField.attr('autocomplete', 'off');
-  
+
   // Perform search on keyup in search field, hide/show loading icon
   $searchField.keyup( function() {
     $loadingIcon.css('display', 'block');
-    
+
     // If the search field is not empty, perform the search function
     if( $searchField.val() !== "" ) {
       termExists = true;
@@ -119,7 +120,7 @@ jQuery(document).ready( function($) {
       $loadingIcon.css('display', 'none');
     }
   });
-  
+
   // Make search Ajax request every 200 milliseconds, output results
   var doSearch = debounce(function() {
     var query = $searchField.val();
@@ -142,7 +143,7 @@ jQuery(document).ready( function($) {
       }
     });
   }, 200);
-  
+
 });
 ```
 

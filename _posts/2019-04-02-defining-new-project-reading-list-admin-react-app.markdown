@@ -2,6 +2,7 @@
 layout: post
 title: Defining a new project - Reading List Admin React App
 date: 2019-04-02
+categories: [React]
 ---
 I’m starting on a new project, and I’ll be working on it in the open. This post is the first in a series where I’ll be chronicling my experience. So, to get started, like any project, I need to define exactly what I’ll be doing. Right now, I have a reading list on my site, and I handle updates to the list through a WordPress dashboard. What I’d like to have is a custom admin panel that I could log in to separately from WordPress. The WordPress admin has a lot of other things going on, and I’d like to just focus on my books.
 

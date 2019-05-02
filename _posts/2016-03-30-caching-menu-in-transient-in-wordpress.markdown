@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Caching a menu in a transient in WordPress"
+title:  Caching a menu in a transient in WordPress
 date:   2016-03-30 15:38:00 -0600
+categories: [WordPress]
 custom_js: prism
 ---
 Menus in WordPress are expensive to generate, in terms of site performance. On every page load, the site is rebuilding almost the exact same thing, and it gets more expensive as the number of menu items increases. The only difference between pages is the current page classes that get applied. What if we stored the menu in a transient, and applied the current page classes on the front end using JavaScript?

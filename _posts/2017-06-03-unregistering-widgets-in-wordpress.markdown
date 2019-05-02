@@ -2,6 +2,7 @@
 layout: post
 title: Unregistering widgets in WordPress
 date: 2017-06-03
+categories: [WordPress]
 custom_js: prism
 ---
 

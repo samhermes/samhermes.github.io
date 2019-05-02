@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Output featured image caption in WordPress"
+title:  Output featured image caption in WordPress
 date:   2016-01-30 12:00:00 -0600
+categories: [WordPress]
 custom_js: prism
 ---
 It's relatively easy and well documented to output a featured image, but getting the caption is a little trickier. Here's the code I use:

@@ -12,13 +12,13 @@ title: Posts
 
 		{% if forloop.first %}
 		<div class="year-group">
-		<h2 id="{{ this_year }}-ref">{{this_year}}</h2>
+		<h2 class="posts-subheading" id="{{ this_year }}-ref">{{this_year}}</h2>
 		<ul>
 		{% endif %}
 
 			<li>
 				<span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-				<h3>
+				<h3 class="post-title">
 					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 				</h3>
 			</li>
@@ -31,7 +31,7 @@ title: Posts
         </ul>
 				</div>
 				<div class="year-group">
-        <h2 id="{{ next_year }}-ref">{{next_year}}</h2>
+        <h2 class="posts-subheading" id="{{ next_year }}-ref">{{next_year}}</h2>
         <ul>
         {% endif %}
     {% endif %}

@@ -2,6 +2,7 @@
 layout: post
 title: Lazy loading images
 date: 2018-03-21
+categories: [JavaScript]
 custom_js: prism
 ---
 A hop and a skip ago, I added a photo page to my website, and started posting a few of my favorite photos. Although it’s super fun to have them there, that wasn’t the primary reason I set up the page. I wanted to look into the smartest way to lazy load images. A page with a bunch of photos on it seemed like the perfect, if only, place to start.

@@ -12,6 +12,16 @@ layout: default
     {{ content }}
   </div>
 
+  {% unless page.categories == empty %}
+  <ul class="categories-list">
+    {% for category in page.categories %}
+    <li><a
+        href="/category/{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% endunless %}
+
   <div class="about-me">
     <img src="/img/samhermes.jpg" alt="Sam Hermes">
     <div class="about-me-text">

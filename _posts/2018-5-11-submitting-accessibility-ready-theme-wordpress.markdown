@@ -2,11 +2,12 @@
 layout: post
 title: Submitting an accessibility-ready theme to WordPress
 date: 2018-05-11
+categories: [WordPress, Accessibility]
 custom_js: prism
 ---
 *This post goes with my talk at WordCamp St. Louis.*
 
-About 2 years ago, I got the idea that I would create and submit my own theme to the official WordPress theme directory. I was curious about the process, and what I could learn from having a theme reviewed. 
+About 2 years ago, I got the idea that I would create and submit my own theme to the official WordPress theme directory. I was curious about the process, and what I could learn from having a theme reviewed.
 
 I started the theme by forking the [Underscores repository](https://github.com/automattic/_s). I’ve started many projects with Underscores, and it remains a great foundation for getting off the ground quickly. I worked on the theme in my free time for about a year and a half. Finally, this past November, I got to a point where I thought that it was ready to be uploaded.
 

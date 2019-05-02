@@ -2,6 +2,7 @@
 layout: post
 title:  How to configure a sticky header to prevent page jump
 date:   2016-11-10
+categories: [JavaScript, CSS]
 custom_js: prism
 ---
 As I’ve been out browsing the web lately, I’ve come across quite a few sticky headers that are implemented in a way that causes the page to jump up as scrolling begins. They are statically positioned at the top of the page, and then convert to fixed position when the page is scrolled down to a certain point. That works well, except removing an element from its position in the page leaves a gap, and that gap will close immediately after the element is removed, causing the page to jump up.

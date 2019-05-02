@@ -2,6 +2,7 @@
 layout: post
 title: Adding a loading state to Reading List
 date: 2018-02-27
+categories: [Vue]
 custom_js: prism
 ---
 This is a continuation of my [previous post about a Vue app](https://samhermes.com/posts/small-vue-app-reading-list/) I created for the reading list on this site.

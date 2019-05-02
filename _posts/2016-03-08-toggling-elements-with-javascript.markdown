@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Toggling elements with JavaScript"
+title:  Toggling elements with JavaScript
 date:   2016-03-08 14:20:00 -0600
+categories: [JavaScript]
 custom_js: prism
 ---
 One of the most performant ways to toggle an element with JavaScript is to apply and remove a class. Paul Irish pointed out last year that using jQuery’s `.hide()`, `.show()`, and `.toggle()` methods are very costly. I’ve used/am currently using each of these, as they are really easy to understand and implement. However, you’ll see that a plain JavaScript approach isn’t too difficult.

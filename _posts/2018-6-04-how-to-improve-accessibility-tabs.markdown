@@ -2,6 +2,7 @@
 layout: post
 title: How to improve the accessibility of tabs
 date: 2018-06-04
+categories: [JavaScript, Accessibility, Components]
 custom_js: prism
 ---
 For quite a few components on the web, there is an accessible way to implement them. For tabs, it’s a little more complicated. With a few attributes, however, we can get pretty close.

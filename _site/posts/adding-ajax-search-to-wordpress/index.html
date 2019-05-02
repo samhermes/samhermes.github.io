@@ -63,7 +63,7 @@
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">ajax_search</span><span class="p">()</span> <span class="p">{</span>
   <span class="c1">// Get search term from search field</span>
   <span class="nv">$search</span> <span class="o">=</span> <span class="nx">sanitize_text_field</span><span class="p">(</span> <span class="nv">$_POST</span><span class="p">[</span> <span class="s1">'query'</span> <span class="p">]</span> <span class="p">);</span>
-  
+
   <span class="c1">// Set up query using search string, limit to 8 results</span>
   <span class="nv">$query</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WP_Query</span><span class="p">(</span>
     <span class="k">array</span><span class="p">(</span>
@@ -71,35 +71,35 @@
       <span class="s1">'s'</span> <span class="o">=&gt;</span> <span class="nv">$search</span>
     <span class="p">)</span>
   <span class="p">);</span>
-  
+
   <span class="nv">$output</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
-  
+
   <span class="c1">// Run search query</span>
   <span class="k">if</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">have_posts</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
     <span class="k">while</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">have_posts</span><span class="p">()</span> <span class="p">)</span> <span class="o">:</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">the_post</span><span class="p">();</span>
-      
+
       <span class="cm">/* Output a link to each result
          This is where the post thumbnail, excerpt, or anything else could be added */</span>
       <span class="k">echo</span> <span class="s1">'&amp;lt;a href="'</span> <span class="o">.</span> <span class="nx">get_permalink</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'"&amp;gt;'</span> <span class="o">.</span> <span class="nx">get_the_title</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'&amp;lt;/a&amp;gt;'</span><span class="p">;</span>
-    
-    <span class="k">endwhile</span><span class="p">;</span>        
-    
+
+    <span class="k">endwhile</span><span class="p">;</span>
+
     <span class="c1">// If there is more than one page of results, add link to the full results page</span>
     <span class="k">if</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">max_num_pages</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
       <span class="c1">// We use urlencode() here to handle any spaces or odd characters in the search string</span>
       <span class="k">echo</span> <span class="s1">'&amp;lt;a class="see-all-results" href="'</span> <span class="o">.</span> <span class="nx">get_site_url</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'?s='</span> <span class="o">.</span> <span class="nb">urlencode</span><span class="p">(</span> <span class="nv">$search</span> <span class="p">)</span> <span class="o">.</span> <span class="s1">'"&amp;gt;View all results&amp;lt;/a&amp;gt;'</span><span class="p">;</span>
     <span class="p">}</span>
-    
+
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-    
+
     <span class="c1">// There are no results, output a message</span>
     <span class="k">echo</span> <span class="s1">'&amp;lt;p class="no-results"&amp;gt;No results&amp;lt;/p&amp;gt;'</span><span class="p">;</span>
-  
+
   <span class="p">}</span>
-  
+
   <span class="c1">// Reset query</span>
   <span class="nx">wp_reset_query</span><span class="p">();</span>
-  
+
   <span class="k">die</span><span class="p">();</span>
 <span class="p">}</span>
 
@@ -120,7 +120,7 @@
       <span class="nx">$searchField</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.search-form .search-field'</span><span class="p">),</span>
       <span class="nx">$loadingIcon</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.search-form .loading'</span><span class="p">),</span>
       <span class="nx">termExists</span> <span class="o">=</span> <span class="s2">""</span><span class="p">;</span>
-  
+
   <span class="c1">// Debounce function from https://davidwalsh.name/javascript-debounce-function</span>
   <span class="kd">function</span> <span class="nx">debounce</span><span class="p">(</span><span class="nx">func</span><span class="p">,</span> <span class="nx">wait</span><span class="p">,</span> <span class="nx">immediate</span><span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">timeout</span><span class="p">;</span>
@@ -136,16 +136,16 @@
       <span class="k">if</span> <span class="p">(</span><span class="nx">callNow</span><span class="p">)</span> <span class="nx">func</span><span class="p">.</span><span class="nx">apply</span><span class="p">(</span><span class="nx">context</span><span class="p">,</span> <span class="nx">args</span><span class="p">);</span>
     <span class="p">};</span>
   <span class="p">};</span>
-  
+
   <span class="c1">// Add results container and disable autocomplete on search field</span>
   <span class="nx">$searchWrap</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&amp;lt;div class="results"&amp;gt;&amp;lt;/div&amp;gt;'</span><span class="p">);</span>
   <span class="kd">var</span> <span class="nx">$searchResults</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.search-form .results'</span><span class="p">);</span>
   <span class="nx">$searchField</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'autocomplete'</span><span class="p">,</span> <span class="s1">'off'</span><span class="p">);</span>
-  
+
   <span class="c1">// Perform search on keyup in search field, hide/show loading icon</span>
   <span class="nx">$searchField</span><span class="p">.</span><span class="nx">keyup</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="nx">$loadingIcon</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'display'</span><span class="p">,</span> <span class="s1">'block'</span><span class="p">);</span>
-    
+
     <span class="c1">// If the search field is not empty, perform the search function</span>
     <span class="k">if</span><span class="p">(</span> <span class="nx">$searchField</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span> <span class="o">!==</span> <span class="s2">""</span> <span class="p">)</span> <span class="p">{</span>
       <span class="nx">termExists</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
@@ -156,7 +156,7 @@
       <span class="nx">$loadingIcon</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'display'</span><span class="p">,</span> <span class="s1">'none'</span><span class="p">);</span>
     <span class="p">}</span>
   <span class="p">});</span>
-  
+
   <span class="c1">// Make search Ajax request every 200 milliseconds, output results</span>
   <span class="kd">var</span> <span class="nx">doSearch</span> <span class="o">=</span> <span class="nx">debounce</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">query</span> <span class="o">=</span> <span class="nx">$searchField</span><span class="p">.</span><span class="nx">val</span><span class="p">();</span>
@@ -179,13 +179,27 @@
       <span class="p">}</span>
     <span class="p">});</span>
   <span class="p">},</span> <span class="mi">200</span><span class="p">);</span>
-  
+
 <span class="p">});</span>
 </code></pre></div></div>
 
 <p>That just about does it. The last piece is styling for the results. You’re likely to have plenty of ideas of your own, so I’ll close this up here. If there’s anything I’ve missed or been a bit unclear about, direct a tweet to <a href="https://twitter.com/samhermes">@samhermes</a>.</p>
 
   </div>
+
+  
+  <ul class="categories-list">
+    
+    <li><a
+        href="/category/wordpress">WordPress</a>
+    </li>
+    
+    <li><a
+        href="/category/javascript">JavaScript</a>
+    </li>
+    
+  </ul>
+  
 
   <div class="about-me">
     <img src="/img/samhermes.jpg" alt="Sam Hermes">

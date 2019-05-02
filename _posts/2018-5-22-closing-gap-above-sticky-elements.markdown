@@ -2,6 +2,7 @@
 layout: post
 title: Closing the gap above sticky elements
 date: 2018-05-22
+categories: [CSS]
 ---
 `position: sticky` is fantastic, and browser support is increasing. However, one little annoyance that keeps happening is that a small gap will appear above an element while it is fixed (as in, it’s stuck to the top of the viewport). At the moment, this is only happening in Chrome, which is convenient, because most everyone uses Chrome.
 

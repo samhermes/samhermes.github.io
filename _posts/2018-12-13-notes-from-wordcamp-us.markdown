@@ -1,7 +1,8 @@
 ---
 layout: post
-title: Notes from WordCamp US
+title: Notes from WordCamp US 2018
 date: 2018-12-13
+categories: [WordPress]
 custom_js: prism
 ---
 <h2 class="margin-bottom-zero">Thinking Like a Front-End Developer</h2>

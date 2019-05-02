@@ -2,6 +2,7 @@
 layout: post
 title: Upgrading from Gulp 3 to 4
 date: 2018-11-11
+categories: [JavaScript]
 custom_js: prism
 ---
 We love when things just keep getting better! Gulp 4 has many new features, and with just a few changes to `gulpfile.js`, it’s easy to make the upgrade. Gulp 4 was officially released on December 31, 2017.

@@ -5,8 +5,8 @@
     <description>Front-end web developer at Washington University in St. Louis. Writes about CSS, JavaScript, accessibility, WordPress, and more.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 May 2019 20:07:37 -0500</pubDate>
-    <lastBuildDate>Wed, 01 May 2019 20:07:37 -0500</lastBuildDate>
+    <pubDate>Wed, 01 May 2019 21:55:29 -0500</pubDate>
+    <lastBuildDate>Wed, 01 May 2019 21:55:29 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -49,6 +49,8 @@
         <guid isPermaLink="true">http://localhost:4000/posts/controlling-scroll-position-natively/</guid>
         
         
+        <category>JavaScript</category>
+        
       </item>
     
       <item>
@@ -86,6 +88,8 @@
         <link>http://localhost:4000/posts/defining-new-project-reading-list-admin-react-app/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/defining-new-project-reading-list-admin-react-app/</guid>
         
+        
+        <category>React</category>
         
       </item>
     
@@ -179,10 +183,12 @@
         <guid isPermaLink="true">http://localhost:4000/posts/excluding-uncategorized-listing-categories-wordpress/</guid>
         
         
+        <category>WordPress</category>
+        
       </item>
     
       <item>
-        <title>Notes from WordCamp US</title>
+        <title>Notes from WordCamp US 2018</title>
         <description>&lt;h2 class=&quot;margin-bottom-zero&quot;&gt;Thinking Like a Front-End Developer&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Chris Coyier&lt;/em&gt;&lt;/p&gt;
@@ -307,6 +313,8 @@ This was the most interesting bit, as I think that this is difficult to get righ
         <guid isPermaLink="true">http://localhost:4000/posts/notes-from-wordcamp-us/</guid>
         
         
+        <category>WordPress</category>
+        
       </item>
     
       <item>
@@ -339,6 +347,8 @@ This was the most interesting bit, as I think that this is difficult to get righ
         <link>http://localhost:4000/posts/disabling-blocks-block-styles-gutenberg/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/disabling-blocks-block-styles-gutenberg/</guid>
         
+        
+        <category>WordPress</category>
         
       </item>
     
@@ -376,6 +386,8 @@ $ npm install date-fns
         <link>http://localhost:4000/posts/replacing-moment-js-date-fns/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/replacing-moment-js-date-fns/</guid>
         
+        
+        <category>React</category>
         
       </item>
     
@@ -433,6 +445,8 @@ $ npm install gulp@^4.0.0 --save-dev
         <guid isPermaLink="true">http://localhost:4000/posts/upgrading-from-gulp-3-to-4/</guid>
         
         
+        <category>JavaScript</category>
+        
       </item>
     
       <item>
@@ -479,6 +493,8 @@ $ npm install gulp@^4.0.0 --save-dev
         <link>http://localhost:4000/posts/multiple-markers-popups-mapbox/</link>
         <guid isPermaLink="true">http://localhost:4000/posts/multiple-markers-popups-mapbox/</guid>
         
+        
+        <category>JavaScript</category>
         
       </item>
     

@@ -9,7 +9,7 @@ title: Projects
 	<ul>
 	  {% for project in site.projects reversed %}
 	    <li>
-	      <h2><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h2>
+	      <h2 class="project-title"><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h2>
       	<p class="project-description">{{ project.description }}</p>
 
 				{% if project.links %}

@@ -50,7 +50,7 @@
 <p>The issue is that the <code class="highlighter-rouge">paged</code> query variable isn’t called <code class="highlighter-rouge">paged</code> on the homepage, but rather <code class="highlighter-rouge">page</code>. Both <code class="highlighter-rouge">next_posts_link()</code> and <code class="highlighter-rouge">prev_posts_link()</code> utilize the query variable, and a custom query is looking for the <code class="highlighter-rouge">paged</code> variable. To remedy this, you need to alter your query. In my specific case, the template partial could be used on a static front page or on any other page. Because of that, the following checks to see which is appropriate to use:</p>
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">global</span> <span class="nv">$paged</span><span class="p">;</span>
-    
+
 <span class="k">if</span> <span class="p">(</span> <span class="nx">get_query_var</span><span class="p">(</span> <span class="s1">'paged'</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
 	<span class="nv">$paged</span> <span class="o">=</span> <span class="nx">get_query_var</span><span class="p">(</span> <span class="s1">'paged'</span> <span class="p">);</span>
 <span class="p">}</span> <span class="k">elseif</span> <span class="p">(</span> <span class="nx">get_query_var</span><span class="p">(</span> <span class="s1">'page'</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
@@ -65,6 +65,16 @@
 <p>I’ll note that <code class="highlighter-rouge">paginate_links()</code> works without making the modification I’ve outlined, if that’s the pagination structure you’re looking for. In my case, it was a bit more than I needed.</p>
 
   </div>
+
+  
+  <ul class="categories-list">
+    
+    <li><a
+        href="/category/wordpress">WordPress</a>
+    </li>
+    
+  </ul>
+  
 
   <div class="about-me">
     <img src="/img/samhermes.jpg" alt="Sam Hermes">
