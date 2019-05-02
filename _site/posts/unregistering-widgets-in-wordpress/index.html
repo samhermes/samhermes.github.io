@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Unregistering widgets in WordPress – Sam Hermes</title>
+<meta name="description"
+    content="If you’ve ever installed Jetpack, you’re probably familiar with widget overload. Sometimes it’s better to cut down on the number of widgets available to your...">
+
+<link rel="stylesheet" href="/css/main.css?v=1.0.7">
+
+<link rel="canonical" href="http://localhost:4000/posts/unregistering-widgets-in-wordpress/">
+<link rel="alternate" type="application/rss+xml" title="Sam Hermes"
+    href="http://localhost:4000/feed.xml">
+<link rel="alternate" type="application/json" title="Sam Hermes"
+    href="http://localhost:4000/feed.json" />
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133352732-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-133352732-1');
+</script>
+
+
+<body class="page-unregistering-widgets-in-wordpress">
+    <header class="site-header group">
+	<div class="contain">
+    <a class="logotype" href="/"><svg xmlns="http://www.w3.org/2000/svg" width="295" height="36" viewBox="0 0 295 36"><path fill="#ffffff" d="M.24 28.08l4.46-3.52c2.5 4.04 5.98 5.92 10.3 5.92 4.61 0 7-2.26 7-5.36 0-4.09-4.37-4.89-8.98-5.87-5.3-1.09-10.94-2.5-10.94-9.36 0-5.36 4.89-9.82 11.8-9.82 5.87 0 9.73 2.11 13.06 5.87l-4.23 3.34c-2.02-2.73-4.37-4.56-8.83-4.56-4.61 0-6.53 2.16-6.53 5.12 0 3.48 4.04 4.14 8.51 5.08 5.4 1.13 11.42 2.68 11.42 10.15 0 5.26-4.32 10.25-12.13 10.25C8 35.32 3.49 32.5.24 28.08zM31.36 27.84c0-5.22 4.32-8.41 11.42-8.41h7.52v-.42c0-3.38-2.07-5.73-6.58-5.73-3.34 0-5.83 1.6-7.28 4.09l-4.51-2.63c2.49-3.34 6.39-5.78 11.84-5.78 7.28 0 11.42 4.04 11.42 10.2v15.7H50.3V30.4c-2.02 3.01-5.73 4.98-9.96 4.98-5.88-.02-8.98-3.26-8.98-7.54zm18.94-2.25v-2.12h-7.19c-4.7 0-6.58 1.46-6.58 3.95 0 2.21 1.5 3.52 4.89 3.52 3.61.01 7.23-2.02 8.88-5.35zM60.92 9.47h5.03v2.91c1.55-2.12 3.95-3.43 7.19-3.43 4.04 0 6.72 1.69 8.08 4.46 1.6-2.68 4.51-4.46 8.27-4.46 6.96 0 10.2 4.18 10.2 10.72v15.18h-5.22v-14.9c0-3.95-1.74-6.53-5.73-6.53-3.62 0-5.97 2.35-5.97 7v14.43h-5.12V19.62c0-3.85-1.74-6.2-5.59-6.2-3.76 0-6.06 2.44-6.06 7.24v14.19h-5.08V9.47zM138.84 20.04h-16.45v14.8h-5.12V.54h5.12v14.62h16.45V.54h5.08v34.31h-5.08V20.04zM148.76 22.25c0-7.47 5.73-13.3 13.21-13.3s13.02 5.45 13.02 12.97v2.12h-21.34c.75 4.09 3.95 6.81 8.6 6.81 3.57 0 5.92-1.64 7.43-4.09l4.18 2.49c-2.44 3.67-6.11 6.11-11.61 6.11-8.08 0-13.49-5.73-13.49-13.11zm5.08-2.54h16.03c-.75-3.99-3.71-6.3-7.9-6.3-4.04.01-7.15 2.64-8.13 6.3zM179.88 9.47h4.98v4.42c1.08-3.2 3.67-4.79 6.91-4.79 1.74 0 3.29.38 4.28.99l-1.97 4.89c-.7-.47-1.74-.75-3.2-.75-3.62 0-5.92 1.79-5.92 6.34v14.29h-5.08V9.47zM200.04 9.47h5.03v2.91c1.55-2.12 3.95-3.43 7.19-3.43 4.04 0 6.72 1.69 8.08 4.46 1.6-2.68 4.51-4.46 8.27-4.46 6.96 0 10.2 4.18 10.2 10.72v15.18h-5.22v-14.9c0-3.95-1.74-6.53-5.73-6.53-3.62 0-5.97 2.35-5.97 7v14.43h-5.12V19.62c0-3.85-1.74-6.2-5.59-6.2-3.76 0-6.06 2.44-6.06 7.24v14.19h-5.08V9.47zM243.61 22.25c0-7.47 5.73-13.3 13.21-13.3 7.47 0 13.02 5.45 13.02 12.97v2.12H248.5c.75 4.09 3.95 6.81 8.6 6.81 3.57 0 5.92-1.64 7.43-4.09l4.18 2.49c-2.44 3.67-6.11 6.11-11.61 6.11-8.09 0-13.49-5.73-13.49-13.11zm5.07-2.54h16.03c-.75-3.99-3.71-6.3-7.9-6.3-4.04.01-7.14 2.64-8.13 6.3zM272.75 29.77l4.56-2.58c1.55 2.4 3.71 3.76 6.86 3.76 3.29 0 5.03-1.64 5.03-3.57 0-2.21-3.1-2.72-6.44-3.43-4.28-.89-8.84-2.3-8.84-7.47 0-3.95 3.81-7.61 9.78-7.57 4.75 0 7.99 1.74 10.2 4.75l-4.37 2.49c-1.27-1.88-3.1-3.01-5.83-3.01-3.1 0-4.61 1.46-4.61 3.24 0 2.02 2.3 2.49 6.16 3.34 4.23.89 9.02 2.35 9.02 7.61 0 3.71-3.34 8.08-10.34 8.04-5.36-.01-9.02-1.93-11.18-5.6z"/></svg><span class="screen-reader-text">Sam Hermes</span></a>
+    <ul class="site-nav">
+      <li><a href="/posts">Posts</a></li>
+      <li><a href="/projects">Projects</a></li>
+    </ul>
+   	</div>
+</header>
+
+    <div class="page">
+        <article class="post">
+
+  <header class="post-header">
+    <p class="post-meta"><time>June 3, 2017</time></p>
+    <h1 class="post-title">Unregistering widgets in WordPress</h1>
+  </header>
+
+  <div class="post-content">
+    <p>If you’ve ever installed Jetpack, you’re probably familiar with widget overload. Sometimes it’s better to cut down on the number of widgets available to your users, both for the benefit of their cognitive load and just for the fact that they may never use some of them. Meta widget, anyone?</p>
+
+<p>Unregistering a widget is a fairly small bit of code, but getting all of the information you need can sometimes be the tricky part.</p>
+
+<p>Here is a function that hooks into the <code class="highlighter-rouge">widgets_init</code> action in WordPress, and in the function it calls <code class="highlighter-rouge">unregister_widget()</code> on the widget to remove, the meta widget in this case.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">unregister_widgets</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nx">unregister_widget</span><span class="p">(</span> <span class="s1">'WP_Meta'</span> <span class="p">);</span>
+<span class="p">}</span>
+<span class="nx">add_action</span><span class="p">(</span> <span class="s1">'widgets_init'</span><span class="p">,</span> <span class="s1">'unregister_widgets'</span> <span class="p">);</span>
+</code></pre></div></div>
+
+<p>Where do we know to get the class of the widget though? For all of the WordPress core widgets, you can <a href="https://codex.wordpress.org/Function_Reference/unregister_widget">reference the codex</a>, where all of the widget names are listed. Each starts with <code class="highlighter-rouge">WP_</code>.</p>
+
+<p>What about widgets that come from other sources, such as a plugin or theme? That can take a little more work. The first and easiest way is to search the source code, and see if you can find where <code class="highlighter-rouge">register_widget()</code> is being called. In Sublime Text or Atom, you could perform a Find in Files for anywhere that <code class="highlighter-rouge">register_widget</code> appears in the project and grab the class name from there.</p>
+
+<p>If you don’t have the plugin or theme locally, you could also search the repository on GitHub. Opening the <a href="https://github.com/Automattic/Jetpack">Jetpack repository</a>, the search field in the header will perform searches only within the current repository, so a search for <code class="highlighter-rouge">register_widget</code> there will return the same results as if we had searched in a text editor.</p>
+
+<p>One last piece is adding a conditional to only unregister widgets if the plugin is actually active. It appears that <code class="highlighter-rouge">unregister_widget</code> fails gracefully if it can’t find the widget class, but it would be better to just ignore it entirely if the plugin or theme isn’t active. This might take a little investigation as well, but you can check to see if the main class of the plugin exists.</p>
+
+<div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="p">(</span> <span class="nb">class_exists</span><span class="p">(</span> <span class="s1">'Jetpack'</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="nx">unregister_widget</span><span class="p">(</span> <span class="s1">'Jetpack_Gallery_Widget'</span> <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If you’re unregistering a group of Jetpack widgets, adding this conditional will be much faster than checking for each widget individually.</p>
+
+  </div>
+
+  <div class="about-me">
+    <img src="/img/samhermes.jpg" alt="Sam Hermes">
+    <div class="about-me-text">
+      <p class="name">Sam Hermes</p>
+      <p class="description">I'm a web developer at Washington University in St. Louis. I write about WordPress, CSS,
+        JS, accessibility, and more.</p>
+      <p><a href="/about">More About Me</a></p>
+    </div>
+  </div>
+</article>
+    </div>
+    <footer class="site-footer group">
+	<div class="contain">
+		<ul class="site-nav">
+			<li><a href="/about">About</a></li>
+			<li><a href="/lists">Lists</a></li>
+			<li><a href="https://samhermes.typeform.com/to/d4C4FT">Contact</a></li>
+		</ul>
+
+		<ul class="social">
+			<li>
+				<a href="https://teamtreehouse.com/samhermes">
+					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 35 35"><path d="M17.5 0C7.8 0 0 7.8 0 17.5S7.8 35 17.5 35 35 27.2 35 17.5 27.2 0 17.5 0zM28 22.1c0 .7-.5 1.6-1.1 1.9l-8.3 4.7c-.6.3-1.6.3-2.2 0L8.1 24c-.6-.3-1.1-1.2-1.1-1.9v-9.2c0-.7.5-1.6 1.1-1.9l8.3-4.7c.6-.3 1.6-.3 2.3.1l1.2.7c.7.4.7 1.5.1 2.6l-1.3 1.9c-.5 1-1.7 1.9-2.8 2.1h-.3c-1 .2-2.3-.1-2.8-.1-.3 0-.6.1-.8.3-.6.5-.7 1.3-.3 1.9.5.6 1.3.7 1.9.3l.3-.3c.2-.1.8-.2 1.5-.3h.4l1.8-1-2.1 1.6c-.1.1-.3.2-.4.3-.7.5-2 1.3-2.4 1.4l-.6.3c-.6.5-.7 1.5-.2 2.1.5.6 1.5.7 2.1.2.2-.2.3-.3.4-.5.2-.3.5-.7.8-1 .2-.1.6-.4.8-.6.4-.3.5-.3.5 0l.9-1.8-.8 3v.2l-.3.9c-.2.5-.3 1-.4 1l-.1.1c-.8.4-1.1 1.5-.7 2.3.4.8 1.5 1.1 2.3.7.8-.4 1.1-1.5.7-2.3 0-.1-.1-.1-.1-.2s.2-1 .5-2v-.1c.4-1 1.3-2 1.8-1.5.4.5.5 1.1.5 1.4-.1.2-.1.4 0 .6.3.8 1.1 1.2 1.9 1 .2-.1.4-.2.6-.4.6-.5.7-1.5.1-2.1-.3-.3-1.1-1.1-1.7-2V17c-.6-.9-.7-2-.2-3l1.3-2.3c.7-1.2 1.9-1.9 2.7-1.5l1.4.8c.6.3 1.1 1.2 1.1 1.9v9.2z" fill="#090909"/></svg>
+					<span class="screen-reader-text">Sam Hermes on Treehouse</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://codepen.io/samhermes">
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"><path fill="#090909" d="M8.6 16v3l2.3-1.5zM16.6 13.7V9.4l-7.3 4.8 3.3 2.2zM25.7 14.2l-7.3-4.8v4.3l4 2.7zM9.3 20.8l7.3 4.8v-4.3l-4-2.7zM18.4 21.3v4.3l7.3-4.8-3.3-2.2zM17.5 15.3l-3.3 2.2 3.3 2.2 3.3-2.2z"/><path fill="#090909" d="M17.5.1C7.9.1.1 7.9.1 17.5c0 9.6 7.8 17.4 17.4 17.4 9.6 0 17.4-7.8 17.4-17.4C34.9 7.9 27.1.1 17.5.1zm10.8 20.7v.5h-.1L18 28.1c-.2.1-.3.2-.5.2s-.4-.1-.5-.2l-9.8-6.6h-.1v-.1-.1-.1-.1V14.4v-.1-.1-.1-.1-.1h.1l9.8-7c.3-.2.7-.2 1 0l9.8 6.6h.1v7.3z"/><path fill="#090909" d="M26.4 19v-3l-2.3 1.5z"/></svg>
+					<span class="screen-reader-text">Sam Hermes on CodePen</span>
+				</a>
+			</li>
+			<li>
+				<a href="https://github.com/samhermes">
+					<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35"><path fill-rule="evenodd" clip-rule="evenodd" fill="#090909" d="M17.5 0C7.8 0 0 7.9 0 17.5c0 7.7 5 14.3 12 16.6.9.2 1.2-.4 1.2-.8v-3c-4.9 1.1-6-2.3-6-2.3-.8-2-1.9-2.6-1.9-2.6-1.6-1.1.1-1.1.1-1.1 1.8.1 2.7 1.8 2.7 1.8 1.6 2.7 4.1 1.9 5.1 1.5.2-1.1.6-1.9 1.1-2.3-3.9-.4-8-1.9-8-8.6 0-1.9.7-3.5 1.8-4.7-.1-.5-.7-2.3.2-4.7 0 0 1.5-.5 4.8 1.8 1.4-.4 2.9-.6 4.4-.6 1.5 0 3 .2 4.4.6 3.3-2.3 4.8-1.8 4.8-1.8 1 2.4.4 4.2.2 4.6 1.1 1.2 1.8 2.8 1.8 4.7 0 6.7-4.1 8.2-8 8.6.6.5 1.2 1.6 1.2 3.2v4.8c0 .5.3 1 1.2.8 6.9-2.3 12-8.9 12-16.6C35 7.9 27.2 0 17.5 0z"/></svg>
+					<span class="screen-reader-text">Sam Hermes on GitHub</span>
+				</a>
+			</li>
+		</ul>
+	</div>
+</footer>
+
+
+
+
+<script src="/js/prism.js"></script>
+
+
+
+
+</html>
+</body>
