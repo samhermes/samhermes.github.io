@@ -5,8 +5,8 @@
     <description>Front-end web developer at Washington University in St. Louis. Writes about CSS, JavaScript, accessibility, WordPress, and more.</description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 01 May 2019 22:00:10 -0500</pubDate>
-    <lastBuildDate>Wed, 01 May 2019 22:00:10 -0500</lastBuildDate>
+    <pubDate>Thu, 02 May 2019 11:18:49 -0500</pubDate>
+    <lastBuildDate>Thu, 02 May 2019 11:18:49 -0500</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -213,8 +213,8 @@
         &lt;span class=&quot;s1&quot;&gt;'level'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'core/image'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
-        &lt;span class=&quot;c1&quot;&gt;// Any block atribute can be set as the default.&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;'align'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'wide'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;c1&quot;&gt;// Any block atribute can be set as the default.
+&lt;/span&gt;        &lt;span class=&quot;s1&quot;&gt;'align'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'wide'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'core/paragraph'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
         &lt;span class=&quot;s1&quot;&gt;'placeholder'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;__&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Bio...'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'my-plugin'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;

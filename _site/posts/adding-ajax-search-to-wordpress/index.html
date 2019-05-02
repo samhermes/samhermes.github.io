@@ -61,11 +61,11 @@
 <p>Now, for creating the files. I’m going to start with <code class="highlighter-rouge">ajax-search.php</code>. This is where the template will be stored for the search results. Here we can control what is returned, add a thumbnail, excerpt, date, author, or simply return the title. There’s just one function in this file, and it attaches to the <code class="highlighter-rouge">wp_ajax_</code> hook in WordPress.</p>
 
 <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">function</span> <span class="nf">ajax_search</span><span class="p">()</span> <span class="p">{</span>
-  <span class="c1">// Get search term from search field</span>
-  <span class="nv">$search</span> <span class="o">=</span> <span class="nx">sanitize_text_field</span><span class="p">(</span> <span class="nv">$_POST</span><span class="p">[</span> <span class="s1">'query'</span> <span class="p">]</span> <span class="p">);</span>
+  <span class="c1">// Get search term from search field
+</span>  <span class="nv">$search</span> <span class="o">=</span> <span class="nx">sanitize_text_field</span><span class="p">(</span> <span class="nv">$_POST</span><span class="p">[</span> <span class="s1">'query'</span> <span class="p">]</span> <span class="p">);</span>
 
-  <span class="c1">// Set up query using search string, limit to 8 results</span>
-  <span class="nv">$query</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WP_Query</span><span class="p">(</span>
+  <span class="c1">// Set up query using search string, limit to 8 results
+</span>  <span class="nv">$query</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">WP_Query</span><span class="p">(</span>
     <span class="k">array</span><span class="p">(</span>
       <span class="s1">'posts_per_page'</span> <span class="o">=&gt;</span> <span class="mi">8</span><span class="p">,</span>
       <span class="s1">'s'</span> <span class="o">=&gt;</span> <span class="nv">$search</span>
@@ -74,31 +74,31 @@
 
   <span class="nv">$output</span> <span class="o">=</span> <span class="s1">''</span><span class="p">;</span>
 
-  <span class="c1">// Run search query</span>
-  <span class="k">if</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">have_posts</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Run search query
+</span>  <span class="k">if</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">have_posts</span><span class="p">()</span> <span class="p">)</span> <span class="p">{</span>
     <span class="k">while</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">have_posts</span><span class="p">()</span> <span class="p">)</span> <span class="o">:</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">the_post</span><span class="p">();</span>
 
       <span class="cm">/* Output a link to each result
          This is where the post thumbnail, excerpt, or anything else could be added */</span>
-      <span class="k">echo</span> <span class="s1">'&amp;lt;a href="'</span> <span class="o">.</span> <span class="nx">get_permalink</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'"&amp;gt;'</span> <span class="o">.</span> <span class="nx">get_the_title</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'&amp;lt;/a&amp;gt;'</span><span class="p">;</span>
+      <span class="k">echo</span> <span class="s1">'&lt;a href="'</span> <span class="o">.</span> <span class="nx">get_permalink</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'"&gt;'</span> <span class="o">.</span> <span class="nx">get_the_title</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'&lt;/a&gt;'</span><span class="p">;</span>
 
     <span class="k">endwhile</span><span class="p">;</span>
 
-    <span class="c1">// If there is more than one page of results, add link to the full results page</span>
-    <span class="k">if</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">max_num_pages</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
-      <span class="c1">// We use urlencode() here to handle any spaces or odd characters in the search string</span>
-      <span class="k">echo</span> <span class="s1">'&amp;lt;a class="see-all-results" href="'</span> <span class="o">.</span> <span class="nx">get_site_url</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'?s='</span> <span class="o">.</span> <span class="nb">urlencode</span><span class="p">(</span> <span class="nv">$search</span> <span class="p">)</span> <span class="o">.</span> <span class="s1">'"&amp;gt;View all results&amp;lt;/a&amp;gt;'</span><span class="p">;</span>
+    <span class="c1">// If there is more than one page of results, add link to the full results page
+</span>    <span class="k">if</span> <span class="p">(</span> <span class="nv">$query</span><span class="o">-&gt;</span><span class="na">max_num_pages</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="p">)</span> <span class="p">{</span>
+      <span class="c1">// We use urlencode() here to handle any spaces or odd characters in the search string
+</span>      <span class="k">echo</span> <span class="s1">'&lt;a class="see-all-results" href="'</span> <span class="o">.</span> <span class="nx">get_site_url</span><span class="p">()</span> <span class="o">.</span> <span class="s1">'?s='</span> <span class="o">.</span> <span class="nb">urlencode</span><span class="p">(</span> <span class="nv">$search</span> <span class="p">)</span> <span class="o">.</span> <span class="s1">'"&gt;View all results&lt;/a&gt;'</span><span class="p">;</span>
     <span class="p">}</span>
 
   <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
 
-    <span class="c1">// There are no results, output a message</span>
-    <span class="k">echo</span> <span class="s1">'&amp;lt;p class="no-results"&amp;gt;No results&amp;lt;/p&amp;gt;'</span><span class="p">;</span>
+    <span class="c1">// There are no results, output a message
+</span>    <span class="k">echo</span> <span class="s1">'&lt;p class="no-results"&gt;No results&lt;/p&gt;'</span><span class="p">;</span>
 
   <span class="p">}</span>
 
-  <span class="c1">// Reset query</span>
-  <span class="nx">wp_reset_query</span><span class="p">();</span>
+  <span class="c1">// Reset query
+</span>  <span class="nx">wp_reset_query</span><span class="p">();</span>
 
   <span class="k">die</span><span class="p">();</span>
 <span class="p">}</span>
@@ -138,7 +138,7 @@
   <span class="p">};</span>
 
   <span class="c1">// Add results container and disable autocomplete on search field</span>
-  <span class="nx">$searchWrap</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&amp;lt;div class="results"&amp;gt;&amp;lt;/div&amp;gt;'</span><span class="p">);</span>
+  <span class="nx">$searchWrap</span><span class="p">.</span><span class="nx">append</span><span class="p">(</span><span class="s1">'&lt;div class="results"&gt;&lt;/div&gt;'</span><span class="p">);</span>
   <span class="kd">var</span> <span class="nx">$searchResults</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s1">'.search-form .results'</span><span class="p">);</span>
   <span class="nx">$searchField</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span><span class="s1">'autocomplete'</span><span class="p">,</span> <span class="s1">'off'</span><span class="p">);</span>
 

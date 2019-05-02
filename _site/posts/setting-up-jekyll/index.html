@@ -52,10 +52,10 @@
   <li>I was using m/d/Y to display dates, and so in looking at how to set that up in Jekyll, I found an <a href="http://alanwsmith.com/jekyll-liquid-date-formatting-examples">article from Allan W. Smith</a> that detailed all of the possibilities. It can be accomplished with <code class="highlighter-rouge">{{ post.date | date: "%-m/%-d/%Y" }}</code>.</li>
   <li>I display excerpts from posts on the homepage, and in order to specify those manually, you can add an <code class="highlighter-rouge">excerpt:</code> declaration to the YAML front matter on each post and specify the excerpt there. It can then be output with <code class="highlighter-rouge">{{ post.excerpt }}</code>. Jekyll will automatically give you an excerpt, but for posts that start with a code snippet, that was not ideal.</li>
   <li>For posts that include code snippets, I use <a href="http://prismjs.com/">prism.js</a> for formatting. To include the file only on posts that use it, I add <code class="highlighter-rouge">custom_js: prism</code>  to the front matter. In footer.html, I’ve added the following, which takes care of outputting the script tag:
-    <pre><code class="language-markup">{% if page.custom_js %}
+    <pre><code class="language-markup" style="background:none;">{% if page.custom_js %}
   {% for js_file in page.custom_js %}</code>
-    <code class="language-javascript">&lt;script src='/js/{{ js_file }}.js' type="text/javascript"&gt;&lt;/script&gt;</code>
-  <code class="language-markup">{% endfor %}
+    <code class="language-javascript" style="background:none;">&lt;script src='/js/{{ js_file }}.js' type="text/javascript"&gt;&lt;/script&gt;</code>
+  <code class="language-markup" style="background:none;">{% endfor %}
 {% endif %}</code></pre>
     <p>This also allows for the possibility of additional js files, so I can just add the name of a file I’d like to include to the <code class="highlighter-rouge">custom_js</code> declaration. Learned this trick on <a href="http://mattgemmell.com/page-specific-assets-with-jekyll/">Matt Gemmell’s site</a>.</p>
   </li>

@@ -43,20 +43,20 @@ function ajax_search() {
 
       /* Output a link to each result
          This is where the post thumbnail, excerpt, or anything else could be added */
-      echo '&lt;a href="' . get_permalink() . '"&gt;' . get_the_title() . '&lt;/a&gt;';
+      echo '<a href="' . get_permalink() . '">' . get_the_title() . '</a>';
 
     endwhile;
 
     // If there is more than one page of results, add link to the full results page
     if ( $query->max_num_pages > 1 ) {
       // We use urlencode() here to handle any spaces or odd characters in the search string
-      echo '&lt;a class="see-all-results" href="' . get_site_url() . '?s=' . urlencode( $search ) . '"&gt;View all results&lt;/a&gt;';
+      echo '<a class="see-all-results" href="' . get_site_url() . '?s=' . urlencode( $search ) . '">View all results</a>';
     }
 
   } else {
 
     // There are no results, output a message
-    echo '&lt;p class="no-results"&gt;No results&lt;/p&gt;';
+    echo '<p class="no-results">No results</p>';
 
   }
 
@@ -102,7 +102,7 @@ jQuery(document).ready( function($) {
   };
 
   // Add results container and disable autocomplete on search field
-  $searchWrap.append('&lt;div class="results"&gt;&lt;/div&gt;');
+  $searchWrap.append('<div class="results"></div>');
   var $searchResults = $('.search-form .results');
   $searchField.attr('autocomplete', 'off');
 
