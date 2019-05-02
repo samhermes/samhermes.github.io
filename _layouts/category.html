@@ -11,7 +11,7 @@
             </header>
 
             <ul>
-                {% for post in page.posts %}
+                {% for post in site.categories[page.title] %}
                 <li>
                     <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
                     <h2 class="post-title">
