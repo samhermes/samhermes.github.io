@@ -108,13 +108,17 @@
     }
 
     a {
-      border: 1px solid #ececec;
+      border: 1px solid transparent;
+      background: #3b18e3;
+      color: #fff;
       padding: 0.5rem 1rem;
       border-radius: 0.25em;
       display: block;
 
       &:hover {
-        background: #f6f6f6;
+        border-color: #3b18e3;
+        background: #fff;
+        color: #3b18e3;
       }
     }
   }
