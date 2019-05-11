@@ -33,28 +33,3 @@ title: Home
     {% endfor %}
   </ul>
 </div>
-
-<div class="home-projects">
-  <h2>Selected Projects</h2>
-  <ul class="project-list">
-    <li>
-      <h3><a class="post-link" href="/halle">Halle</a></h3>
-      <p class="project-description">WordPress theme</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="https://wordpress.org/plugins/map-block-for-mapbox/">Map Block for Mapbox</a></h3>
-      <p class="project-description">WordPress plugin</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="/reading-list">Reading List</a></h3>
-      <p class="project-description">Vue app</p>
-    </li>
-    <li>
-      <h3><a class="post-link" href="/next-spacex-launch">Next SpaceX Launch</a></h3>
-      <p class="project-description">React app</p>
-    </li>
-  </ul>
-  <div class="view-all">
-    <a href="/projects">All Projects</a>
-  </div>
-</div>
