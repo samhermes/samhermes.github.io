@@ -7,23 +7,12 @@
 <meta name="description"
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-<link rel="stylesheet" href="/css/main.css?v=1.0.8">
+<link rel="stylesheet" href="/css/main.css?v=1.0.9">
 {% if page.custom_css %}
 <link rel="stylesheet" href="{{ page.custom_css }}.css">
-{% elsif page.layout == 'docs' %}
-<link rel="stylesheet" href="/css/docs.css">
 {% endif %}
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
 <link rel="alternate" type="application/rss+xml" title="{{ site.title }}"
     href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 <link rel="alternate" type="application/json" title="{{ site.title }}"
     href="{{ "/feed.json" | prepend: site.baseurl | prepend: site.url }}" />
-
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-133352732-1"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-
-    gtag('config', 'UA-133352732-1');
-</script>
