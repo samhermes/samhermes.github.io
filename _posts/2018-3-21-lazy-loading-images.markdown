@@ -5,9 +5,7 @@ date: 2018-03-21
 categories: [JavaScript]
 custom_js: prism
 ---
-A hop and a skip ago, I added a photo page to my website, and started posting a few of my favorite photos. Although it’s super fun to have them there, that wasn’t the primary reason I set up the page. I wanted to look into the smartest way to lazy load images. A page with a bunch of photos on it seemed like the perfect, if only, place to start.
-
-First of all, since we needn’t write this ourselves, we’ll look for a script to handle the lazy loading. There are so many options out there. For many people, having a non-javascript fallback isn’t too much of a concern. But, I am not most people. This led me to lazyload.js, which just so happens to be the first result on Google for “lazy load script”. Maybe I am most people.
+First things first, we needn’t write a lazy loading script ourselves. There are so many options out there. For many people, having a non-javascript fallback isn’t too much of a concern. But, I am not most people. This led me to lazyload.js, which just so happens to be the first result on Google for “lazy load script”. Maybe I am most people.
 
 So, we include lazyload.js in the footer of the page, and then we call `lazyload();`. I’ve modified my copy of the lazyload.js script to include this in the bottom of the file, so that it gets called right after it loads, but it could also be called in the footer of the page like so:
 

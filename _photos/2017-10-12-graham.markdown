@@ -1,6 +1,0 @@
----
-layout: photo
-title: Graham Chapel, Washington University in Saint Louis
-date: 2017-10-12
-image: graham.jpg
----
