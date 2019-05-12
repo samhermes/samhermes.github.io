@@ -2,11 +2,11 @@
 layout: default
 title: Projects
 ---
-<div class="post-list">
+<div class="contain">
 	<header class="page-header">
 		<h1 class="page-title">Projects</h1>
 	</header>
-	<ul>
+	<ul class="post-list">
 	  {% for project in site.projects reversed %}
 	    <li>
 	      <h2 class="project-title"><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h2>

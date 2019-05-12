@@ -1,12 +1,13 @@
 ---
 layout: default
 ---
-<div class="post-list">
+<div class="contain">
     <header class="page-header">
+        <a class="back-to" href="/posts">Posts</a>
         <h1 class="page-title">Category: {{ page.title }}</h1>
     </header>
 
-    <ul>
+    <ul class="post-list">
         {% for post in site.categories[page.title] %}
         <li>
             <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>

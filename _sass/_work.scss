@@ -86,25 +86,5 @@
                 text-decoration: underline;
             }
         }
-
-        .project-tags {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-wrap: wrap;
-
-            li {
-                margin: 0 1rem 0 0;
-                text-transform: uppercase;
-                font-size: 0.875rem;
-                font-weight: 600;
-                color: #565656;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-        }
     }
 }

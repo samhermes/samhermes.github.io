@@ -2,7 +2,7 @@
 layout: default
 title: Lists
 ---
-<div class="post-list">
+<div class="contain">
 	<header class="page-header">
 		<h1 class="page-title">Lists</h1>
 	</header>

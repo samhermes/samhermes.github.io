@@ -1,6 +1,17 @@
 .page {
   background: #fff;
   min-height: calc(100vh - 7.66rem);
+
+  .contain {
+    max-width: 42em;
+    margin: 0 auto;
+    padding: 2.6em 0 7.5em;
+    width: 90%;
+
+    @media screen and (min-width: 54.25em) {
+      padding: 5% 0 12%;
+    }
+  }
 }
 
 .site-header {
@@ -139,6 +150,18 @@
         }
       }
     }
+  }
+}
+
+.back-to {
+  margin-bottom: 0.3rem;
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 
