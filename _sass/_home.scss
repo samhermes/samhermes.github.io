@@ -4,15 +4,23 @@
     }
 
     .intro {
+        background: #3b18e3;
+        color: #fff;
+        margin-bottom: 2rem;
+
+        @media screen and (min-width: 48em) {
+            margin-bottom: 3rem;
+        }
+
         .intro-text {
             max-width: 42em;
             margin: 0 auto;
-            padding: 2em 0 3em;
+            padding: 2rem 0;
             width: 90%;
             position: relative;
 
             @media screen and (min-width: 48em) {
-                padding: 4em 0 3em;
+                padding: 3rem 0;
             }
         }
 
@@ -30,10 +38,9 @@
         .cta {
             font-size: 1.1rem;
             font-weight: 500;
-            background: #fff;
             padding: 0.65rem 1.2rem 0.65rem 0;
-            border-radius: 1.5rem;
             display: inline-block;
+            color: #fff;
 
             @media screen and (min-width: 48em) {
                 padding: 0.8rem 1.5rem 0.8rem 0;
@@ -47,7 +54,7 @@
                 content: "";
                 height: 13px;
                 width: 8px;
-                background: url("/img/arrow.svg") no-repeat;
+                background: url("/img/arrow-reverse.svg") no-repeat;
                 background-position: center;
                 background-size: cover;
                 margin-top: 0.1rem;
