@@ -10,11 +10,11 @@ title: Work
 </div>
 
 <ul class="work-list">
-    <!-- <li>
+    <li>
         <h3>Students site</h3>
         <p>I was the front end lead for this project, working on a flexible front end architecture to support the variety of components and templates needed for the site.</p>
         <a class="project-link" href="https://students.wustl.edu">students.wustl.edu</a>
-    </li> -->
+    </li>
     <li>
         <h3>Diversity maps</h3>
         <p>I used Mapbox GL JS to display faculty origin and degree data on an interative map. This demonstrated the global reach of the university. The Diversity team is able to make updates at their convenience from the WordPress admin.</p>
@@ -39,6 +39,25 @@ title: Work
         <h3>University Directory</h3>
         <p>I redesigned the university's directory search feature, returning results to the user almost immediately through Ajax. As one of the tools used daily by university staff, this UX improvement directly impacted productivity.</p>
         <a class="project-link" href="https://wustl.edu/directory">wustl.edu/directory</a>
+    </li>
+</ul>
+</div>
+
+<div class="work-group">
+<div class="group-header">
+<h2>Side Projects</h2>
+</div>
+
+<ul class="work-list">
+    <li>
+        <h3>Halle WordPress theme</h3>
+        <p>I designed and developed a WordPress theme for the official WordPress theme repository. Since release, I've adapted it for use with the new WordPress block editor.</p>
+        <a class="project-link" href="https://github.com/samhermes/halle">github.com/samhermes/halle</a>
+    </li>
+    <li>
+        <h3>Map Block for Mapbox</h3>
+        <p>I used Mapbox GL JS to create a block plugin for the new WordPress block editor. It allows the user to center the map on any location using Mapbox’s geolocation service.</p>
+        <a class="project-link" href="https://github.com/samhermes/map-block-mapbox">github.com/samhermes/map-block-mapbox</a>
     </li>
 </ul>
 </div>
