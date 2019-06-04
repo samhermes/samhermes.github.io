@@ -81,7 +81,7 @@
 
       &:hover {
         background: #fff;
-        color: #3b18e3;
+        color: #101010;
       }
     }
   }
@@ -94,7 +94,6 @@
   padding: 1em 5%;
   margin: 0 auto;
   position: relative;
-  background: #fff;
 
   @media screen and (min-width: 45.625em) {
     padding: 1em 1.65em;
@@ -107,15 +106,6 @@
 
   .site-nav {
     margin: 0 0 0 -0.625rem;
-
-    a {
-      color: #1D1D1D;
-
-      &:hover {
-        background: #3b18e3;
-        color: #fff;
-      }
-    }
   }
 }
 
@@ -139,6 +129,10 @@
     svg {
       width: 1.7em;
       height: auto;
+
+      path {
+        fill: #fff;
+      }
     }
 
     a {
@@ -146,7 +140,7 @@
 
       &:hover {
         svg path {
-          fill: #3b18e3;
+          fill: #666;
         }
       }
     }
@@ -169,111 +163,33 @@
 
 .page-not-found {
   .page {
-    background: #000!important;
-  }
-}
-
-.fourzerofour {
-  max-width: 75em;
-  width: 90%;
-  margin: 0 auto;
-  padding: 5rem 0;
-  text-align: center;
-  line-height: 1.5;
-  box-sizing: border-box;
-
-  @media screen and (min-width: 28.125em) {
-    margin: 0 auto;
-  }
-
-  p {
-    color: #fff;
-  }
-
-  a {
-    color: #fff;
-    text-decoration: underline;
-  }
-
-  .filterwrapper {
-    position: absolute;
-    z-index: -1;
-    pointer-events: none;
-    opacity: 0;
-  }
-
-  .svgtext {
-      display: block;
-      position: relative;
-      overflow: hidden;
-      margin: 0 auto;
-  }
-
-  .fourzerofour-wrapper {
-    display: block;
-    position: relative;
+    background: #000;
     text-align: center;
-    margin: 0;
-    padding: 4em 0 2em;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 
-  .fourzerofour-filtered-text {
-    filter: url(#filter);
-    fill: #fff;
-    font-size: 6.25rem;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    display: block;
+    h1 {
+      color: #fff;
+      font-size: 6rem;
+      line-height: 1;
+      margin: 0 0 1rem;
 
-    @media screen and (min-width: 28.125em) {
-      font-size: 9.3rem;
-    }
-  }
-
-  .top-r,
-  .bot-r,
-  .top-g,
-  .bot-g {
-    stroke: #fff;
-  }
-
-  .top-r {
-    stroke-width: 100px;
-    animation: top 3.5s linear infinite;
-  }
-
-  .bot-r {
-    stroke-width: 100px;
-    animation: bottom 4s linear infinite;
-  }
-
-  .top-g {
-    stroke-width: 50px;
-    animation: top 4s linear reverse infinite;
-  }
-
-  .bot-g {
-    stroke-width: 50%;
-    animation: bottom 3.5s linear reverse infinite;
-  }
-
-  @mixin createRandomKeyframes( $numberOfKeys ) {
-    $delta: round(100/$numberOfKeys);
-
-    @for $i from 1 through $numberOfKeys {
-      $time: ($i*$delta - random($delta)) +'%';
-      #{$time} {
-        stroke-width: random(200) + px;
+      @media screen and (min-width: 45.625em) {
+        font-size: 10rem;
       }
     }
-  }
 
-  @keyframes top {
-    @include createRandomKeyframes( 10 + random(10) );
-  }
+    p {
+      color: #fff;
+      line-height: 1.5;
+      margin-bottom: 3rem;
+    }
 
-  @keyframes bottom {
-    @include createRandomKeyframes( 10 + random(10) );
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
   }
 }
