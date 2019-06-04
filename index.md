@@ -4,7 +4,7 @@ title: Home
 ---
 <div class="intro">
   <div class="intro-text">
-    <p>Hello! I'm Sam, a front-end developer in St. Louis. Here, I write as I learn about CSS, WordPress, JavaScript, accessibility, and more. You'll also find a few side projects that I use to explore new ways of working.</p>
+    <p>Hello! I'm Sam, a front-end developer in St. Louis. Here, I write as I learn about CSS, WordPress, JavaScript, accessibility, and more.</p>
     <a class="cta" href="/about">About Me</a>
   </div>
 </div>
