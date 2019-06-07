@@ -2,6 +2,10 @@
   background: #fff;
   min-height: calc(100vh - 7.66rem);
 
+  @media (prefers-color-scheme: dark) {
+    background: $dark-mode-background;
+  }
+
   .contain {
     max-width: 42em;
     margin: 0 auto;
@@ -29,10 +33,6 @@
 
   svg {
     display: block;
-
-    path {
-      fill: #fff;
-    }
   }
 
   .logotype {
@@ -81,7 +81,7 @@
 
       &:hover {
         background: #fff;
-        color: #282a36;
+        color: $dark-mode-background;
       }
     }
   }
@@ -129,19 +129,11 @@
     svg {
       width: 1.7em;
       height: auto;
-
-      path {
-        fill: #fff;
-      }
     }
 
     a {
-      opacity: 1;
-
       &:hover {
-        svg path {
-          fill: #666;
-        }
+        opacity: 0.5;
       }
     }
   }
@@ -163,7 +155,7 @@
 
 .page-not-found {
   .page {
-    background: #282a36;
+    background: $dark-mode-background;
     text-align: center;
     display: flex;
     align-items: center;

@@ -4,9 +4,13 @@
     }
 
     .intro {
-        background: #282a36;
+        background: $dark-mode-background;
         color: #fff;
         margin-bottom: 2rem;
+
+        @media (prefers-color-scheme: dark) {
+            border-bottom: 1px solid $dark-mode-border-color;
+        }
 
         @media screen and (min-width: 48em) {
             margin-bottom: 3rem;
@@ -51,10 +55,10 @@
             }
 
             &::after {
-                content: "";
+                content: '';
                 height: 13px;
                 width: 8px;
-                background: url("/img/arrow-reverse.svg") no-repeat;
+                background: url('/img/arrow-reverse.svg') no-repeat;
                 background-position: center;
                 background-size: cover;
                 margin-top: 0.1rem;
@@ -100,14 +104,18 @@
                 }
 
                 &::after {
-                    content: "";
+                    content: '';
                     height: 13px;
                     width: 8px;
-                    background: url("/img/arrow.svg") no-repeat;
+                    background: url('/img/arrow.svg') no-repeat;
                     background-position: center;
                     background-size: cover;
                     margin-left: 0.5rem;
                     display: inline-block;
+
+                    @media (prefers-color-scheme: dark) {
+                        background-image: url('/img/arrow-reverse.svg');
+                    }
                 }
             }
         }

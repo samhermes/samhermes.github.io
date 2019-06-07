@@ -1,3 +1,7 @@
+:root {
+	color-scheme: light dark;
+}
+
 /**
  * Reset some basic elements
  */
@@ -14,8 +18,12 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size} $base-font-family;
   color: $text-color;
-  background: #282a36;
+  background: $dark-mode-background;
   -webkit-text-size-adjust: 100%;
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
+  }
 }
 
 /**
@@ -61,12 +69,20 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-  color: $text-color;
-  text-decoration: none;
+	color: $text-color;
+	text-decoration: none;
 
-  &:hover {
-    color: $text-color;
-  }
+	@media (prefers-color-scheme: dark) {
+		color: #fff;
+	}
+
+	&:hover {
+		color: $text-color;
+
+		@media (prefers-color-scheme: dark) {
+			color: #fff;
+		}
+	}
 }
 
 /**
@@ -119,7 +135,11 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	background: #282a36;
+	background: $dark-mode-background;
+
+	@media (prefers-color-scheme: dark) {
+		border: 1px solid $dark-mode-border-color;
+	}
 }
 
 /* Inline code */
@@ -208,7 +228,7 @@ pre[class*="language-"] {
  * Clearfix
  */
 .group:after {
-	content: "";
+	content: '';
 	display: table;
 	clear: both;
 }

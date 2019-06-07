@@ -32,6 +32,18 @@
 				color: #404040;
 			}
 		}
+
+		@media (prefers-color-scheme: dark) {
+			border-color: $dark-mode-border-color;
+
+			&.active {
+				border-color: #fff;
+
+				label {
+					color: #fff;
+				}
+			}
+		}
 	}
 
 	label {
@@ -43,6 +55,10 @@
 		text-transform: uppercase;
 		padding: 0.6em 0.7em 0.65em;
 		cursor: pointer;
+
+		@media (prefers-color-scheme: dark) {
+			color: rgba(255, 255, 255, 0.3);
+		}
 	}
 }
 
@@ -52,7 +68,6 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(255,255,255,0.8);
 
 	svg {
 		animation: rotate 1.8s linear infinite;
@@ -90,11 +105,15 @@ ul.book-list {
 		position: absolute;
 		top: 0.37rem;
 		right: 0;
-		background: url('/img/projects/favorite.svg');
+		background: url('/img/favorite.svg');
 		background-repeat: no-repeat;
 		background-size: contain;
 		width: 1.25rem;
 		height: 1rem;
+
+		@media (prefers-color-scheme: dark) {
+			background-image: url('/img/favorite-reverse.svg');
+		}
 
 		@media screen and (min-width: 37.5rem) {
 			top: 0.55rem;
@@ -106,8 +125,8 @@ ul.book-list {
 	text-align: center;
 
 	button {
-		background: #333;
-		border: 1px solid #333;
+		background: $dark-mode-background;
+		border: 1px solid $dark-mode-background;
 		border-radius: 3px;
 		font-size: 1em;
 		padding: 0.4em 0.8em 0.43em;
@@ -115,10 +134,13 @@ ul.book-list {
 		color: #fafafa;
 		cursor: pointer;
 
-		&:disabled {
+		@media (prefers-color-scheme: dark) {
 			background: #fff;
-			border-color: gainsboro;
-			color: #666;
+			color: $dark-mode-background;
+		}
+
+		&:disabled {
+			opacity: 0.3;
 			cursor: default;
 		}
 	}

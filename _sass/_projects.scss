@@ -31,6 +31,11 @@
             display: flex;
             flex-direction: column;
 
+            @media (prefers-color-scheme: dark) {
+                box-shadow: none;
+                border-color: $dark-mode-border-color;
+            }
+
             *:last-child {
                 margin-bottom: 0;
             }
@@ -74,15 +79,19 @@
             }
 
             a::after {
-                content: "";
+                content: '';
                 display: inline-block;
                 width: 0.5em;
                 height: 0.5em;
-                background: url("/img/out.svg") no-repeat;
+                background: url('/img/out.svg') no-repeat;
                 background-size: contain;
                 vertical-align: middle;
                 margin-top: -0.2rem;
                 margin-left: 0.3rem;
+
+                @media (prefers-color-scheme: dark) {
+                    background-image: url('/img/out-reverse.svg');
+                }
             }
         }
 

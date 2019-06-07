@@ -9,6 +9,10 @@ ul.list {
         margin: 0;
         font-size: 1.4rem;
 
+        @media (prefers-color-scheme: dark) {
+            border-color: $dark-mode-border-color;
+        }
+
         &:first-child {
             padding-top: 0;
         }
@@ -38,6 +42,10 @@ ul.list {
                     vertical-align: middle;
                     margin-top: -0.2rem;
                     margin-left: 0.3rem;
+
+                    @media (prefers-color-scheme: dark) {
+                        background-image: url('/img/out-reverse.svg');
+                    }
                 }
             }
         }

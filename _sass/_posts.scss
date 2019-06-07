@@ -16,6 +16,10 @@
     background: #fff;
     padding: 0.75rem 0;
     margin: 0;
+
+    @media (prefers-color-scheme: dark) {
+      background: $dark-mode-background;
+    }
   }
 
   ul {
@@ -115,16 +119,20 @@
 
     a {
       border: 1px solid transparent;
-      background: #282a36;
+      background: $dark-mode-background;
       color: #fff;
       padding: 0.4rem 1rem;
       border-radius: 0.25em;
       display: block;
 
+      @media (prefers-color-scheme: dark) {
+        border-color: $dark-mode-border-color;
+      }
+
       &:hover {
-        border-color: #282a36;
+        border-color: $dark-mode-background;
         background: #fff;
-        color: #282a36;
+        color: $dark-mode-background;
       }
     }
   }
@@ -245,6 +253,10 @@
       border-radius: 0.2em;
       word-wrap: break-word;
 
+      @media (prefers-color-scheme: dark) {
+        background: #1a1c24;
+      }
+
       @media screen and (min-width: 37.5em) {
         font-size: 1.1rem;
       }
@@ -330,6 +342,11 @@
   padding: 1.2em;
   display: flex;
 
+  @media (prefers-color-scheme: dark) {
+    box-shadow: none;
+    border-color: $dark-mode-border-color;
+  }
+
   @media screen and (min-width: 30em) {
     padding: 1.3em 1.6em;
   }
@@ -378,15 +395,19 @@
     }
 
     &::after {
-      content: "";
+      content: '';
       height: 13px;
       width: 8px;
-      background: url("/img/arrow.svg") no-repeat;
+      background: url('/img/arrow.svg') no-repeat;
       background-position: center;
       background-size: cover;
       margin-top: 0.1rem;
       margin-left: 0.5rem;
       display: inline-block;
+
+      @media (prefers-color-scheme: dark) {
+        background-image: url('/img/arrow-reverse.svg');
+      }
     }
   }
 }

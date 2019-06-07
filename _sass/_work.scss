@@ -10,6 +10,11 @@
     padding: 1rem 1.2rem 1.5rem;
     margin-bottom: 1.5rem;
 
+    @media (prefers-color-scheme: dark) {
+        background: none;
+        border: 1px solid $dark-mode-border-color;
+	}
+
     @media screen and (min-width: 30em) {
         padding: 1.2rem 1.5rem 1.5rem;
     }
@@ -61,6 +66,12 @@
             display: flex;
             flex-direction: column;
 
+            @media (prefers-color-scheme: dark) {
+                box-shadow: none;
+                border: none;
+                background: rgba(255, 255, 255, 0.05);
+            }
+
             @media screen and (min-width: 30em) {
                 padding: 1.1em 1.5em;
             }
@@ -81,6 +92,10 @@
             margin: auto 0 1rem;
             align-self: flex-start;
             word-break: break-word;
+
+            @media (prefers-color-scheme: dark) {
+                background: $dark-mode-background;
+            }
 
             &:hover {
                 text-decoration: underline;
