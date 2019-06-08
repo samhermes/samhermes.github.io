@@ -14,6 +14,9 @@ collections:
   lists:
     title: Lists
     output: true
+  category:
+    title: Category
+    output: true
   uploads:
     title: Uploads
     output: true
