@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Upgrading from Gulp 3 to 4
-date: 2018-11-11
-categories: [JavaScript]
+date: 2018-11-11 00:00:00 Z
+categories:
+- JavaScript
+layout: post
 custom_js: prism
 ---
+
 We love when things just keep getting better! Gulp 4 has many new features, and with just a few changes to `gulpfile.js`, it’s easy to make the upgrade. Gulp 4 was officially released on December 31, 2017.
 
 The biggest change is in how tasks are ordered. Previously, if there was a list of tasks that you wanted to complete, they would happen sequentially. Now, with a mixture of `gulp.series()` and `gulp.parallel()`, you can be a little more specific. `gulp.series()` will complete tasks sequentially, like before, and `gulp.parallel()` will complete them at the same time.

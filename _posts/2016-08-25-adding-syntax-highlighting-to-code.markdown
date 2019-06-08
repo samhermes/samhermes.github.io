@@ -1,10 +1,12 @@
 ---
+title: Adding syntax highlighting to code
+date: 2016-08-25 00:00:00 Z
+categories:
+- JavaScript
 layout: post
-title:  Adding syntax highlighting to code
-date:   2016-08-25
-categories: [JavaScript]
 custom_js: prism
 ---
+
 When I started working on the last iteration of my site, I knew I was going to need to figure out how to display code snippets. I considered using Github Gists or Codepen, but they both seemed to be a bit overkill. Also, I wanted control over the appearance and formatting.
 
 If I wasn’t going to be embedding the code, that meant I would need to add it directly to the post, wrap it in `<pre>` tags, and style it. I could handle the first two steps, but needed help styling it. There are a number of JavaScript libraries that will apply syntax highlighting to your code, but I landed on [Prism.js](http://prismjs.com). It was the lightest option, and was the easiest to tweak the styles of. I am using the Okaidia theme and added PHP to the list of default languages.

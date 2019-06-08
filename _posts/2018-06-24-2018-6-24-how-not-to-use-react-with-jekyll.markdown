@@ -1,9 +1,12 @@
 ---
-layout: post
 title: How not to use React with Jekyll
-date: 2018-06-24
-categories: [React, Jekyll]
+date: 2018-06-24 00:00:00 Z
+categories:
+- React
+- Jekyll
+layout: post
 ---
+
 To lay the groundwork a little, this site uses Jekyll and is hosted on GitHub Pages. Whenever I make a new project that I want to include on the site, I just create a new page in markdown and build out from there. When I made my reading list app, I used Vue and included that without issue. React, on the other hand, has proven to be a little more complex. Which, typical. For this project, I wanted to display information about upcoming SpaceX launches.
 
 The ever-popular Create React App makes it really easy to get started with React. It can be installed globally with `npm install -g create-react-app`. Then, to start this project, I ran `create-react-app next-spacex-launch` in the root of my site. This created a new directory and placed a very simple app in it, and then started up a development server. So, with my Jekyll site running, I had the site at `localhost:4000` and the React app running at `localhost:3000`. Neat, but I wanted React to be running at the subdirectory address. Instead, it was inside of a `/build` folder within that subdirectory. So, going to /next-space-launch was a 404.

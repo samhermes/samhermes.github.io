@@ -1,7 +1,8 @@
 ---
-layout: list
 title: Email Newsletters
+layout: list
 ---
+
 * ## Dense Discovery
   [densediscovery.com](https://www.densediscovery.com/)
 * ## Frontend Focus

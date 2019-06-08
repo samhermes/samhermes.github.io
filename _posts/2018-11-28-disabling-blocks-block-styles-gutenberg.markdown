@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Disabling blocks and block styles in Gutenberg
-date: 2018-11-28
-categories: [WordPress]
+date: 2018-11-28 00:00:00 Z
+categories:
+- WordPress
+layout: post
 custom_js: prism
 ---
+
 As with most things involving Gutenberg, this could change, and may not be best practice later on, but it's what I've found to work for the time being. Both blocks and block styles can be disabled through JavaScript, using `wp.domReady()`.
 
 First things first, a JavaScript file needs to be enqueued in the Gutenberg editor, which can be accomplished by hooking into `enqueue_block_editor_assets`.

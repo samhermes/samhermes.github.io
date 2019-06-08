@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Lazy loading images
-date: 2018-03-21
-categories: [JavaScript]
+date: 2018-03-21 00:00:00 Z
+categories:
+- JavaScript
+layout: post
 custom_js: prism
 ---
+
 First things first, we needn’t write a lazy loading script ourselves. There are so many options out there. For many people, having a non-javascript fallback isn’t too much of a concern. But, I am not most people. This led me to lazyload.js, which just so happens to be the first result on Google for “lazy load script”. Maybe I am most people.
 
 So, we include lazyload.js in the footer of the page, and then we call `lazyload();`. I’ve modified my copy of the lazyload.js script to include this in the bottom of the file, so that it gets called right after it loads, but it could also be called in the footer of the page like so:

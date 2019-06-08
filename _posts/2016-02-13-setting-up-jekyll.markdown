@@ -1,10 +1,12 @@
 ---
+title: Setting up Jekyll
+date: 2016-02-13 07:15:00 Z
+categories:
+- Jekyll
 layout: post
-title:  Setting up Jekyll
-date:   2016-02-13 01:15:00 -0600
-categories: [Jekyll]
 custom_js: prism
 ---
+
 I recently switched this site to Jekyll, and I thought I'd share the setup process. Jekyll was a bit slow the last time I used it, so I was excited to find that the 3.0.0 update included speed improvements that make updates available in the browser almost immediately. Here are some of the configuration changes I made outside of the defaults:
 
 - Changed the permalink structure to `/posts/:title/`. I made this update in config.yml, refreshed the site, and nothing changed. A little digging, and I found out that changes to config.yml will not be processed while `jekyll serve` is running. You’ll need to ctrl-c and `jekyll serve` again.

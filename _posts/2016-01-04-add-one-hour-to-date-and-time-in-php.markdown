@@ -1,9 +1,10 @@
 ---
+title: Add 1 hour to date & time in PHP
+date: 2016-01-04 18:00:00 Z
 layout: post
-title:  Add 1 hour to date & time in PHP
-date:   2016-01-04 12:00:00 -0600
 custom_js: prism
 ---
+
 ```php
 strtotime($time . '+ 1 hour');
 ```

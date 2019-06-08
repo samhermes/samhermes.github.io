@@ -1,9 +1,11 @@
 ---
-layout: post
 title: CSS skills should be valued as much as JavaScript skills
-categories: [CSS]
-date: 2017-12-20
+date: 2017-12-20 00:00:00 Z
+categories:
+- CSS
+layout: post
 ---
+
 Honestly, this should have just been a tweet, because it’s as simple as that. However, I deleted my account so we’re just going to have to give it deeper consideration.
 
 ## Why do I feel this way?

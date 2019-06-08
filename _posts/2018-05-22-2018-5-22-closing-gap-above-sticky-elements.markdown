@@ -1,9 +1,11 @@
 ---
-layout: post
 title: Closing the gap above sticky elements
-date: 2018-05-22
-categories: [CSS]
+date: 2018-05-22 00:00:00 Z
+categories:
+- CSS
+layout: post
 ---
+
 `position: sticky` is fantastic, and browser support is increasing. However, one little annoyance that keeps happening is that a small gap will appear above an element while it is fixed (as in, it’s stuck to the top of the viewport). At the moment, this is only happening in Chrome, which is convenient, because most everyone uses Chrome.
 
 This issue is most visible on elements that stick to the top of the viewport while a user scrolls down. If the element has a solid background color, the gap between the element and the top of the viewport allows the content behind the element to be seen scrolling by. This, of course, is only an issue when the element with `position: sticky` is currently fixed.

@@ -1,10 +1,13 @@
 ---
-layout: post
 title: Submitting an accessibility-ready theme to WordPress
-date: 2018-05-11
-categories: [WordPress, Accessibility]
+date: 2018-05-11 00:00:00 Z
+categories:
+- WordPress
+- Accessibility
+layout: post
 custom_js: prism
 ---
+
 *This post goes with my talk at WordCamp St. Louis.*
 
 About 2 years ago, I got the idea that I would create and submit my own theme to the official WordPress theme directory. I was curious about the process, and what I could learn from having a theme reviewed.

@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Communicating about the web
-date: 2017-05-06
+date: 2017-05-06 00:00:00 Z
+layout: post
 ---
+
 The longer that I work in web development, the more time I spend thinking about the communication that surrounds the work I’m doing. How do I talk about what I’ve done? How do I best explain how to use a feature or tool? What happens when I’m no longer working on this project? The language that we use, whether we’re talking to another developer, a designer, or a user, is really important.
 
 For communicating with other developers, it just gets more and more important to be succinct. The fewer words I can use to explain something, the better. This is true in commit messages, code comments, and documentation. I know it’s important because I really appreciate it when others do it. It might take me a little more time to edit, but depending on how many people are involved, it can save a lot of others’ time.

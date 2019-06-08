@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Replacing Moment.js with date-fns
-date: 2018-11-15
-categories: [React]
+date: 2018-11-15 00:00:00 Z
+categories:
+- React
+layout: post
 custom_js: prism
 ---
+
 In my [Next SpaceX Launch](https://samhermes.com/next-spacex-launch/) app, data is pulled from a [SpaceX API](https://github.com/r-spacex/SpaceX-API). It returns date and time information for each launch, which needs to be formatted before being displayed. When I started on this project, I quickly found Moment.js and determined that it could get the job done. It was easy to format a date with the following:
 
 ```js

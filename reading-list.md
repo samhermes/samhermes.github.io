@@ -1,10 +1,11 @@
 ---
-layout: page
 title: Reading List
+layout: page
 custom_js:
 - js/vue.min
 - js/reading-list
 ---
+
 <div id="app">
 
 <div class="status-toggle-wrap">

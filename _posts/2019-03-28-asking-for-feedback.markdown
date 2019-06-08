@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Asking for feedback
-date: 2019-03-28
+date: 2019-03-28 00:00:00 Z
+layout: post
 ---
+
 Feedback is a topic that comes up all the time when working with a team. I definitely know its value and appreciate it when it comes, but it’s difficult to both remember to ask for it and to stay open to it.
 
 First off, asking for someone’s opinion of your work can be pretty scary, and very easy to avoid as well. If you don’t ask, you won’t find out that it’s bad. Why would you punish yourself? Like most things, my default around this seems to be remaining quiet. The problem with this is that feedback helps us grow, and growing is good. It helps us do better next time.

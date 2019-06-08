@@ -1,10 +1,12 @@
 ---
+title: Using vertical height media queries with fixed headers
+date: 2016-01-03 18:00:00 Z
+categories:
+- CSS
 layout: post
-title:  Using vertical height media queries with fixed headers
-date:   2016-01-03 12:00:00 -0600
-categories: [CSS]
 custom_js: prism
 ---
+
 On a site with tall pages, setting up a fixed header can make a lot of sense. Why not use that extra screen real estate? The philosophies of responsive design can and should apply to this as well. Screen height should be taken into account, and fixed headers should be disabled if there is not enough height for them to be useful (although, I would argue that they are never useful).
 
 Let's say that the fixed header on a site is 80px tall. Nothing too unruly, but it might get in the way of someone on a smaller laptop as they are browsing your site. In this example, you could set the header to fixed if the viewport is at least 800px tall. Any shorter and let that header scroll away out of sight.

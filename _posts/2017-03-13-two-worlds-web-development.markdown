@@ -1,8 +1,9 @@
 ---
-layout: post
 title: The two worlds of web development
-date: 2017-03-13
+date: 2017-03-13 00:00:00 Z
+layout: post
 ---
+
 There’s a big divide in the web development community that doesn’t get discussed enough. It’s roughly the difference between those who develop sites for informational purposes and those who develop sites that are applications. In some ways, it’s the divide between front end and back end development. It’s a bit difficult to draw a line between the two worlds, but informational sites are usually those for organizations, businesses, government, etc., and applications are properties like Airbnb, Facebook, and Google Docs. Interactivity, such as filtering, liking, saving, editing, or sorting, is usually what takes it from informational to application. The way we talk about and teach web development often mixes these two or makes no distinction.
 
 There are fundamental differences in the way we approach development in the two worlds. I’ve often gotten caught in this myself. Developing CSS for a web application is infinitely more complex than developing CSS for a static site mostly consisting of pages. Typically, if a project has a small team of developers working on it, CSS naming techniques such as BEM or OOCSS are not necessary. In fact, they are likely adding undue complexity and bloat to the site. In addition, a future developer would need to be briefed on how CSS works in that specific project.

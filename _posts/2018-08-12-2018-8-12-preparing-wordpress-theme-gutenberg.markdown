@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Preparing a WordPress theme for Gutenberg
-date: 2018-08-12
-categories: [WordPress]
+date: 2018-08-12 00:00:00 Z
+categories:
+- WordPress
+layout: post
 custom_js: prism
 ---
+
 As the launch of Gutenberg gets closer and closer, now is as good a time as any to make preparations. My theme that is live in the theme directory, [Halle](https://wordpress.org/themes/halle/), works fairly well with Gutenberg without any changes, but there are some small modifications that I’d like to make to improve the overall experience and to take full advantage of what Gutenberg offers.
 
 ## Matching editor styles to the front end

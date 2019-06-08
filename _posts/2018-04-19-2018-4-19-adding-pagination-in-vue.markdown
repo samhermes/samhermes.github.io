@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Adding pagination in Vue
-date: 2018-04-19
-categories: [Vue]
+date: 2018-04-19 00:00:00 Z
+categories:
+- Vue
+layout: post
 custom_js: prism
 ---
+
 So, I’ve been reading too much. The reading list that I’ve been maintaining has grown to an unwieldy length (I’m kind of making up problems to solve at this point…). To remedy this, we need pagination!
 
 Much like when I was adding a loading state, searching Google for help in this project just brought back a lot of packages that I could add to Vue. Not so fetch. A little further down in the results, I found an [article by Denny Headrick](https://medium.com/@denny.headrick/pagination-in-vue-js-4bfce47e573b) that laid out a simple implementation. Like the loading state, I didn’t want to load in any superfluous code for something as (supposedly) simple as pagination, plus I wanted to be able to understand a little bit about what was going on.

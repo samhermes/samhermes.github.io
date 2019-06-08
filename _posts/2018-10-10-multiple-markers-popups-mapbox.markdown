@@ -1,10 +1,12 @@
 ---
-layout: post
 title: How to add multiple default markers with popups in Mapbox GL JS
-date: 2018-10-10
-categories: [JavaScript]
+date: 2018-10-10 00:00:00 Z
+categories:
+- JavaScript
+layout: post
 custom_js: prism
 ---
+
 To create my [travel map](https://samhermes.com/travel-map), I used Mapbox GL JS. After the map embed loads from Mapbox, it fires off an ajax request to a WordPress site where the location data is stored. The map gets the response in JSON, which is then used to build a geoJSON object that the map will understand. From there, adding the data to the map is fairly easy, if you know what you’re doing.
 
 Adding a single marker to a Mapbox embed is straightforward. The Mapbox documentation site provides a [working example](https://www.mapbox.com/mapbox-gl-js/api/#marker) that can be emulated, but doesn’t give explicit instructions for what to do if you have multiple points. In my case, I also wanted to add a popup for each of the markers with a title and visit count.

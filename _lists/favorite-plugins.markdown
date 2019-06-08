@@ -1,7 +1,8 @@
 ---
-layout: list
 title: Favorite WordPress Plugins
+layout: list
 ---
+
 * ## Broken Link Checker
   [wordpress.org](https://wordpress.org/plugins/broken-link-checker)
 * ## Disable Comments

@@ -1,8 +1,9 @@
 ---
+title: Designing for every moment
+date: 2016-01-02 18:00:00 Z
 layout: post
-title:  Designing for every moment
-date:   2016-01-02 12:00:00 -0600
 ---
+
 Responsive design is truly about each and every point in between the smallest supported viewport and the largest, which leaves a lot of possibilities. If truly designing for a fully responsive experience, you should give attention to the awkward moments of change. One of those moments is when an element comes into contact with the edge of the screen.
 
 If there is a centered image on the page with no border or additional styles around it, what happens when the width of the browser window is about 10px wider than the image? It leaves a small gutter along each side. Is this an issue? Maybe not. I still think it deserves consideration.

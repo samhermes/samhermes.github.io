@@ -1,10 +1,14 @@
 ---
-layout: post
 title: Explaining accessible modals
-date: 2017-08-18
-categories: [JavaScript, Components, Accessibility]
+date: 2017-08-18 00:00:00 Z
+categories:
+- JavaScript
+- Components
+- Accessibility
+layout: post
 custom_js: prism
 ---
+
 Accessibility on the web is tricky, and modals are even trickier. Fortunately, there seem to be quite a few resources for getting there, one being [Frend](https://frend.co). It includes a component for an accessible modal that provides a small JavaScript library that hooks up to a modal and takes care of the rest. Only problem is that it’s a little too component-ized to understand what’s going on under the hood. The documentation says that you can just call `var myModal = Frdialogmodal();` and you’re good to go. But what’s really happening, and how might we adapt it for our own use?
 
 Before I dig into this, I think it’s worth pointing out that “modal” is sort of a loose definition of what this will work for. In my current project, it’s less of a modal and more of a change of focus. In the Frend component, the main work that the JavaScript is doing is keeping the focus within the modal content while it is open and then putting the focus back where it was when the modal is closed. Someone who is tabbing through the site should be able to enter the context of the modal and then get back out of it when they’re ready. This works for modals or any event where you might be shifting context based on user input.

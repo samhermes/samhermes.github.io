@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Notes from WordCamp US 2018
-date: 2018-12-13
-categories: [WordPress]
+date: 2018-12-13 00:00:00 Z
+categories:
+- WordPress
+layout: post
 custom_js: prism
 ---
+
 <h2 class="margin-bottom-zero">Thinking Like a Front-End Developer</h2>
 
 *Chris Coyier*

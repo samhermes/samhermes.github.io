@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Adding a loading state to Reading List
-date: 2018-02-27
-categories: [Vue]
+date: 2018-02-27 00:00:00 Z
+categories:
+- Vue
+layout: post
 custom_js: prism
 ---
+
 This is a continuation of my [previous post about a Vue app](https://samhermes.com/posts/small-vue-app-reading-list/) I created for the reading list on this site.
 
 After I got the books displaying, the first thing I felt was missing was a loading state. It takes a second (or more, depending on connection speed) for the books to load in, and in the meantime, there’s just a white screen. Even on this super simple app, that’s not a great experience.

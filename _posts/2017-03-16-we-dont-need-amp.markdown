@@ -1,8 +1,9 @@
 ---
-layout: post
 title: We don’t need AMP
-date: 2017-03-16
+date: 2017-03-16 00:00:00 Z
+layout: post
 ---
+
 [Episode #248 of Shop Talk Show](http://shoptalkshow.com/episodes/248-amp/) is all about AMP (accelerated mobile pages) and how the project relates to the web at large. After listening, I have some thoughts. It’s made fairly clear in the episode that AMP is a crutch used by publishers who have lost control of their website’s performance. AMP has a very tight set of constraints built into it that prioritize performance. Comparing it to a traditional website, it makes sense why it is so effective. The defeating part of it is that it doesn’t have to exist. We can make pages that are better than AMP on the web.
 
 Development teams have been fighting constraints as long as the web has existed, and sometimes performance just doesn’t win out. Now they’ve been presented with, essentially, an easy way out. Instead of reprioritizing performance internally, AMP can be used to make the case for performance, and it wins out because it puts you in a good place with Google. This isn’t a good for the long-term.

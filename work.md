@@ -1,6 +1,6 @@
 ---
-layout: page
 title: Work
+layout: page
 ---
 
 <div class="work-group">

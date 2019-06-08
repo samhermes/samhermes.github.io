@@ -1,10 +1,12 @@
 ---
-layout: post
 title: Adding dark mode support
-date: 2019-06-06
-categories: [CSS]
+date: 2019-06-06 00:00:00 Z
+categories:
+- CSS
+layout: post
 custom_js: prism
 ---
+
 I just pushed an update to my site to add support for dark mode. If a user visits the site while their device is set to prefer a dark color scheme, they'll receive a specially designed version of the site. I was inspired to dig into this after viewing a WWDC video about [dark mode and web content](https://developer.apple.com/videos/play/wwdc2019/511/).
 
 It's a super easy to add styles for dark mode using `prefers-color-scheme`. A rule set in Sass would look like this:

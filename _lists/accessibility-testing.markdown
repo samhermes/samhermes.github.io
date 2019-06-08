@@ -1,7 +1,8 @@
 ---
-layout: list
 title: Accessibility Testing Tools
+layout: list
 ---
+
 * ## Axe
   [deque.com/axe](https://www.deque.com/axe/)
 * ## Koa11y

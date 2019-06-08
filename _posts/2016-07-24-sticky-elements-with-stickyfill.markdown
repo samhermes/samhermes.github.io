@@ -1,10 +1,13 @@
 ---
+title: Sticky elements with Stickyfill
+date: 2016-07-24 00:00:00 Z
+categories:
+- JavaScript
+- CSS
 layout: post
-title:  Sticky elements with Stickyfill
-date:   2016-07-24
-categories: [JavaScript, CSS]
 custom_js: prism
 ---
+
 Sticky elements seem to be everywhere, following you wherever you scroll. There are many ways to implement sticky positioning, but as support comes to browsers natively, the best way right now is to use a polyfill. This is where Stickyfill comes in. If `position: sticky` is not supported, it mimics the behavior. As soon as support comes to all major browsers, the polyfill can be removed. At the moment, it is supported in Firefox and Safari, and is behind a flag in Chrome and Opera. Considering that it is most commonly used on larger screens, the support is strong.
 
 You can [download Stickyfill on Github](https://github.com/wilddeer/stickyfill). There is a demo and a few use cases provided. I’m sure there are some cases where this isn’t the best option, but I think the polyfill approach is best in most implementations.

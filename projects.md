@@ -1,7 +1,8 @@
 ---
-layout: default
 title: Projects
+layout: default
 ---
+
 <div class="contain">
 	<header class="page-header">
 		<h1 class="page-title">Projects</h1>

@@ -1,8 +1,9 @@
 ---
+title: High density screens and web performance
+date: 2016-12-05 00:00:00 Z
 layout: post
-title:  High density screens and web performance
-date:   2016-12-05
 ---
+
 High density screens and the web are at odds. On one side, we want sites to look as crisp as possible, no matter where they are being viewed, but on the other hand, performance is incredibly important. Actually, most important.
 
 Say that we begin preparing images for 2x devices. We serve up images that are four times bigger in file size, and they look great on a Retina MacBook Pro. That's great. But, look at it on a 5K iMac, and we're essentially back to square one. Also, we forgot to ask, but did that MacBook Pro user want to download an image that was four times bigger? Maybe they were on a slow connection and did not really care to. Should we be making those decisions for them at this point? I think we should be waiting for browsers to get smarter about this.
