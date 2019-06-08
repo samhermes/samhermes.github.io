@@ -8,8 +8,14 @@ title: Projects
 	</header>
 	<ul class="post-list">
 	  {% for project in site.projects reversed %}
+		{% if project.external_url %}
+			{% assign project_link = project.external_url %}
+		{% else %}
+			{% assign project_link = project.permalink | prepend: site.baseurl %}
+		{% endif %}
+
 	    <li>
-	      <h2 class="project-title"><a class="post-link" href="{{ project.permalink | prepend: site.baseurl }}">{{ project.title }}</a></h2>
+	      <h2 class="project-title"><a class="post-link" href="{{ project_link }}">{{ project.title }}</a></h2>
       	<p class="project-description">{{ project.description }}</p>
 
 				{% if project.links %}
