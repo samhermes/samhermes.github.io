@@ -11,6 +11,9 @@ collections:
   projects:
     title: Projects
     output: false
+  lists:
+    title: Lists
+    output: true
   uploads:
     title: Uploads
     output: true
