@@ -2,6 +2,9 @@
 title: Sam Hermes
 timezone: UTC
 collections:
+  lists:
+    title: Lists
+    output: true
   photos:
     title: Photos
     output: false
@@ -11,9 +14,6 @@ collections:
   projects:
     title: Projects
     output: false
-  lists:
-    title: Lists
-    output: true
   uploads:
     title: Uploads
     output: true
