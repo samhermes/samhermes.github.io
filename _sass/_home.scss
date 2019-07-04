@@ -6,14 +6,14 @@
     .intro {
         background: $dark-mode-background;
         color: #fff;
-        margin-bottom: 2rem;
+        margin-bottom: 2.5rem;
 
         @media (prefers-color-scheme: dark) {
             border-bottom: 1px solid $dark-mode-border-color;
         }
 
         @media screen and (min-width: 48em) {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .intro-text {

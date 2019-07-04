@@ -6,12 +6,12 @@ layout: default
 <div class="intro">
   <div class="intro-text">
     <p>Hello! I'm Sam, a front-end developer in St. Louis. Here, I write as I learn about CSS, WordPress, JavaScript, accessibility, and more.</p>
-    <a class="cta" href="/about">About Me</a>
+    <a class="cta" href="/about">About</a>
   </div>
 </div>
 
 <div class="home-posts">
-  <h2>Recent Posts</h2>
+  <h2 class="screen-reader-text">Recent Posts</h2>
 
   <ul class="post-list">
   {% for post in site.posts limit:5 %}
