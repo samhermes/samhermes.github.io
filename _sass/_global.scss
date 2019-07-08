@@ -26,6 +26,10 @@
     padding: 0.7em 1.65em;
   }
 
+  @media (prefers-color-scheme: dark) {
+    border-bottom: 1px solid $dark-mode-border-color;
+  }
+
   .contain {
     display: flex;
     align-items: center;
@@ -97,6 +101,10 @@
 
   @media screen and (min-width: 45.625em) {
     padding: 1em 1.65em;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    border-top: 1px solid $dark-mode-border-color;
   }
 
   .contain {

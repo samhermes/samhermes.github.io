@@ -1,19 +1,19 @@
 .page-home {
+    .site-header {
+        @media (prefers-color-scheme: dark) {
+            border-bottom: none;
+        }
+    }
+
     .page {
-        padding-bottom: 2rem;
+        background: transparent;
     }
 
     .intro {
-        background: $dark-mode-background;
         color: #fff;
-        margin-bottom: 2.5rem;
 
         @media (prefers-color-scheme: dark) {
             border-bottom: 1px solid $dark-mode-border-color;
-        }
-
-        @media screen and (min-width: 48em) {
-            margin-bottom: 4rem;
         }
 
         .intro-text {
@@ -29,18 +29,18 @@
         }
 
         p {
-            font-size: 1.3rem;
+            font-size: 1.6rem;
             font-weight: 400;
-            margin: 0 0 1em;
+            margin: 0 0 0.8rem;
             line-height: 1.3;
 
             @media screen and (min-width: 48em) {
-                font-size: 1.6rem;
+                font-size: 2rem;
             }
         }
 
         .cta {
-            font-size: 1.1rem;
+            font-size: 1.4rem;
             font-weight: 500;
             padding: 0.65rem 1.2rem 0.65rem 0;
             display: inline-block;
@@ -56,8 +56,8 @@
 
             &::after {
                 content: '';
-                height: 13px;
-                width: 8px;
+                height: 1.1875rem;
+                width: 0.5rem;
                 background: url('/img/arrow-reverse.svg') no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -69,6 +69,19 @@
     }
 
     .home-posts {
+        background: #fff;
+        padding: 2.5rem 0 2rem;
+
+        @media screen and (min-width: 48em) {
+            padding-top: 4rem;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            background: $dark-mode-background;
+        }
+    }
+
+    .home-posts-contain {
         margin: 0 auto;
         padding: 0 0 4rem;
         max-width: 42em;
