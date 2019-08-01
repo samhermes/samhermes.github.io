@@ -5,8 +5,7 @@ layout: default
 
 <div class="intro">
   <div class="intro-text">
-    <p>Hello! I'm Sam, a front-end developer in St. Louis. Here, I write as I learn about CSS, WordPress, JavaScript, accessibility, and more.</p>
-    <a class="cta" href="/about">About</a>
+    <p>Hello! I'm a front-end developer in St. Louis. Here, I write as I learn about CSS, WordPress, JavaScript, accessibility, and more.</p>
   </div>
 </div>
 
