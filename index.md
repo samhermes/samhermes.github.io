@@ -5,7 +5,8 @@ layout: default
 
 <div class="intro">
   <div class="intro-text">
-    <p>Hello! I'm a front-end developer in St. Louis. Here, I write as I learn about CSS, WordPress, JavaScript, accessibility, and more.</p>
+    <p>Front-End Developer</p>
+    <p class="city">Saint Louis</p>
   </div>
 </div>
 

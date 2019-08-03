@@ -7,6 +7,7 @@
 
     .intro {
         background: rgba(69, 106, 199, 0.03);
+        border-bottom: 1px solid rgba(29, 31, 36, 0.05);
 
         @media (prefers-color-scheme: dark) {
             background: transparent;
@@ -19,20 +20,27 @@
             padding: 2rem 0 1rem;
             width: 90%;
             position: relative;
+            text-align: center;
 
             @media screen and (min-width: 48em) {
-                padding: 2.5rem 0 2rem;
+                padding: 2.2rem 0;
             }
         }
 
         p {
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             font-weight: 400;
-            margin: 0 0 0.8rem;
+            margin: 0 0 0.5rem;
             line-height: 1.3;
 
-            @media screen and (min-width: 48em) {
-                font-size: 1.8rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &.city {
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                letter-spacing: 0.15rem;
             }
         }
     }
