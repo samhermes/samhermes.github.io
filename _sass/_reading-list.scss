@@ -34,7 +34,7 @@
 		}
 
 		@media (prefers-color-scheme: dark) {
-			border-color: $dark-mode-border-color;
+			border-color: $dark-border-color;
 
 			&.active {
 				border-color: #fff;
@@ -125,8 +125,8 @@ ul.book-list {
 	text-align: center;
 
 	button {
-		background: $dark-mode-background;
-		border: 1px solid $dark-mode-background;
+		background: $color-dark;
+		border: 1px solid $color-dark;
 		border-radius: 3px;
 		font-size: 1em;
 		padding: 0.4em 0.8em 0.43em;
@@ -136,7 +136,7 @@ ul.book-list {
 
 		@media (prefers-color-scheme: dark) {
 			background: #fff;
-			color: $dark-mode-background;
+			color: $color-dark;
 		}
 
 		&:disabled {

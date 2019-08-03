@@ -5,65 +5,34 @@
         }
     }
 
-    .page {
-        background: transparent;
-    }
-
     .intro {
-        color: #fff;
+        background: rgba(69, 106, 199, 0.03);
 
         @media (prefers-color-scheme: dark) {
-            border-bottom: 1px solid $dark-mode-border-color;
+            background: transparent;
+            border-bottom: 1px solid $dark-border-color;
         }
 
         .intro-text {
             max-width: 42em;
             margin: 0 auto;
-            padding: 2rem 0;
+            padding: 2rem 0 1rem;
             width: 90%;
             position: relative;
 
             @media screen and (min-width: 48em) {
-                padding: 3rem 0;
+                padding: 2.5rem 0 2rem;
             }
         }
 
         p {
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 400;
             margin: 0 0 0.8rem;
             line-height: 1.3;
 
             @media screen and (min-width: 48em) {
-                font-size: 2rem;
-            }
-        }
-
-        .cta {
-            font-size: 1.4rem;
-            font-weight: 500;
-            padding: 0.65rem 1.2rem 0.65rem 0;
-            display: inline-block;
-            color: #fff;
-
-            @media screen and (min-width: 48em) {
-                padding: 0.8rem 1.5rem 0.8rem 0;
-            }
-
-            &:hover {
-                text-decoration: underline;
-            }
-
-            &::after {
-                content: '';
-                height: 1.1875rem;
-                width: 0.5rem;
-                background: url('/img/arrow-reverse.svg') no-repeat;
-                background-position: center;
-                background-size: cover;
-                margin-top: 0.1rem;
-                margin-left: 0.5rem;
-                display: inline-block;
+                font-size: 1.8rem;
             }
         }
     }
@@ -73,17 +42,17 @@
         padding: 2.5rem 0 2rem;
 
         @media screen and (min-width: 48em) {
-            padding-top: 4rem;
+            padding-top: 3.5rem;
         }
 
         @media (prefers-color-scheme: dark) {
-            background: $dark-mode-background;
+            background: $color-dark;
         }
     }
 
     .home-posts-contain {
         margin: 0 auto;
-        padding: 0 0 4rem;
+        padding: 0 0 3rem;
         max-width: 42em;
         width: 90%;
 

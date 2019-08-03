@@ -10,7 +10,7 @@ ul.list {
         font-size: 1.4rem;
 
         @media (prefers-color-scheme: dark) {
-            border-color: $dark-mode-border-color;
+            border-color: $dark-border-color;
         }
 
         &:first-child {

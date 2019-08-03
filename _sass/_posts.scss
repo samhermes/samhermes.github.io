@@ -18,7 +18,7 @@
     margin: 0;
 
     @media (prefers-color-scheme: dark) {
-      background: $dark-mode-background;
+      background: $color-dark;
     }
   }
 
@@ -47,7 +47,7 @@
     }
 
     @media screen and (min-width: 62.5em) {
-      font-size: 1.6em;
+      font-size: 1.7em;
     }
   }
 }
@@ -119,20 +119,20 @@
 
     a {
       border: 1px solid transparent;
-      background: $dark-mode-background;
+      background: $color-dark;
       color: #fff;
       padding: 0.4rem 1rem;
       border-radius: 0.25em;
       display: block;
 
       @media (prefers-color-scheme: dark) {
-        border-color: $dark-mode-border-color;
+        border-color: $dark-border-color;
       }
 
       &:hover {
-        border-color: $dark-mode-background;
+        border-color: $color-dark;
         background: #fff;
-        color: $dark-mode-background;
+        color: $color-dark;
       }
     }
   }
@@ -144,11 +144,11 @@
 .post {
   margin: 0 auto;
   max-width: 42em;
-  padding: 2.6em 0 7.5em;
+  padding: 2rem 0 6rem;
   width: 90%;
 
   @media screen and (min-width: 45.625em) {
-    padding: 5% 0 12%;
+    padding: 3rem 0 6rem;
   }
 }
 
@@ -163,12 +163,17 @@
 .page-title {
   font-size: 1.8em;
   line-height: 1.2;
-  margin: 0 0 1em;
+  margin: 0 0 1.5rem;
   font-weight: 600;
+  color: $color-dark;
 
   @media screen and (min-width: 37.5em) {
     font-size: 2.3em;
     line-height: 1.25;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    color: #fff;
   }
 
   .page-reading-list & {
@@ -330,84 +335,5 @@
 
   code {
     font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
-}
-
-.about-me {
-  position: relative;
-  border-radius: 0.4em;
-  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
-  border: 1px solid #f4f4f4;
-  margin: 4rem 0 0;
-  padding: 1.2em;
-  display: flex;
-
-  @media (prefers-color-scheme: dark) {
-    box-shadow: none;
-    border-color: $dark-mode-border-color;
-  }
-
-  @media screen and (min-width: 30em) {
-    padding: 1.3em 1.6em;
-  }
-
-  img {
-    width: 3rem;
-    height: 3rem;
-    margin-right: 1rem;
-    padding: 0.3rem 0;
-    border-radius: 50%;
-
-    @media screen and (min-width: 30em) {
-      width: 4rem;
-      height: 4rem;
-      margin-right: 1.5rem;
-    }
-  }
-
-  p {
-    margin: 0 0 0.35rem;
-    line-height: 1.55;
-
-    @media screen and (min-width: 30em) {
-      font-size: 1.2rem;
-    }
-
-    &:last-child {
-      margin: 0;
-    }
-  }
-
-  .name {
-    margin-bottom: 0.2em;
-    font-weight: 500;
-    font-size: 1.4em;
-    line-height: 1.2;
-  }
-
-  a {
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 1.1rem;
-
-    &:hover {
-      text-decoration: underline;
-    }
-
-    &::after {
-      content: '';
-      height: 13px;
-      width: 8px;
-      background: url('/img/arrow.svg') no-repeat;
-      background-position: center;
-      background-size: cover;
-      margin-top: 0.1rem;
-      margin-left: 0.5rem;
-      display: inline-block;
-
-      @media (prefers-color-scheme: dark) {
-        background-image: url('/img/arrow-reverse.svg');
-      }
-    }
   }
 }

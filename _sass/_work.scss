@@ -12,7 +12,7 @@
 
     @media (prefers-color-scheme: dark) {
         background: none;
-        border: 1px solid $dark-mode-border-color;
+        border: 1px solid $dark-border-color;
 	}
 
     @media screen and (min-width: 30em) {
@@ -94,7 +94,7 @@
             word-break: break-word;
 
             @media (prefers-color-scheme: dark) {
-                background: $dark-mode-background;
+                background: $color-dark;
             }
 
             &:hover {
