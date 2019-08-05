@@ -1,13 +1,7 @@
 .page-home {
-    .site-header {
-        @media (prefers-color-scheme: dark) {
-            border-bottom: none;
-        }
-    }
-
     .intro {
         background: rgba(69, 106, 199, 0.03);
-        border-bottom: 1px solid rgba(29, 31, 36, 0.05);
+        border-bottom: 1px solid rgba(29, 31, 36, 0.04);
 
         @media (prefers-color-scheme: dark) {
             background: transparent;
@@ -54,7 +48,7 @@
         }
 
         @media (prefers-color-scheme: dark) {
-            background: $color-dark;
+            background: $color-medium;
         }
     }
 

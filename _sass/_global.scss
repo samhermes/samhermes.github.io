@@ -3,7 +3,7 @@
   min-height: calc(100vh - 7.66rem);
 
   @media (prefers-color-scheme: dark) {
-    background: $color-dark;
+    background: $color-medium;
   }
 
   .contain {
@@ -24,10 +24,6 @@
 
   @media screen and (min-width: 45.625em) {
     padding: 0.7em 1.65em;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    border-bottom: 1px solid $dark-border-color;
   }
 
   .contain {
@@ -120,10 +116,6 @@
     padding: 1em 1.65em;
   }
 
-  @media (prefers-color-scheme: dark) {
-    border-top: 1px solid $dark-border-color;
-  }
-
   .contain {
     display: flex;
     flex-wrap: wrap;
@@ -182,7 +174,7 @@
 
 .page-not-found {
   .page {
-    background: $color-dark;
+    background: $color-medium;
     text-align: center;
     display: flex;
     align-items: center;
