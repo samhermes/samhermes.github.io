@@ -1,6 +1,7 @@
 ---
 title: Dealing with mental health
 date: 2019-08-11 21:18:00 Z
+layout: post
 ---
 
 I felt an inclination to make this post title more specific. To add something like “while working full time” or “in tech.” Going deeper, maybe “as a result of repressing your sexuality due to your environment for most of your life.” You know, something like that. For the most part, though, I think it’s just plain old dealing with mental health! We’ve all got environments or situations that challenge us.
