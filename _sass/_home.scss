@@ -11,18 +11,18 @@
         .intro-text {
             max-width: 42em;
             margin: 0 auto;
-            padding: 2rem 0;
+            padding: 3rem 0;
             width: 90%;
             position: relative;
             text-align: center;
 
             @media screen and (min-width: 48em) {
-                padding: 3rem 0;
+                padding: 4rem 0;
             }
         }
 
         p {
-            font-size: 1.4rem;
+            font-size: 1.7rem;
             font-weight: 400;
             margin: 0 0 0.5rem;
             line-height: 1.3;
@@ -34,6 +34,7 @@
             &.city {
                 text-transform: uppercase;
                 font-size: 0.8rem;
+                font-weight: 500;
                 letter-spacing: 0.15rem;
                 color: #717276;
             }

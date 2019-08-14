@@ -21,6 +21,7 @@
 .site-header {
   padding: 0.7em 5%;
   margin: 0 auto;
+  background-color: $color-dark;
 
   @media screen and (min-width: 45.625em) {
     padding: 0.7em 1.65em;
@@ -111,6 +112,7 @@
   padding: 1em 5%;
   margin: 0 auto;
   position: relative;
+  background-color: $color-dark;
 
   @media screen and (min-width: 45.625em) {
     padding: 1em 1.65em;
