@@ -28,9 +28,6 @@
   }
 
   .contain {
-    max-width: 72em;
-    margin: 0 auto;
-
     @media screen and (min-width: 22.5em) {
       display: flex;
       align-items: center;
@@ -121,8 +118,6 @@
   .contain {
     display: flex;
     flex-wrap: wrap;
-    max-width: 72em;
-    margin: 0 auto;
   }
 
   .site-nav {
