@@ -156,14 +156,18 @@
 }
 
 .back-to {
-  margin-bottom: 0.3rem;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 600;
+  margin: 0 auto 0.3rem;
+  max-width: 42rem;
+  width: 90%;
 
-  &:hover {
-    text-decoration: underline;
+  a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

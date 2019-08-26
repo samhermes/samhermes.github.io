@@ -3,7 +3,7 @@ title: About
 layout: page
 ---
 
-<img class="headshot" src="/img/samhermes-large.jpg" alt="Sam Hermes headshot">
+<div><img class="headshot" src="/img/samhermes-large.jpg" alt="Sam Hermes headshot"></div>
 
 <p class="subhead">I believe in the power of the web to educate, inform, and connect.</p>
 
