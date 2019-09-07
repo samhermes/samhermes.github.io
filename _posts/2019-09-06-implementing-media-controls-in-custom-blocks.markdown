@@ -1,12 +1,13 @@
 ---
 title: Implementing media controls in custom blocks
 date: 2019-09-06 22:51:00 Z
+layout: post
 categories:
 - React
 - WordPress
+custom_js: prism
 ---
 
-# Implementing media controls in custom blocks
 I’ve been deep in block development for the past few months, and through that, I’ve had to learn a lot of stuff! It’s been really fun, and at times a little challenging. One of the most confusing parts has been media controls. There doesn’t seem to be a plug-and-play implementation that Gutenberg gives you, which is great for flexibility and not so great for times that you just want to get going.
 
 So, what do we want to be able to do?
@@ -32,6 +33,7 @@ Of course, only add the one you need, if that’s the case. However, we’re goi
 This is where things are a bit of a free-for-all, and you can really accomplish about anything that you’d like to. You could put all of the controls right in the block itself, in the block’s toolbar, or in the inspector controls in the sidebar. You could go absolutely mad!
 
 **Following WordPress**
+
 You needn’t look far to get an impression of how the core developers think that this should work. It’s never explicitly said anywhere, but looking at the Media & Text block, you can see that the initial image upload is handled within the block itself, and then updates to the image can be made through a button in the toolbar.
 
 I believe in following WordPress, so that’s where I'm going to take this. First, we need to add a couple of attributes to our block for the image URL.
@@ -62,10 +64,11 @@ Next, we can add a `mediaPlaceholder` to prompt the user to choose an image. Wit
 This gets you pretty far, but this really needs to be nested inside of a conditional that will handle displaying the image on the page after you’ve uploaded or chosen it.
 
 **Image conditional**
+
 In this implementation, the conditional can be fairly simple. We check the attribute that we’re storing the image URL in, and if it has a URL, we render the image, and if not, we display the media placeholder.
 
 ```js
-{mediaUrl ?
+{% raw %}{mediaUrl ?
   <div className="block-image" style={{
       backgroundImage: `url(${mediaUrl})`
   }}></div>
@@ -80,7 +83,7 @@ In this implementation, the conditional can be fairly simple. We check the attri
     accept="image/*"
     allowedTypes={['image']}
   />
-}
+}{% endraw %}
 ```
 
 You can see here that we’re sharing a class name between both the image markup and the media placeholder. This allows the styles to be shared between both. Depending on your block, this may not be what you’re needing. You could split this into two classes and style accordingly.
@@ -88,6 +91,7 @@ You can see here that we’re sharing a class name between both the image markup
 The major functional piece of the MediaPlaceholder element is the `onSelect` property. It accepts a callback function that handles the image upload process and stores the resulting image attributes.
 
 **Setting up the callback function**
+
 This is the part of the media control that really complicated things for me. It’s incredibly flexible, but leaves a lot to the developer. Maybe too much. `mediaUpload` and `mediaPlaceholder` are just components, and they do not carry much functionality with them. The callback function needs to pull out the appropriate media attributes after a user makes a selection.
 
 Looking at the Media & Text block in Gutenberg, the `onSelectMedia` seems fairly straightforward, apart from the `get` function that is used to pick apart the media attributes in order to retrieve the URL of a specific image size. My inclination here was to reproduce this without depending on Lodash, but I wasn’t able to make it happen. This is something I want to work on in the future.
@@ -122,6 +126,7 @@ onSelectMedia( media ) {
 With this, we’re nearly done. As soon as a user selects an image from the placeholder, it will be placed in the block due to our conditional. As soon as `mediaUrl` receives a value in state, it will equate to true. However, now that we have an image in our block, how do we change it?
 
 **Adding a media upload control to the toolbar**
+
 There are a number of ways to handle image modification. We could add our own button over the top of the image, add something to the inspector, or, the WordPress way, we could add a control to the block’s toolbar. You probably saw that coming.
 
 We’re already importing the media components, we just need a few more. First, we bring in `BlockControls`. It basically just acts a wrapper. In fact, [look at the source](https://github.com/WordPress/gutenberg/blob/master/packages/block-editor/src/components/block-controls/index.js), there’s hardly anything there. React is… interesting.
@@ -177,4 +182,4 @@ Hate to say it, but this may have been more information than one article could h
 - I showed how to output the image as a background. How would this be different for an image tag?
 - Getting back to my earlier question, can we handle image uploads without the Lodash dependency? Does it matter?
 - What if Gutenberg just did all of this for us?
-- How do I keep all of my other life memories in my brain if they are getting crowded out by useless React knowledge?
+- How do I keep all of my other life memories in my brain if they are getting crowded out by React info?
