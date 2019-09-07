@@ -275,18 +275,14 @@
   ul,
   ol {
     margin-bottom: 1.8rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (min-width: 62.5em) {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     & > li {
-      margin-bottom: 1em;
+      margin-bottom: 0;
       line-height: 1.6;
     }
   }
@@ -321,7 +317,7 @@
   }
 
   ul > li {
-    margin-bottom: 1em;
+    margin-bottom: 0;
     line-height: 1.6;
 
     pre {
