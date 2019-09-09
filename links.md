@@ -3,10 +3,11 @@ title: Links
 layout: default
 ---
 
+<header class="page-header">
+	<h1 class="page-title">Links</h1>
+</header>
+
 <div class="contain">
-	<header class="page-header">
-		<h1 class="page-title">Links</h1>
-	</header>
 	<ul class="post-list">
 	  {% for link in site.links reversed %}
 		{% if link.link %}
@@ -16,10 +17,10 @@ layout: default
 		{% endif %}
 
 	    <li>
-            <h2 class="link-title">
+			<span class="post-meta">{{ link.date | date: "%B %-d, %Y" }}</span>
+            <h2 class="post-title">
                 <a class="post-link" href="{{ link_url }}">{{ link.title }}</a>
             </h2>
-      	    <p class="link-description">{{ link.description }}</p>
 	    </li>
 	  {% endfor %}
 	</ul>
