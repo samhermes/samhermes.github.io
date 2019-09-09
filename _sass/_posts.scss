@@ -23,7 +23,7 @@
   }
 
   ul {
-    margin-top: 1rem;
+    margin-top: 2rem;
   }
 }
 
@@ -48,6 +48,14 @@
 
     @media screen and (min-width: 62.5em) {
       font-size: 1.7em;
+    }
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
@@ -148,7 +156,7 @@
   width: 90%;
 
   @media screen and (min-width: 45.625em) {
-    padding: 3rem 0 6rem;
+    padding: 4rem 0 6rem;
   }
 }
 
@@ -163,8 +171,8 @@
 .page-title {
   font-size: 1.8em;
   line-height: 1.2;
-  margin: 0 0 1.5rem;
-  font-weight: 600;
+  margin: 0 0 1.8rem;
+  font-weight: 500;
   color: $color-dark;
 
   @media screen and (min-width: 37.5em) {
@@ -178,10 +186,6 @@
 
   .page-reading-list & {
     margin-bottom: 0;
-  }
-
-  .page-about & {
-    margin-bottom: 0.5em;
   }
 }
 
@@ -271,18 +275,14 @@
   ul,
   ol {
     margin-bottom: 1.8rem;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
 
     @media screen and (min-width: 37.5em) {
-      font-size: 1.1rem;
-    }
-
-    @media screen and (min-width: 62.5em) {
-      font-size: 1.25rem;
+      font-size: 1.4rem;
     }
 
     & > li {
-      margin-bottom: 1em;
+      margin-bottom: 0;
       line-height: 1.6;
     }
   }
@@ -317,7 +317,7 @@
   }
 
   ul > li {
-    margin-bottom: 1em;
+    margin-bottom: 0;
     line-height: 1.6;
 
     pre {

@@ -7,6 +7,8 @@ layout: list
   [densediscovery.com](https://www.densediscovery.com/)
 * ## Frontend Focus
   [frontendfoc.us](https://frontendfoc.us/)
+* ## Future Crunch
+  [futurecrun.ch](https://futurecrun.ch/subscribe)
 * ## Web Design Weekly
   [web-design-weekly.com](https://web-design-weekly.com/)
 * ## wpMail.me

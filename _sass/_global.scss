@@ -28,9 +28,6 @@
   }
 
   .contain {
-    max-width: 72em;
-    margin: 0 auto;
-
     @media screen and (min-width: 22.5em) {
       display: flex;
       align-items: center;
@@ -75,11 +72,11 @@
 
   li {
     float: left;
-    font-size: 0.75em;
-    text-transform: uppercase;
+    font-size: 0.9rem;
 
     @media screen and (min-width: 33em) {
       margin-left: 1rem;
+      font-size: 1rem;
     }
 
     &:first-child {
@@ -121,8 +118,6 @@
   .contain {
     display: flex;
     flex-wrap: wrap;
-    max-width: 72em;
-    margin: 0 auto;
   }
 
   .site-nav {
@@ -161,14 +156,18 @@
 }
 
 .back-to {
-  margin-bottom: 0.3rem;
-  display: inline-block;
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  font-weight: 600;
+  margin: 0 auto 0.3rem;
+  max-width: 42rem;
+  width: 90%;
 
-  &:hover {
-    text-decoration: underline;
+  a {
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 

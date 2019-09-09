@@ -3,10 +3,11 @@ title: Lists
 layout: default
 ---
 
+<header class="page-header">
+	<h1 class="page-title">{{ page.title }}</h1>
+</header>
+
 <div class="contain">
-	<header class="page-header">
-		<h1 class="page-title">Lists</h1>
-	</header>
 	<ul class="list">
 	  {% for post in site.lists %}
 	    <li>
