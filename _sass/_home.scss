@@ -1,7 +1,6 @@
 .page-home {
     .intro {
-        background: rgba(69, 106, 199, 0.03);
-        border-bottom: 1px solid rgba(29, 31, 36, 0.04);
+        background: rgba(34, 57, 114, 0.03);
 
         @media (prefers-color-scheme: dark) {
             background: transparent;
@@ -17,13 +16,13 @@
             text-align: center;
 
             @media screen and (min-width: 48em) {
-                padding: 4rem 0;
+                padding: 5rem 0;
             }
         }
 
         p {
             font-size: 1.4rem;
-            font-weight: 400;
+            font-weight: 500;
             margin: 0 0 0.5rem;
             line-height: 1.3;
 
@@ -45,55 +44,117 @@
         }
     }
 
-    .home-posts {
-        background: #fff;
+    .home-contain {
+        max-width: 68rem;
+        margin: 0 auto;
+        width: 90%;
+        display: grid;
         padding: 2.5rem 0;
 
         @media screen and (min-width: 48em) {
+            grid-template-columns: 5fr 2fr;
+            grid-gap: 6rem;
             padding: 4rem 0;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            background: $color-medium;
         }
     }
 
-    .home-posts-contain {
-        margin: 0 auto;
-        max-width: 42em;
-        width: 90%;
+    .home-posts {
+        margin-bottom: 5rem;
 
-        .view-all {
-            width: 100%;
+        @media screen and (min-width: 48em) {
+            margin-bottom: 0;
+        }
+    }
 
-            a {
-                font-size: 1.1rem;
-                font-weight: 500;
-                padding: 0.65rem 1.2rem 0.65rem 0;
-                border-radius: 1.5rem;
+    h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        font-weight: 600;
+        margin: 0.38rem 0 2rem;
+    }
+
+    .sidebar-group {
+        margin-bottom: 5rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .sidebar-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            margin-bottom: 2rem;
+
+            &:last-child {
+                margin-bottom: 1.5rem;
+            }
+        }
+
+        &.list-list li {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .sidebar-title {
+        font-size: 1.4rem;
+        font-weight: 400;
+        margin-bottom: 0.2rem;
+    }
+
+    .project-description {
+        font-size: 0.9rem;
+        font-weight: 400;
+        margin: 0;
+    }
+
+    .sidebar-link {
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .view-all {
+        width: 100%;
+
+        a {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: rgb(0, 133, 221);
+            padding: 0.65rem 1.2rem 0.65rem 0;
+            border-radius: 1.5rem;
+            display: inline-block;
+
+            @media screen and (min-width: 48em) {
+                padding: 0.8rem 1.5rem 0.8rem 0;
+            }
+
+            &:hover {
+                text-decoration: underline;
+            }
+
+            &::after {
+                content: '';
+                height: 13px;
+                width: 8px;
+                background: url('/img/arrow.svg') no-repeat;
+                background-position: center;
+                background-size: cover;
+                margin-left: 0.5rem;
                 display: inline-block;
 
-                @media screen and (min-width: 48em) {
-                    padding: 0.8rem 1.5rem 0.8rem 0;
-                }
-
-                &:hover {
-                    text-decoration: underline;
-                }
-
-                &::after {
-                    content: '';
-                    height: 13px;
-                    width: 8px;
-                    background: url('/img/arrow.svg') no-repeat;
-                    background-position: center;
-                    background-size: cover;
-                    margin-left: 0.5rem;
-                    display: inline-block;
-
-                    @media (prefers-color-scheme: dark) {
-                        background-image: url('/img/arrow-reverse.svg');
-                    }
+                @media (prefers-color-scheme: dark) {
+                    background-image: url('/img/arrow-reverse.svg');
                 }
             }
         }
