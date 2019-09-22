@@ -2,6 +2,7 @@
 title: Home
 layout: default
 ---
+
 <div class="intro">
   <div class="intro-text">
     <p>Front-End Developer</p>
