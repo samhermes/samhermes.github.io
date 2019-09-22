@@ -3,7 +3,7 @@
   min-height: calc(100vh - 7.66rem);
 
   @media (prefers-color-scheme: dark) {
-    background: $color-medium;
+    background: $color-dark;
   }
 
   .contain {
@@ -175,7 +175,7 @@
 
 .page-not-found {
   .page {
-    background: $color-medium;
+    background: $color-dark;
     text-align: center;
     display: flex;
     align-items: center;

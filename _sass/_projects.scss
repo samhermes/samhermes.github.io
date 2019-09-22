@@ -83,6 +83,10 @@
                 }
             }
 
+            @media (prefers-color-scheme: dark) {
+                border-color: $dark-border-color;
+            }
+
             &::after {
                 content: '';
                 display: inline-block;
