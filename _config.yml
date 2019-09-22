@@ -5,9 +5,6 @@ collections:
   category:
     title: Category
     output: true
-  links:
-    title: Links
-    output: false
   lists:
     title: Lists
     output: true
