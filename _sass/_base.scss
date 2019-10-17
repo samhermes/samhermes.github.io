@@ -18,7 +18,7 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size} $base-font-family;
   color: $color-dark;
-  background-color: #fff;
+  background-color: $color-dark;
   background-position: top 4.4rem center;
   -webkit-text-size-adjust: 100%;
 

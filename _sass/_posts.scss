@@ -161,9 +161,9 @@
 }
 
 .post .post-meta {
-  font-size: 0.8em;
+  font-size: 0.9rem;
   font-weight: 500;
-  margin: 0 0 0.625em;
+  margin: 0 0 0.625rem;
   text-transform: uppercase;
 }
 
@@ -296,10 +296,12 @@
   }
 
   hr {
-    margin: 0 0 1.8rem;
+    margin: 3rem auto;
     border: 0;
-    height: 1px;
-    background: gainsboro;
+    height: 2px;
+    border-radius: 1px;
+    background: $color-dark;
+    max-width: 6rem;
   }
 }
 

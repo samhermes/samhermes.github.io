@@ -67,15 +67,16 @@
 
 .site-nav {
   list-style: none;
-  margin: 0 -0.625rem 0 auto;
+  margin: 0 0 0 auto;
   padding: 0;
 
   li {
     float: left;
     font-size: 0.9rem;
+    margin-left: 1rem;
 
     @media screen and (min-width: 33em) {
-      margin-left: 1rem;
+      margin-left: 2rem;
       font-size: 1rem;
     }
 
@@ -86,17 +87,13 @@
     a {
       color: #fff;
       display: block;
-      padding: 0.5rem;
-      border-radius: 0.4em;
+      padding: 0.4rem 0;
+      border-top: 2px solid transparent;
+      border-bottom: 2px solid transparent;
       font-weight: 500;
 
-      @media screen and (min-width: 33em) {
-        padding: 0.5rem 0.625rem;
-      }
-
       &:hover {
-        background: #fff;
-        color: $color-dark;
+        border-bottom: 2px solid #fff;
       }
     }
   }
