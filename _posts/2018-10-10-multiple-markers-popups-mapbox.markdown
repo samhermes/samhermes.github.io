@@ -7,7 +7,7 @@ layout: post
 custom_js: prism
 ---
 
-To create my [travel map](https://samhermes.com/travel-map), I used Mapbox GL JS. After the map embed loads from Mapbox, it fires off an ajax request to a WordPress site where the location data is stored. The map gets the response in JSON, which is then used to build a geoJSON object that the map will understand. From there, adding the data to the map is fairly easy, if you know what you’re doing.
+To create my travel map, I used Mapbox GL JS. After the map embed loads from Mapbox, it fires off an ajax request to a WordPress site where the location data is stored. The map gets the response in JSON, which is then used to build a geoJSON object that the map will understand. From there, adding the data to the map is fairly easy, if you know what you’re doing.
 
 Adding a single marker to a Mapbox embed is straightforward. The Mapbox documentation site provides a [working example](https://www.mapbox.com/mapbox-gl-js/api/#marker) that can be emulated, but doesn’t give explicit instructions for what to do if you have multiple points. In my case, I also wanted to add a popup for each of the markers with a title and visit count.
 
@@ -47,4 +47,4 @@ new mapboxgl.Marker()
     .addTo(map);
 ```
 
-An working version of this code can be [seen on Github](https://github.com/samhermes/samhermes.github.io/blob/master/js/travel-map.js#L42), where I customize the popup styles a bit. This is what is currently running my travel map.
+An archived, working version of this code can be [seen on Github](https://github.com/samhermes/samhermes.github.io/blob/e03be05ef9544bf4f5bc7d13b93c9ac709354cd9/js/travel-map.js), where I customize the popup styles a bit.
