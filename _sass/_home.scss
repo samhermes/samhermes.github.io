@@ -48,12 +48,12 @@
         margin: 0 auto;
         width: 90%;
         display: grid;
-        padding: 2.5rem 0;
+        padding: 2.5rem 0 4rem;
 
         @media screen and (min-width: 48em) {
             grid-template-columns: 5fr 2fr;
             grid-gap: 6rem;
-            padding: 4rem 0;
+            padding: 4rem 0 6rem;
         }
     }
 

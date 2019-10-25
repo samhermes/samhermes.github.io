@@ -9,11 +9,11 @@
   .contain {
     max-width: 42em;
     margin: 0 auto;
-    padding: 2rem 0 4rem;
+    padding: 2rem 0 5rem;
     width: 90%;
 
     @media screen and (min-width: 45.625em) {
-      padding: 3rem 0 6rem;
+      padding: 3rem 0 7rem;
     }
   }
 }
@@ -40,6 +40,9 @@
 
   .logotype {
     display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
 
     svg {
       width: 130px;
@@ -103,13 +106,13 @@
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1em 5%;
+  padding: 1rem 5% 4rem;
   margin: 0 auto;
   position: relative;
   background-color: $color-dark;
 
   @media screen and (min-width: 45.625em) {
-    padding: 1em 1.65em;
+    padding: 1rem 1.65rem 2rem;
   }
 
   .contain {
@@ -118,7 +121,33 @@
   }
 
   .site-nav {
-    margin: 0 0 0 -0.625rem;
+    margin: 0;
+
+    li {
+      float: none;
+      margin: 0;
+
+      @media screen and (min-width: 45.625em) {
+        float: left;
+        margin-left: 2rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  .pride {
+    border-radius: 2px;
+    position: absolute;
+    left: 50%;
+    top: -2.5rem;
+    margin-left: -15px;
+
+    @media screen and (min-width: 45.625em) {
+      bottom: 1.7em;
+    }
   }
 }
 
