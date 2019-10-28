@@ -1,0 +1,31 @@
+---
+title: Software is like a city
+date: 2019-10-28 16:56:00 Z
+layout: post
+---
+
+Before I deep dive into this, a quick disclaimer to say that this is merely a thought exercise. Enjoy!
+
+I live in a city and I write software for a living, and so I spend quite a bit of time thinking about both. I think that there is a lot of overlap between the two, just looking at them at a high level as complex systems. I am frequently frustrated by the city, as just as much by software.
+
+The promise of a city is the potential. Come here, and through our shared resources, we’ll make something amazing happen. Software is much the same. We can make things with software, and there is a lot of potential.
+
+Potential is great, but it isn’t the part that we often experience in the day-to-day. Of course, being in a city affords opportunities, much like writing software, but the bottlenecks often create more friction that you might want to imagine. The travel brochures and conference talks rarely speak of issues that are very difficult to fix. The backlog of bugs is more omnipresent than the future roadmap.
+
+For example, the internet infrastructure is much like a city highway. At a certain point, there’s too much traffic and everything grinds to a slow crawl. With software, the server topples over or stops responding. Your connection slows down when too many people are streaming Netflix. There is great potential, but once the limit is hit, it’s a bummer. From your streaming TV or behind the wheel, there’s not much you can do about it.
+
+When there’s a bug in software, we assign someone to fix it. It might take a while to fix, or it needs to go through a process before being deployed, but there’s usually something we can do about it. Same with a pothole. However, sometimes that bug is non-critical. It could even be something that never warrants a fix. Same with a pothole. If a street has no traffic, why fix a pothole? Yes, we want to take care of things, but there are usually other bugs and more important roads to address.
+
+In software, the focus usually rests on bringing on new features and functionality. Much like opening a new street, it’s very difficult to walk this back. If we find that we don’t have the resources to support the new, it can sometimes be a tangle to unwind it all. Maybe the new street leads to a newly constructed business. Maybe the new search feature raises the bar for what’s possible. In each of these, we’ve introduced a new reality, and cancelling is a bummer! No one wants to pull the plug. Potential above all!
+
+Speaking of bugs and features, the process of how both are introduced is one fraught with instability. Accidentally introducing a bug could have huge consequences, especially if it’s in something like a payment system. In this case, a single person could have an outsize impact on the entire system. Granted, they likely didn’t mean to, but they have that power. Again, to keep going with this metaphor, a single person could get into an accident on a highway, and cause all of the traffic to be rerouted for hours. It’s a huge disruption that makes people late, annoyed, and inconvenienced. All because of a single person. It’s a strange unbalance.
+
+A city at large has a status. The residents have a feeling for how things are going. Can they get where they need to go? Are there businesses that provide the goods they need to live? Can they expect to be safe? Naturally, cities are far more important in this case, but software also has this status. In fact, it’s here where the two come closest. Does the software work? Do I have confidence in the software? As cities place more dependence on software to serve their residents, can they keep up? At the DMV, when software fails, residents are rightfully irate. Not only is software in a bad state, so is the city.
+
+As we depend on our cities to take care of us, so too do we depend on software to always be in good working order. Getting back to potential, we can begin to see where this all falls apart. Yes, a city can expand and grow in size and density. So too can we add more lines of code. With each addition, we increase our overall support burden. With unlimited potential also comes compounding maintenance costs. When things are going so well that we continue to add, we rarely stop to think about a year or two down the line.
+
+The longer that I work in software development, the greater the appreciation I have for how cities are managed. Yes, the road that I frequently drive on is in bad shape, but it’s competing for resources against every single other road in the city. It’s less travelled than most of them. Yes, my website has a bug, but unfortunately the greater system has bigger issues that need to be addressed first. In building and maintaining a system, prioritization is paramount. Without a way to address the most pressing issues first, we don’t know how to help the most people.
+
+Fortunately, most of us do not have to manage software being used by millions of people at a time. Thinking about the teams behind iOS, my eye twitches for them. Their software is super successful! And buggy! There are horrible bugs that none of us even know about. Their success makes each of their bugs just that much more critical. This brings us to the MTA, naturally. A huge, complex system that is hugely successful by proxy of NYC’s success, that is riddled with problems. Deep, deep, problems that are only exacerbated by how many people rely on it. A small improvement has a huge impact. A medium sized problem is catastrophic. It’s almost better to be an unpopular city. It’s almost better to have an app that only a small group of people use.
+
+I think that I use this comparison in my mind so frequently as a way to lessen the stress of software. As technology is so shiny and new, it gives the idea that the software we write should also be. But like any complex system, there is a balance. Perfection does not exist, much like the perfect city is only in imagination. It just means that there is work to be done, and every day we get the chance to make things a little better.
