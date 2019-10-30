@@ -24,44 +24,22 @@
   background-color: $color-dark;
 
   @media screen and (min-width: 45.625em) {
-    padding: 0.7em 1.65em;
+    padding: 1rem 1.65rem;
   }
 
   .contain {
-    @media screen and (min-width: 22.5em) {
-      display: flex;
-      align-items: center;
-    }
-  }
-
-  svg {
-    display: block;
+    display: flex;
+    align-items: center;
   }
 
   .logotype {
     display: block;
     color: #fff;
-    font-size: 1.5rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 600;
 
-    svg {
-      width: 130px;
-      height: 16px;
-      margin: 0.4em 0;
-
-      @media screen and (min-width: 33em) {
-        width: 160px;
-        height: 20px;
-        margin: 0.5em 0;
-      }
-    }
-  }
-
-  .site-nav {
-    margin-left: -0.4rem;
-
-    @media screen and (min-width: 22.5em) {
-      margin-left: auto;
+    @media screen and (min-width: 33em) {
+      font-size: 1.6rem;
     }
   }
 }
@@ -70,16 +48,16 @@
 
 .site-nav {
   list-style: none;
-  margin: 0 0 0 auto;
+  margin: 0 -0.5rem 0 auto;
   padding: 0;
+  display: flex;
 
   li {
-    float: left;
     font-size: 0.9rem;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
 
     @media screen and (min-width: 33em) {
-      margin-left: 2rem;
+      margin-left: 1rem;
       font-size: 1rem;
     }
 
@@ -90,13 +68,12 @@
     a {
       color: #fff;
       display: block;
-      padding: 0.4rem 0;
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
+      padding: 0.5rem;
       font-weight: 500;
+      transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
 
       &:hover {
-        border-bottom: 2px solid #fff;
+        opacity: 0.5;
       }
     }
   }
@@ -112,7 +89,11 @@
   background-color: $color-dark;
 
   @media screen and (min-width: 45.625em) {
-    padding: 1rem 1.65rem 2rem;
+    padding: 1rem 1.65rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: $color-navy;
   }
 
   .contain {
@@ -121,15 +102,20 @@
   }
 
   .site-nav {
-    margin: 0;
+    margin: 0 auto 0 0;
+    display: block;
+
+    @media screen and (min-width: 45.625em) {
+      display: flex;
+      margin: 0 auto 0 -0.5rem;
+    }
 
     li {
       float: none;
       margin: 0;
 
       @media screen and (min-width: 45.625em) {
-        float: left;
-        margin-left: 2rem;
+        margin-left: 1rem;
 
         &:first-child {
           margin-left: 0;
@@ -169,8 +155,10 @@
     }
 
     a {
+      transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+
       &:hover {
-        opacity: 0.7;
+        opacity: 0.5;
       }
     }
   }
@@ -185,6 +173,7 @@
     text-transform: uppercase;
     font-size: 0.9rem;
     font-weight: 500;
+    color: #fff;
 
     &:hover {
       text-decoration: underline;

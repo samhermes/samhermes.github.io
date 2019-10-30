@@ -6,7 +6,7 @@ layout: default
 <div class="intro">
   <div class="intro-text">
     <p>Front-End Developer</p>
-    <p class="city">Saint Louis</p>
+    <p class="city">Saint Louis, USA</p>
   </div>
 </div>
 

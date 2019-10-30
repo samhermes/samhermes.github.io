@@ -1,6 +1,5 @@
 .page-header {
-    background: rgba(69, 106, 199, 0.03);
-    border-bottom: 1px solid rgba(29, 31, 36, 0.04);
+    background: #141924;
     padding: 2rem 0;
 
     @media screen and (min-width: 48em) {
@@ -16,4 +15,5 @@
     margin: 0 auto;
     max-width: 42rem;
     width: 90%;
+    color: #fff;
 }
