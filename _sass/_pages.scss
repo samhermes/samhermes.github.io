@@ -1,5 +1,5 @@
 .page-header {
-    background: #141924;
+    background: $color-navy;
     padding: 2rem 0;
 
     @media screen and (min-width: 48em) {
@@ -7,7 +7,7 @@
     }
 
     @media (prefers-color-scheme: dark) {
-        background: rgba(34, 57, 114, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.04);
     }
 }
 
