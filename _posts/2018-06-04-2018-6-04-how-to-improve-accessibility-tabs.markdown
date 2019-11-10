@@ -4,7 +4,6 @@ date: 2018-06-04 00:00:00 Z
 categories:
 - JavaScript
 - Accessibility
-- Components
 layout: post
 custom_js: prism
 ---

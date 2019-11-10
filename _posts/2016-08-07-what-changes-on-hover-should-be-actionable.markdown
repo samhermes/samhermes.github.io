@@ -3,7 +3,6 @@ title: What changes on hover should be actionable
 date: 2016-08-07 00:00:00 Z
 categories:
 - CSS
-- Components
 layout: post
 ---
 

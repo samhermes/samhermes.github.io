@@ -55,6 +55,10 @@
     @media screen and (min-width: 33em) {
       font-size: 1.3rem;
     }
+
+    img {
+      width: 160px;
+    }
   }
 }
 
@@ -97,14 +101,10 @@
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1rem 0 4rem;
+  padding: 1rem 0;
   margin: 0 auto;
   position: relative;
   background-color: $color-dark;
-
-  @media screen and (min-width: 45.625em) {
-    padding: 1rem 0;
-  }
 
   @media (prefers-color-scheme: dark) {
     background: $color-navy;
@@ -113,39 +113,10 @@
   .contain {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     max-width: 72em;
     margin: 0 auto;
     width: 90%;
-  }
-
-  .site-nav {
-    margin: 0 auto 0 0;
-    display: block;
-
-    @media screen and (min-width: 45.625em) {
-      display: flex;
-      margin: 0 auto 0 -0.5rem;
-    }
-
-    li {
-      float: none;
-      margin: 0;
-
-      @media screen and (min-width: 45.625em) {
-        margin-left: 1rem;
-
-        &:first-child {
-          margin-left: 0;
-        }
-      }
-    }
-  }
-
-  .pride {
-    position: absolute;
-    left: 50%;
-    top: -2.5rem;
-    margin-left: -15px;
   }
 }
 

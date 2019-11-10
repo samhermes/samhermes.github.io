@@ -2,7 +2,6 @@
 title: Replacing Moment.js with date-fns
 date: 2018-11-15 00:00:00 Z
 categories:
-- React
 layout: post
 custom_js: prism
 ---
