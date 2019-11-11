@@ -9,7 +9,7 @@ layout: default
 		{% capture next_year %}{{ post.previous.date | date: "%Y" }}{% endcapture %}
 
 		{% if forloop.first %}
-	<div class="year-group">
+	<div>
 	<ul class="post-list">
 		{% endif %}
 
@@ -33,11 +33,4 @@ layout: default
 		{% endif %}
 	{% endif %}
 	{% endfor %}
-
-	<h2 class="categories-heading">By Category</h2>
-	<ul class="categories-list">
-	{% for category in site.categories %}
-		<li><a href="/category/{{ category[0] | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category[0] | camelcase }}</a></li>
-	{% endfor %}
-	</ul>
 </div>
