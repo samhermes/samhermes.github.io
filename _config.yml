@@ -5,15 +5,9 @@ collections:
   category:
     title: Category
     output: true
-  lists:
-    title: Lists
-    output: true
   posts:
     title: Posts
     output: true
-  projects:
-    title: Projects
-    output: false
   uploads:
     title: Uploads
     output: true
