@@ -65,7 +65,7 @@ To create your first site, run `10updocker create`. It will prompt you with ques
 
 The first time I ran this, I received an error message:
 
-```BASH
+```bash
 ERROR: for mysql  Cannot start service mysql: b'Mounts denied: The path /usr/local/lib/node_modules/wp-local-docker/global/config/mysql/config.cnf is not shared from OS X and is not known to Docker.
 ```
 
