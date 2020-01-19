@@ -63,11 +63,7 @@ Next, globally install the NPM package for WP Local Docker from 10up using `npm 
 
 To create your first site, run `10updocker create`. It will prompt you with questions.
 
-The first time I ran this, I received an error message:
-
-```bash
-ERROR: for mysql  Cannot start service mysql: b'Mounts denied: The path /usr/local/lib/node_modules/wp-local-docker/global/config/mysql/config.cnf is not shared from OS X and is not known to Docker.
-```
+The first time I ran this, I received an error message: `ERROR: for mysql  Cannot start service mysql: b'Mounts denied: The path /usr/local/lib/node_modules/wp-local-docker/global/config/mysql/config.cnf is not shared from OS X and is not known to Docker.`
 
 To remedy this, I added `/usr/local/lib/node_modules/wp-local-docker/global/config/mysql` to the File Sharing preferences in Docker Desktop. It worked. I assume that this is a bug with WP Local Docker, and may be fixed? I’m not sure why just mysql had trouble and not the others.
 
