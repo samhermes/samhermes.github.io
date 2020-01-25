@@ -51,4 +51,4 @@ The last piece here is using the `radio` value in the block itself, both in the 
 )}
 ```
 
-Strangely, most of this came together for me from reviewing the `[InspectorControls](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inspector-controls)` [component on GitHub](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inspector-controls). So, if you’re still missing a piece of this puzzle, or need a look at the bigger picture, that might be a good place to look.
+Strangely, most of this came together for me from reviewing the [InspectorControls component on GitHub](https://github.com/WordPress/gutenberg/tree/master/packages/block-editor/src/components/inspector-controls). So, if you’re still missing a piece of this puzzle, or need a look at the bigger picture, that might be a good place to look.
