@@ -13,7 +13,7 @@ Next, we need to add an attribute to the block to store the value of the RadioCo
 
 Also, how is a default value set? The documentation stresses the need to have one. It is simply though the `default` argument, and then the slug of the radio option.
 
-```jsx
+```JSX
 attributes: {
   radio: {
     type: 'string',
@@ -26,7 +26,7 @@ Very simple in hindsight, but hard to figure out when an example is hard to come
 
 Now, on to actually adding the `RadioControl` to the block. Inside of the edit function, and inside of `InspectorControls`, we add a `RadioControl`.
 
-```jsx
+```JSX
 <RadioControl
   label={__('Radio control', 'textdomain')}
   help="Description of radio control"
@@ -45,7 +45,7 @@ In the component documentation, it uses `setState` to store the updated option. 
 
 The last piece here is using the `radio` value in the block itself, both in the `edit` and `save` function. The attribute only stores the slug of the option selected, so we can check that value using a conditional statement.
 
-```jsx
+```JSX
 { radio && radio === 'option-one' && (
   // set class name, include element, etc. here
 )}
