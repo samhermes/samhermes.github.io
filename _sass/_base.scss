@@ -90,22 +90,23 @@ a {
  * Blockquotes
  */
 blockquote {
-  color: #828282;
-  border-left: 0.25em solid lighten(#828282, 40%);
-  padding-left: $spacing-unit / 2;
-  font-size: 1.125em;
-  letter-spacing: -0.056em;
-  font-style: italic;
+	border-left: 0.25em solid $color-dark;
+	padding-left: 1.3rem;
+	font-style: italic;
 
-  > :last-child {
-    margin-bottom: 0;
-  }
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		border-color: #fff;
+	}
 }
 
 /**
  * Code formatting
  */
-code[class*="language-"],
+code[class*="language-"]:not(.language-plaintext),
 pre[class*="language-"] {
 	color: #f8f8f2;
 	background: none;
