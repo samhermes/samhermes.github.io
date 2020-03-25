@@ -1,6 +1,8 @@
 ---
 title: Using RadioControl in a custom Gutenberg block
 date: 2020-01-25 21:52:00 Z
+categories:
+- WordPress
 custom_js: prism
 ---
 
