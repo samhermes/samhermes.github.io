@@ -1,5 +1,5 @@
 ---
-title: Using a single stylesheet for both block and classic editors
+title: Using a single stylesheet for both block and classic editor
 date: 2020-03-25 17:58:00 Z
 custom_js: prism
 layout: post
