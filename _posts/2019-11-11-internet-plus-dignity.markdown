@@ -1,6 +1,7 @@
 ---
 title: Internet + Dignity
 date: 2019-11-11 01:18:00 Z
+layout: post
 ---
 
 I came across this article recently that speaks about dignity and the internet. I thought that it was an interesting take on the issue, and shows how complex this is.

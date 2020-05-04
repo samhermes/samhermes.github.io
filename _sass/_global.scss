@@ -11,6 +11,11 @@
     background: $color-less-dark;
   }
 
+  .type-posts & {
+    position: sticky;
+    top: 0;
+  }
+
   .contain {
     display: flex;
     align-items: center;

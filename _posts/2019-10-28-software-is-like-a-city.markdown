@@ -1,10 +1,6 @@
 ---
 title: Software is like a city
 date: 2019-10-28 16:56:00 Z
-excerpt: I live in a city and I write software for a living, and so I spend quite
-  a bit of time thinking about both. I think that there is a lot of overlap between
-  the two, just looking at them at a high level as complex systems. I am frequently
-  frustrated by the city, as just as much by software.
 layout: post
 ---
 
