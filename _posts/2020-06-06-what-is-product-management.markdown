@@ -24,13 +24,12 @@ If products are the things produced by labor, we are making all kinds of product
 
 Sherif Mansour of Atlassian has [a great article about the product manager role](https://www.atlassian.com/agile/product-management/product-manager), and offers this list of responsibilities:
 
-
-> Understanding and representing user needs.
-> Monitoring the market and developing competitive analyses.
-> Defining a vision for a product.
-> Aligning stakeholders around the vision for the product.
-> Prioritizing product features and capabilities.
-> Creating a shared brain across larger teams to empower independent decision making.
+> - Understanding and representing user needs.
+> - Monitoring the market and developing competitive analyses.
+> - Defining a vision for a product.
+> - Aligning stakeholders around the vision for the product.
+> - Prioritizing product features and capabilities.
+> - Creating a shared brain across larger teams to empower independent decision making.
 
 In a more simplified sense, it’s about taking in a lot of good information, processing that, and then giving it to the team in meaningful and helpful ways. Are we hitting the mark with what we’re doing? Could we be better? How do we get there? Is there something that the team can’t see from their point of view?
 
