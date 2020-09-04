@@ -3,6 +3,7 @@ title: How not to use React with Jekyll
 date: 2018-06-24 00:00:00 Z
 categories:
 - Jekyll
+- React
 layout: post
 ---
 
