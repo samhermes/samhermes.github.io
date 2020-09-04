@@ -49,8 +49,9 @@
     }
 
     &:last-child {
-        border-bottom: none;
-        margin-bottom: 0;
+        &::after {
+            content: none;
+        }
     }
 
     ul {
