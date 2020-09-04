@@ -24,6 +24,10 @@
     width: 90%;
   }
 
+  .full-width & .contain {
+    max-width: 87.5em;
+  }
+
   .logotype {
     display: block;
     color: #fff;
@@ -104,6 +108,10 @@
       padding: 4rem 0 7rem;
     }
   }
+
+  .full-width & .contain {
+    max-width: 87.5em;
+  }
 }
 
 .category-header {
@@ -141,6 +149,10 @@
     max-width: 42em;
     margin: 0 auto;
     width: 90%;
+  }
+
+  .full-width & .contain {
+    max-width: 87.5em;
   }
 }
 
