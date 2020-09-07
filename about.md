@@ -15,4 +15,4 @@ These days, whe web platform is a strange and interesting place. There's always 
 
 ## About this site
 
-This site was fully designed and developed by yours truly. It was built using [Jekyll](https://jekyllrb.com/), is hosted by [GitHub pages](https://pages.github.com/), and is served up by [Cloudflare](https://www.cloudflare.com/). HTTPS is enabled using Cloudflare, and ensures that every visitor has an encrypted connection.
+I designed and developed this site, using [Jekyll](https://jekyllrb.com/) to assemble it, [GitHub pages](https://pages.github.com/) to host it, and [Cloudflare](https://www.cloudflare.com/) for delivery. HTTPS is enabled and enforced by Cloudflare, and ensures that every visitor has an encrypted connection.
