@@ -6,6 +6,10 @@
     }}{% endif %}</title>
 <meta name="description"
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+   
+{% if page.visibility == "hidden" %}
+<meta name="robots" content="noindex, follow">
+{% endif %}
 
 <link rel="stylesheet" href="/css/main.css?v=1.1.2">
 {% if page.custom_css %}
