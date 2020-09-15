@@ -8,13 +8,10 @@ layout: default
 		<p>Front end developer focused on CSS, accessibility, and UX.</p>
 		<a class="more" href="/about">About</a>
 	</div>
-
 	<div class="latest-posts">
-		<h2>Latest Posts</h2>
-			<ul class="post-list">
+		<h2>{% include posts.svg %}Latest Posts</h2>
+		<ul class="post-list">
 			{% for post in site.posts limit:5 %}
-
-			
 			<li>
 				<span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
 				<h3 class="post-title">
@@ -25,12 +22,12 @@ layout: default
 		</ul>
 		<a class="more" href="/posts">All Posts</a>
 	</div>
-
-	<h2>Browse by Topic</h2>
-
-	<ul class="categories-list">
-		{% for category in site.categories %}
-		<li><a href="/category/{{ category[0] | downcase }}">{{ category[0] }} ({{ category | last | size }})</a></li>
-		{% endfor %}
-	</ul>
+	<div class="home-categories">
+		<h2>{% include category.svg %}Browse by Category</h2>
+		<ul class="categories-list">
+			{% for category in site.categories %}
+			<li><a href="/category/{{ category[0] | downcase }}">{{ category[0] }} ({{ category | last | size }})</a></li>
+			{% endfor %}
+		</ul>
+	</div>
 </div>
