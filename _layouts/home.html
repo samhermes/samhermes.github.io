@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% include head.html %}
+{% assign slug = page.title | slugify | prepend: 'page-' %}
+
+{% if page.collection == "posts" %}
+    {% assign type = page.collection | slugify | prepend: ' type-' %}
+{% else %}
+    {% assign type = '' %}
+{% endif %}
+
+{% if page.width == "full" %}
+    {% assign width = ' full-width' %}
+{% else %}
+    {% assign width = '' %}
+{% endif %} 
+
+<body class="{{ slug }}{{ type }}{{ width }}">
+    {% include header-home.html %}
+    <div class="page">
+        {{ content }}
+    </div>
+    {% include footer.html %}
+</body>
