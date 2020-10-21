@@ -16,6 +16,10 @@
             background-size: contain;
             margin-left: 0.5rem;
             margin-bottom: -0.06rem;
+
+            @media (prefers-color-scheme: dark) {
+                background-image: url('/img/arrow-reverse.svg');
+            }
         }
     }
 
