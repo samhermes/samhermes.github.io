@@ -13,7 +13,7 @@ Confusingly, this inline image option is called a "format" in the Gutenberg code
 
 To disable any of the formats available in the RichTextToolbar, like so:
 
-```js
+```javascript
 wp.richText.unregisterFormatType('core/image');
 ```
 
