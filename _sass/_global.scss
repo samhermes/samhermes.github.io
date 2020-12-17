@@ -1,14 +1,10 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
-  background-color: $color-dark;
+  background-color: $background-color;
 
   @media screen and (min-width: 33em) {
     padding: 1rem 0;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: $color-less-dark;
   }
 
   .type-posts & {
@@ -19,9 +15,12 @@
   .contain {
     display: flex;
     align-items: center;
-    max-width: 42em;
     margin: 0 auto;
     width: 90%;
+
+    @media screen and (min-width: 62.5em) {
+      width: 95%;
+    }
   }
 
   .full-width & .contain {
@@ -34,7 +33,6 @@
 
   .logotype {
     display: block;
-    color: #fff;
     font-size: 1.1rem;
     font-weight: 500;
     transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
@@ -75,7 +73,6 @@
     }
 
     a {
-      color: #fff;
       display: block;
       padding: 0.5rem;
       font-weight: 500;
@@ -91,15 +88,10 @@
 /* Page Elements */
 
 .page {
-  background: #fff;
   min-height: calc(100vh - 7.4375rem);
 
   @media screen and (min-width: 33em) {
     min-height: calc(100vh - 8.1875rem);
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: $color-dark;
   }
 
   .contain {
@@ -140,19 +132,17 @@
   padding: 1rem 0;
   margin: 0 auto;
   position: relative;
-  background-color: $color-dark;
-
-  @media (prefers-color-scheme: dark) {
-    background: $color-less-dark;
-  }
 
   .contain {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    max-width: 42em;
     margin: 0 auto;
     width: 90%;
+
+    @media screen and (min-width: 62.5em) {
+      width: 95%;
+    }
   }
 
   .full-width & .contain {

@@ -18,13 +18,9 @@ dl, dd, ol, ul, figure {
 body {
   font: $base-font-weight #{$base-font-size} $base-font-family;
   color: $color-dark;
-  background-color: $color-dark;
+  background-color: $background-color;
   background-position: top 4.4rem center;
   -webkit-text-size-adjust: 100%;
-
-  @media (prefers-color-scheme: dark) {
-    color: #fff;
-  }
 }
 
 /**
@@ -73,16 +69,8 @@ a {
 	color: $color-dark;
 	text-decoration: none;
 
-	@media (prefers-color-scheme: dark) {
-		color: #fff;
-	}
-
 	&:hover {
 		color: $color-dark;
-
-		@media (prefers-color-scheme: dark) {
-			color: #fff;
-		}
 	}
 }
 
@@ -96,10 +84,6 @@ blockquote {
 
 	> :last-child {
 		margin-bottom: 0;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		border-color: #fff;
 	}
 }
 
@@ -138,10 +122,6 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: $color-dark;
-
-	@media (prefers-color-scheme: dark) {
-		border: 1px solid $dark-border-color;
-	}
 }
 
 /* Inline code */
