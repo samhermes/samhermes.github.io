@@ -17,8 +17,8 @@ dl, dd, ol, ul, figure {
  */
 body {
   font: $base-font-weight #{$base-font-size} $base-font-family;
-  color: $color-dark;
-  background-color: $background-color;
+  color: #fff;
+  background-color: $color-dark;
   background-position: top 4.4rem center;
   -webkit-text-size-adjust: 100%;
 }
@@ -66,11 +66,11 @@ h1, h2, h3, h4, h5, h6 {
  * Links
  */
 a {
-	color: $color-dark;
+	color: #fff;
 	text-decoration: none;
 
 	&:hover {
-		color: $color-dark;
+		color: #fff;
 	}
 }
 
@@ -78,7 +78,7 @@ a {
  * Blockquotes
  */
 blockquote {
-	border-left: 0.25em solid $color-dark;
+	border-left: 0.25em solid #fff;
 	padding-left: 1.3rem;
 	font-style: italic;
 
@@ -122,6 +122,7 @@ pre[class*="language-"] {
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
 	background: $color-dark;
+	border: 1px solid $dark-border-color;
 }
 
 /* Inline code */
