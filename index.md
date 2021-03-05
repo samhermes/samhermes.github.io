@@ -5,7 +5,7 @@ layout: home
 
 <div class="contain">
 	<div class="intro">
-		<p>Front end developer focused on CSS, accessibility, and UX.</p>
+		<p>Front-end developer focused on CSS, accessibility, and UX.</p>
 		<a class="more" href="/about">About</a>
 	</div>
 	<div class="latest-posts">
