@@ -1,10 +1,3 @@
-:root {
-	color-scheme: light dark;
-}
-
-/**
- * Reset some basic elements
- */
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -12,59 +5,39 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
-/**
- * Basic styling
- */
 body {
-  font: $base-font-weight #{$base-font-size} $base-font-family;
-  color: #fff;
-  background-color: $color-dark;
-  background-position: top 4.4rem center;
-  -webkit-text-size-adjust: 100%;
+	font: 300 100% $base-font-family;
+	color: #fff;
+	background-color: $color-dark;
+	-webkit-text-size-adjust: 100%;
 }
 
-/**
- * Set `margin-bottom` to maintain vertical rhythm
- */
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
-ul, ol, dl, figure,
-%vertical-rhythm {
-  margin-bottom: $spacing-unit / 2;
+ul, ol, dl, figure {
+	margin-bottom: 1rem;
 }
 
-/**
- * Images
- */
 img {
-  max-width: 100%;
-  vertical-align: middle;
+	max-width: 100%;
+	vertical-align: middle;
 }
 
-/**
- * Lists
- */
 ul, ol {
-  margin-left: $spacing-unit;
+	margin-left: 1.8em;
 }
 
 li {
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
+	> ul,
+	> ol {
+		margin-bottom: 0;
+	}
 }
 
-/**
- * Headings
- */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+	font-weight: 300;
 }
 
-/**
- * Links
- */
 a {
 	color: #fff;
 	text-decoration: none;
@@ -74,9 +47,6 @@ a {
 	}
 }
 
-/**
- * Blockquotes
- */
 blockquote {
 	border-left: 0.25em solid #fff;
 	padding-left: 1.3rem;
@@ -87,138 +57,6 @@ blockquote {
 	}
 }
 
-/**
- * Code formatting
- */
-code[class*="language-"]:not(.language-plaintext),
-pre[class*="language-"] {
-	color: #f8f8f2;
-	background: none;
-	text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	text-align: left;
-	white-space: pre;
-	word-spacing: normal;
-	word-break: normal;
-	word-wrap: normal;
-	line-height: 1.6;
-	-moz-tab-size: 4;
-	-o-tab-size: 4;
-	tab-size: 4;
-	-webkit-hyphens: none;
-	-moz-hyphens: none;
-	-ms-hyphens: none;
-	hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-	padding: 1.2rem 1.6rem;
-	margin: 1.8rem 0;
-	overflow: auto;
-	border-radius: 0.3em;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-	background: $color-dark;
-	border: 1px solid $dark-border-color;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-	padding: .1em;
-	border-radius: .3em;
-	white-space: normal;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-	color: #6272a4;
-}
-
-.token.punctuation {
-	color: #f8f8f2;
-}
-
-.namespace {
-	opacity: .7;
-}
-
-.token.property,
-.token.tag,
-.token.constant,
-.token.symbol,
-.token.deleted {
-	color: #ff79c6;
-}
-
-.token.boolean,
-.token.number {
-	color: #bd93f9;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string,
-.token.char,
-.token.builtin,
-.token.inserted {
-	color: #50fa7b;
-}
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string,
-.token.variable {
-	color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value,
-.token.function,
-.token.class-name {
-	color: #f1fa8c;
-}
-
-.token.keyword {
-	color: #8be9fd;
-}
-
-.token.regex,
-.token.important {
-	color: #ffb86c;
-}
-
-.token.important,
-.token.bold {
-	font-weight: bold;
-}
-
-.token.italic {
-	font-style: italic;
-}
-
-.token.entity {
-	cursor: help;
-}
-
-/**
- * Clearfix
- */
-.group:after {
-	content: '';
-	display: table;
-	clear: both;
-}
-
-/**
- * Screen reader text
- */
 .screen-reader-text {
 	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
