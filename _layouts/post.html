@@ -13,18 +13,21 @@ layout: default
     {{ content }}
   </div>
 
+  {% unless page.categories == empty %}
+  <div class="post-categories">
+    {% include category.svg %}
+    <p class="screen-reader-text">This post is categorized in:</p>
+    <ul class="categories-list">
+      {% for category in page.categories %}
+      <li><a
+          href="/category/{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endunless %}
+
   <div class="post-feedback">
     <p>Was this helpful? Have a question? <a href="https://samhermes.typeform.com/to/d4C4FT">Let me know</a>!</p>
   </div>
-
-  {% unless page.categories == empty %}
-  <ul class="categories-list">
-    {% for category in page.categories %}
-    <li><a
-        href="/category/{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}</a>
-    </li>
-    {% endfor %}
-  </ul>
-  {% endunless %}
-
 </article>

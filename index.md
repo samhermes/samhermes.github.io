@@ -26,7 +26,7 @@ layout: home
 		<h2>{% include category.svg %}Browse by Category</h2>
 		<ul class="categories-list">
 			{% for category in site.categories %}
-			<li><a href="/category/{{ category[0] | downcase }}">{{ category[0] }} ({{ category | last | size }})</a></li>
+			<li><a href="/category/{{ category[0] | downcase }}">{{ category[0] }} <span class="category-count"><span class="screen-reader-text">Count: </span>{{ category | last | size }}</span></a></li>
 			{% endfor %}
 		</ul>
 	</div>
