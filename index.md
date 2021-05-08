@@ -2,6 +2,7 @@
 title: Home
 layout: home
 ---
+
 {% include arrow.svg %}
 <div class="contain">
 	<div class="intro">
