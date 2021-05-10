@@ -36,9 +36,13 @@ layout: home
 		<ul class="project-list">
 			{% for project in site.projects limit:5 %}
 			<li>
-				<h3 class="project-title">
-					<a class="project-link" href="{{ project.url | prepend: site.baseurl }}">{{ project.title }}</a>
-				</h3>
+				<img class="project-image" src="img/projects/{{ project.icon }}" alt="{{ project.title }}">
+				<div class="project-info">
+					<h3 class="project-title">
+						<a class="project-link" href="{{ project.external_url | prepend: site.baseurl }}">{{ project.title }}</a>
+					</h3>
+					<p class="project-desc">{{ project.description }}</p>
+				</div>
 			</li>
 			{% endfor %}
 		</ul>

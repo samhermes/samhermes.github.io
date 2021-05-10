@@ -88,25 +88,35 @@
 
 .project-list {
     list-style: none;
-    margin: 0 0 2.5rem;
+    margin: 0;
     padding: 0;
 
     li {
         background: $color-less-dark;
-        padding: 2rem 2.5rem;
+        padding: 1rem;
         border-radius: 0.5rem;
         margin-bottom: 1.5rem;
+        display: grid;
+        grid-template-columns: 6.25rem 1fr;
+        grid-gap: 2rem;
+        align-items: center;
 
         &:last-child {
             margin-bottom: 0;
         }
     }
 
+    .project-image {
+        width: 6.25rem;
+        height: auto;
+        border-radius: 0.5rem;
+    }
+
     .project-title {
         font-size: 1.3em;
         font-weight: 500;
         line-height: 1.25;
-        margin: 0;
+        margin: 0 0 0.25rem;
     
         @media screen and (min-width: 28.125em) {
           font-size: 1.45em;
@@ -123,5 +133,9 @@
                 text-decoration: underline;
             }
         }
+    }
+
+    .project-desc {
+        margin-bottom: 0;
     }
 }
