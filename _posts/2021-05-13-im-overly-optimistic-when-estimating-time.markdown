@@ -29,3 +29,5 @@ I think it would really help me to look back over my estimations after the fact,
 ## Stress
 
 Before I wrap this up, I have to address stress. I think it's a major factor here. Especially with what we've all been through. Some days, it's all gotten to me. I'm not productive on those days. I wish I wasn't expected to be productive on those days. Usually, when I'm estimating time, I'm envisioning myself as operating at 100%. Again, optimism. No one is operating at that level all the time, and if they are, they need to take a break. Being realistic about how much I should push myself is something that no one else will do for me.
+
+**Update, May 23, 2021:** I just came across [this article from Farnam Street](https://fs.blog/2021/05/slack/) about the necessity of slack time. I agree with what the article is saying, but in practice, this burden is still placed on the individual. An organization would need to recognize, at all levels, the need for slack, something near impossible to pull off. Still, a good idea to carry with me as I estimate time.
