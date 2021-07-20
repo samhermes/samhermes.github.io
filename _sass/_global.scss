@@ -1,10 +1,16 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
-  background-color: $color-less-dark;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 
   @media screen and (min-width: 33em) {
     padding: 1rem 0;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-less-dark;
+    border-bottom: none;
   }
 
   .type-posts & {
@@ -12,9 +18,11 @@
     top: 0;
 
     @supports (backdrop-filter: none) or (--webkit-backdrop-filter: none) {
-      background-color: rgba($color-less-dark, 0.7);
-      -webkit-backdrop-filter: blur(18px);
-      backdrop-filter: blur(18px);
+      @media (prefers-color-scheme: dark) {
+        background-color: rgba($color-less-dark, 0.7);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+      }
     }
   }
 
@@ -137,8 +145,14 @@
   box-sizing: border-box;
   padding: 1rem 0;
   margin: 0 auto;
-  background-color: $color-less-dark;
+  background-color: #fff;
+  border-top: 1px solid #eee;
   position: relative;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $color-less-dark;
+    border-top: none;
+  }
 
   .contain {
     display: flex;
@@ -154,6 +168,10 @@
 
   .full-width & .contain {
     max-width: 87.5em;
+  }
+
+  .pride {
+    border-radius: 3px;
   }
 }
 

@@ -13,9 +13,14 @@ dl, dd, ol, ul, figure {
 
 body {
 	font: 300 100% $base-font-family;
-	color: #fff;
-	background-color: $color-dark;
+	color: $color-dark;
+	background-color: #fff;
 	-webkit-text-size-adjust: 100%;
+
+	@media (prefers-color-scheme: dark) {
+		color: #fff;
+		background-color: $color-dark;
+	}
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -45,18 +50,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	color: #fff;
+	color: $color-dark;
 	text-decoration: none;
 
 	&:hover {
+		color: $color-dark;
+	}
+
+	@media (prefers-color-scheme: dark) {
 		color: #fff;
+
+		&:hover {
+			color: #fff;
+		}
 	}
 }
 
 blockquote {
-	border-left: 0.25em solid #fff;
+	border-left: 0.25em solid $color-dark;
 	padding-left: 1.3rem;
 	font-style: italic;
+
+	@media (prefers-color-scheme: dark) {
+		border-left-color: #fff;
+	}
 
 	> :last-child {
 		margin-bottom: 0;
