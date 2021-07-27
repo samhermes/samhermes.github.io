@@ -14,6 +14,11 @@ collections:
   uploads:
     title: Uploads
     output: true
+defaults:
+- scope:
+    path: ''
+  values:
+    layout: default
 description: Sam is a front-end web developer in Chicago, and writes about CSS, WordPress,
   JavaScript, accessibility, and more.
 url: https://samhermes.com
@@ -21,9 +26,3 @@ permalink: "/posts/:title/"
 markdown: kramdown
 sass:
   style: compressed
-defaults:
--
-  scope:
-    path: "" # an empty string here means all files in the project
-  values:
-    layout: "default"
