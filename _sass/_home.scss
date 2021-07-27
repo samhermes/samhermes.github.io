@@ -26,9 +26,13 @@
             display: inline-block;
             width: 100%;
             height: 0.3rem;
-            background-color: $color-less-dark;
+            background-color: $color-light;
             border-radius: 0.15rem;
             margin-top: 5rem;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-less-dark;
+            }
         }
     
         p {
@@ -65,9 +69,13 @@
             display: inline-block;
             width: 100%;
             height: 0.3rem;
-            background-color: $color-less-dark;
+            background-color: $color-light;
             border-radius: 0.15rem;
             margin-top: 3rem;
+
+            @media (prefers-color-scheme: dark) {
+                background-color: $color-less-dark;
+            }
         }
     }
 
@@ -92,14 +100,20 @@
     padding: 0;
 
     li {
-        background: $color-less-dark;
         padding: 1rem;
-        border-radius: 0.5rem;
         margin-bottom: 1.5rem;
+        background-color: $color-extra-light;
+        border: 1px solid $color-light;
+        border-radius: 0.5rem;
         display: grid;
         grid-template-columns: 6.25rem 1fr;
         grid-gap: 2rem;
         align-items: center;
+
+        @media (prefers-color-scheme: dark) {
+            background: $color-less-dark;
+            border-color: $dark-border-color;
+        }
 
         &:last-child {
             margin-bottom: 0;
@@ -136,6 +150,6 @@
     }
 
     .project-desc {
-        margin-bottom: 0;
+        margin-bottom: 0.2rem;
     }
 }

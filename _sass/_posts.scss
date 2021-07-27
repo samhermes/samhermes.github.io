@@ -151,8 +151,7 @@
       font-size: 1rem;
       width: 1.75rem;
       height: 1.75rem;
-      background-color: $color-less-dark;
-      color: #fff;
+      background-color: $color-light;
       padding: 0.3rem;
       margin-left: 0.4rem;
       border-radius: 50%;
@@ -340,34 +339,5 @@
 
   code {
     font-family: Monaco, Consolas, 'Andale Mono', 'Ubuntu Mono', monospace;
-  }
-}
-
-.post-feedback {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  text-align: center;
-  margin: 3rem 0 0;
-  padding: 1.5rem;
-  background-color: $color-light;
-  border: 1px solid $color-medium;
-  border-radius: 0.5rem;
-
-  @media screen and (min-width: 37.5em) {
-    font-size: 1.4rem;
-  }
-
-  @media (prefers-color-scheme: dark) {
-    background: $color-less-dark;
-    border-color: $dark-border-color;
-  }
-
-  p {
-    margin-bottom: 0;
-  }
-
-  a {
-    text-decoration: underline;
-    display: inline-block;
   }
 }
