@@ -3,9 +3,13 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background: $color-dark;
+    background: #fff;
     padding: 0.75rem 0;
     margin: 0;
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $color-dark;
+    }
   }
 
   ul {
@@ -103,11 +107,15 @@
     margin-left: 2rem;
 
     @media screen and (min-width: 37.5em) {
-      margin-left: 2.5rem;
+      margin-left: 2.8rem;
     }
 
-    li a {
-      padding: 0.1rem 0;
+    li {
+      margin-right: 1rem;
+      
+      a {
+        padding: 0.1rem 0;
+      }
     }
   }
 }
@@ -129,8 +137,6 @@
     }
 
     a {
-      background: $color-dark;
-      color: #fff;
       padding: 0.3rem 0;
       border-radius: 0.25em;
       display: inline-flex;
@@ -145,12 +151,17 @@
       font-size: 1rem;
       width: 1.75rem;
       height: 1.75rem;
-      background: #fff;
-      color: $color-dark;
+      background-color: $color-less-dark;
+      color: #fff;
       padding: 0.3rem;
       margin-left: 0.4rem;
       border-radius: 50%;
       text-align: center;
+
+      @media (prefers-color-scheme: dark) {
+        background: #fff;
+        color: $color-dark;
+      }
     }
   }
 }
@@ -247,13 +258,19 @@
   li {
     code {
       font-size: 1rem;
-      background: #1a1c24;
+      background: $color-light;
+      border: 1px solid $color-medium;
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
       word-wrap: break-word;
 
       @media screen and (min-width: 37.5em) {
         font-size: 1.1rem;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        background-color: #1a1c24;
+        border: 1px solid $dark-border-color;
       }
     }
   }
@@ -286,7 +303,7 @@
     border: 0;
     height: 2px;
     border-radius: 1px;
-    background: #fff;
+    background: currentColor;
     max-width: 6rem;
   }
 }
@@ -332,12 +349,17 @@
   text-align: center;
   margin: 3rem 0 0;
   padding: 1.5rem;
-  background: $color-less-dark;
-  border: 1px solid $dark-border-color;
+  background-color: $color-light;
+  border: 1px solid $color-medium;
   border-radius: 0.5rem;
 
   @media screen and (min-width: 37.5em) {
     font-size: 1.4rem;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background: $color-less-dark;
+    border-color: $dark-border-color;
   }
 
   p {

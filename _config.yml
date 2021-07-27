@@ -14,8 +14,8 @@ collections:
   uploads:
     title: Uploads
     output: true
-description: Front-end web developer in St. Louis. Writes about CSS, WordPress, JavaScript,
-  accessibility, and more.
+description: Sam is a front-end web developer in Chicago, and writes about CSS, WordPress,
+  JavaScript, accessibility, and more.
 url: https://samhermes.com
 permalink: "/posts/:title/"
 markdown: kramdown
