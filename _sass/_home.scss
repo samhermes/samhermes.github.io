@@ -1,7 +1,11 @@
 .page-home {
     a.more {
-        font-size: 1.3rem;
+        font-size: 1rem;
         font-weight: 500;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 1.3rem;
+        }
 
         &:hover {
             text-decoration: underline;
@@ -18,7 +22,7 @@
 
     .intro {
         margin-top: 1rem;
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
         position: relative;
 
         @media screen and (min-width: 37.5em) {
@@ -39,7 +43,7 @@
     h2 {
         font-size: 1.6rem;
         font-weight: 600;
-        margin: 0 0 2.5rem;
+        margin: 0 0 1.8rem;
         
         @media screen and (min-width: 50em) {
             margin-bottom: 2rem;
@@ -55,11 +59,7 @@
     }
 
     .home-posts {
-        margin-bottom: 3rem;
-
-        @media screen and (min-width: 28.125em) {
-            margin-bottom: 4rem;
-        }
+        margin-bottom: 4rem;
     }
 }
 
