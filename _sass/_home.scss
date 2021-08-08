@@ -1,11 +1,7 @@
 .page-home {
-    a.more {
-        font-size: 1rem;
+    .more {
+        font-size: 1.3rem;
         font-weight: 500;
-
-        @media screen and (min-width: 37.5em) {
-            font-size: 1.3rem;
-        }
 
         &:hover {
             text-decoration: underline;
@@ -13,8 +9,8 @@
 
         .more-icon {
             display: inline-block;
-            width: 0.6rem;
-            height: 1rem;
+            width: 0.5em;
+            height: 0.8em;
             margin-left: 0.5rem;
             margin-bottom: -0.06rem;
         }
@@ -84,6 +80,11 @@
 
     .more {
         margin-left: auto;
+        font-size: 1rem;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 1.3rem;
+        }
     }
 
     .post-list {
