@@ -28,7 +28,7 @@ Plenty of chain restaurants had mobile order apps before this, which makes sense
 
 As for ordering groceries, it was much rockier. Some grocery chains had infrastructure in place beforehand, some of which were ready to go, some of which were not. In the case of groceries, browsing the selection is typically done most comfortably on a larger screen. Issues arose here with the handoff to a mobile device, bringing the tension between web and app to the forefront. Place the order on the web, but let them know you've arrived on the mobile app? Not so easy.
 
-The downside of much of this, whether it was Square, ToastTab, Instacart, or what have you, was that this served to further funnel money to tech companies and away from local economies. Square, naturally, is [thrilled by this trend](https://squareup.com/us/en/press/making-change-4) (emotion added by me). I'm not sure the answer here is to start spinning up local bespoke platforms, but just that we continue to find new ways of exporting money from small towns, which is a shame.
+The downside of much of this, whether it was Square, ToastTab, Instacart, or what have you, was that this served to further funnel money to tech companies and away from local economies. Square, naturally, is [thrilled by this trend](https://squareup.com/us/en/press/making-change-4) (emotion added by me). I'm not sure that we should start spinning up local bespoke platforms, but it's a shame that we continue to find new ways of exporting money from small towns.
 
 ## Shopping
 
