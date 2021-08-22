@@ -3,6 +3,7 @@ title: How to make accessible accordions
 date: 2021-08-22 20:29:00 Z
 categories:
 - js
+custom_js: prism
 layout: post
 ---
 
