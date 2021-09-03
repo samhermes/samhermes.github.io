@@ -19,8 +19,7 @@ defaults:
     path: ''
   values:
     layout: default
-description: Sam is a front-end web developer in Chicago, and writes about CSS, WordPress,
-  JavaScript, accessibility, and more.
+description: Front-end developer focused on CSS, accessibility, and UX.
 url: https://samhermes.com
 permalink: "/posts/:title/"
 markdown: kramdown
