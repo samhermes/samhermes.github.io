@@ -17,17 +17,50 @@
     }
 
     .intro {
-        margin-top: 1rem;
-        margin-bottom: 6rem;
         position: relative;
+        padding: 22% 0;
+        margin-bottom: 2rem;
 
         @media screen and (min-width: 37.5em) {
-            margin-bottom: 7rem;
+            margin-bottom: 4rem;
+        }
+
+        .blob-container {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            z-index: -1;
+            width: 100%;
+        }
+
+        .blob {
+            width: 90%;
+            opacity: 70%;
+
+            @media screen and (prefers-reduced-motion: no-preference) {
+                animation: rotation 30s infinite ease;
+            }
+        }
+        
+        @keyframes rotation {
+          0% {
+            transform: rotate(-10deg) skew(0, 0);
+          }
+          33% {
+            transform: rotate(50deg) skew(3deg, -16deg);
+          }
+          66% {
+            transform: rotate(40deg) skew(-4deg, 5deg);
+          }
+          100% {
+            transform: rotate(-10deg) skew(0, 0);
+          }
         }
     
         p {
             font-size: 2.2rem;
-            font-weight: 600;
+            font-weight: 500;
             margin: 0 0 1.2rem;
 
             @media screen and (min-width: 37.5em) {
@@ -38,7 +71,7 @@
 
     h2 {
         font-size: 1.6rem;
-        font-weight: 600;
+        font-weight: 500;
         margin: 0 0 1.8rem;
         
         @media screen and (min-width: 50em) {
@@ -55,7 +88,7 @@
     }
 
     .home-posts {
-        margin-bottom: 4rem;
+        margin-bottom: 7rem;
     }
 }
 
@@ -63,16 +96,10 @@
 .home-project-list {
     display: flex;
     flex-direction: column;
+    background: #fff;
     box-shadow: 0 3px 12px rgba(0, 0, 0, 0.07);
     border-radius: 0.5rem;
     padding: 1.25rem 1.25rem;
-    border: 1px solid $color-medium;
-
-    @media (prefers-color-scheme: dark) {
-        background: $color-less-dark;
-        border-color: $dark-border-color;
-        box-shadow: none;
-    }
 
     @media screen and (min-width: 37.5em) {
         padding: 2rem 2.25rem;
@@ -108,11 +135,6 @@
         @media screen and (min-width: 28.125em) {
             grid-template-columns: 6.25rem 1fr;
             grid-gap: 2rem;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            background: $color-less-dark;
-            border-color: $dark-border-color;
         }
 
         &:last-child {

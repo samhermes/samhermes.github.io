@@ -6,6 +6,9 @@ layout: home
 {% include arrow.svg %}
 <div class="contain">
 	<div class="intro">
+		<div class="blob-container">
+			{% include blob.svg %}
+		</div>
 		<p>Front-end developer focused on CSS, accessibility, and UX.</p>
 		<a class="more" href="/about">About<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
 	</div>
