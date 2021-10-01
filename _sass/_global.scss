@@ -1,8 +1,6 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
-  background-color: #f5dfce;
-  border-bottom: 1px solid $color-dark;
 
   @media screen and (min-width: 33em) {
     padding: 1rem 0;
@@ -11,7 +9,7 @@
   .type-posts & {
     position: sticky;
     top: 0;
-    border-bottom: 1px solid $color-dark;
+    background-color: $color-light;
   }
 
   .contain {
@@ -87,9 +85,15 @@
 
 .page {
   min-height: calc(100vh - 7.4375rem);
+  background: #fff;
+  color: $color-text-dark;
 
   @media screen and (min-width: 33em) {
     min-height: calc(100vh - 8.1875rem);
+  }
+
+  a {
+    color: $color-text-dark;
   }
 
   .contain {
@@ -129,9 +133,8 @@
   box-sizing: border-box;
   padding: 1rem 0;
   margin: 0 auto;
-  background-color: $color-light;
+  background-color: $color-dark;
   position: relative;
-  border-top: 1px solid $color-dark;
 
   .contain {
     display: flex;

@@ -3,7 +3,7 @@
     position: -webkit-sticky;
     position: sticky;
     top: 0;
-    background: $color-light;
+    background: #fff;
     padding: 0.75rem 0;
     margin: 0;
   }
@@ -150,9 +150,10 @@
 
 .post {
   margin: 0 auto;
-  max-width: 42em;
+  max-width: 42rem;
   padding: 2rem 0 5rem;
   width: 90%;
+  background: #fff;
 
   @media screen and (min-width: 37.5em) {
     padding: 4rem 0 7rem;
@@ -168,7 +169,7 @@
 
 .post-title {
   font-size: 2rem;
-  line-height: 1.2;
+  line-height: 1.15;
   margin: 0 0 3rem;
   font-weight: 500;
 
@@ -236,8 +237,8 @@
   li {
     code {
       font-size: 1rem;
-      background: $color-medium;
-      border: 1px solid $color-dark;
+      background: #efefef;
+      border: 1px solid #ddd;
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
       word-wrap: break-word;
