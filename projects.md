@@ -1,0 +1,45 @@
+---
+title: Projects
+layout: default
+---
+
+<div class="contain">
+    <header class="page-header">
+        <h1 class="page-title">{{ page.title }}</h1>
+    </header>
+
+    <ul class="project-list">
+	{% for project in site.projects %}
+        <li>
+            <img class="project-image" src="/img/projects/{{ project.icon }}" alt="{{ project.title }}">
+            <div class="project-info">
+                <h2 class="project-title">
+                    <a class="project-link" href="{{ project.external_url | prepend: site.baseurl }}">{{ project.title }}</a>
+                </h2>
+                <p class="project-desc">{{ project.description }}</p>
+            </div>
+        </li>
+	{% endfor %}
+    </ul>
+    <h2 class="past-project-heading">Past Projects</h2>
+    <ul class="past-project-list">
+        <li>
+            <h3 class="project-title">
+                <a href="https://github.com/samhermes/map-block-mapbox">Map Block for Mapbox</a>
+            </h3>
+            <p class="project-desc">WordPress plugin, added a map block using <a href="https://www.mapbox.com">Mapbox</a></p>
+        </li>
+        <li>
+            <h3 class="project-title">
+                <a href="https://github.com/samhermes/next-spacex-launch">Next SpaceX Launch</a>
+            </h3>
+            <p class="project-desc">React app, used the <a href="https://github.com/r-spacex/SpaceX-API">SpaceX API</a></p>
+        </li>
+        <li>
+            <h3 class="project-title">
+                <a href="https://github.com/samhermes/stlmetro.link">St. Louis MetroLink Schedule</a>
+            </h3>
+            <p class="project-desc">Installable web app, displayed upcoming train schedule</p>
+        </li>
+    </ul>
+</div>

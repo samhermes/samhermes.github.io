@@ -44,6 +44,7 @@ layout: home
 				</li>
 				{% endfor %}
 			</ul>
+			<a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
 		</div>
 	</div>
 </div>
