@@ -11,7 +11,7 @@ layout: default
     <ul class="project-list">
 	{% for project in site.projects %}
         <li>
-            <img class="project-image" src="/img/projects/{{ project.icon }}" alt="{{ project.title }}">
+            <img class="project-image" src="/img/projects/{{ project.icon }}" width="100" height="100" alt="">
             <div class="project-info">
                 <h2 class="project-title">
                     <a class="project-link" href="{{ project.external_url | prepend: site.baseurl }}">{{ project.title }}</a>
