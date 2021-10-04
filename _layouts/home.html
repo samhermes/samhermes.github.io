@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 {% include head.html %}
-{% assign slug = page.title | slugify | prepend: 'page-' %}
+{% assign slug = title | slugify | downcase | prepend: 'page-' %}
 
 {% if page.collection == "posts" %}
     {% assign type = page.collection | slugify | prepend: ' type-' %}

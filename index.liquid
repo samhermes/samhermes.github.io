@@ -9,18 +9,18 @@ layout: home
 		<div class="blob-container">
 			{% include blob.svg %}
 		</div>
-		<p>Front-end developer focused on CSS, accessibility, and UX.</p>
+		<p>{{ site.description }}</p>
 		<a class="more" href="/about">About<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
 	</div>
 	<div class="home-posts">
 		<h2>{% include icons/posts.svg %}Latest Posts</h2>
 		<div class="home-post-list">
 			<ul class="post-list">
-				{% for post in site.posts limit:5 %}
+				{% for post in collections.posts limit:5 %}
 				<li>
 					<span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
 					<h3 class="post-title">
-						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+						<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.data.title }}</a>
 					</h3>
 				</li>
 				{% endfor %}
@@ -32,14 +32,14 @@ layout: home
 		<h2>{% include icons/projects.svg %}Projects</h2>
 		<div class="home-project-list">
 			<ul class="project-list">
-				{% for project in site.projects limit:5 %}
+				{% for project in collections.projects limit:5 %}
 				<li>
-					<img class="project-image" src="img/projects/{{ project.icon }}" width="100" height="100" alt="">
+					<img class="project-image" src="img/projects/{{ project.data.icon }}" width="100" height="100" alt="">
 					<div class="project-info">
 						<h3 class="project-title">
-							<a class="project-link" href="{{ project.external_url | prepend: site.baseurl }}">{{ project.title }}</a>
+							<a class="project-link" href="{{ project.data.external_url | prepend: site.baseurl }}">{{ project.data.title }}</a>
 						</h3>
-						<p class="project-desc">{{ project.description }}</p>
+						<p class="project-desc">{{ project.data.description }}</p>
 					</div>
 				</li>
 				{% endfor %}

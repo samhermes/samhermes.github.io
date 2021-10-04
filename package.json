@@ -1,0 +1,27 @@
+{
+  "name": "samhermes.github.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy & sass _sass:_site/css",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:sass": "npx sass _sass:_site/css --watch",
+    "start": "npm run watch:eleventy & npm run watch:sass"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/samhermes/samhermes.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/samhermes/samhermes.github.io/issues"
+  },
+  "homepage": "https://github.com/samhermes/samhermes.github.io#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "sass": "^1.42.1"
+  }
+}
