@@ -1,5 +1,0 @@
----
-title: WordPress
-layout: category
----
-

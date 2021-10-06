@@ -1,7 +1,7 @@
 ---
 title: My WordPress hosting recommendation
 date: 2020-08-28 19:14:00 Z
-categories:
+tags:
 - WordPress
 layout: post
 ---

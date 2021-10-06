@@ -1,10 +1,10 @@
 ---
 title: The journey to Alexander
 date: 2021-09-29 00:32:00 Z
-categories:
-- CSS
-- JavaScript
-- Accessibility
+tags:
+    - CSS
+    - JavaScript
+    - Accessibility
 layout: post
 ---
 

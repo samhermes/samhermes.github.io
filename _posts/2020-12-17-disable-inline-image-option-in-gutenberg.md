@@ -1,8 +1,8 @@
 ---
 title: Disable inline image option in Gutenberg
 date: 2020-12-17 04:53:00 Z
-categories:
-- WordPress
+tags:
+    - WordPress
 layout: post
 custom_js: prism
 ---

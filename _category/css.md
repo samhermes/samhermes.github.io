@@ -1,5 +1,0 @@
----
-title: CSS
-layout: category
----
-

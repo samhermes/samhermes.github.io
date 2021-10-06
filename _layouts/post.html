@@ -5,7 +5,7 @@ layout: default
 <article class="post">
 
   <header class="post-header">
-    <p class="post-meta"><time>{{ page.date | date: "%B %-d, %Y" }}</time></p>
+    <p class="post-meta"><time>{{ page.date | date: "%B %e, %Y" }}</time></p>
     <h1 class="post-title">{{ title }}</h1>
   </header>
 
@@ -13,14 +13,14 @@ layout: default
     {{ content }}
   </div>
 
-  {% unless page.categories == empty %}
+  {% unless tags == empty %}
   <div class="post-categories">
     {% include icons/category.svg %}
     <p class="screen-reader-text">This post is categorized in:</p>
     <ul class="categories-list">
-      {% for category in page.categories %}
+      {% for tag in tags %}
       <li><a
-          href="/category/{{ category | downcase | url_escape | strip | replace: ' ', '-' }}">{{ category | camelcase }}</a>
+          href="/tags/{{ tag | downcase | url_escape | strip | replace: ' ', '-' }}">{{ tag | camelcase }}</a>
       </li>
       {% endfor %}
     </ul>

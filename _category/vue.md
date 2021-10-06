@@ -1,5 +1,0 @@
----
-title: Vue
-layout: category
----
-

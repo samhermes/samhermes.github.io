@@ -25,8 +25,8 @@
 	</div>
 </footer>
 
-{% if page.custom_js %}
-{% for js_file in page.custom_js %}
+{% if custom_js %}
+{% for js_file in custom_js %}
 <script async src="/js/{{ js_file }}.js"></script>
 {% endfor %}
 {% endif %}
