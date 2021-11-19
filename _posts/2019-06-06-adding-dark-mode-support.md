@@ -1,8 +1,6 @@
 ---
 title: Adding dark mode support
 date: 2019-06-06 00:00:00 Z
-categories:
-- CSS
 layout: post
 custom_js: prism
 ---

@@ -1,8 +1,6 @@
 ---
 title: Notes from WordCamp US 2018
 date: 2018-12-13 00:00:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

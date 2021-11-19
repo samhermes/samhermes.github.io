@@ -1,8 +1,6 @@
 ---
 title: Getting started with CSS grid
 date: 2017-11-06 00:00:00 Z
-categories:
-- CSS
 layout: post
 custom_js: prism
 ---

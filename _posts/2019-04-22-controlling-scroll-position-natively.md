@@ -1,8 +1,6 @@
 ---
 title: Controlling scroll position natively
 date: 2019-04-22 00:00:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

@@ -1,8 +1,6 @@
 ---
 title: I love overscroll-behavior
 date: 2018-06-10 00:00:00 Z
-categories:
-- CSS
 layout: post
 ---
 

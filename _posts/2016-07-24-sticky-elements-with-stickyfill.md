@@ -1,9 +1,6 @@
 ---
 title: Sticky elements with Stickyfill
 date: 2016-07-24 00:00:00 Z
-categories:
-- JavaScript
-- CSS
 layout: post
 custom_js: prism
 ---

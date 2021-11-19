@@ -1,8 +1,6 @@
 ---
 title: Fade in and out element with CSS transition
 date: 2021-11-05 11:15:00 Z
-categories:
-- CSS
 custom_js: prism
 layout: post
 ---

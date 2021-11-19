@@ -1,8 +1,6 @@
 ---
 title: Adding syntax highlighting to code
 date: 2016-08-25 00:00:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

@@ -1,8 +1,6 @@
 ---
 title: Migrate WordPress install from one DigitalOcean droplet to another
 date: 2020-02-22 19:49:00 Z
-categories:
-- WordPress
 layout: post
 ---
 

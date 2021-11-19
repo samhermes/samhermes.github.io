@@ -1,9 +1,6 @@
 ---
 title: Revisiting my WordPress work from 2013
 date: 2019-09-10 21:40:00 Z
-categories:
-- WordPress
-- CSS
 layout: post
 ---
 

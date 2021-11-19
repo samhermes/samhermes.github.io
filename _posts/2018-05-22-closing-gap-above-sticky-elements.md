@@ -1,8 +1,6 @@
 ---
 title: Closing the gap above sticky elements
 date: 2018-05-22 00:00:00 Z
-categories:
-- CSS
 layout: post
 ---
 

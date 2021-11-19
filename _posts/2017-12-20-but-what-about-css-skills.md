@@ -1,8 +1,6 @@
 ---
 title: CSS skills should be valued as much as JavaScript skills
 date: 2017-12-20 00:00:00 Z
-categories:
-- CSS
 layout: post
 ---
 

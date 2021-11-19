@@ -1,9 +1,6 @@
 ---
 title: How to configure a sticky header to prevent page jump
 date: 2016-11-10 00:00:00 Z
-categories:
-- JavaScript
-- CSS
 layout: post
 custom_js: prism
 ---

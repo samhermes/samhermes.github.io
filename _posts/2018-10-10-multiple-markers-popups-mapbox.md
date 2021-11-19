@@ -1,8 +1,6 @@
 ---
 title: How to add multiple default markers with popups in Mapbox GL JS
 date: 2018-10-10 00:00:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

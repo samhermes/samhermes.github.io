@@ -1,8 +1,6 @@
 ---
 title: Output featured image caption in WordPress
 date: 2016-01-30 18:00:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

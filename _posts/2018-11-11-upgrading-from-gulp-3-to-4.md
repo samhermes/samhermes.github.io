@@ -1,8 +1,6 @@
 ---
 title: Upgrading from Gulp 3 to 4
 date: 2018-11-11 00:00:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

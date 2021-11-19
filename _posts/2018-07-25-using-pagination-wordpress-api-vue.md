@@ -1,9 +1,6 @@
 ---
 title: Using pagination with the WordPress API in Vue
 date: 2018-07-25 00:00:00 Z
-categories:
-- WordPress
-- Vue
 layout: post
 custom_js: prism
 ---

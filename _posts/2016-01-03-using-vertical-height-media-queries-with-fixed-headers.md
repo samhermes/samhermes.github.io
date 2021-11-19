@@ -1,8 +1,6 @@
 ---
 title: Using vertical height media queries with fixed headers
 date: 2016-01-03 18:00:00 Z
-categories:
-- CSS
 layout: post
 custom_js: prism
 ---

@@ -12,18 +12,5 @@ layout: default
   <div class="post-content">
     {{ content }}
   </div>
-
-  {% unless tags == empty %}
-  <div class="post-categories">
-    {% include icons/category.svg %}
-    <p class="screen-reader-text">This post is categorized in:</p>
-    <ul class="categories-list">
-      {% for tag in tags %}
-      <li><a
-          href="/tags/{{ tag | downcase | url_escape | strip | replace: ' ', '-' }}">{{ tag | camelcase }}</a>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
-  {% endunless %}
+  
 </article>

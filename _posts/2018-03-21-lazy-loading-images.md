@@ -1,8 +1,6 @@
 ---
 title: Lazy loading images
 date: 2018-03-21 00:00:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

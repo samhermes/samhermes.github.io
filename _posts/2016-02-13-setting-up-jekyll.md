@@ -1,8 +1,6 @@
 ---
 title: Setting up Jekyll
 date: 2016-02-13 07:15:00 Z
-categories:
-- Jekyll
 layout: post
 custom_js: prism
 ---

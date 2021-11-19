@@ -1,8 +1,6 @@
 ---
 title: Adding a loading state to Reading List
 date: 2018-02-27 00:00:00 Z
-categories:
-- Vue
 layout: post
 custom_js: prism
 ---

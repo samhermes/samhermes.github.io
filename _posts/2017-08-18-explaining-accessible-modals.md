@@ -1,9 +1,6 @@
 ---
 title: Explaining accessible modals
 date: 2017-08-18 00:00:00 Z
-categories:
-- JavaScript
-- Accessibility
 layout: post
 custom_js: prism
 ---

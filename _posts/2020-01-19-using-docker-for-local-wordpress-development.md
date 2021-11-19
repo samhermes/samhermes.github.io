@@ -1,8 +1,6 @@
 ---
 title: Using Docker for local WordPress development
 date: 2020-01-19 23:32:00 Z
-categories:
-- WordPress
 layout: post
 ---
 

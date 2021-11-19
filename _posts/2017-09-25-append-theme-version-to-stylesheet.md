@@ -1,8 +1,6 @@
 ---
 title: Append theme version to stylesheet
 date: 2017-09-25 00:00:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

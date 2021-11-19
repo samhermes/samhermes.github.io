@@ -1,8 +1,6 @@
 ---
 title: Maintaining state with sessionStorage
 date: 2016-04-24 00:00:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

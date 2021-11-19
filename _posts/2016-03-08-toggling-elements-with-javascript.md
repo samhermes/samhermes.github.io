@@ -1,8 +1,6 @@
 ---
 title: Toggling elements with JavaScript
 date: 2016-03-08 20:20:00 Z
-categories:
-- JavaScript
 layout: post
 custom_js: prism
 ---

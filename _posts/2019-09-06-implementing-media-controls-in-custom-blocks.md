@@ -1,9 +1,6 @@
 ---
 title: Implementing media controls in custom blocks
 date: 2019-09-06 22:51:00 Z
-categories:
-- WordPress
-- React
 custom_js: prism
 layout: post
 ---

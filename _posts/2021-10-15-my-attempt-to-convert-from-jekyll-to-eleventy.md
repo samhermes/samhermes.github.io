@@ -1,9 +1,6 @@
 ---
 title: My attempt to convert from Jekyll to Eleventy
 date: 2021-10-15 11:30:00 Z
-categories:
-- JavaScript
-- Jekyll
 custom_js: prism
 layout: post
 ---

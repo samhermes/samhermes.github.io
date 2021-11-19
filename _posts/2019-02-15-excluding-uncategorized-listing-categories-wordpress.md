@@ -1,8 +1,6 @@
 ---
 title: Excluding Uncategorized when listing categories in WordPress
 date: 2019-02-15 00:00:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

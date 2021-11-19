@@ -1,8 +1,6 @@
 ---
 title: Caching a menu in a transient in WordPress
 date: 2016-03-30 21:38:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

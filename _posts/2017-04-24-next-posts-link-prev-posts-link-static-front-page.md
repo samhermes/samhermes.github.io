@@ -1,8 +1,6 @@
 ---
 title: Using next_posts_link() and prev_posts_link() on static front page
 date: 2017-04-24 00:00:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

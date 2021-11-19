@@ -1,8 +1,6 @@
 ---
 title: Disabling blocks and block styles in Gutenberg
 date: 2018-11-28 00:00:00 Z
-categories:
-- WordPress
 layout: post
 custom_js: prism
 ---

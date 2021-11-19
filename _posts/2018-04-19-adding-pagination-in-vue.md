@@ -1,8 +1,6 @@
 ---
 title: Adding pagination in Vue
 date: 2018-04-19 00:00:00 Z
-categories:
-- Vue
 layout: post
 custom_js: prism
 ---
