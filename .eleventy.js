@@ -13,6 +13,7 @@ module.exports = function (config) {
     });
     config.addPassthroughCopy('img')
     config.addPassthroughCopy('js')
+    config.addPassthroughCopy({ 'favicon': '/' })
 
     return {
         dir: {
