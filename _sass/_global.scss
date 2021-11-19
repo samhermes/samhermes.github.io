@@ -9,7 +9,11 @@
   .type-posts & {
     position: sticky;
     top: 0;
-    background-color: $color-light;
+    background-color: $color-dark;
+  }
+
+  .page-home & {
+    background-color: $color-dark;
   }
 
   .contain {
@@ -127,13 +131,29 @@
   }
 }
 
+a.external {
+  &::after {
+    content: '';
+    width: 0.6em;
+    height: 0.6em;
+    display: inline-block;
+    background: url('/img/out.svg') no-repeat;
+    background-size: 100%;
+    margin: 0 0 0.03em 0.4em;
+  }
+}
+
 /* Site Footer */
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1rem 0;
+  padding: 1rem 0 3rem;
   margin: 0 auto;
   position: relative;
+
+  @media screen and (min-width: 37.5em) {
+    padding-bottom: 1rem;
+  }
 
   .contain {
     display: flex;

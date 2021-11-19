@@ -4,14 +4,18 @@ layout: home
 ---
 
 {% include arrow.svg %}
-<div class="contain">
-	<div class="intro">
-		<div class="blob-container">
-			{% include blob.svg %}
+<div class="home-intro">
+	<div class="contain">
+		<div class="intro">
+			<div class="blob-container">
+				{% include blob.svg %}
+			</div>
+			<p>{{ site.description }}</p>
+			<a class="more" href="/about">About<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
 		</div>
-		<p>{{ site.description }}</p>
-		<a class="more" href="/about">About<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
 	</div>
+</div>
+<div class="contain">
 	<div class="home-posts">
 		<h2>{% include icons/posts.svg %}Latest Posts</h2>
 		<div class="home-post-list">
