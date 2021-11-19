@@ -11,7 +11,7 @@ Usually when I write something, it’s because I’ve figured something out, or 
 
 This part was super easy! I’m familiar with node, and all that entails, so installing Eleventy and configuring it was very straightforward. It felt like a great fit. With that done, I began running into issues. The first was surrounding the templates. Eleventy expects them to be in a folder called `_includes`, but Jekyll wants them to be in a folder called `_layouts`. Thanks to [this article by Alex Pearce](https://alexpearce.me/2020/06/jekyll-to-eleventy/), I found I could just modify this with a setting in `.eleventy.js` (a file that must be created).
 
-```other
+```js
 module.exports = {
     dir: {
         layouts: "_layouts"
@@ -21,7 +21,7 @@ module.exports = {
 
 Now that the layouts were looking in the right place, I stumbled around trying to get them to be applied appropriately until I found out ([from this article by Kitty Giraudel](https://kittygiraudel.com/2020/11/30/from-jekyll-to-11ty/)) that each “collection” in Eleventy uses a configuration file in their directory to apply this across the board. So, for my “posts” collection, I added a file called `_posts.json`, and added the following.
 
-```other
+```js
 {
     "layout": "post",
     "permalink": "/posts/{{ page.fileSlug }}/"
@@ -32,7 +32,7 @@ The only problem was, the posts were nowhere to be found. My homepage had an emp
 
 The next thing that I tried was explictly defining my collections in the configuration file. There, I added each of my collections, one for posts, categories, and projects. For example, here’s the posts definition:
 
-```other
+```js
 config.addCollection('posts', collection =>
 	collection.getFilteredByGlob('_posts/*.md')
 )
@@ -54,13 +54,13 @@ Eleventy does not doing anything with Sass by default. This was a surprise to me
 
 I needed to install the `sass` package first.
 
-```other
+```bash
 npm install sass --save-dev
 ```
 
 Then, I needed to integrate it with the build. Before, I was just using the default `eleventy —serve` command, but with the additional step of building styles, I set up custom commands in `package.json`. I learned how to do all of this from [this article by John Kemp-Cruz](https://jkc.codes/blog/using-sass-with-eleventy/). Honestly, the most fun part of not knowing what you're doing is visiting all of these personal sites.
 
-```other
+```js
 "watch:eleventy": "eleventy --serve",
 "watch:sass": "sass _sass:_site/css --watch",
 "start": "npm run watch:eleventy & npm run watch:sass"
@@ -68,7 +68,7 @@ Then, I needed to integrate it with the build. Before, I was just using the defa
 
 The last little bit was to connect updates to sass files to BrowserSync, so that it would reload the browser when any of the sass files changed. This works out of the box for everything else in Eleventy, and it’s easy to add files to the watch list. In `.eleventy.js`:
 
-```other
+```js
 config.setBrowserSyncConfig({
 	files: './_site/css/**/*.css'
 });
@@ -78,7 +78,7 @@ config.setBrowserSyncConfig({
 
 This is really where everything came crashing down. Previously, through the front matter on my posts, I’d add in a list of strings for the post categories. For example, here’s the front matter for this post:
 
-```other
+```md
 ---
 title: My attempt to convert from Jekyll to Eleventy
 date: 2021-10-15 11:30:00 Z

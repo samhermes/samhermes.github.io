@@ -19,7 +19,7 @@ Fair warning, this is going to be a fairly slow explanation of what’s going on
 
 Gutenberg comes with two media components, `mediaUpload` and `mediaPlaceholder`. `mediaPlaceholder` makes use of `mediaUpload`, but gives us a little UI on top. For most blocks that need a standard media upload control, `mediaPlaceholder` is a great place to start. To add both of them to your block:
 
-```JSX
+```js
 const { MediaPlaceholder, MediaUpload } = wp.editor;
 ```
 
@@ -35,7 +35,7 @@ You needn’t look far to get an impression of how the core developers think tha
 
 I believe in following WordPress, so that’s where I'm going to take this. First, we need to add a couple of attributes to our block for the image URL.
 
-```JSX
+```js
 attributes: {
   mediaUrl: {
     type: 'string',
@@ -45,7 +45,7 @@ attributes: {
 
 Next, we can add a `mediaPlaceholder` to prompt the user to choose an image. Within the edit function of the block, right inside the block’s JSX, we add the following:
 
-```JSX
+```js
 {% raw %}<MediaPlaceholder
   icon="format-image"
   labels={{
@@ -64,7 +64,7 @@ This gets you pretty far, but this really needs to be nested inside of a conditi
 
 In this implementation, the conditional can be fairly simple. We check the attribute that we’re storing the image URL in, and if it has a URL, we render the image, and if not, we display the media placeholder.
 
-```JSX
+```js
 {% raw %}{mediaUrl ?
   <div className="block-image" style={{
       backgroundImage: `url(${mediaUrl})`
@@ -101,13 +101,13 @@ npm install lodash
 
 After it’s been added, we can then bring in just the `get` function to our block:
 
-```JSX
+```js
 import { get } from 'lodash';
 ```
 
 Now, on to the `onSelect` function. We bring in `setAttributes` from the block’s props. Next, it retrieves the large image size URL, falls back to the full size URL if needed, and then stores the URL in state. This function is a simplification of what is used in the Media & Text block in Gutenberg.
 
-```JSX
+```js
 onSelectMedia( media ) {
   const { setAttributes } = this.props;
 
@@ -128,13 +128,13 @@ There are a number of ways to handle image modification. We could add our own bu
 
 We’re already importing the media components, we just need a few more. First, we bring in `BlockControls`. It basically just acts a wrapper. In fact, [look at the source](https://github.com/WordPress/gutenberg/blob/master/packages/block-editor/src/components/block-controls/index.js), there’s hardly anything there. React is… interesting.
 
-```JSX
+```js
 const { BlockControls, MediaPlaceholder, MediaUpload } = wp.editor;
 ```
 
 Next, we need the `Toolbar` and `IconButton` components. They’re coming in from `wp.components` rather than `wp.editor` like the other components.
 
-```JSX
+```js
 const { Toolbar, IconButton } = wp.components;
 ```
 
@@ -142,7 +142,7 @@ When I began doing block development, I was confused about all of this, and wond
 
 In the edit function, right above the JSX for the block, we’ll add the new `MediaUpload` component, amongst our new components. Like so.
 
-```JSX
+```js
 <BlockControls>
   <Toolbar>
     <MediaUpload

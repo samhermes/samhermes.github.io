@@ -1,3 +1,5 @@
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+
 module.exports = function (config) {
     config.addCollection('posts', collection =>
         collection.getFilteredByGlob('_posts/*.md')
@@ -14,6 +16,8 @@ module.exports = function (config) {
     config.addPassthroughCopy('img')
     config.addPassthroughCopy('js')
     config.addPassthroughCopy({ 'favicon': '/' })
+
+    config.addPlugin(syntaxHighlight);
 
     return {
         dir: {
