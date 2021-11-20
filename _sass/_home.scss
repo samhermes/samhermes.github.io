@@ -99,11 +99,7 @@
     overflow: hidden;
 
     .contain {
-        padding: 2rem 0;
-
-        @media screen and (min-width: 37.5em) {
-            padding: 4rem 0;
-        }
+        padding: 4rem 0;
     }
 }
 
