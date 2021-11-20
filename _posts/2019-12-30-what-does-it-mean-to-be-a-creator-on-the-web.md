@@ -1,7 +1,6 @@
 ---
 title: What does it mean to be a creator on the web?
 date: 2019-12-30 18:38:00 Z
-layout: post
 ---
 
 The [Contract for the Web](https://contractfortheweb.org) that Tim Berners-Lee put forth last month has been bouncing around the web. [Principle 7](https://contractfortheweb.org/principles/principle-7-be-creators-and-collaborators-on-the-web/) of the contract states that citizens should “Be creators and collaborators on the Web.” It was the only principle that jumped out at me, I think because “creator” is just one of those words right now. What does it mean? It’s been heavily diluted, applied to just about everybody. Post photos on the web? You’re a creator! It pairs nicely with “content,” an equally nebulous term at this point.

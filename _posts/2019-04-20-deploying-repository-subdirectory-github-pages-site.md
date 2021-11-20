@@ -1,7 +1,6 @@
 ---
 title: Deploying a repository to a subdirectory of GitHub Pages site
 date: 2019-04-20 00:00:00 Z
-layout: post
 ---
 
 My site is currently hosted on GitHub Pages, which means that anytime I want to put something on the site, I have to make a commit and push it up. This works great for most things, but if I want to work on a larger project and “host” it on my site, it has to all go in the same repo. With GitHub Pages, it wasn’t clear that there is a much easier way to handle this. It’s a simple as setting any other repository to use GitHub Pages as well.

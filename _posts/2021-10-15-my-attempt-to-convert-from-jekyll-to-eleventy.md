@@ -1,8 +1,6 @@
 ---
 title: My attempt to convert from Jekyll to Eleventy
 date: 2021-10-15 11:30:00 Z
-custom_js: prism
-layout: post
 ---
 
 Usually when I write something, it’s because I’ve figured something out, or done something for the first time. But, that’s like 1% of the things that happen. In this case, I thought I’d try out Eleventy, and see about converting my site from Jekyll. After getting stuck on all kinds of weird things, I gave up. I questioned my career choice. I stared longingly out of a window. I ate bread. So, this isn’t really a conversion guide, but more of a report? There are things here that are likely obvious to others, or there are things here that probably should be better documented.
@@ -85,7 +83,7 @@ date: 2021-10-15 11:30:00 Z
 categories:
 - JavaScript
 - Jekyll
-layout: post
+
 ---
 ```
 

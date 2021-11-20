@@ -1,6 +1,10 @@
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (config) {
+    config.addPlugin(pluginRss);
+    config.addPlugin(syntaxHighlight);
+
     config.addCollection('posts', collection =>
         collection.getFilteredByGlob('_posts/*.md')
             .sort((a, b) => b.date - a.date)
@@ -16,8 +20,6 @@ module.exports = function (config) {
     config.addPassthroughCopy('img')
     config.addPassthroughCopy('js')
     config.addPassthroughCopy({ 'favicon': '/' })
-
-    config.addPlugin(syntaxHighlight);
 
     return {
         dir: {

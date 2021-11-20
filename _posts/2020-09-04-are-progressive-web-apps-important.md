@@ -1,7 +1,6 @@
 ---
 title: Are progressive web apps important?
 date: 2020-09-04 21:37:00 Z
-layout: post
 ---
 
 As part of Google’s Lighthouse tool (which is very useful), it gives feedback on how well a site has implemented progressive web app (PWA) features. It’s one of five main measurements, alongside performance and accessibility. Google has championed progressive web apps more than anyone, so it isn’t surprising that the ranking gets this positioning in its own tool. However, how important are they?

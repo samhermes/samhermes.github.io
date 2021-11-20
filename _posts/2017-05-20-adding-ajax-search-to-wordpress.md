@@ -1,8 +1,6 @@
 ---
 title: Adding Ajax search to a WordPress theme
 date: 2017-05-20 00:00:00 Z
-layout: post
-custom_js: prism
 ---
 
 There are a few plugins that will add Ajax search for you, but what if you wanted to integrate it into your theme yourself for more control over functionality and appearance? Let’s see what we can do.

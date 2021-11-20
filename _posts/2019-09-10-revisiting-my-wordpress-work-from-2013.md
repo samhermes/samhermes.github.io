@@ -1,7 +1,6 @@
 ---
 title: Revisiting my WordPress work from 2013
 date: 2019-09-10 21:40:00 Z
-layout: post
 ---
 
 It’s pretty rare that you get to return to a project after six years, but that’s just what I’ve been up to! Even though I’d love to never tell anyone about the mistakes that I made, why not make them useful.

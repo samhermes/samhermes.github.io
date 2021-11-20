@@ -1,7 +1,6 @@
 ---
 title: From developer to manager
 date: 2019-12-18 16:39:00 Z
-layout: post
 ---
 
 About six months ago, I made the move from developer to developer/manager. It wasn’t the typical clean break, as the role is still actively involved in doing some development work. I’m on a smaller team, so this arrangement works well and makes sense. Plus, for me, I’m only about five and a half years into my career, so hanging up my developer hat completely seemed crazy. Anyway, the important part is that I have new responsibilities!

@@ -1,7 +1,6 @@
 ---
 title: Migrate WordPress install from one DigitalOcean droplet to another
 date: 2020-02-22 19:49:00 Z
-layout: post
 ---
 
 Alternate title: “Upgrade” Ubuntu from 14.04 to 18.04 by just starting over with a fresh droplet because that’s far far easier than actually upgrading.

@@ -1,19 +1,15 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
+  background-color: #eee;
+  border-bottom: 1px solid gainsboro;
 
   @media screen and (min-width: 33em) {
-    padding: 1rem 0;
-  }
-
-  .type-posts & {
-    position: sticky;
-    top: 0;
-    background-color: $color-dark;
+    padding: 0.9rem 0;
   }
 
   .page-home & {
-    background-color: $color-dark;
+    border-bottom: none;
   }
 
   .contain {
@@ -37,7 +33,7 @@
 
   .logotype {
     display: block;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 500;
     transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
 
@@ -46,7 +42,7 @@
     }
 
     @media screen and (min-width: 33em) {
-      font-size: 1.7rem;
+      font-size: 1.4rem;
     }
   }
 }
@@ -74,7 +70,7 @@
 
     a {
       display: block;
-      padding: 0.5rem;
+      padding: 0.2rem 0.5rem;
       font-weight: 500;
       transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
 
@@ -147,12 +143,14 @@ a.external {
 
 .site-footer {
   box-sizing: border-box;
-  padding: 1rem 0 3rem;
+  padding: 0.9rem 0 3rem;
   margin: 0 auto;
   position: relative;
+  background-color: #eee;
+  border-top: 1px solid gainsboro;
 
   @media screen and (min-width: 37.5em) {
-    padding-bottom: 1rem;
+    padding-bottom: 0.9rem;
   }
 
   .contain {

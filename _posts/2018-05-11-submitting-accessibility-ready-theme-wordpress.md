@@ -1,8 +1,6 @@
 ---
 title: Submitting an accessibility-ready theme to WordPress
 date: 2018-05-11 00:00:00 Z
-custom_js: prism
-layout: post
 ---
 
 *This post goes with my talk at WordCamp St. Louis.*

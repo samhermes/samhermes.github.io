@@ -1,9 +1,6 @@
 ---
 title: My WordPress hosting recommendation
 date: 2020-08-28 19:14:00 Z
-tags:
-- WordPress
-layout: post
 ---
 
 I’ve been making hosting recommendations to clients for a while now, and it’s honestly been a bit of a journey. With so many options, there are a lot of good paths, and some paths that you just have to go down for a while before you really know. It would probably be useful to list those paths, but I’m going to just focus on the path that has been the most sensible to me.

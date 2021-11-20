@@ -1,7 +1,6 @@
 ---
 title: Preparing SVG for the web
 date: 2016-09-14 00:00:00 Z
-layout: post
 ---
 
 I used to be really scared of using SVG, and now I’m just a little bit scared. I think the scary part is that you can easily see the mess inside. It’s all right there, open to edit and optimize. I’ve been working with SVG for a while now, and I’ve come to rest on what I’ve found to be the best way to prepare them for the web. As they are complex, these may not be the best in each and every case, but this is what works for me.

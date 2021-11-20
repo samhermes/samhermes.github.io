@@ -1,7 +1,6 @@
 ---
 title: 'Analytics: Where do we go?'
 date: 2020-09-10 21:10:00 Z
-layout: post
 ---
 
 Measuring web traffic on the web. Yikes. Right now, it seems like we are in a precarious place, increasingly so. With privacy becoming more and more of a household topic, how should we think about collecting analytics in the coming years? (Spoiler alert: I do not have the answer. But, definitely thinking about it.)

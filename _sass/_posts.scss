@@ -81,71 +81,6 @@
     }
 }
 
-/* Category List */
-
-.post-categories {
-  position: relative;
-
-  svg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 1.625rem;
-    height: 1.625rem;
-
-    @media screen and (min-width: 37.5em) {
-      width: 1.8125rem;
-      height: 1.8125rem;
-    }
-  }
-
-  .categories-list {
-    margin-left: 2rem;
-
-    @media screen and (min-width: 37.5em) {
-      margin-left: 2.8rem;
-    }
-
-    li {
-      margin-right: 1rem;
-      
-      a {
-        padding: 0.1rem 0;
-      }
-    }
-  }
-}
-
-.categories-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  flex-wrap: wrap;
-
-  li {
-    font-size: 1.2rem;
-    font-weight: 500;
-    margin: 0 2rem 0.5rem 0;
-
-    &:last-child {
-      margin-right: 0;
-    }
-
-    a {
-      padding: 0.3rem 0;
-      border-radius: 0.25em;
-      display: inline-flex;
-      align-items: center;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-
 /* Post Page */
 
 .post {
@@ -170,7 +105,7 @@
 .post-title {
   font-size: 2rem;
   line-height: 1.15;
-  margin: 0 0 3rem;
+  margin: 0 0 2rem;
   font-weight: 500;
 
   @media screen and (min-width: 37.5em) {

@@ -14,7 +14,6 @@ dl, dd, ol, ul, figure {
 body {
 	font: 300 100% $base-font-family;
 	color: $color-text;
-	background-color: $color-dark;
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -45,11 +44,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	color: $color-text;
+	color: $color-text-dark;
 	text-decoration: none;
 
 	&:hover {
-		color: $color-text;
+		color: $color-text-dark;
 	}
 }
 

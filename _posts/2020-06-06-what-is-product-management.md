@@ -1,7 +1,6 @@
 ---
 title: What is product management?
 date: 2020-06-06 15:30:00 Z
-layout: post
 ---
 
 I’ve been interested in exploring the practice of product management, as it’s something that I think I do a bits and pieces of in my current role. I think that it’s worth digging in to this, to see if it would be a useful frame for me as I go about my current work, and if it’s something I would like to more intentionally lean into in the future.

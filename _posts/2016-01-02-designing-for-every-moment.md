@@ -1,7 +1,6 @@
 ---
 title: Designing for every moment
 date: 2016-01-02 18:00:00 Z
-layout: post
 ---
 
 Responsive design is truly about each and every point in between the smallest supported viewport and the largest, which leaves a lot of possibilities. If truly designing for a fully responsive experience, you should give attention to the awkward moments of change. One of those moments is when an element comes into contact with the edge of the screen.

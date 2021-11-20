@@ -1,8 +1,6 @@
 ---
 title: Getting started with CSS grid
 date: 2017-11-06 00:00:00 Z
-layout: post
-custom_js: prism
 ---
 
 CSS grid has been out in the wild for a little while now, and though I still have a little hesitation about putting it into production, it’s worth studying up on it. For all of the complexity that CSS grid brings, it’s incredibly simple to get started. Many of the basic layout tasks that I’ve attempted so far have only required a few properties to be specified on the parent element. Let’s look at a run-of-the-mill example.

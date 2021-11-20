@@ -1,8 +1,6 @@
 ---
 title: Opening links in a new window
 date: 2018-05-18 00:00:00 Z
-layout: post
-custom_js: prism
 ---
 
 Over the past year, I’ve seen a few people discussing the security dangers of using `target="_blank"` to open links in a new window. The issue is that the page you open in a new window has access to the `window` object of the originating page. Seems fairly harmless, but this means the site in the new window could potentially redirect the originating page or perform some other malicious action without permission. Depending on where you’re linking off to, you may not know if the site is secure (especially if it’s loaded with ad trackers).

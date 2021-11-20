@@ -1,7 +1,6 @@
 ---
 title: Moving ahead before you’re ready
 date: 2019-11-11 01:16:00 Z
-layout: post
 ---
 
 I think one of the biggest lessons that I’ve had to take in as an adult is to just move forward before I’m ready. Having a full time job that marches forward at an unstoppable pace has been the biggest teacher of this, but also my personal life, where a new day comes around quicker and quicker all the time.

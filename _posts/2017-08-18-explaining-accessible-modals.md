@@ -1,8 +1,6 @@
 ---
 title: Explaining accessible modals
 date: 2017-08-18 00:00:00 Z
-layout: post
-custom_js: prism
 ---
 
 Accessibility on the web is tricky, and modals are even trickier. Fortunately, there seem to be quite a few resources for getting there, one being [Frend](https://frend.co). It includes a component for an accessible modal that provides a small JavaScript library that hooks up to a modal and takes care of the rest. Only problem is that it’s a little too component-ized to understand what’s going on under the hood. The documentation says that you can just call `var myModal = Frdialogmodal();` and you’re good to go. But what’s really happening, and how might we adapt it for our own use?

@@ -1,7 +1,6 @@
 ---
 title: The long game of web development
 date: 2017-01-01 00:00:00 Z
-layout: post
 ---
 
 I recently finished reading *The World Beyond Your Head* by Matthew B. Crawford, and in the book he speaks of observing the individuals working as organ builders. He tells of the slowness of the process, much done by hand, then spends a bit of time musing on the long game of organ building. In it, one must respect the work of the person who came before, and also think of the person who will be maintaining the organ, and learning from their work in the future.

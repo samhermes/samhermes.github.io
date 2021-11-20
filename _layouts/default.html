@@ -1,14 +1,8 @@
 <!DOCTYPE html>
 {% include head.html %}
-{% assign slug = title | slugify | downcase | prepend: 'page-' %}
+{% assign slug = title | slug | downcase | prepend: 'page-' %}
 
-{% if page.collection == "posts" %}
-    {% assign type = page.collection | slugify | prepend: ' type-' %}
-{% else %}
-    {% assign type = '' %}
-{% endif %}
-
-<body class="{{ slug }}{{ type }}">
+<body class="{{ slug }}">
     {% include header.html %}
     <div class="page">
         {{ content }}

@@ -1,8 +1,6 @@
 ---
 title: Fade in and out element with CSS transition
 date: 2021-11-05 11:15:00 Z
-custom_js: prism
-layout: post
 ---
 
 Here we have an element that is using `position: absolute`, and is not visible when the page loads or by default. In this case, we can rely on `visibility` to control whether or not the element is visible. As the element is using `position: absolute`, it doesn't matter if it continues to take up space when its hidden, one of the gotchas of using `visibility: hidden`. Here, we transition opacity to give the fade in/out effect.

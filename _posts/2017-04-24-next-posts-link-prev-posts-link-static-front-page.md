@@ -1,8 +1,6 @@
 ---
 title: Using next_posts_link() and prev_posts_link() on static front page
 date: 2017-04-24 00:00:00 Z
-layout: post
-custom_js: prism
 ---
 
 If you have a custom query of posts on a static front page in WordPress, adding pagination can be a confusing experience. The answer is fairly simple, if you’ve done it before. Prior to last week, I had not done it before, and I was very lost. Search results were driving me all kinds of places. Fortunately, you’ve landed here.

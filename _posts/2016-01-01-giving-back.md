@@ -1,7 +1,6 @@
 ---
 title: Giving back
 date: 2016-01-01 18:00:00 Z
-layout: post
 ---
 
 Everything I’ve learned about working on the web, I’ve learned on the web. From reading blogs to doing Treehouse courses to simply reading Twitter, it all took place on one website or another. Up to this point, I’ve really only been taking things in. I don’t think it’s a bad thing, I’ve simply been learning as much as I can. However, I think the time has come that I try to give back a little.
