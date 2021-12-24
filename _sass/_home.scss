@@ -110,8 +110,8 @@
     background: #fff;
     color: var(--color-text-dark);
     border: 1px solid gainsboro;
-    border-radius: 0.5rem;
-    padding: 1.25rem 1.25rem;
+    border-radius: var(--border-radius);
+    padding: 1.25rem;
 
     @media screen and (min-width: 37.5em) {
         padding: 2rem 2.25rem;

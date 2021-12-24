@@ -8,7 +8,7 @@
         background: #fff;
         color: var(--color-dark);
         border: 1px solid gainsboro;
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius);
         padding: 1.25rem 1.25rem;
 
         @media screen and (min-width: 37.5em) {
@@ -19,7 +19,7 @@
 
     li {
         margin-bottom: 2rem;
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius);
         display: grid;
         grid-template-columns: 4rem 1fr;
         grid-gap: 1.25rem;
@@ -38,7 +38,7 @@
     .project-image {
         width: 6.25rem;
         height: auto;
-        border-radius: 0.5rem;
+        border-radius: var(--border-radius);
     }
     
     .project-title {
