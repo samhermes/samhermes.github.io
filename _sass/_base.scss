@@ -12,8 +12,8 @@ dl, dd, ol, ul, figure {
 }
 
 body {
-	font: 300 100% $base-font-family;
-	color: $color-text;
+	font: 300 100% var(--base-font-family);
+	color: var(--color-text);
 	-webkit-text-size-adjust: 100%;
 }
 
@@ -44,16 +44,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	color: $color-text-dark;
+	color: var(--color-text-dark);
 	text-decoration: none;
 
 	&:hover {
-		color: $color-text-dark;
+		color: var(--color-text-dark);
 	}
 }
 
 blockquote {
-	border-left: 0.25em solid $color-text;
+	border-left: 0.25em solid var(--color-text);
 	padding-left: 1.3rem;
 	font-style: italic;
 

@@ -86,14 +86,14 @@
 .page {
   min-height: calc(100vh - 7.4375rem);
   background: #fff;
-  color: $color-text-dark;
+  color: var(--color-text-dark);
 
   @media screen and (min-width: 33em) {
     min-height: calc(100vh - 8.1875rem);
   }
 
   a {
-    color: $color-text-dark;
+    color: var(--color-text-dark);
   }
 
   .contain {
