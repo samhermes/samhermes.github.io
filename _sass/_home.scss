@@ -17,59 +17,6 @@
         }
     }
 
-    .intro {
-        position: relative;
-        z-index: 1;
-
-        .blob-container {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            z-index: -1;
-            width: 100%;
-        }
-
-        .blob {
-            width: 100%;
-            opacity: 70%;
-
-            @media screen and (min-width: 37.5em) {
-                width: 90%;
-            }
-
-            @media screen and (prefers-reduced-motion: no-preference) {
-                animation: rotation 30s infinite ease;
-            }
-        }
-        
-        @keyframes rotation {
-          0% {
-            transform: rotate(-10deg) skew(0, 0);
-          }
-          33% {
-            transform: rotate(50deg) skew(3deg, -16deg);
-          }
-          66% {
-            transform: rotate(40deg) skew(-4deg, 5deg);
-          }
-          100% {
-            transform: rotate(-10deg) skew(0, 0);
-          }
-        }
-    
-        p {
-            font-size: 2.2rem;
-            font-weight: 500;
-            margin: 0 0 1.2rem;
-
-            @media screen and (min-width: 37.5em) {
-                font-size: 2.5rem;
-                margin-bottom: 1.5rem;
-            }
-        }
-    }
-
     h2 {
         font-size: 1.6rem;
         font-weight: 500;
@@ -96,10 +43,60 @@
 .home-intro {
     background: #eee;
     border-bottom: 1px solid gainsboro;
-    overflow: hidden;
+    margin-bottom: 1.5rem;
 
     .contain {
-        padding: 4rem 0;
+        padding: 3rem 0 2rem;
+        max-width: 65rem;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+
+        @media screen and (min-width: 62.5em) {
+            padding: 0;
+            align-items: center;
+        }
+    }
+
+    .intro {
+        width: 50%;
+        max-width: 32rem;
+
+        @media screen and (min-width: 62.5em) {
+            position: absolute;
+            top: 50%;
+            z-index: 1;
+            transform: translateY(-50%);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 500;
+            margin: 0 0 1.2rem;
+            line-height: 1.1;
+
+            @media screen and (min-width: 37.5em) {
+                font-size: 3rem;
+                margin-bottom: 1.5rem;
+            }
+
+            @media screen and (min-width: 62.5em) {
+                font-size: 4.5rem;
+            }
+        }
+    }
+
+    img {
+        margin-left: auto;
+        margin-bottom: -3.5rem;
+        max-width: 37.5rem;
+        width: 40%;
+        height: auto;
+
+        @media screen and (min-width: 62.5em) {
+            margin-bottom: -1.5rem;
+            width: 50%;
+        }
     }
 }
 

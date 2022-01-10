@@ -150,7 +150,7 @@ a.external {
   border-top: 1px solid gainsboro;
 
   @media screen and (min-width: 37.5em) {
-    padding-bottom: 0.9rem;
+    padding-bottom: 2rem;
   }
 
   .contain {
@@ -173,10 +173,11 @@ a.external {
 .social {
   list-style: none;
   padding: 0;
-  margin: 0.125em 0 0 auto;
+  margin: 0 0 0 auto;
+  display: flex;
+  align-items: center;
 
   li {
-    float: left;
     margin-left: 1.25em;
 
     &:first-child {
@@ -186,11 +187,13 @@ a.external {
     svg {
       width: 1.7em;
       height: auto;
+      display: block;
     }
 
     a {
       transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
       will-change: opacity;
+      display: block;
 
       &:hover {
         opacity: 0.5;
