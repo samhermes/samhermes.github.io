@@ -3,7 +3,7 @@ title: Home
 layout: home
 ---
 
-{% include icons/arrow.svg %}
+{% include 'icons/arrow.svg' %}
 <div class="home-intro">
 	<div class="contain">
 		<div class="intro">
@@ -15,7 +15,7 @@ layout: home
 </div>
 <div class="contain">
 	<div class="home-posts">
-		<h2>{% include icons/posts.svg %}Latest Posts</h2>
+		<h2>{% include 'icons/posts.svg' %}Latest Posts</h2>
 		<div class="home-post-list">
 			<ul class="post-list">
 				{% for post in collections.posts limit:5 %}
@@ -31,7 +31,7 @@ layout: home
 		</div>
 	</div>
 	<div class="home-projects">
-		<h2>{% include icons/projects.svg %}Projects</h2>
+		<h2>{% include 'icons/projects.svg' %}Projects</h2>
 		<div class="home-project-list">
 			<ul class="project-list">
 				{% for project in collections.projects limit:5 %}

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{% include head.html %}
+{% include 'head.html' %}
 {% assign slug = title | slugify | downcase | prepend: 'page-' %}
 
 {% if page.collection == "posts" %}
@@ -15,9 +15,9 @@
 {% endif %} 
 
 <body class="{{ slug }}{{ type }}{{ width }}">
-    {% include header-home.html %}
+    {% include 'header-home.html' %}
     <div class="page">
         {{ content }}
     </div>
-    {% include footer.html %}
+    {% include 'footer.html' %}
 </body>

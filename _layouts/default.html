@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-{% include head.html %}
-{% assign slug = title | slug | downcase | prepend: 'page-' %}
+{% include 'head.html' %}
+{% assign slug = title | slugify | downcase | prepend: 'page-' %}
 
 <body class="{{ slug }}">
-    {% include header.html %}
+    {% include 'header.html' %}
     <div class="page">
         {{ content }}
     </div>
-    {% include footer.html %}
+    {% include 'footer.html' %}
 </body>
