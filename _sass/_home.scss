@@ -34,16 +34,16 @@
             margin: 0 0.8rem -0.25rem -0.01rem;
         }
     }
-
-    .home-posts {
-        margin-bottom: 7rem;
-    }
 }
 
 .home-intro {
     background: #eee;
     border-bottom: 1px solid gainsboro;
     margin-bottom: 1.5rem;
+    
+    @media screen and (min-width: 37.5em) {
+        padding-top: 1rem;
+    }
 
     .contain {
         padding: 3rem 0 2rem;
@@ -101,6 +101,29 @@
     }
 }
 
+.home-posts {
+    margin-bottom: 6rem;
+
+    .contain {
+        max-width: 65rem;
+        padding-top: 3rem;
+        padding-bottom: 0;
+
+        @media screen and (min-width: 37.5em) {
+            padding-top: 5rem;
+        }
+    }
+}
+
+.home-posts-contain {
+    display: grid;
+    grid-gap: 3rem;
+
+    @media screen and (min-width: 37.5em) {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
 .home-post-list,
 .home-project-list {
     display: flex;
@@ -130,6 +153,40 @@
 
     .post-list {
         margin: 0;
+    }
+}
+
+.category-list {
+    margin: 1.7rem 0 0;
+
+    h3 {
+        font-weight: 500;
+        font-size: 1.125rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    li {
+        display: inline-block;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-right: 0.5rem;
+        padding: 0rem 0.4rem 0.8rem 0;
+
+        a:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.home-projects {
+    .contain {
+        padding-top: 0;
     }
 }
 

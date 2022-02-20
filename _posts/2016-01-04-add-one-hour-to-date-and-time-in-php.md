@@ -1,6 +1,8 @@
 ---
 title: Add 1 hour to date & time in PHP
 date: 2016-01-04 18:00:00 Z
+tags:
+- PHP
 ---
 
 ```php

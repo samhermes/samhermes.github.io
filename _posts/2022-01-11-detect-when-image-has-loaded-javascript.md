@@ -1,6 +1,8 @@
 ---
 title: Detect when an image has loaded with JavaScript
 date: 2022-01-11 17:36:00 Z
+tags:
+- JavaScript
 ---
 
 When you’re wanting to make something happen after an image has completely loaded, you need an event to attach your script to. This can be a little tricky to get right, but with a combination of event listeners and the image `complete` attribute, it’s possible.

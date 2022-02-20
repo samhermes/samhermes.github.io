@@ -1,6 +1,9 @@
 ---
 title: Implementing media controls in custom blocks
 date: 2019-09-06 22:51:00 Z
+tags:
+- JavaScript
+- WordPress
 ---
 
 I’ve been deep in block development for the past few months, and through that, I’ve had to learn a lot of stuff! It’s been really fun, and at times a little challenging. One of the most confusing parts has been media controls. There doesn’t seem to be a plug-and-play implementation that Gutenberg gives you, which is great for flexibility and not so great for times that you just want to get going.

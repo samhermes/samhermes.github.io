@@ -1,6 +1,8 @@
 ---
 title: Asking for feedback
 date: 2019-03-28 00:00:00 Z
+tags:
+- Work
 ---
 
 Feedback is a topic that comes up all the time when working with a team. I definitely know its value and appreciate it when it comes, but it’s difficult to both remember to ask for it and to stay open to it.

@@ -1,6 +1,8 @@
 ---
 title: Using Docker for local WordPress development
 date: 2020-01-19 23:32:00 Z
+tags:
+- WordPress
 ---
 
 I definitely knew about Docker before this, but I’d never really started from the beginning. Fair warning, most of this is going to essentially be a stream of consciousness as I attempt to set up Docker for local WordPress development. There are better guides out there, but I wanted to capture some of the questions or uncertainty that I had throughout, possibly that others haven’t answered or addressed previously. You know, noob stuff.

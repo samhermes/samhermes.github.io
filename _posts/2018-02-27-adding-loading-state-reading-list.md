@@ -1,6 +1,9 @@
 ---
 title: Adding a loading state to Reading List
 date: 2018-02-27 00:00:00 Z
+tags:
+- JavaScript
+- CSS
 ---
 
 This is a continuation of my [previous post about a Vue app](https://samhermes.com/posts/small-vue-app-reading-list/) I created for the reading list on this site.

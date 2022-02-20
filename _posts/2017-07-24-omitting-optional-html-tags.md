@@ -1,6 +1,8 @@
 ---
 title: Omitting optional HTML tags
 date: 2017-07-24 00:00:00 Z
+tags:
+- HTML
 ---
 
 Someone mentioned somewhere at some point (life moves too fast) that the [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html#Optional_Tags) suggests that any unnecessary HTML tags can be omitted, such as the `<head>` and `<body>`. This was rather interesting to me, and so quintessential of the web. Even the things you think are so foundational may not be.

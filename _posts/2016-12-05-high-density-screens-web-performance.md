@@ -1,6 +1,9 @@
 ---
 title: High density screens and web performance
 date: 2016-12-05 00:00:00 Z
+tags:
+- Design
+- SVG
 ---
 
 High density screens and the web are at odds. On one side, we want sites to look as crisp as possible, no matter where they are being viewed, but on the other hand, performance is incredibly important. Actually, most important.

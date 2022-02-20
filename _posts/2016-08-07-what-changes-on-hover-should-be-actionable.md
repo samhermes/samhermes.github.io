@@ -1,6 +1,10 @@
 ---
 title: What changes on hover should be actionable
 date: 2016-08-07 00:00:00 Z
+tags:
+- CSS
+- HTML
+- Design
 ---
 
 This falls clearly in the realm of opinion, but I thought I’d share my thoughts anyway. If an item has a hover state, that hover state should highlight the part of the item that an action can be taken on. To illustrate this, I’ve created an example card. When hovering over the card, an outline appears. However, only the link at the bottom is actionable.

@@ -1,6 +1,8 @@
 ---
 title: Lazy loading images
 date: 2018-03-21 00:00:00 Z
+tags:
+- JavaScript
 ---
 
 First things first, we needn’t write a lazy loading script ourselves. There are so many options out there. For many people, having a non-javascript fallback isn’t too much of a concern. But, I am not most people. This led me to lazyload.js, which just so happens to be the first result on Google for “lazy load script”. Maybe I am most people.

@@ -1,6 +1,8 @@
 ---
 title: Buttons need a declared type
 date: 2017-10-26 00:00:00 Z
+tags:
+- HTML
 ---
 
 When using a `<button>` element, the default type is `submit`. So, if you’re just going for a toggle button or other interactive functionality, `type="button"` should be added.

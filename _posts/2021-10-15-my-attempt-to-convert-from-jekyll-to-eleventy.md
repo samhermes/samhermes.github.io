@@ -1,6 +1,8 @@
 ---
 title: My attempt to convert from Jekyll to Eleventy
 date: 2021-10-15 11:30:00 Z
+tags:
+- Static Sites
 ---
 
 *Update 11/22/21: I have published a [follow-up post](https://samhermes.com/posts/returning-to-eleventy/), where I finally bring this all together.*

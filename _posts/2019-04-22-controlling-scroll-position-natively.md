@@ -1,6 +1,8 @@
 ---
 title: Controlling scroll position natively
 date: 2019-04-22 00:00:00 Z
+tags:
+- JavaScript
 ---
 
 It had been a little while since I implemented a control to scroll the page, and I was delighted to find that much of the functionality we usually look for has been implemented directly into [most of the major browsers](https://caniuse.com/#feat=element-scroll-methods)! Of course, before we get too carried away, it’s important to note that this isn’t quite ready for use without a polyfill, but we’re getting closer and closer every day.

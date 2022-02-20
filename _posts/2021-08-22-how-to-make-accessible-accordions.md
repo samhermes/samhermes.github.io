@@ -1,6 +1,10 @@
 ---
 title: How to make accessible accordions
 date: 2021-08-22 20:29:00 Z
+tags:
+- Accessibility
+- HTML
+- CSS
 ---
 
 The time has finally come. I'm going to try and make accessible accordions. This, I know, has been solved by literally so many people. They are in every design system. They litter CodePen. It’s a bit of a goldilocks problem, though. Some of them are too simple, some of them are too complicated. Some of them are, rightly so, very specific. I've made quite a few of them myself, and each time I go to make them, I start somewhere different.

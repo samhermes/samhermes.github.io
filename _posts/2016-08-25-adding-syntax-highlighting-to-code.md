@@ -1,6 +1,9 @@
 ---
 title: Adding syntax highlighting to code
 date: 2016-08-25 00:00:00 Z
+tags:
+- JavaScript
+- CSS
 ---
 
 When I started working on the last iteration of my site, I knew I was going to need to figure out how to display code snippets. I considered using Github Gists or Codepen, but they both seemed to be a bit overkill. Also, I wanted control over the appearance and formatting.

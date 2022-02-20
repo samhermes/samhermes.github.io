@@ -1,6 +1,10 @@
 ---
 title: The journey to Alexander
 date: 2021-09-29 00:32:00 Z
+tags:
+- HTML
+- CSS
+- JavaScript
 ---
 
 I’ve long been interested in design systems, pattern libraries, front end frameworks, and the like. Naturally, for no good reason, I’ve wanted to create one of my own, putting my spin on it and filling it with all of my opinions. Despite a long list of reasons not to, I decided to wade into this project earlier this year.

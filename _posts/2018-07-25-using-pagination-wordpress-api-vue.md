@@ -1,6 +1,9 @@
 ---
 title: Using pagination with the WordPress API in Vue
 date: 2018-07-25 00:00:00 Z
+tags:
+- WordPress
+- JavaScript
 ---
 
 This is a continuation of my [previous Vue pagination post](https://samhermes.com/posts/adding-pagination-in-vue/) in which I added pagination to the list of books that I’m reading or have read. In that post, I fetched all of the books from a specific category using the WordPress REST API, and then stored them in state. This worked great, but wasn’t a great long-term solution. The problem lies in the fact that the [API limits queries to 100](https://developer.wordpress.org/rest-api/using-the-rest-api/pagination/) posts at a time by default. This means that as soon as I read more than a hundred books, the end of the list will get chopped off.

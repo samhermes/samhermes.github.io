@@ -1,6 +1,9 @@
 ---
 title: Using a single stylesheet for both block and classic editor
 date: 2020-03-25 17:58:00 Z
+tags:
+- WordPress
+- CSS
 ---
 
 When I first started working with the block editor, my assumption was that I would need to define a separate set of styles just for the block editor. While this has never been the guidance from core, I was resistant to the idea that I could enqueue my existing editor stylesheet (from the classic editor) and everything would just work. However, now that I’ve revisited this, I may have been wrong!

@@ -1,6 +1,9 @@
 ---
 title: Using RadioControl in a custom Gutenberg block
 date: 2020-01-25 21:52:00 Z
+tags:
+- WordPress
+- JavaScript
 ---
 
 Why was this so complicated? So much of developing with Gutenberg is simply finding all of the necessary bits of information to bring it all together. The official documentation is a little sparse on the [RadioControl](https://developer.wordpress.org/block-editor/components/radio-control/) front. It seems directed more towards the core developers. Which, is fine, but I think it’s really cool and want to use it too.

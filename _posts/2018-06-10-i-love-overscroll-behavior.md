@@ -1,6 +1,8 @@
 ---
 title: I love overscroll-behavior
 date: 2018-06-10 00:00:00 Z
+tags:
+- CSS
 ---
 
 Talk about something that you didn’t know you needed! A new CSS property has been proposed (about a year ago by now, actually) called `overscroll-behavior` that allows us to limit scrolling to a contained element, without scrolling the entire page as well. This is great for modals, small chat windows, and, in my very specific reason to be excited, mobile menus! There’s a great writeup about it on the [Chrome developer site](https://developers.google.com/web/updates/2017/11/overscroll-behavior).

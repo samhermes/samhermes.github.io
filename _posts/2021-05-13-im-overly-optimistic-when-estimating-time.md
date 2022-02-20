@@ -1,6 +1,8 @@
 ---
 title: I'm overly optimistic when estimating time
 date: 2021-05-13 02:23:00 Z
+tags:
+- Work
 ---
 
 I mean, who isn’t!? I wanted to pull at this string a little though, to see what’s there. I've been finding myself setting expectations that are sunnier than they should be for years now, and then I deal with the pain of attempting to deliver on a promise that stretches me too thin.
