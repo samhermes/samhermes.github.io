@@ -37,8 +37,8 @@
 }
 
 .home-intro {
-    background: #eee;
-    border-bottom: 1px solid gainsboro;
+    background: $color-bg;
+    border-bottom: 1px solid darken($color-bg, 8);
     margin-bottom: 1.5rem;
     
     @media screen and (min-width: 37.5em) {

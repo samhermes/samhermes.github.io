@@ -3,6 +3,7 @@
 // Site variables
 :root {
 	--base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--color-bg: #f5eee4;
 	--color-dark: #010048;
 	--color-medium: #010057;
 	--color-light: #02006c;
@@ -13,6 +14,8 @@
 	--color-extra-light: #f7f7f7;
 	--border-radius: 0.5rem;
 }
+
+$color-bg: #f5eee4;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

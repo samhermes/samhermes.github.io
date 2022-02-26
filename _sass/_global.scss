@@ -1,8 +1,8 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
-  background-color: #eee;
-  border-bottom: 1px solid gainsboro;
+  background-color: $color-bg;
+  border-bottom: 1px solid darken($color-bg, 8);
 
   @media screen and (min-width: 33em) {
     padding: 0.9rem 0;
@@ -146,8 +146,8 @@ a.external {
   padding: 0.9rem 0 3rem;
   margin: 0 auto;
   position: relative;
-  background-color: #eee;
-  border-top: 1px solid gainsboro;
+  background-color: $color-bg;
+  border-top: 1px solid darken($color-bg, 8);
 
   @media screen and (min-width: 37.5em) {
     padding-bottom: 2rem;
