@@ -2,36 +2,36 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-gap: 2rem;
+    grid-auto-rows: 1fr;
+
+    @media screen and (min-width: 33em) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+    @media screen and (min-width: 62.5em) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
 
     .page-projects & {
         margin: 2rem 0 4rem;
-        background: #fff;
         color: var(--color-dark);
-        border: 1px solid gainsboro;
         border-radius: var(--border-radius);
-        padding: 1.25rem 1.25rem;
 
         @media screen and (min-width: 37.5em) {
             margin-bottom: 5rem;
-            padding: 2rem 2.25rem;
         }
     }
 
     li {
-        margin-bottom: 2rem;
         border-radius: var(--border-radius);
-        display: grid;
-        grid-template-columns: 4rem 1fr;
-        grid-gap: 1.25rem;
         align-items: center;
+        border: 1px solid gainsboro;
+        padding: 1.25rem;
 
-        @media screen and (min-width: 28.125em) {
-            grid-template-columns: 6.25rem 1fr;
-            grid-gap: 2rem;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
+        @media screen and (min-width: 37.5em) {
+            padding: 1.75rem;
         }
     }
 
@@ -39,6 +39,7 @@
         width: 6.25rem;
         height: auto;
         border-radius: var(--border-radius);
+        margin-bottom: 1.2rem;
     }
     
     .project-title {
@@ -66,6 +67,12 @@
     
     .project-desc {
         margin-bottom: 0.2rem;
+    }
+}
+
+.page-projects {
+    .page .contain {
+        max-width: 65rem;
     }
 }
 
