@@ -51,6 +51,11 @@
         position: relative;
         display: flex;
         align-items: flex-end;
+        flex-direction: column;
+
+        @media screen and (min-width: 25em) {
+            flex-direction: row;
+        }
 
         @media screen and (min-width: 62.5em) {
             padding: 0;
@@ -59,8 +64,10 @@
     }
 
     .intro {
-        width: 50%;
-        max-width: 32rem;
+        @media screen and (min-width: 25em) {
+            width: 50%;
+            max-width: 32rem;
+        }
 
         @media screen and (min-width: 62.5em) {
             position: absolute;

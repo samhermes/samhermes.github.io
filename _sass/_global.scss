@@ -29,20 +29,46 @@
 
   h1 {
     margin: 0;
+    display: inline-flex;
   }
 
   .logotype {
-    display: block;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 500;
     transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+    will-change: opacity;
+    padding-left: 1.8rem;
+    position: relative;
 
     &:hover {
       opacity: 0.5;
     }
 
+    @media screen and (min-width: 25em) {
+      font-size: 1.3rem;
+      padding-left: 2.2rem;
+    }
+
     @media screen and (min-width: 33em) {
       font-size: 1.4rem;
+      padding-left: 2.4rem;
+    }
+
+    svg {
+      width: 1.4rem;
+      height: 1.4rem;
+      position: absolute;
+      left: 0;
+
+      @media screen and (min-width: 25em) {
+        width: 1.6rem;
+        height: 1.6rem;
+      }
+
+      @media screen and (min-width: 33em) {
+        width: 1.8rem;
+        height: 1.8rem;
+      }
     }
   }
 }
@@ -57,7 +83,10 @@
 
   li {
     font-size: 0.9rem;
-    margin-left: 0.5rem;
+
+    @media screen and (min-width: 25em) {
+      margin-left: 0.5rem;
+    }
 
     @media screen and (min-width: 33em) {
       margin-left: 1rem;
