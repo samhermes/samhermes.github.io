@@ -8,13 +8,7 @@
     {% assign type = '' %}
 {% endif %}
 
-{% if page.width == "full" %}
-    {% assign width = ' full-width' %}
-{% else %}
-    {% assign width = '' %}
-{% endif %} 
-
-<body class="{{ slug }}{{ type }}{{ width }}">
+<body class="{{ slug }}{{ type }}">
     {% include 'header-home.html' %}
     <main class="page">
         {{ content }}

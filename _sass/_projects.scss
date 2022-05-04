@@ -25,7 +25,7 @@
     li {
         border-radius: var(--border-radius);
         align-items: center;
-        border: 1px solid gainsboro;
+        border: 1px solid var(--border-color);
         padding: 1.25rem;
 
         @media screen and (min-width: 37.5em) {

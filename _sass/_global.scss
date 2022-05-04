@@ -23,10 +23,6 @@
     }
   }
 
-  .full-width & .contain {
-    max-width: 87.5em;
-  }
-
   h1 {
     margin: 0;
     display: inline-flex;
@@ -115,14 +111,10 @@
 .page {
   min-height: calc(100vh - 9.5rem);
   background: #fff;
-  color: var(--color-text-dark);
+  color: var(--color-text);
 
   @media screen and (min-width: 37.5em) {
     min-height: calc(100vh - 7.4375rem);
-  }
-
-  a {
-    color: var(--color-text-dark);
   }
 
   .contain {
@@ -134,10 +126,6 @@
     @media screen and (min-width: 37.5em) {
       padding: 4rem 0 7rem;
     }
-  }
-
-  .full-width & .contain {
-    max-width: 87.5em;
   }
 }
 
@@ -194,8 +182,12 @@ a.external {
     }
   }
 
-  .full-width & .contain {
-    max-width: 87.5em;
+  .pride {
+    svg {
+      width: 2.8125rem;
+      height: auto;
+      border-radius: 0.3rem;
+    }
   }
 }
 

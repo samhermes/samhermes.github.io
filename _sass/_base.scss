@@ -13,8 +13,9 @@ dl, dd, ol, ul, figure {
 
 body {
 	font: 300 100% var(--base-font-family);
-	color: var(--color-text-dark);
+	color: var(--color-text);
 	-webkit-text-size-adjust: 100%;
+	background: $color-bg;
 }
 
 h1, h2, h3, h4, h5, h6,
@@ -45,11 +46,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-	color: var(--color-text-dark);
+	color: var(--color-text);
 	text-decoration: none;
 
 	&:hover {
-		color: var(--color-text-dark);
+		color: var(--color-text);
 	}
 }
 
