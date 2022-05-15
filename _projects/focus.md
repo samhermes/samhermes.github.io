@@ -11,6 +11,10 @@ permalink: /projects/focus/index.html
     <a class="button-buy" href="">Buy</a>
 </div>
 
+<div class="stage">
+    <img src="/img/projects/focus/focus.png" alt="">
+</div>
+
 <ul class="features">
     <li>
         <h3>Automatic</h3>
