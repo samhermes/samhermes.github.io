@@ -3,6 +3,12 @@
         background: #101010;
         color: #fff;
         padding: 3rem 0;
+    }
+
+    .page-intro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
         h1 {
             font-size: 8rem;
@@ -17,26 +23,50 @@
             font-weight: 600;
             text-align: center;
             max-width: 20rem;
-            margin: 0 auto;
+            margin: 0 auto 1rem;
         }
-    
-        .features {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            grid-gap: 2.5rem;
-            max-width: 65rem;
-            margin: 3rem auto;
-            list-style: none;
+    }
 
-            h3 {
-                font-size: 2.5rem;
-                font-weight: 600;
-            }
+    .features {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2.5rem;
+        max-width: 65rem;
+        margin: 3rem auto;
+        list-style: none;
 
-            p {
-                font-size: 2rem;
-                font-weight: 400;
-            }
+        h3 {
+            font-size: 2.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+    }
+
+    .button-buy {
+        background: rgb(30, 86, 216);
+        color: #fff;
+        border-radius: 100px;
+        padding: 0.5rem 1rem;
+    }
+
+    .cta {
+        max-width: 10rem;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+
+        p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .button-buy {
+            margin-left: 1.5rem;
         }
     }
 }

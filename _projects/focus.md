@@ -4,10 +4,12 @@ description: Photo gallery plugin
 icon: focus.svg
 permalink: /projects/focus/index.html
 ---
-# Focus
-
 {% raw %}
-<p class="tagline">Photo Gallery Plugin for WordPress</p>
+<div class="page-intro">
+    <h1>Focus</h1>
+    <p class="tagline">Photo Gallery Plugin for WordPress</p>
+    <a class="button-buy" href="">Buy</a>
+</div>
 
 <ul class="features">
     <li>
@@ -23,5 +25,10 @@ permalink: /projects/focus/index.html
         <p>No matter the device, your photos will look great.</p>
     </li>
 </ul>
+
+<div class="cta">
+    <p>$14.99</p>
+    <a class="button-buy" href="">Buy</a>
+</div>
 {% endraw %}
     
