@@ -5,14 +5,14 @@
 	--base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 	--color-bg: #FFB2A6;
 	--color-text: #101010;
-	--color-code-bg: #101010;
+	--color-code-bg: #1f1f1f;
 	--border-color: rgb(228, 228, 228);
 	--dark-border-color: rgba(255, 255, 255, 0.1);
 	--color-extra-light: #f7f7f7;
 	--border-radius: 0.5rem;
 }
 
-$color-bg: #FFB2A6;
+$color-bg: #1f1f1f;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import

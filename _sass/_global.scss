@@ -36,6 +36,7 @@
     will-change: opacity;
     position: relative;
     display: inline-flex;
+    color: #fff;
 
     &:hover {
       opacity: 0.5;
@@ -98,6 +99,7 @@
       padding: 0.2rem 0.5rem;
       font-weight: 500;
       transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+      color: #fff;
 
       &:hover {
         opacity: 0.5;
@@ -215,6 +217,7 @@ a.external {
       transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
       will-change: opacity;
       display: block;
+      color: #fff;
 
       &:hover {
         opacity: 0.5;
