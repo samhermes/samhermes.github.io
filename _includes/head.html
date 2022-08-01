@@ -8,8 +8,8 @@
     content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
 <link rel="stylesheet" href="/css/main.css?v=1.3.11">
-{% if page.custom_css %}
-<link rel="stylesheet" href="{{ page.custom_css }}.css">
+{% if custom_css %}
+<link rel="stylesheet" href="{{ custom_css }}">
 {% endif %}
 
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">

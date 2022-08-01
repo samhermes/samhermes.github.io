@@ -37,6 +37,7 @@ module.exports = function (config) {
         files: './_site/css/**/*.css'
     });
     config.addPassthroughCopy('img')
+    config.addPassthroughCopy('inc')
     config.addPassthroughCopy('js')
     config.addPassthroughCopy({ 'favicon': '/' })
 
