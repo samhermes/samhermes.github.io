@@ -6,6 +6,15 @@
         text-align: center;
     }
 
+    .section-intro {
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.3;
+        margin: 0 auto 2rem;
+        max-width: 42rem;
+        text-align: center;
+    }
+
     .page {
         background: #141414;
         color: #fff;
@@ -31,73 +40,53 @@
             font-weight: 600;
             text-align: center;
             max-width: 20rem;
-            margin: 0 auto 1rem;
+            margin: 0 auto 2rem;
         }
     }
 
-    .stage {
-        img {
-            display: block;
-            max-width: 72rem;
-            margin: 0 auto;
-            width: 95%;
-            box-shadow: 0 0 30px #000;
-            border-radius: 1rem;
-        }
-    }
-
-    .features {
-        margin: 5rem 0;
-
-        h2 {
-            max-width: 32rem;
-            margin: 0 auto 5rem;
-        }
-    }
-
-    .features-list {
-        display: grid;
-        grid-gap: 3.5rem;
-        max-width: 72rem;
-        width: 95%;
-        margin: 3rem auto;
-        list-style: none;
-        background: #1f1f1f;
-        padding: 2rem 2.5rem 2.3rem;
-        border-radius: 1rem;
-
-        @media screen and (min-width: 42em) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-
-        h3 {
-            font-size: 1.6rem;
-            font-weight: 600;
-        }
+    .cta-buy {
+        max-width: 10rem;
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
 
         p {
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 1.3;
-            margin-bottom: 0;
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin: 0;
         }
+
+        .button-buy {
+            margin-left: 1.5rem;
+        }
+    }
+
+    .button-buy {
+        background: rgb(30, 86, 216);
+        color: #fff;
+        border-radius: 100px;
+        padding: 0.5rem 1rem;
     }
 
     .demo {
         margin: 0 auto 5rem;
         max-width: 72rem;
         width: 95%;
+        background: #1f1f1f;
+        box-shadow: 0 0 30px rgba(0,0,0,0.4);
+        border-radius: 0.8rem;
+        padding: 1.25rem;
+
+        @media screen and (min-width: 37.5em) {
+            padding: 2.1rem 3rem 2.5rem;
+        }
 
         h2 {
-            margin-bottom: 1rem;
+            margin-bottom: 0.8rem;
         }
 
         p {
-            font-size: 1.5rem;
-            font-weight: 400;
-            line-height: 1.3;
-            text-align: center;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
 
         .focus-gallery {
@@ -118,27 +107,76 @@
         }
     }
 
-    .button-buy {
-        background: rgb(30, 86, 216);
-        color: #fff;
-        border-radius: 100px;
-        padding: 0.5rem 1rem;
+    .features {
+        margin: 5rem 0;
+
+        h2 {
+            max-width: 32rem;
+            margin: 0 auto 5rem;
+        }
+    }
+
+    .features-list {
+        display: grid;
+        grid-gap: 3.5rem;
+        max-width: 72rem;
+        width: 95%;
+        margin: 3rem auto 5rem;
+        list-style: none;
+
+        @media screen and (min-width: 42em) {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 1.5rem;
+            font-weight: 400;
+            line-height: 1.3;
+            margin-bottom: 0;
+        }
     }
 
     .cta {
-        max-width: 10rem;
-        display: flex;
-        align-items: center;
-        margin: 0 auto 3rem;
+        margin: 0 auto 5rem;
+        max-width: 72rem;
+        width: 95%;
+        background: #1f1f1f;
+        border-radius: 0.8rem;
+        padding: 3rem;
+    }
 
-        p {
-            font-size: 1.2rem;
-            font-weight: 500;
-            margin: 0;
+    .notes {
+        .section-intro {
+            margin-bottom: 3rem;
         }
 
-        .button-buy {
-            margin-left: 1.5rem;
+        .notes-contain {
+            max-width: 42rem;
+            margin: 0 auto;
+
+            h3 {
+                font-size: 1.6rem;
+                font-weight: 500;
+
+                &:not(:first-child) {
+                    margin-top: 2rem;
+                }
+            }
+
+            p {
+                font-size: 1.3rem;
+                line-height: 1.5;
+            }
+
+            a {
+                color: #fff;
+                text-decoration: underline;
+            }
         }
     }
 }
