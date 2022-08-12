@@ -24,10 +24,10 @@ layout: default
 			{% assign lastyear = currentyear %}
 		{% endif %}
 			<li>
-				<span class="post-meta">{{ post.date | date: "%B %e, %Y" }}</span>
 				<h3 class="post-title">
 					<a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.data.title }}</a>
 				</h3>
+				<p class="post-meta">{{ post.date | date: "%B %e, %Y" }}</p>
 			</li>
 		{% if forloop.last %}
 			</ul>

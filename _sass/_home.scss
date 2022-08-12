@@ -179,10 +179,14 @@
 
     li {
         display: inline-block;
-        font-size: 1.4rem;
+        font-size: 1rem;
         font-weight: 500;
         margin-right: 0.5rem;
         padding: 0rem 0.4rem 0.8rem 0;
+
+        @media screen and (min-width: 37.5em) {
+            font-size: 1.4rem;
+        }
 
         a:hover {
             text-decoration: underline;

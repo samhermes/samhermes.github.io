@@ -20,6 +20,8 @@
 
   li {
     margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
   }
 
   .post-title {
@@ -69,6 +71,7 @@
     display: block;
     margin: 0 0 0.625em;
     text-transform: uppercase;
+    order: -1;
 }
 
 .post-list p {
@@ -93,6 +96,11 @@
   @media screen and (min-width: 37.5em) {
     padding: 4rem 0 7rem;
   }
+
+  .post-header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .post .post-meta {
@@ -100,6 +108,7 @@
   font-weight: 500;
   margin: 0 0 0.625rem;
   text-transform: uppercase;
+  order: -1;
 }
 
 .post-title {

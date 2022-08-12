@@ -9,13 +9,16 @@ layout: default
     </header>
     <ul class="project-list">
 	{% for project in collections.projects %}
-        <li>
-            <img class="project-image" src="/img/projects/{{ project.data.icon }}" width="100" height="100" alt="">
+        <li style="background-color:#{{ project.data.color }};">
             <div class="project-info">
                 <h2 class="project-title">
                     <a class="project-link" href="{{ project.data.external_url }}">{{ project.data.title }}</a>
                 </h2>
                 <p class="project-desc">{{ project.data.description }}</p>
+
+                <a class="project-github" href="{{ project.data.github_url }}">
+                    {% include 'icons/github.svg' %}
+                </a>
             </div>
         </li>
 	{% endfor %}
