@@ -1,6 +1,8 @@
 const { DateTime } = require("luxon");
 const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const markdownIt = require("markdown-it");
+const markdownItAnchor = require("markdown-it-anchor");
 
 module.exports = function (config) {
     config.addPlugin(pluginRss);
@@ -9,6 +11,13 @@ module.exports = function (config) {
     config.addFilter("readableDate", dateObj => {
         return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("DDD");
     });
+
+    let markdownLibrary = markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true
+    }).use(markdownItAnchor);
+    config.setLibrary("md", markdownLibrary);
 
     config.addCollection('posts', collection =>
         collection.getFilteredByGlob('_posts/*.md')
