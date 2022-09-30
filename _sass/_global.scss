@@ -17,10 +17,7 @@
     align-items: center;
     margin: 0 auto;
     width: 90%;
-
-    @media screen and (min-width: 62.5em) {
-      width: 95%;
-    }
+    max-width: 65rem;
   }
 
   h1 {
@@ -178,10 +175,7 @@ a.external {
     align-items: center;
     margin: 0 auto;
     width: 90%;
-
-    @media screen and (min-width: 62.5em) {
-      width: 95%;
-    }
+    max-width: 65rem;
   }
 
   .pride {
