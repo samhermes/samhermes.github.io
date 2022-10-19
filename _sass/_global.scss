@@ -2,7 +2,6 @@
   padding: 0.7em 0;
   margin: 0 auto;
   background-color: $color-bg;
-  border-bottom: 1px solid darken($color-bg, 8);
 
   @media screen and (min-width: 33em) {
     padding: 0.9rem 0;
@@ -17,7 +16,10 @@
     align-items: center;
     margin: 0 auto;
     width: 90%;
-    max-width: 65rem;
+
+    @media screen and (min-width: 62.5em) {
+      width: 95%;
+    }
   }
 
   h1 {
@@ -113,23 +115,35 @@
   color: var(--color-text);
 
   @media screen and (min-width: 37.5em) {
-    min-height: calc(100vh - 7.4375rem);
+    min-height: calc(100vh - 8.1875rem);
   }
 
   .contain {
-    max-width: 42em;
+    max-width: 48rem;
     margin: 0 auto;
     padding: 2rem 0 7rem;
     width: 90%;
 
     @media screen and (min-width: 37.5em) {
-      padding: 4rem 0 7rem;
+      padding: 3rem 0 7rem;
     }
   }
 }
 
 .category-header {
   margin-bottom: 2.5rem;
+}
+
+.page-header {
+  background: $color-bg;
+  color: #fff;
+  padding: 4rem 0 2rem;
+
+  .page-title {
+    max-width: 48rem;
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 
 .page-title {
@@ -175,12 +189,15 @@ a.external {
     align-items: center;
     margin: 0 auto;
     width: 90%;
-    max-width: 65rem;
+    
+    @media screen and (min-width: 62.5em) {
+      width: 95%;
+    }
   }
 
   .pride {
     svg {
-      width: 2.8125rem;
+      width: 2.4rem;
       height: auto;
       border-radius: 0.3rem;
     }

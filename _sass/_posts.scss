@@ -1,4 +1,8 @@
 .year-group {
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+
   h2 {
     position: -webkit-sticky;
     position: sticky;
@@ -8,27 +12,31 @@
     margin: 0;
   }
 
-  ul {
+  .posts-subheading + ul {
     margin-top: 2rem;
   }
 }
 
 .post-list {
   list-style: none;
-  margin: 3rem 0 0;
+  margin: 0;
   padding: 0;
 
   li {
     margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .post-title {
     font-size: 1.3em;
     font-weight: 500;
     line-height: 1.25;
-    margin: 0;
+    margin: 0 0 0.5rem;
 
     @media screen and (min-width: 28.125em) {
       font-size: 1.45em;
@@ -65,30 +73,62 @@
 	text-decoration: underline;
 }
 
-.post-list .post-meta {
-    font-size: 0.75em;
-    font-weight: 500;
-    display: block;
-    margin: 0 0 0.625em;
-    text-transform: uppercase;
-    order: -1;
+.post-meta {
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.post-list p {
-	font-size: 1.05em;
-	line-height: 1.5;
-	margin: 0.8em 0;
+.post-tags-container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
 
-    @media screen and (min-width: 28.125em) {
-        font-size: 1.25em;
+  svg {
+    margin-right: 0.5rem;
+  }
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    margin: 0 0.6rem 0 0;
+
+    &:last-child {
+      margin-right: 0;
     }
+
+    .post-list & {
+      font-size: 0.9rem;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.post-date {
+  font-size: 1rem;
+  font-weight: 300;
+  display: block;
+  margin: 0 2rem 0 0;
+
+  .post-list & {
+    font-size: 0.9rem;
+    margin: 0 2rem 0 0;
+  }
 }
 
 /* Post Page */
 
 .post {
   margin: 0 auto;
-  max-width: 42rem;
+  max-width: 48rem;
   padding: 2rem 0 5rem;
   width: 90%;
   background: #fff;
@@ -100,21 +140,14 @@
   .post-header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 3rem;
   }
-}
-
-.post .post-meta {
-  font-size: 0.8rem;
-  font-weight: 500;
-  margin: 0 0 0.625rem;
-  text-transform: uppercase;
-  order: -1;
 }
 
 .post-title {
   font-size: 2rem;
   line-height: 1.15;
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
   font-weight: 500;
 
   @media screen and (min-width: 37.5em) {
@@ -124,8 +157,6 @@
 
 .post-content,
 .page-content {
-  margin-bottom: 2.5rem;
-
   h2 {
     font-size: 1.4em;
     font-weight: 500;
@@ -234,7 +265,6 @@
   }
 
   ul {
-    list-style: none;
     margin-left: 0;
     padding-left: 1.3em;
   }
@@ -246,14 +276,6 @@
     pre {
       margin-top: 0.625em;
     }
-  }
-
-  ul > li:before {
-    display: block;
-    float: left;
-    content: "–";
-    width: 1.2em;
-    margin-left: -1.2em;
   }
 
   code {

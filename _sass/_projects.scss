@@ -8,14 +8,10 @@
 
     @media screen and (min-width: 33em) {
         grid-template-columns: 1fr 1fr;
-      }
-
-    @media screen and (min-width: 62.5em) {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .page-projects & {
-        margin: 2rem 0 4rem;
+        margin: 0 0 4rem;
 
         @media screen and (min-width: 37.5em) {
             margin-bottom: 5rem;
@@ -23,10 +19,10 @@
     }
 
     li {
+        background: #efefef;
         border-radius: var(--border-radius);
         align-items: center;
         padding: 1.25rem;
-        color: #fff;
 
         @media screen and (min-width: 37.5em) {
             padding: 1.75rem;
@@ -69,19 +65,14 @@
     }
 
     .project-github {
-        color: #fff;
+        width: 1.7rem;
+        display: block;
 
         svg {
             width: 1.7rem;
             height: auto;
             display: block;
         }
-    }
-}
-
-.page-projects {
-    .page .contain {
-        max-width: 65rem;
     }
 }
 

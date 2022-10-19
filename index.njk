@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: home
+layout: default
 ---
 
 {% include 'icons/arrow.svg' %}
@@ -24,20 +24,23 @@ layout: home
 						<h3 class="post-title">
 							<a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
 						</h3>
-						<p class="post-meta">{{ post.date | readableDate }}</p>
+						<div class="post-meta">
+							<p class="post-date">{{ post.date | readableDate }}</p>
+							{% if post.data.tags %}
+								<div class="post-tags-container">
+									{% include 'icons/tag.svg' %}
+									<ul class="post-tags" aria-label="Post Tags">
+										{% for tag in post.data.tags %}
+											<li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
+										{% endfor %}
+									</ul>
+								</div>
+							{% endif %}
+						</div>
 					</li>
 					{% endfor %}
 				</ul>
 				<a class="more" href="/posts">All Posts<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-			</div>
-			<div class="category-list">
-				<h3>Posts by Category</h3>
-				<ul >
-				{% for tag in collections.tagList %}
-					{% set tagUrl %}/category/{{ tag | slug }}/{% endset %}
-					<li><a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a></li>
-				{% endfor %}
-				</ul>
 			</div>
 		</div>
 	</div>
@@ -49,7 +52,7 @@ layout: home
 		<div class="home-project-list">
 			<ul class="project-list">
 				{% for project in collections.projects.slice(0, 5) %}
-				<li style="background-color:#{{ project.data.color }};">
+				<li>
 					<div class="project-info">
 						<h3 class="project-title">
 							<a class="project-link" href="{{ project.data.external_url | url }}">{{ project.data.title }}</a>
