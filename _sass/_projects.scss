@@ -8,14 +8,10 @@
 
     @media screen and (min-width: 33em) {
         grid-template-columns: 1fr 1fr;
-      }
-
-    @media screen and (min-width: 62.5em) {
-        grid-template-columns: 1fr 1fr 1fr;
     }
 
     .page-projects & {
-        margin: 2rem 0 4rem;
+        margin: 0 0 4rem;
 
         @media screen and (min-width: 37.5em) {
             margin-bottom: 5rem;
@@ -23,9 +19,9 @@
     }
 
     li {
+        background: #efefef;
         border-radius: var(--border-radius);
         align-items: center;
-        border: 1px solid var(--border-color);
         padding: 1.25rem;
 
         @media screen and (min-width: 37.5em) {
@@ -56,6 +52,7 @@
     
         a {
             text-decoration: none;
+            color: inherit;
     
             &:hover {
                 text-decoration: underline;
@@ -64,13 +61,18 @@
     }
     
     .project-desc {
-        margin-bottom: 0.2rem;
+        margin-bottom: 2.2rem;
     }
-}
 
-.page-projects {
-    .page .contain {
-        max-width: 65rem;
+    .project-github {
+        width: 1.7rem;
+        display: block;
+
+        svg {
+            width: 1.7rem;
+            height: auto;
+            display: block;
+        }
     }
 }
 

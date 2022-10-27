@@ -2,6 +2,7 @@
 title: Halle
 description: WordPress theme
 external_url: https://wordpress.org/themes/halle
-icon: halle.jpg
+github_url: https://github.com/samhermes/halle
+color: 173b41
 ---
 

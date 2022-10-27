@@ -15,17 +15,23 @@ eleventyComputed:
   title: "{{ tag }}"
 layout: default
 ---
+<header class="page-header"><h1 class="page-title">Category: {{ tag }}</h1></header>
 <div class="contain">
-  <header class="page-header"><h1 class="page-title">Category: {{ tag }}</h1></header>
-  
   <ul class="post-list">
     {% set taglist = collections[ tag ] %}
     {% for post in taglist | reverse %}
 			<li>
-				<p class="post-meta">{{ post.date | readableDate }}</p>
-				<h3 class="post-title">
+				<h2 class="post-title">
 					<a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
-				</h3>
+				</h2>
+        <div class="post-meta">
+					<p class="post-date">{{ post.date | readableDate }}</p>
+					<ul class="post-tags" aria-label="Post Tags">
+						{% for tag in post.data.tags %}
+							<li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
 			</li>
 	  {% endfor %}
   </ul>

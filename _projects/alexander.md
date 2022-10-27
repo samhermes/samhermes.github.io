@@ -2,6 +2,7 @@
 title: Alexander
 description: Front-end starter kit
 external_url: https://samhermes.github.io/alexander
-icon: alexander.svg
+github_url: https://github.com/samhermes/alexander
+color: 080d55
 ---
 
