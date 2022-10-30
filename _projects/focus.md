@@ -69,27 +69,17 @@ custom_css: /inc/focus/css/focus.css
     </ul>
 </div>
 
-<div class="features">
-    <h2>Give your photos the stage they deserve.</h2>
-    <ul class="features-list">
-        <li>
-            <h3>Automatic</h3>
-            <p>Just plug it in, and you're on your way.</p>
-        </li>
-        <li>
-            <h3>Performative</h3>
-            <p>Maintains image quality without sacrificing speed.</p>
-        </li>
-        <li>
-            <h3>Responsive</h3>
-            <p>The perfect frame, no matter the device.</p>
-        </li>
-    </ul>
+<div class="wordpress">
+    <div class="text-container">
+        <h2>Designed for WordPress</h2>
+        <p class="section-intro">Focus works seamlessly with the Image and Gallery block in WordPress.</p>
+        <p>The problem: WordPress does not link to a full size version of an image when it's placed in a gallery block. Additionally, most themes do not include a photo gallery or lightbox. Focus handles all of this for you, so all you have to do is hit publish.</p>
+    </div>
+    <img src="/img/projects/focus/wp-editor.png" alt="A screenshot of a gallery block in the WordPress editor">
 </div>
 
-<div class="wordpress">
-    <h2>Designed for WordPress</h2>
-    <p class="section-intro">Focus works seamlessly with the Image and Gallery block in WordPress.</p>
+<div class="features">
+    <h2>Give your photos the stage they deserve.</h2>
 </div>
 
 <div class="cta">
