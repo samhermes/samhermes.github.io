@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+{% include 'head.html' %}
+{% assign slug = title | slugify | downcase | prepend: 'page-' %}
+
+<body class="{{ slug }}">
+    <main class="page">
+        {{ content }}
+    </main>
+</body>

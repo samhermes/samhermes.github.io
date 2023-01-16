@@ -1,73 +1,21 @@
 ---
 title: Home
-layout: default
+layout: home
 ---
 
-{% include 'icons/arrow.svg' %}
-<section class="home-intro">
-	<div class="contain">
-		<div class="intro">
-			<h2>Front-End Developer in Chicago</h2>
-			<a class="more" href="/about">About<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-		</div>
-		<img src="img/chicago.jpg" alt="Photo of Chicago Skyline and Millennium Park" width="600" height="600">
-	</div>
-</section>
-<section class="home-posts">
-	<div class="contain">
-		<h2>{% include 'icons/posts.svg' %}Latest Posts</h2>
-		<div class="home-posts-contain">
-			<div class="home-post-list">
-				<ul class="post-list">
-					{% for post in collections.posts.slice(0, 5) %}
-					<li>
-						<h3 class="post-title">
-							<a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
-						</h3>
-						<div class="post-meta">
-							<p class="post-date">{{ post.date | readableDate }}</p>
-							{% if post.data.tags %}
-								<div class="post-tags-container">
-									{% include 'icons/tag.svg' %}
-									<ul class="post-tags" aria-label="Post Tags">
-										{% for tag in post.data.tags %}
-											<li><a href="/category/{{ tag | slug }}">{{tag}}</a></li>
-										{% endfor %}
-									</ul>
-								</div>
-							{% endif %}
-						</div>
-					</li>
-					{% endfor %}
-				</ul>
-				<a class="more" href="/posts">All Posts<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-			</div>
-		</div>
-	</div>
-</section>
-
-<section class="home-projects">
-	<div class="contain">
-		<h2>{% include 'icons/projects.svg' %}Projects</h2>
-		<div class="home-project-list">
-			<ul class="project-list">
-				{% for project in collections.projects.slice(0, 5) %}
-				<li>
-					<div class="project-info">
-						<h3 class="project-title">
-							<a class="project-link" href="{{ project.data.external_url | url }}">{{ project.data.title }}</a>
-						</h3>
-						<p class="project-desc">{{ project.data.description }}</p>
-
-						<a class="project-github" href="{{ project.data.github_url }}">
-							{% include 'icons/github.svg' %}
-							<span class="screen-reader-text">{{ project.data.title }} repository on GitHub</span>
-						</a>
-					</div>
-				</li>
-				{% endfor %}
-			</ul>
-			<a class="more" href="/projects">All Projects<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
-		</div>
-	</div>
-</section>
+<div class="intro">
+	<h1>Sam Hermes</h1>
+	<p class="subtitle">Front-End Developer</p>
+	<ul class="home-nav">
+		<li>
+			<a href="/posts">Posts</a>
+		</li>
+		<li>
+			<a href="/projects">Projects</a>
+		</li>
+		<li>
+			<a href="/about">About</a>
+		</li>
+	</ul>
+	<img src="/img/samhermes-large.jpg" alt>
+</div>
