@@ -165,4 +165,4 @@ const closeAccordion = (accordion, elements) => {
 
 ----
 
-And that’s it! Super simple! Okay, fine, not really. It’s difficult, and I worked on this for weeks. There are probably things I’m missing, or things I’ll change in a month or two, but it’s a good place to be for now. You can see this in action in the [accordion component of Alexander](https://samhermes.com/alexander/components/accordion), a front-end starter kit I created. There are some added styles there that illustrate the possible uses of the `is-active` class.
+And that’s it! Super simple! Okay, fine, not really. It’s difficult, and I worked on this for weeks. There are probably things I’m missing, or things I’ll change in a month or two, but it’s a good place to be for now. You can see this in action in the [accordion component of Alexander](https://samhermes.github.io/alexander/components/accordion), a front-end starter kit I created. There are some added styles there that illustrate the possible uses of the `is-active` class.
