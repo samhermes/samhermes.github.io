@@ -1,7 +1,7 @@
 .page-home {
     .more {
         align-self: center;
-        background: #efefef;
+        background: var(--color-extra-light);
         display: inline-block;
         border-radius: 4rem;
         padding: 0.8rem 1.4rem;
@@ -26,10 +26,10 @@
         font-size: 1.6rem;
         font-weight: 500;
         padding-bottom: 1rem;
-        border-bottom: 1px solid #808080;
+        border-bottom: 1px solid var(--border-color);
         margin: 0 0 1.25rem;
 
-        @media screen and (min-width: 28.125em) {
+        @media screen and (min-width: 37.5em) {
             font-size: 2rem;
             margin: 0 0 2rem;
         }
@@ -41,92 +41,67 @@
 }
 
 .home-intro {
-    background: $color-bg;
-    border-bottom: 1px solid darken($color-bg, 8);
-    margin-bottom: 1.5rem;
+    background: var(--color-bg);
     color: #fff;
-    
-    @media screen and (min-width: 62.5em) {
-        padding-top: 2.5rem;
-    }
 
     .contain {
-        padding: 3rem 0 2rem;
-        max-width: 65rem;
-        position: relative;
-        display: flex;
-        align-items: flex-end;
-        flex-direction: column;
+        padding: 2rem 0 2.5rem;
 
-        @media screen and (min-width: 25em) {
-            flex-direction: row;
-        }
-
-        @media screen and (min-width: 62.5em) {
-            padding: 0;
-            align-items: center;
+        @media screen and (min-width: 37.5em) {
+            padding-bottom: 3rem;
         }
     }
 
     .intro {
-        @media screen and (min-width: 25em) {
-            width: 50%;
-            max-width: 32rem;
-        }
+        text-align: center;
 
-        @media screen and (min-width: 62.5em) {
-            position: absolute;
-            top: 50%;
-            z-index: 1;
-            transform: translateY(-50%);
-        }
-
-        h2 {
-            font-size: 2.2rem;
+        .intro-name {
+            font-size: 1.8rem;
             font-weight: 500;
-            margin: 0 0 1.2rem;
+            margin: 0 0 0.4rem;
             line-height: 1.1;
-            border: none;
             padding: 0;
 
             @media screen and (min-width: 37.5em) {
-                font-size: 3rem;
-                margin-bottom: 1.5rem;
+                font-size: 2.2rem;
             }
 
             @media screen and (min-width: 62.5em) {
-                font-size: 4.5rem;
+                font-size: 2.5rem;
             }
         }
 
-        .more {
-            background: none;
-            border-radius: 0;
-            padding: 0;
-            font-size: 1.2rem;
+        .intro-title {
+            font-size: 1rem;
+            font-weight: 500;
+            margin-bottom: 0;
 
             @media screen and (min-width: 37.5em) {
+                font-size: 1.3rem;
+            }
+
+            @media screen and (min-width: 62.5em) {
                 font-size: 1.5rem;
             }
         }
-    }
 
-    img {
-        margin-left: auto;
-        margin-bottom: -3.5rem;
-        margin-top: -1.5rem;
-        max-width: 37.5rem;
-        width: 40%;
-        height: auto;
-        border-radius: var(--border-radius);
+        img {
+            margin-left: auto;
+            margin-bottom: 0.8rem;
+            border-radius: 50%;
+            border: 3px solid rgba(255, 255, 255, 0.7);
+            width: 5rem;
+            height: 5rem;
 
-        @media screen and (min-width: 25em) {
-            margin-top: 0;
-        }
-
-        @media screen and (min-width: 62.5em) {
-            margin-bottom: -1.5rem;
-            width: 50%;
+            @media screen and (min-width: 37.5em) {
+                width: 6rem;
+                height: 6rem;
+            }
+    
+            @media screen and (min-width: 62.5em) {
+                width: 7rem;
+                height: 7rem;
+            }
         }
     }
 }
@@ -139,7 +114,7 @@
         padding-bottom: 0;
 
         @media screen and (min-width: 37.5em) {
-            padding-top: 5rem;
+            padding-top: 4rem;
         }
     }
 }

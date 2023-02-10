@@ -1,6 +1,11 @@
 <header class="site-header">
   <div class="contain">
-    <a class="logotype" href="/">{% include 'icons/s.svg' %}Sam Hermes</a>
+    <a class="logotype" href="/">
+      {% include 'icons/s.svg' %}
+      {% if title == "Home" %}<span class="screen-reader-text">{% endif %}
+      Sam Hermes
+      {% if title == "Home" %}</span>{% endif %}
+    </a>
     <ul class="site-nav">
       <li><a href="/about">About</a></li>
       <li><a href="https://samhermes.typeform.com/to/d4C4FT">Contact</a></li>

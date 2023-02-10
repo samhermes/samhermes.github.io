@@ -3,8 +3,6 @@ title: About
 layout: page
 ---
 
-<div><img class="headshot" src="/img/samhermes-large.jpg" alt="Sam Hermes headshot"></div>
-
 <p class="subhead">I believe in the power of the web to educate, inform, and connect.</p>
 
 We've gotten a little sidetracked, but the web can transform your life in ways previously impossible, and that must be protected. To this end, accessibility and performance are incredibly important to my work. Alongside this, I have a deep respect for [the web's grain](https://frankchimero.com/writing/the-webs-grain/), and it informs everything that I create.

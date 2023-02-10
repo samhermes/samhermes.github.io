@@ -19,7 +19,7 @@
     }
 
     li {
-        background: #efefef;
+        background: var(--color-extra-light);
         border-radius: var(--border-radius);
         align-items: center;
         padding: 1.25rem;
@@ -27,13 +27,6 @@
         @media screen and (min-width: 37.5em) {
             padding: 1.75rem;
         }
-    }
-
-    .project-image {
-        width: 6.25rem;
-        height: auto;
-        border-radius: var(--border-radius);
-        margin-bottom: 1.2rem;
     }
     
     .project-title {
@@ -72,6 +65,12 @@
             width: 1.7rem;
             height: auto;
             display: block;
+            transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
+            will-change: opacity;
+
+            &:hover {
+                opacity: 0.5;
+            }
         }
     }
 }

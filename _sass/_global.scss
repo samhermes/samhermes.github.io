@@ -1,14 +1,10 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
-  background-color: $color-bg;
+  background-color: var(--color-bg);
 
   @media screen and (min-width: 33em) {
     padding: 0.9rem 0;
-  }
-
-  .page-home & {
-    border-bottom: none;
   }
 
   .contain {
@@ -20,11 +16,6 @@
     @media screen and (min-width: 62.5em) {
       width: 95%;
     }
-  }
-
-  h1 {
-    margin: 0;
-    display: inline-flex;
   }
 
   .logotype {
@@ -135,7 +126,7 @@
 }
 
 .page-header {
-  background: $color-bg;
+  background: var(--color-bg);
   color: #fff;
   padding: 4rem 0 2rem;
 
@@ -176,8 +167,7 @@ a.external {
   padding: 0.9rem 0 3rem;
   margin: 0 auto;
   position: relative;
-  background-color: $color-bg;
-  border-top: 1px solid darken($color-bg, 8);
+  background-color: var(--color-bg);
 
   @media screen and (min-width: 37.5em) {
     padding-bottom: 2rem;

@@ -76,6 +76,7 @@
 .post-meta {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.3rem;
 }
 
 .post-tags-container {
@@ -120,7 +121,7 @@
 
   .post-list & {
     font-size: 0.9rem;
-    margin: 0 2rem 0 0;
+    margin: 0 1.5rem 0 0;
   }
 }
 
@@ -129,7 +130,7 @@
 .post {
   margin: 0 auto;
   max-width: 48rem;
-  padding: 2rem 0 5rem;
+  padding: 3rem 0 5rem;
   width: 90%;
   background: #fff;
 
@@ -212,7 +213,7 @@
   li {
     code {
       font-size: 1rem;
-      background: #efefef;
+      background: var(--color-extra-light);
       border: 1px solid #ddd;
       padding: 0.2em 0.5em;
       border-radius: 0.2em;
