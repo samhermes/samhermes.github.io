@@ -1,8 +1,16 @@
 .site-header {
   padding: 0.7em 0;
   margin: 0 auto;
-  background-color: var(--color-bg);
+  position: absolute;
+  width: 100%;
 
+  .page-not-found &,
+  .type-post & {
+    position: relative;
+    background: var(--color-bg) url('/img/header-slim.jpg') no-repeat center;
+    background-size: cover;
+  }
+  
   @media screen and (min-width: 33em) {
     padding: 0.9rem 0;
   }
@@ -126,9 +134,9 @@
 }
 
 .page-header {
-  background: var(--color-bg);
+  background: var(--color-bg) url('/img/header.jpg') no-repeat center;
   color: #fff;
-  padding: 4rem 0 2rem;
+  padding: 8rem 0 2rem;
 
   .page-title {
     max-width: 48rem;

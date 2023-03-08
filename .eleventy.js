@@ -42,9 +42,10 @@ module.exports = function (config) {
         return filterTagList([...tagSet]);
     });
 
-    config.setBrowserSyncConfig({
-        files: './_site/css/**/*.css'
+    config.setServerOptions({    
+        watch: ["_site/**/*.css"]
     });
+
     config.addPassthroughCopy('img')
     config.addPassthroughCopy('js')
     config.addPassthroughCopy({ 'favicon': '/' })
