@@ -16,7 +16,13 @@ layout: default
 </section>
 <section class="home-posts">
 	<div class="contain">
-		<h2>Latest Posts</h2>
+		<div class="home-section-header">
+			<h2>Latest Posts</h2>
+			<a href="/feed.xml">
+				{% include 'icons/rss.svg' %}
+				<span class="screen-reader-text">RSS Feed</span>
+			</a>
+		</div>
 		<div class="home-posts-contain">
 			<div class="home-post-list">
 				<ul class="post-list">
@@ -49,7 +55,9 @@ layout: default
 
 <section class="home-projects">
 	<div class="contain">
-		<h2>Featured Projects</h2>
+		<div class="home-section-header">
+			<h2>Featured Projects</h2>
+		</div>
 		<div class="home-project-list">
 			<ul class="project-list">
 				{% for project in collections.projects.slice(0, 5) %}
