@@ -25,7 +25,7 @@ To start, container queries require that you define a "containment context." Bas
 
 When you define a containment context, you use the `container-type` property and give it a value of either `inline-size` or `size`. This was confusing to me at first, as they seem really similar. What I've found is that in most cases, `inline-size` is what I would want to use. The default value for this property is `normal`, in the event that you need to turn off a container.
 
-```CSS
+```css
 .container-element {
 	container-type: inline-size;
 }
@@ -35,7 +35,7 @@ When you define a containment context, you use the `container-type` property and
 
 Once you've set the containment context, you can use the new `@container` on any of the elements inside of the container.
 
-```CSS
+```css
 @container (min-width: 30em) {
 	.child-element {
 		font-size: 2rem;
@@ -47,7 +47,7 @@ Once you've set the containment context, you can use the new `@container` on any
 
 If you've got a lot of containers, naming them is a nice way to clearly specify which container you're referring to. This isn't absolutely required, as it will target the nearest ancestor container by default. That could get confusing pretty quickly, so naming containers seems like a sensible default.
 
-```CSS
+```css
 .container-element {
 	container-type: inline-size;
 	container-name: card;
@@ -58,7 +58,7 @@ This could be shorthanded as `container: card / inline-size`.
 
 Once you've got it named, you can reference it directly in the query.
 
-```CSS
+```css
 @container card (min-width: 50em) {
 	.child-element {
 		font-size: 3rem;
