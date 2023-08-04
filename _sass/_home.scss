@@ -34,12 +34,10 @@
 }
 
 .home-intro {
-    background: var(--color-bg) url('/img/header.jpg') no-repeat center;
-    background-size: cover;
-    color: #fff;
+    background-color: var(--color-bg);
 
     .contain {
-        padding: 4.5rem 0 2.5rem;
+        padding: 0 0 2.5rem;
 
         @media screen and (min-width: 37.5em) {
             padding-bottom: 3rem;
@@ -83,18 +81,12 @@
             margin-left: auto;
             margin-bottom: 0.8rem;
             border-radius: 50%;
-            border: 3px solid rgba(255, 255, 255, 0.7);
             width: 5rem;
             height: 5rem;
 
             @media screen and (min-width: 37.5em) {
                 width: 6rem;
                 height: 6rem;
-            }
-    
-            @media screen and (min-width: 62.5em) {
-                width: 7rem;
-                height: 7rem;
             }
         }
     }
