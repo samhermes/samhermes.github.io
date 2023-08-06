@@ -3,7 +3,7 @@
   margin: 0 auto;
   width: 100%;
   
-  @media screen and (min-width: 33em) {
+  @media screen and (min-width: 37.5em) {
     padding: 1.2rem 0;
   }
 
@@ -13,7 +13,7 @@
     margin: 0 auto;
     width: 90%;
 
-    @media screen and (min-width: 33em) {
+    @media screen and (min-width: 37.5em) {
       width: 93%;
     }
   }
@@ -25,20 +25,16 @@
     display: inline-flex;
 
     svg {
-      width: 11rem;
+      width: 9rem;
       height: auto;
+
+      @media screen and (min-width: 37.5em) {
+        width: 11rem;
+      }
     }
 
     &:hover {
       opacity: 0.5;
-    }
-
-    @media screen and (min-width: 25em) {
-      font-size: 1.4rem;
-    }
-
-    @media screen and (min-width: 33em) {
-      font-size: 1.6rem;
     }
   }
 }
@@ -58,7 +54,7 @@
       margin-left: 0.5rem;
     }
 
-    @media screen and (min-width: 33em) {
+    @media screen and (min-width: 37.5em) {
       margin-left: 1rem;
       font-size: 1rem;
     }

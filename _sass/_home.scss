@@ -52,7 +52,8 @@
             padding: 0;
 
             svg {
-                width: 12.5rem;
+                width: 13rem;
+                height: auto;
 
                 @media screen and (min-width: 37.5em) {
                     width: 15.875rem;
@@ -61,7 +62,7 @@
         }
 
         .intro-title {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: 400;
             margin-bottom: 0;
 
