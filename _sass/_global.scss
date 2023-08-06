@@ -19,13 +19,15 @@
   }
 
   .logotype {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.3;
     transition: opacity 0.15s cubic-bezier(0.65, 0.05, 0.36, 1);
     will-change: opacity;
     position: relative;
     display: inline-flex;
+
+    svg {
+      width: 11rem;
+      height: auto;
+    }
 
     &:hover {
       opacity: 0.5;

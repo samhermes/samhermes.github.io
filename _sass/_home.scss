@@ -48,18 +48,15 @@
         text-align: center;
 
         .intro-name {
-            font-size: 1.8rem;
-            font-weight: 500;
-            margin: 0 0 0.2rem;
-            line-height: 1.1;
+            margin: 0 0 0.3rem;
             padding: 0;
 
-            @media screen and (min-width: 37.5em) {
-                font-size: 2.2rem;
-            }
+            svg {
+                width: 12.5rem;
 
-            @media screen and (min-width: 62.5em) {
-                font-size: 2.5rem;
+                @media screen and (min-width: 37.5em) {
+                    width: 15.875rem;
+                }
             }
         }
 
@@ -69,17 +66,13 @@
             margin-bottom: 0;
 
             @media screen and (min-width: 37.5em) {
-                font-size: 1.3rem;
-            }
-
-            @media screen and (min-width: 62.5em) {
                 font-size: 1.5rem;
             }
         }
 
         img {
             margin-left: auto;
-            margin-bottom: 0.8rem;
+            margin-bottom: 1rem;
             border-radius: 50%;
             width: 5rem;
             height: 5rem;
