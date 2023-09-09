@@ -1,0 +1,20 @@
+.page-container {
+    background: #fff;
+    display: grid;
+    gap: 2rem;
+    padding: 5rem var(--site-edge) 8rem;
+
+    @media screen and (min-width: 60em) {
+        gap: 5rem;
+        grid-template-columns: 3fr 5fr;
+    }
+
+    .page-header {
+        flex: 0 0 40%;
+    }
+
+    .page-content-contain {
+        flex-grow: 1;
+        max-width: 43.75rem;
+    }
+}

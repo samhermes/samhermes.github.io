@@ -1,14 +1,14 @@
 <header class="site-header">
   <div class="contain">
     <a class="logotype" href="/">
-      {% if title != "Home" %}
-        {% include 'samhermes.svg' %}
-      {% endif %}
-      <span class="screen-reader-text">Sam Hermes</span>
+      Sam Hermes
     </a>
-    <ul class="site-nav">
-      <li><a href="/about">About</a></li>
-      <li><a href="https://samhermes.typeform.com/to/d4C4FT">Contact</a></li>
-    </ul>
+    <nav class="site-nav" aria-label="Site">
+      <h2 id="main-nav-heading" class="screen-reader-text">Site Navigation</h2>
+      <ul aria-labelledby="main-nav-heading" role="list">
+        <li><a href="/about">About</a></li>
+        <li><a href="https://samhermes.typeform.com/to/d4C4FT">Contact</a></li>
+      </ul>
+    </nav>
   </div>
 </header>

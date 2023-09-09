@@ -2,25 +2,28 @@
 	<div class="contain">
 		<div class="pride">{% include 'icons/progress.svg' %}</div>
 
-		<ul class="social">
-			<li>
-				<a rel="me" href="https://mstdn.social/@samhermes">
-					{% include 'icons/mastodon.svg' %}
-					<span class="screen-reader-text">Sam Hermes on Mastodon</span>
-				</a>
-			</li>
-			<li>
-				<a href="https://profiles.wordpress.org/samhermes">
-					{% include 'icons/wordpress.svg' %}
-					<span class="screen-reader-text">Sam Hermes on WordPress.org</span>
-				</a>
-			</li>
-			<li>
-				<a href="https://github.com/samhermes">
-					{% include 'icons/github.svg' %}
-					<span class="screen-reader-text">Sam Hermes on GitHub</span>
-				</a>
-			</li>
-		</ul>
+		<nav class="social" aria-label="Social">
+			<h2 id="social-nav-heading" class="screen-reader-text">Social Navigation</h2>
+			<ul>
+				<li>
+					<a rel="me" href="https://mstdn.social/@samhermes">
+						{% include 'icons/mastodon.svg' %}
+						<span class="screen-reader-text">Sam Hermes on Mastodon</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://profiles.wordpress.org/samhermes">
+						{% include 'icons/wordpress.svg' %}
+						<span class="screen-reader-text">Sam Hermes on WordPress.org</span>
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/samhermes">
+						{% include 'icons/github.svg' %}
+						<span class="screen-reader-text">Sam Hermes on GitHub</span>
+					</a>
+				</li>
+			</ul>
+		</nav>
 	</div>
 </footer>

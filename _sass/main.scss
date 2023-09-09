@@ -2,22 +2,29 @@
 
 // Site variables
 :root {
-	--base-font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--color-bg: #f8dce2;
-	--color-text: #1c1c1c;
-	--color-code-bg: #191919;
-	--border-color: #d1d1d7;
-	--dark-border-color: rgba(255, 255, 255, 0.1);
-	--color-extra-light: #fcf6f7;
+	--base-font-family: "Inter", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--color-bg: #000;
+	--color-text: #1d1d1d;
+	--color-code-bg: #000;
+	--border-color: #d2d2d2;
+	--dark-border-color: #4f4f4f;
+	--color-extra-light: #f7f7f7;
 	--border-radius: 0.5rem;
+	--site-edge: 1.5rem;
+
+	@media screen and (min-width: 37.5em) {
+		--site-edge: 3rem;
+	}
 }
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+	"fonts",
 	"base",
 	"code",
 	"global",
 	"home",
 	"posts",
+	"page",
 	"projects"
 ;

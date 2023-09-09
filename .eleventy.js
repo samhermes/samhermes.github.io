@@ -46,6 +46,7 @@ module.exports = function (config) {
         watch: ["_site/**/*.css"]
     });
 
+    config.addPassthroughCopy('fonts')
     config.addPassthroughCopy('img')
     config.addPassthroughCopy('js')
     config.addPassthroughCopy({ 'favicon': '/' })

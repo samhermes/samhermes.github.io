@@ -3,17 +3,18 @@ title: Posts
 layout: default
 ---
 
-<header class="page-header">
-	<h1 class="page-title">{{ title }}</h1>
-</header>
-
 <div class="page-container">
-	<div class="contain">
+	<header class="page-header">
+		<h1 class="page-title">{{ title }}</h1>
+	</header>
+
+	<div class="page-content-contain">
 		{% for post in collections.posts %}
 			{% assign currentyear = post.date | date: "%Y" %}
 			{% if forloop.first %}
 				{% assign lastyear = currentyear %}
 				<div class="year-group">
+					<h2 class="screen-reader-text" id="{{currentyear}}-ref">{{ currentyear }}</h2>
 					<ul class="post-list">
 			{% endif %}
 			{% if currentyear != lastyear %}

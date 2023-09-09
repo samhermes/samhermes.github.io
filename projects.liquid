@@ -2,51 +2,49 @@
 title: Projects
 layout: default
 ---
-
-<article>
+<div class="page-container">
     <header class="page-header">
         <h1 class="page-title">{{ title }}</h1>
     </header>
 
-    <div class="page-container">
-        <div class="contain">
-            <ul class="project-list">
-            {% for project in collections.projects %}
-                <li>
-                    <div class="project-info">
-                        <h2 class="project-title">
-                            <a class="project-link" href="{{ project.data.external_url }}">{{ project.data.title }}</a>
-                        </h2>
-                        <p class="project-desc">{{ project.data.description }}</p>
+    <div class="page-content-contain">
+        <ul class="project-list">
+        {% for project in collections.projects %}
+            <li>
+                <div class="project-info">
+                    <h2 class="project-title">
+                        <a class="project-link" href="{{ project.data.external_url }}">{{ project.data.title }}</a>
+                    </h2>
+                    <p class="project-desc">{{ project.data.description }}</p>
 
-                        <a class="project-github" href="{{ project.data.github_url }}">
-                            {% include 'icons/github.svg' %}
-                        </a>
-                    </div>
-                </li>
-            {% endfor %}
-            </ul>
-            <h2 class="past-project-heading">Past Projects</h2>
-            <ul class="past-project-list">
-                <li>
-                    <h3 class="project-title">
-                        <a class="external" href="https://github.com/samhermes/map-block-mapbox">Map Block for Mapbox</a>
-                    </h3>
-                    <p class="project-desc">WordPress plugin, added a map block using <a href="https://www.mapbox.com">Mapbox</a></p>
-                </li>
-                <li>
-                    <h3 class="project-title">
-                        <a class="external" href="https://github.com/samhermes/next-spacex-launch">Next SpaceX Launch</a>
-                    </h3>
-                    <p class="project-desc">React app, used the <a href="https://github.com/r-spacex/SpaceX-API">SpaceX API</a></p>
-                </li>
-                <li>
-                    <h3 class="project-title">
-                        <a class="external" href="https://github.com/samhermes/stlmetro.link">St. Louis MetroLink Schedule</a>
-                    </h3>
-                    <p class="project-desc">Installable web app, displayed upcoming train schedule</p>
-                </li>
-            </ul>
-        </div>
+                    <a class="project-github" href="{{ project.data.github_url }}">
+                        {% include 'icons/github.svg' %}
+                        <span class="screen-reader-text">{{ project.data.title }} repository on GitHub</span>
+                    </a>
+                </div>
+            </li>
+        {% endfor %}
+        </ul>
+        <h2 class="past-project-heading">Past Projects</h2>
+        <ul class="past-project-list">
+            <li>
+                <h3 class="project-title">
+                    <a class="external" href="https://github.com/samhermes/map-block-mapbox">Map Block for Mapbox</a>
+                </h3>
+                <p class="project-desc">WordPress plugin, added a map block using <a href="https://www.mapbox.com">Mapbox</a></p>
+            </li>
+            <li>
+                <h3 class="project-title">
+                    <a class="external" href="https://github.com/samhermes/next-spacex-launch">Next SpaceX Launch</a>
+                </h3>
+                <p class="project-desc">React app, used the <a href="https://github.com/r-spacex/SpaceX-API">SpaceX API</a></p>
+            </li>
+            <li>
+                <h3 class="project-title">
+                    <a class="external" href="https://github.com/samhermes/stlmetro.link">St. Louis MetroLink Schedule</a>
+                </h3>
+                <p class="project-desc">Installable web app, displayed upcoming train schedule</p>
+            </li>
+        </ul>
     </div>
-</article>
+</div>
