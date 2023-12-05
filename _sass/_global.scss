@@ -1,11 +1,11 @@
 .site-header {
-  padding: 1.5rem 0 1rem;
+  padding: 2rem 0 1rem;
   margin: 0 auto;
   width: 100%;
   color: #fff;
   
   @media screen and (min-width: 37.5em) {
-    padding: 2rem 0 1rem;
+    padding: 3rem 0 1.25rem;
   }
 
   .contain {
@@ -19,7 +19,7 @@
     will-change: opacity;
     position: relative;
     display: inline-flex;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 400;
     color: inherit;
 
