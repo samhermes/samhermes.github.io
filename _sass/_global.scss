@@ -19,9 +19,13 @@
     will-change: opacity;
     position: relative;
     display: inline-flex;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     color: inherit;
+
+    @media screen and (min-width: 37.5em) {
+      font-size: 1.5rem;
+    }
 
     &:hover {
       opacity: 0.5;
