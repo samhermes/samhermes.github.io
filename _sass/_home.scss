@@ -55,6 +55,10 @@
             margin: 0;
 
             @media screen and (min-width: 37.5em) {
+                font-size: 3.25rem;
+            }
+
+            @media screen and (min-width: 60em) {
                 font-size: 4rem;
             }
         }
