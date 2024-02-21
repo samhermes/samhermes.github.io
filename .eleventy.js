@@ -25,7 +25,9 @@ module.exports = function (config) {
     )
 
     config.addCollection('projects', collection =>
-        collection.getFilteredByGlob('_projects/*.md')
+        collection.getFilteredByGlob('_projects/*.md').sort((a, b) => {
+            return Number(a.data.order) - Number(b.data.order);
+        })
     )
 
     function filterTagList(tags) {
