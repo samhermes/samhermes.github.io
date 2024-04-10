@@ -15,17 +15,16 @@ layout: default
 <section class="home-posts">
 	<div class="wrapper">
 		<div class="home-section-header">
-			<h2>Latest Posts</h2>
+			<h2>Selected Posts</h2>
 		</div>
 		<div class="home-post-list">
 			<ul class="post-list">
-				{% for post in collections.posts.slice(0, 5) %}
+				{% for post in collections.posts | postsFilter(true) %}
 				<li>
 					<h3 class="post-title">
 						<a class="post-link" href="{{ post.url | url }}">{{ post.data.title }}</a>
 					</h3>
 					<div class="post-meta">
-						<p class="post-date">{{ post.date | readableDate }}</p>
 						{% if post.data.tags %}
 							<div class="post-tags-container">
 								{% include 'icons/tag.svg' %}

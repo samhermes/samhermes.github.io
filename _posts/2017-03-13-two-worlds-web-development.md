@@ -4,6 +4,7 @@ date: 2017-03-13 00:00:00 Z
 tags:
 - JavaScript
 - CSS
+selected: true
 ---
 
 There’s a big divide in the web development community that doesn’t get discussed enough. It’s roughly the difference between those who develop sites for informational purposes and those who develop sites that are applications. In some ways, it’s the divide between front end and back end development. It’s a bit difficult to draw a line between the two worlds, but informational sites are usually those for organizations, businesses, government, etc., and applications are properties like Airbnb, Facebook, and Google Docs. Interactivity, such as filtering, liking, saving, editing, or sorting, is usually what takes it from informational to application. The way we talk about and teach web development often mixes these two or makes no distinction.

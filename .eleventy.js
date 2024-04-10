@@ -24,6 +24,11 @@ module.exports = function (config) {
             .sort((a, b) => b.date - a.date)
     )
 
+    config.addFilter('postsFilter', function(collection, post) {
+        if (!post) return collection;
+        return collection.filter(item => item.data.selected)
+    })
+
     config.addCollection('projects', collection =>
         collection.getFilteredByGlob('_projects/*.md').sort((a, b) => {
             return Number(a.data.order) - Number(b.data.order);

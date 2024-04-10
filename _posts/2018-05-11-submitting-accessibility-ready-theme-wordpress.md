@@ -6,6 +6,7 @@ tags:
 - Accessibility
 - CSS
 - Design
+selected: true
 ---
 
 *This post goes with my talk at WordCamp St. Louis.*
