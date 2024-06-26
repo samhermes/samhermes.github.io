@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+{% include 'head.html' %}
+{% assign slug = title | slugify | downcase | prepend: 'page-' %}
+{% assign seriesSlug = series | slugify | downcase %}
+<style>
+  .type-story {
+    background-color: #{{ backgroundColor }};
+  }
+</style>
+
+<body class="type-story {{ slug }}">
+  {% include 'header.html' %}
+  <main class="page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/writing">Writing</a></li>
+        <li><a href="/{{seriesSlug}}">{{ series }}</a></li>
+      </ol>
+    </nav>
+
+    <article class="story-container">
+      <header class="story-header">
+        <h1 class="story-title">{{ title }}</h1>
+      </header>
+
+      <div class="story-content">
+        {{ content }}
+      </div>
+    </article>
+  </main>
+  {% include 'footer.html' %}
+</body>

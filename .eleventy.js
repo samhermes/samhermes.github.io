@@ -35,6 +35,11 @@ module.exports = function (config) {
         })
     )
 
+    config.addCollection('writing', collection =>
+        collection.getFilteredByGlob('_writing/*.md')
+            .sort((a, b) => b.date - a.date)
+    )
+
     function filterTagList(tags) {
         return (tags || []).filter(tag => ["all", "nav", "post", "posts"].indexOf(tag) === -1);
     }
@@ -49,7 +54,7 @@ module.exports = function (config) {
         return filterTagList([...tagSet]);
     });
 
-    config.setServerOptions({    
+    config.setServerOptions({
         watch: ["_site/**/*.css"]
     });
 

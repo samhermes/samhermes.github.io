@@ -66,7 +66,8 @@
 }
 
 .home-posts,
-.home-projects {
+.home-projects,
+.home-writing {
     padding: 3rem var(--site-edge);
 
     .wrapper {
@@ -132,7 +133,7 @@
 }
 
 .home-projects {
-    padding-bottom: 10rem;
+    padding-bottom: 9rem;
 }
 
 .home-project-list {
@@ -148,4 +149,8 @@
             color: #bbb;
         }
     }
+}
+
+.home-writing {
+    padding-bottom: 9rem;
 }

@@ -71,3 +71,23 @@ layout: default
 		</div>
 	</div>
 </section>
+
+<section class="home-writing">
+	<div class="wrapper">
+		<div class="home-section-header">
+			<h2>Writing</h2>
+		</div>
+		<div class="home-post-list">
+			<ul class="post-list">
+				{% for story in collections.writing %}
+				<li>
+					<h3 class="post-title">
+						<a class="post-link" href="{{ story.url | url }}">{{ story.data.title }}</a>
+					</h3>
+				</li>
+				{% endfor %}
+			</ul>
+			<a class="more" href="/writing">All Writing<svg class="more-icon"><use xlink:href="#arrow"></use></svg></a>
+		</div>
+	</div>
+</section>
