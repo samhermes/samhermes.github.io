@@ -12,6 +12,14 @@
     src: url('/fonts/Lusitana-700.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'Instrument Serif';
+    font-style: normal;
+    font-weight: 400;
+    src: url('/fonts/instrument-serif-v4-latin-regular.woff2') format('woff2');
+}
+
+
 .type-story {
     background-color: var(--color-extra-light);
     color: #444;
@@ -64,23 +72,24 @@
     font-style: normal;
     margin: 0 auto;
     max-width: 42rem;
-    padding: 3rem 0 5rem;
+    padding: 6rem 0;
 
     @media screen and (min-width: 62.5em) {
-        padding: 5rem 0 10rem;
+        padding: 6rem 0 10rem;
     }
 }
 
 .story-header {
-    margin-bottom: 4rem;
+    margin-bottom: 6rem;
 
     .story-title {
-        font-size: 1.8rem;
-        font-weight: 700;
+        font-family: "Instrument Serif", serif;
+        font-size: 3.25rem;
+        font-weight: 400;
         text-align: center;
 
         @media screen and (min-width: 37.5em) {
-            font-size: 2.5rem;
+            font-size: 4rem;
         }
     }
 }

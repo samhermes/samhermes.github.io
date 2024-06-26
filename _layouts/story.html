@@ -2,6 +2,7 @@
 {% include 'head.html' %}
 {% assign slug = title | slugify | downcase | prepend: 'page-' %}
 {% assign seriesSlug = series | slugify | downcase %}
+
 <style>
   .type-story {
     background-color: #{{ backgroundColor }};
