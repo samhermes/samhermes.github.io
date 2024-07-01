@@ -22,7 +22,6 @@
 
 .type-story {
     background-color: var(--color-extra-light);
-    color: #444;
 
     .site-header,
     .site-footer {
@@ -48,7 +47,8 @@
             list-style: none;
             display: inline-flex;
             margin: 0;
-            font-size: 1rem;
+            font-size: 0.875rem;
+            font-weight: 400;
         }
 
         li {
@@ -87,6 +87,7 @@
         font-size: 3.25rem;
         font-weight: 400;
         text-align: center;
+        text-wrap: balance;
 
         @media screen and (min-width: 37.5em) {
             font-size: 4rem;
