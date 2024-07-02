@@ -32,23 +32,14 @@
             margin-bottom: -0.06rem;
         }
     }
-
-    .site-footer {
-        border-top: 1px solid var(--dark-border-color);
-    }
 }
 
 .home-intro {
     padding: 0 0 2rem;
 
-    @media screen and (min-width: 37.5em) {
-        padding-bottom: 5rem;
-    }
-
     .intro {
         margin: 0 var(--site-edge);
         padding: 35vh 0 3rem;
-        border-bottom: 1px solid #4f4f4f;
 
         p {
             font-size: 2.5rem;
@@ -67,7 +58,12 @@
 
 .home-posts,
 .home-projects {
-    padding: 3rem var(--site-edge);
+    background-color: var(--color-bg);
+    padding: 3rem var(--site-edge) 6rem;
+
+    @media screen and (min-width: 37.5em) {
+        padding: 6rem var(--site-edge);
+    }
 
     .wrapper {
         display: grid;
@@ -83,7 +79,7 @@
 .home-section-header {
     display: flex;
     flex: 0 0 40%;
-    margin: 0 0 1rem;
+    margin: 0;
 
     @media screen and (min-width: 37.5em) {
         margin: 0 0 2rem;
@@ -97,7 +93,11 @@
 }
 
 .home-posts {
-    margin-bottom: 6rem;
+    padding-bottom: 4rem;
+
+    @media screen and (min-width: 37.5em) {
+        padding-bottom: 0;
+    }
 
     .contain {
         padding-top: 3rem;
@@ -115,7 +115,11 @@
     max-width: 43.75rem;
 
     .post-list {
-        margin: 1rem 0 5rem;
+        margin: 1rem 0 3.5rem;
+
+        @media screen and (min-width: 37.5em) {
+            margin-bottom: 5rem;
+        }
 
         @media screen and (min-width: 60em) {
             margin-top: 0;
@@ -131,10 +135,6 @@
     }
 }
 
-.home-projects {
-    padding-bottom: 10rem;
-}
-
 .home-project-list {
     display: flex;
     flex-direction: column;
@@ -142,7 +142,11 @@
     max-width: 43.75rem;
 
     .project-list {
-        margin-bottom: 5rem;
+        margin-bottom: 3.5rem;
+
+        @media screen and (min-width: 37.5em) {
+            margin-bottom: 5rem;
+        }
 
         .project-desc {
             color: #bbb;
